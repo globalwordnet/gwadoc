@@ -253,7 +253,8 @@ Core semantic relations that define synsets.
 
 We follow the discussion in [Maziarz:Piasecki:Szpakowicz:2013]_
 
-.. [Maziarz:Piasecki:Szpakowicz:2013] The chicken-and-egg problem in wordnet design: synonymy, synsets and constitutive relations
+.. [Maziarz:Piasecki:Szpakowicz:2013] The chicken-and-egg problem in
+   wordnet design: synonymy, synsets and constitutive relations.
    Language Resources and Evaluation, 47(3), pp 769–79
 """
 
@@ -281,7 +282,7 @@ A hypernym of something is its superordinate term: if X is a hypernym of Y, then
 rels.hypernym.ex.en = "*animal* is a hypernym of *dog*"
 rels.hypernym.exe.en = """
  * *meat* ``hypernym`` *beef*
- * *pear* ``hypernym`` *edible fruit*
+ * *edible fruit* ``hypernym`` *pear*
  * *wordbook* ``hypernym`` *dictionary*
 """
 rels.hypernym.test.en = """
@@ -315,7 +316,7 @@ rels.hypernym.ex.ja="動物は犬の上位語"
 
 rels.hyponym.name.symbol = "⊂"
 
-rels.hypernym.form.constitutive = True
+rels.hyponym.form.constitutive = True
 rels.hyponym.form.inOMW = True
 rels.hyponym.form.reverse = "hypernym"
 
@@ -331,8 +332,11 @@ rels.hyponym.df.en = "a word that is more specific than a given word"
 rels.hyponym.dfn.en = """
 A relation between two concepts where concept B is a type of
 concept A."""
-rels.hyponym.ex.en = "*beef* is a hyponym of *meat*"
+rels.hyponym.ex.en = "*dog* is a hyponym of *animal*"
 rels.hyponym.exe.en = """
+ * *beef* ``hyponym`` *meat*
+ * *pear* ``hyponym`` *edible fruit*
+ * *dictionary* ``hyponym`` *wordbook*
 """
 rels.hyponym.test.en="""
 Hyponymy-relation between nouns (EWN test 9)
@@ -408,13 +412,15 @@ rels.role.proj.plwordnet = "role_unspecified subtype and role_time"
 rels.role.proj.pointer = ""
 
 rels.role.name.en = "Role"
-rels.role.df.en = "what something is used for; what something is used for"
-rels.role.ex.en = ""
+rels.role.df.en = "what something is used for"
 rels.role.dfn.en = """
 X Role Y: A relation between two concepts where concept X is typically
-involved in the action or event expressed by concept Y. It is the supertype of
-``agent``, ``instrument``, ``patient``, ``result``, ``location``, ``direction``, ``target_direction``,
-``source_direction``."""
+involved in the action or event expressed by concept Y. It is the
+supertype of ``agent``, ``instrument``, ``patient``, ``result``,
+``location``, ``direction``, ``target_direction``, and
+``source_direction``.
+"""
+rels.role.ex.en = ""
 rels.role.exe.en = """
 * *hammer* ``role`` *to hammer*
 """
@@ -628,10 +634,12 @@ rels.involved.proj.pointer = ""
 rels.involved.name.en = "Involved"
 rels.involved.df.en = "connected by participation or association or use"
 rels.involved.dfn.en = """
-Y involved X: A relation between two concepts where concept Y is typically
-involved in the action or event expressed by concept X. Involved is the supertype of ``involved_agent``,
-``involved_patient``, ``involved_result``, ``involved_instrument``, ``involved_location``, ``involved_direction``,
-``involved_target_direction``, ``involved_source_direction``.
+Y involved X: A relation between two concepts where concept Y is
+typically involved in the action or event expressed by concept
+X. Involved is the supertype of ``involved_agent``,
+``involved_patient``, ``involved_result``, ``involved_instrument``,
+``involved_location``, ``involved_direction``,
+``involved_target_direction``, and ``involved_source_direction``.
 """
 rels.involved.ex.en = ""
 rels.involved.exe.en = """
@@ -1548,11 +1556,13 @@ Equality is a self-reciprocal link (the two directions of this relation share th
 
 It denotes a special kind full synonimity that allows separation of synonym lemmas in two different synsets. It can occur with any type of part-of-speech.
 
-At the moment, we're currently making use of this in order to isolate chengyu (成语), a traditional four-character chinese idiom."""
+At the moment, we're currently making use of this in order to isolate
+chengyu (成语), a traditional four-character Chinese idiom.
 rels.eq_synonym.ex.en = ""
 rels.eq_synonym.exe.en = """
-一模一样 (70100056-a) EQUALS identical (02068946-a)  identical
-(02068946-a) EQUALS  一模一样 (70100056-a)"""
+* 一模一样 (70100056-a) EQUALS identical (02068946-a)  identical
+* (02068946-a) EQUALS  一模一样 (70100056-a)
+"""
 rels.eq_synonym.com.en = """
 """
 
@@ -1783,8 +1793,9 @@ concept X is an attribute of concept Y. ‘Attributes’ is a self-reciprocal li
 It denotes a relation between a noun and its adjectival attributes, and vice-versa — for this reason it should only link adjectives to nouns and vice-versa. """
 rels.attribute.ex.en = ""
 rels.attribute.exe.en = """
-fertile (01001689-a) ATTRIBUTES:  fertility (14051494-n)
-fertility (14051494-n) ATTRIBUTES: fertile (01001689-a)"""
+* fertile (01001689-a) ATTRIBUTES:  fertility (14051494-n)
+* fertility (14051494-n) ATTRIBUTES: fertile (01001689-a)
+"""
 rels.attribute.com.en = """
 In plWN Value_of_the_attribute is a unilateral relation from adjectives to nouns.
 """
@@ -1831,8 +1842,9 @@ A relation between nominal (pronominal) concept Y and an
 adjectival concept X (quantifier/determiner)."""
 rels.restricted_by.ex.en = ""
 rels.restricted_by.exe.en = """
-this-a (77000061-a) QUANTIFIES [qant] this-n (77000061-n)
-this-n (77000061-n) QUANTIFIER: [hasq] this-a (77000061-a)"""
+* this-a (77000061-a) QUANTIFIES [qant] this-n (77000061-n)
+* this-n (77000061-n) QUANTIFIER: [hasq] this-a (77000061-a)
+"""
 rels.restricted_by.com.en = """
 """
 
@@ -1847,7 +1859,9 @@ rels.classifies.proj.plwordnet = ""
 rels.classifies.proj.pointer = ""
 
 rels.classifies.name.en = "Classifies"
-rels.classifies.df.en = "assign to a class or kind; assign to a class or kind"
+rels.classifies.df.en = """
+assign to a class or kind; assign to a class or kind
+"""
 rels.classifies.dfn.en = """
 A relation between a classifier concept X and concept Y. A relation between a classifier X and Y"""
 rels.classifies.ex.en = ""
@@ -1919,7 +1933,10 @@ rels.antonym.proj.plwordnet = "complementary, proper and converse antonymy"
 rels.antonym.proj.pointer = "!"
 
 rels.antonym.name.en = "Antonym"
-rels.antonym.df.en = "a word that expresses a meaning opposed to the meaning of another word, in which case the two words are antonyms of each other; a word that expresses a meaning opposed to the meaning of another word, in which case the two words are antonyms of each other"
+rels.antonym.df.en = """
+a word that expresses a meaning opposed to the meaning of another
+word, in which case the two words are antonyms of each other
+"""
 rels.antonym.dfn.en = """
 Antonymy is a self-reciprocal link (the two directions of this relation share the same meaning) — Concept-X's antonym is Concept-Y, and Concept-Y's antonym is Concept-X.
 
@@ -1948,7 +1965,9 @@ rels.entails.proj.plwordnet = ""
 rels.entails.proj.pointer = ""
 
 rels.entails.name.en = "Entails"
-rels.entails.df.en = "impose, involve, or imply as a necessary accompaniment or result; impose, involve, or imply as a necessary accompaniment or result"
+rels.entails.df.en = """
+impose, involve, or imply as a necessary accompaniment or result
+"""
 rels.entails.dfn.en = """
 Entailment is a relation that links two verbs, and it is currently unilateral — Verb-X entails Verb-Y, without a reciprocal or tracing link.
 This relation presupposes/requires a semantic restriction in which Verb-Y has to take place before or during Verb-X.
