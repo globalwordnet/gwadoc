@@ -597,7 +597,7 @@ rels.direction.proj.pointer = ""
 
 rels.direction.name.en = "Direction"
 rels.direction.df.en = """
-a line leading to a place or point; a line leading to a place or point
+a line leading to a place or point
 """
 rels.direction.dfn.en = """
 X Role Y: A relation between two concepts where concept X is typically
@@ -624,8 +624,7 @@ rels.target_direction.proj.pointer = ""
 
 rels.target_direction.name.en = "Target Direction"
 rels.target_direction.df.en = """
-the place designated as the end (as of a race or journey); the place
-designated as the end (as of a race or journey)
+the place designated as the end (as of a race or journey)
 """
 rels.target_direction.dfn.en = """
 X Role Y: (a/an/the) X is the place to which Ying happens / one Ys
@@ -1363,8 +1362,7 @@ rels.meronym.proj.pointer = "%"
 
 rels.meronym.name.en = "Meronym"
 rels.meronym.df.en = """
-a word that names a part of a larger whole; a word that names a part
-of a larger whole
+a word that names a part of a larger whole
 """
 rels.meronym.dfn.en = """
 A relation between two concepts where concept Y makes up a part of
@@ -1393,8 +1391,7 @@ rels.holonym.proj.pointer = "#"
 
 rels.holonym.name.en = "Holonym"
 rels.holonym.df.en = """
-a word that names the whole of which a given word is a part; a word
-that names the whole of which a given word is a part
+a word that names the whole of which a given word is a part
 """
 rels.holonym.dfn.en = """
 A relation between two concepts where concept X makes up a
@@ -1990,8 +1987,7 @@ rels.restricts.proj.pointer = ""
 
 rels.restricts.name.en = "Restricts"
 rels.restricts.df.en = """
-place limits on (extent or access); place limits on (extent or amount
-or access)
+place limits on (extent or amount or access)
 """
 rels.restricts.dfn.en = """
 A relation between an adjectival concept X (quantifier/determiner) and
@@ -2043,7 +2039,7 @@ rels.classifies.proj.pointer = ""
 
 rels.classifies.name.en = "Classifies"
 rels.classifies.df.en = """
-assign to a class or kind; assign to a class or kind
+assign to a class or kind
 """
 rels.classifies.dfn.en = """
 A relation between a classifier concept X and concept Y. A relation
@@ -2069,8 +2065,7 @@ rels.classified_by.proj.pointer = ""
 
 rels.classified_by.name.en = "Classified By"
 rels.classified_by.df.en = """
-arrange or order by classes or categories; arrange or order by classes
-or categories
+arrange or order by classes or categories
 """
 rels.classified_by.dfn.en = """
 A relation between concept Y and a classifier concept X. A relation
