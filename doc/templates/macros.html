@@ -1,3 +1,7 @@
 {% macro rel_id(identifier) -%}
 <span class="rel-id">{{ identifier }}</span>
 {%- endmacro %}
+
+{%- macro ili(symbol) -%}
+⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/{{ symbol[1:] }}">{{ symbol }}</a>⟫
+{%- endmacro %}

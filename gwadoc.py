@@ -5,6 +5,7 @@ from collections import namedtuple
 
 
 preferred_language = 'en'
+backup_language = 'en'
 
 ###############################################################################
 ### Inventories
@@ -158,6 +159,9 @@ class AttrBase(dict):
     def keys(self):
         return self._inventory
 
+    def __bool__(self):
+        return any(self.get(key) is not None for key in self._inventory)
+
 
 class MultiString(AttrBase):
 
@@ -167,7 +171,7 @@ class MultiString(AttrBase):
         return '<MultiString ({!s})>'.format(self)
 
     def __str__(self):
-        return self.get(preferred_language, '')
+        return self.get(preferred_language, self.get(backup_language, ''))
 
     def __len__(self):
         return len(str(self))

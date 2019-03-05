@@ -32,25 +32,29 @@
     {{ rel.com | render_rst }}
     {%- endif %}
     <h4>Project-specific Names</h4>
+    {% if rel.proj -%}
     <table>
       <thead>
-	<tr><th>Project</th><th>Name/Symbol</th></tr>
+        <tr><th>Project</th><th>Name/Symbol</th></tr>
       </thead>
       <tbody>
-	{% for proj in gwadoc.PROJECTS -%}
-	<tr>
-	  <td>{{ gwadoc.PROJECTS[proj] }}</td>
-	  <td>
-	    {% set sym = rel.proj[proj] -%}
-	    {% if sym and proj == "ili" -%}
-	    ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/{{ sym[1:] }}">{{ sym }}</a>⟫
-	    {%- elif sym -%}
-	    {{ sym }}
-	    {%- endif -%}
-	  </td>
-	</tr>
-	{% endfor %}
+        {% for proj in gwadoc.PROJECTS if rel.proj[proj] -%}
+        <tr>
+          <td>{{ gwadoc.PROJECTS[proj] }}</td>
+          <td>
+            {% set sym = rel.proj[proj] -%}
+            {% if sym and proj == "ili" -%}
+            {{ ili(sym) }}
+            {%- elif sym -%}
+            {{ sym }}
+            {%- endif -%}
+          </td>
+        </tr>
+        {% endfor %}
       </tbody>
     </table>
+    {% else %}
+    <p>No project names defined.</p>
+    {% endif %}
   </div>
 </article>
