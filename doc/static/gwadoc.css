@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
+.rel-id {
+    font-family: monospace;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+
+div.description {
+    margin-left: 40px;
+}
+
+.relation dl {
+    margin-left: 20px;
+}
+.relation dt {
+    display: inline-block;
+    min-width: 80px;
+    font-weight: bold;
+}
+.relation dd {
+    display: inline;
+}
+.relation dd:after {
+    display: block;
+    content: '';
+}

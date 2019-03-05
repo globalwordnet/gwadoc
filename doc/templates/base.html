@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+  {% block head -%}
+  <link rel="stylesheet" href="static/gwadoc.css" />
+  <title>{% block title %}{% endblock %}</title>
+  {%- endblock %}
+</head>
+
+<body>
+  <header>
+    {% block header -%}
+    <h1>Global Wordnet Association Sense Relation Documentation</h1>
+    {%- endblock %}
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    {% block footer -%}
+    &copy; Copyright 2019
+    <a href="http://globalwordnet.org/">Global Wordnet Association</a>
+    {%- endblock %}
+  </footer>
+</body>
+
+</html>

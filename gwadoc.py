@@ -4,6 +4,8 @@ from collections import OrderedDict as od
 from collections import namedtuple
 
 
+preferred_language = 'en'
+
 ###############################################################################
 ### Inventories
 
@@ -127,25 +129,34 @@ FORMS = {
 ###############################################################################
 ### Data Structures
 
-class AttrBase(object):
+class AttrBase(dict):
 
     _inventory = set()
 
     def __getitem__(self, key):
-        return getattr(self, key)
+        if key not in self._inventory:
+            raise KeyError("'{}' is not defined".format(key))
+        return dict.__getitem__(self, key)
 
     def __setitem__(self, key, value):
-        setattr(self, key, value)
+        if key not in self._inventory:
+            raise KeyError("'{}' is not defined".format(key))
+        dict.__setitem__(self, key, value)
 
     def __getattr__(self, key):
-        if key not in self._inventory:
-            raise KeyError("'{}' is not defined".format(key))
-        return object.__getattr__(self, key)
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError("'{}' is not defined".format(key))
 
     def __setattr__(self, key, value):
-        if key not in self._inventory:
-            raise KeyError("'{}' is not defined".format(key))
-        object.__setattr__(self, key, value)
+        try:
+            self[key] = value
+        except KeyError:
+            raise AttributeError("'{}' is not defined".format(key))
+
+    def keys(self):
+        return self._inventory
 
 
 class MultiString(AttrBase):
@@ -156,7 +167,10 @@ class MultiString(AttrBase):
         return '<MultiString ({!s})>'.format(self)
 
     def __str__(self):
-        return getattr(self, 'en', '')
+        return self.get(preferred_language, '')
+
+    def __len__(self):
+        return len(str(self))
 
 
 class Forms(AttrBase):
@@ -2285,3 +2299,9 @@ rels.source_direction.df.en = "X is the place from where the event expressed by 
 rels.state_of.df.en = "Y is qualified by X"
 rels.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
 rels.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
+
+
+if __name__ == '__main__':
+    import json
+    d = {'relations': [rels[relname] for relname in RELATIONS]}
+    print(json.dumps(d, indent=2))

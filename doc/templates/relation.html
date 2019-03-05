@@ -1,0 +1,56 @@
+<article class="relation">
+  <h3 id="{{ id }}">{{ rel.name }} ({{ rel_id(id) }})</h3>
+  <div class="description">
+    {% if rel.df -%}
+    <span class="short definition">"{{ rel.df }}"</span>
+    {%- endif %}
+    <dl>
+      {% if rel.name.symbol -%}
+      <dt>symbol</dt><dd>{{ rel.name.symbol }}</dd>
+      {%- endif %}
+      {% if rel.form.reverse -%}
+      <dt>reverse</dt><dd>{{ rel_id(rel.form.reverse) }}</dd>
+      {%- endif %}
+      {% if rel.ex -%}
+      <dt>example</dt><dd>{{ rel.ex | render_rst }}</dd>
+      {% endif %}
+    </dl>
+    {% if rel.dfn -%}
+    <h4>Definition</h4>
+    {{ rel.dfn | render_rst }}
+    {%- endif %}
+    {% if rel.exe -%}
+    <h4>Examples</h4>
+    {{ rel.exe | render_rst }}
+    {%- endif %}
+    {% if rel.test -%}
+    <h4>Tests</h4>
+    {{ rel.test | render_rst }}
+    {%- endif %}
+    {% if rel.com -%}
+    <h4>Comments</h4>
+    {{ rel.com | render_rst }}
+    {%- endif %}
+    <h4>Project-specific Names</h4>
+    <table>
+      <thead>
+	<tr><th>Project</th><th>Name/Symbol</th></tr>
+      </thead>
+      <tbody>
+	{% for proj in gwadoc.PROJECTS -%}
+	<tr>
+	  <td>{{ gwadoc.PROJECTS[proj] }}</td>
+	  <td>
+	    {% set sym = rel.proj[proj] -%}
+	    {% if sym and proj == "ili" -%}
+	    ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/{{ sym[1:] }}">{{ sym }}</a>⟫
+	    {%- elif sym -%}
+	    {{ sym }}
+	    {%- endif -%}
+	  </td>
+	</tr>
+	{% endfor %}
+      </tbody>
+    </table>
+  </div>
+</article>
