@@ -1,258 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from collections import OrderedDict as od
-from collections import namedtuple
-
-
-preferred_language = 'en'
-backup_language = 'en'
-
-###############################################################################
-### Inventories
-
-PROJECTS = od([
-    ('pwn', 'Princeton WordNet Relation Name'),
-    ('pointer', 'Princeton WordNet Pointer'),
-    ('eurown', 'Euro WordNet Relation Name'),
-    ('plwordnet', 'PlWordNet Relation Name'),
-    ('querywn', 'PERL WordNet-QueryData Module'),
-    ('skos', 'SKOS type'),
-    ('ili', 'Interlingual Index Node'),
-    ('SUMO', 'Sumo Relation Type'),
-])
-
-
-LANGUAGES = od([
-    ('en', 'English'),
-    ('pl', 'Polish'),
-    ('ja', 'Japanese'),
-    ('symbol', 'Symbol'),
-])
-
-
-RELATIONS = (
-    'constitutive',
-    'hyponym',
-    'hypernym',
-    'instance_hyponym',
-    'instance_hypernym',
-    'antonym',
-    'eq_synonym',
-    'similar',
-    'meronym',
-    'holonym',
-    'mero_location',
-    'holo_location',
-    'mero_member',
-    'holo_member',
-    'mero_part',
-    'holo_part',
-    'mero_portion',
-    'holo_portion',
-    'mero_substance',
-    'holo_substance',
-    'other',
-    'also',
-    'state_of',
-    'be_in_state',
-    'causes',
-    'is_caused_by',
-    'subevent',
-    'is_subevent_of',
-    'manner_of',
-    'in_manner',
-    'attribute',
-    'restricts',
-    'restricted_by',
-    'classifies',
-    'classified_by',
-    'entails',
-    'is_entailed_by',
-    'domain',
-    'has_domain',
-    'domain_topic',
-    'has_domain_topic',
-    'domain_region',
-    'has_domain_region',
-    'exemplifies',
-    'is_exemplified_by',
-    'role',
-    'involved',
-    'agent',
-    'involved_agent',
-    'patient',
-    'involved_patient',
-    'result',
-    'involved_result',
-    'instrument',
-    'involved_instrument',
-    'location',
-    'involved_location',
-    'direction',
-    'involved_direction',
-    'target_direction',
-    'involved_target_direction',
-    'source_direction',
-    'involved_source_direction',
-    'co_role',
-    'co_agent_patient',
-    'co_patient_agent',
-    'co_agent_instrument',
-    'co_instrument_agent',
-    'co_agent_result',
-    'co_result_agent',
-    'co_patient_instrument',
-    'co_instrument_patient',
-    'co_result_instrument',
-    'co_instrument_result',
-)
-
-PARTS = {
-    'com': 'Comments',
-    'df': 'Short Definition',
-    'dfn': 'Long Definition',
-    'ex': 'Short Example',
-    'exe': 'Long Examples',
-    'form': '',
-    'name': 'Relation Name',
-    'proj': 'Relation Name in Project',
-    'test': 'Tests',
-}
-
-
-FORMS = {
-    'reverse': 'Reverse Relation',
-    'constitutive': 'Constitutive Relation',
-    'inOMW': 'Relation used in OMW'
-}
-
-
-###############################################################################
-### Data Structures
-
-class AttrBase(dict):
-
-    _inventory = set()
-
-    def __getitem__(self, key):
-        if key not in self._inventory:
-            raise KeyError("'{}' is not defined".format(key))
-        return dict.__getitem__(self, key)
-
-    def __setitem__(self, key, value):
-        if key not in self._inventory:
-            raise KeyError("'{}' is not defined".format(key))
-        dict.__setitem__(self, key, value)
-
-    def __getattr__(self, key):
-        try:
-            return self[key]
-        except KeyError:
-            raise AttributeError("'{}' is not defined".format(key))
-
-    def __setattr__(self, key, value):
-        try:
-            self[key] = value
-        except KeyError:
-            raise AttributeError("'{}' is not defined".format(key))
-
-    def keys(self):
-        return self._inventory
-
-    def __bool__(self):
-        return any(self.get(key) is not None for key in self._inventory)
-
-
-class MultiString(AttrBase):
-
-    _inventory = LANGUAGES
-
-    def __repr__(self):
-        return '<MultiString ({!s})>'.format(self)
-
-    def __str__(self):
-        return self.get(preferred_language, self.get(backup_language, ''))
-
-    def __len__(self):
-        return len(str(self))
-
-
-class Forms(AttrBase):
-
-    _inventory = FORMS
-
-    def __init__(self):
-        for form in self._inventory:
-            setattr(self, form, None)
-
-
-class Projects(AttrBase):
-
-    _inventory = PROJECTS
-
-    def __init__(self):
-        for proj in self._inventory:
-            setattr(self, proj, None)
-
-
-class Parts(AttrBase):
-
-    _inventory = PARTS
-
-    def __init__(self):
-        self.com = MultiString()
-        self.df = MultiString()
-        self.dfn = MultiString()
-        self.ex = MultiString()
-        self.exe = MultiString()
-        self.form = Forms()
-        self.name = MultiString()
-        self.proj = Projects()
-        self.test = MultiString()
-
-
-class Relations(AttrBase):
-
-    _inventory = set(RELATIONS)
-
-    def __init__(self):
-        for rel in self._inventory:
-            setattr(self, rel, Parts())
-
-
-rels = Relations()
+from gwadoc.base import rels
 
 
 ###############################################################################
 ### Relations Definitions
 
-# rels[rel]['name'][lg]
-# name of the relation in language 'lg'
-# should always have English
-# lg = 'symbol' for Unicode single character symbol
-
-# rels[rel]['proj'][proj] name used in other projects
-# 'pointer' for PWN pointer
-# http://wordnet.princeton.edu/wordnet/man/wninput.5WN.html
-# '4char' for query-wordnet character name
-# 'ili' for closest ili node
-
-# rels[rel]['df'][lg]
-# short definition in a lang, suitable for mouseover in a tool,
-#  or short table
-
-# rels[rel]['dfn'][lg]  long definition
-
-# rels[rel]['ex'][lg]   short example
-# rels[rel]['exe'][lg]    long example
-# rels[rel]['test'][lg]   tests (and discussion)
-# rels[rel]['com'][lg]    comments
-
 
 ### Relation: domain
 
 rels.domain.name.en = "Domain"
-rels.domain.form.reverse = 'has_domain'
 
 
 ### Relation: has_domain
@@ -277,18 +34,6 @@ We follow the discussion in [Maziarz:Piasecki:Szpakowicz:2013]_
 
 ### Relation: Hypernym
 ### X ⊃ Y,  X is a hypernym of Y
-
-rels.hypernym.name.symbol = "⊃"
-
-rels.hypernym.form.constitutive = True
-rels.hypernym.form.inOMW = True
-rels.hypernym.form.reverse = "hyponym"
-
-rels.hypernym.proj.ili = """i69569"""
-rels.hypernym.proj.querywn = "hype"
-rels.hypernym.proj.eurown = """HAS_HYPONYM"""
-rels.hypernym.proj.plwordnet = "hyperonymy"
-rels.hypernym.proj.pointer = "@"
 
 rels.hypernym.name.en = 'Hypernym'
 rels.hypernym.df.en = 'a word that is more general than a given word'
@@ -323,31 +68,9 @@ for this relation when relating to verbs. In plWordNet it is also
 extended to adjectives and adverbs.
 """
 
-rels.hypernym.df.pl="""
-Relacja łącząca znaczenie z drugim, ogólniejszym, niż to pierwsze, ale
-należącym do tej samej części mowy, co ono
-"""
-
-rels.hypernym.name.ja="上位語"
-rels.hypernym.dfn.ja="当該synsetが相手synsetに包含される"
-rels.hypernym.ex.ja="動物は犬の上位語"
-
 
 ### Relation: hyponym
 ### X ⊂ Y,  X is a hyponym of Y
-
-rels.hyponym.name.symbol = "⊂"
-
-rels.hyponym.form.constitutive = True
-rels.hyponym.form.inOMW = True
-rels.hyponym.form.reverse = "hypernym"
-
-rels.hyponym.proj.ili = "i69570"
-rels.hyponym.proj.pwn = "hyponym"
-rels.hyponym.proj.querywn = "hypo"
-rels.hyponym.proj.eurown = "HAS_HYPERONYM"
-rels.hyponym.proj.plwordnet = "hyponymy"
-rels.hyponym.proj.pointer = "~"
 
 rels.hyponym.name.en = "Hyponym"
 rels.hyponym.df.en = "a word that is more specific than a given word"
@@ -395,16 +118,6 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.
 
 ### Relation: similar
 
-rels.similar.form.inOMW = True
-rels.similar.form.reverse = "similar"
-
-rels.similar.proj.ili = "i13187"
-rels.similar.proj.pwn = "Similar to and Verb Group"
-rels.similar.proj.querywn = "sim"
-rels.similar.proj.eurown = "near_synonym"
-rels.similar.proj.plwordnet = "near_synonymy"
-rels.similar.proj.pointer = "&"
-
 rels.similar.name.en = "Similar"
 rels.similar.df.en = "(of words) expressing closely related meanings"
 rels.similar.dfn.en = """
@@ -436,14 +149,6 @@ relation which is why it is not given in the mappings below.
 
 ### Relation: role
 
-rels.role.form.inOMW = True
-rels.role.form.reverse = "involved"
-
-rels.role.proj.ili = "i64041"
-rels.role.proj.eurown = "role"
-rels.role.proj.plwordnet = "role_unspecified subtype and role_time"
-rels.role.proj.pointer = ""
-
 rels.role.name.en = "Role"
 rels.role.df.en = "what something is used for"
 rels.role.dfn.en = """
@@ -463,14 +168,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: agent
-
-rels.agent.form.inOMW = True
-rels.agent.form.reverse = "involved_agent"
-
-rels.agent.proj.ili = "i69754"
-rels.agent.proj.eurown = "role_agent"
-rels.agent.proj.plwordnet = "role_agent"
-rels.agent.proj.pointer = ""
 
 rels.agent.name.en = "Agent"
 rels.agent.df.en = """
@@ -492,14 +189,6 @@ In plWordNet it is a relation between lexical units.
 
 ### Relation: patient
 
-rels.patient.form.inOMW = True
-rels.patient.form.reverse = "involved_patient"
-
-rels.patient.proj.ili = "i69753"
-rels.patient.proj.eurown = "role_patient"
-rels.patient.proj.plwordnet = "role_patient"
-rels.patient.proj.pointer = ""
-
 rels.patient.name.en = "Patient"
 rels.patient.df.en = """
 the semantic role of an entity that is not the agent but is directly
@@ -520,14 +209,6 @@ In plWordNet it is a relation between lexical units.
 
 ### Relation: result
 
-rels.result.form.inOMW = True
-rels.result.form.reverse = "involved_result"
-
-rels.result.proj.ili = "i69759"
-rels.result.proj.eurown = "role_result"
-rels.result.proj.plwordnet = "role_result"
-rels.result.proj.pointer = ""
-
 rels.result.name.en = "Result"
 rels.result.df.en = """
 the semantic role of the noun phrase whose referent exists only by
@@ -547,14 +228,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: instrument
-
-rels.instrument.form.inOMW = True
-rels.instrument.form.reverse = "involved_instrument"
-
-rels.instrument.proj.ili = "i69756"
-rels.instrument.proj.eurown = "role_instrument"
-rels.instrument.proj.plwordnet = "role_instrument"
-rels.instrument.proj.pointer = ""
 
 rels.instrument.name.en = "Instrument"
 rels.instrument.df.en = """
@@ -580,14 +253,6 @@ In plWordNet it is a relation between lexical units.
 
 ### Relation: location
 
-rels.location.form.inOMW = True
-rels.location.form.reverse = "involved_location"
-
-rels.location.proj.ili = "i35580"
-rels.location.proj.eurown = "role_location"
-rels.location.proj.plwordnet = "role_location"
-rels.location.proj.pointer = ""
-
 rels.location.name.en = "Location"
 rels.location.df.en = "a point or extent in space"
 rels.location.dfn.en = """
@@ -604,14 +269,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: direction
-
-rels.direction.form.inOMW = True
-rels.direction.form.reverse = "involved_direction"
-
-rels.direction.proj.ili = "i82556"
-rels.direction.proj.eurown = "role_direction"
-rels.direction.proj.plwordnet = ""
-rels.direction.proj.pointer = ""
 
 rels.direction.name.en = "Direction"
 rels.direction.df.en = """
@@ -632,14 +289,6 @@ rels.direction.com.en = """
 
 ### Relation: target_direction
 
-rels.target_direction.form.inOMW = True
-rels.target_direction.form.reverse = "involved_target_direction"
-
-rels.target_direction.proj.ili = "i82007" ###(ili doesn't have target in it)
-rels.target_direction.proj.eurown = "role_target_direction"
-rels.target_direction.proj.plwordnet = ""
-rels.target_direction.proj.pointer = ""
-
 rels.target_direction.name.en = "Target Direction"
 rels.target_direction.df.en = """
 the place designated as the end (as of a race or journey)
@@ -656,14 +305,6 @@ rels.target_direction.com.en = """
 
 
 ### Relation: source_direction
-
-rels.source_direction.form.inOMW = True
-rels.source_direction.form.reverse = "involved_source_direction"
-
-rels.source_direction.proj.ili = "i81759"
-rels.source_direction.proj.eurown = "role_source_direction"
-rels.source_direction.proj.plwordnet = ""
-rels.source_direction.proj.pointer = ""
 
 rels.source_direction.name.en = "Source Direction"
 rels.source_direction.df.en = """
@@ -683,14 +324,6 @@ rels.source_direction.com.en = """
 
 
 ### Relation: involved
-
-rels.involved.form.inOMW = True
-rels.involved.form.reverse = "role"
-
-rels.involved.proj.ili = "i8315"
-rels.involved.proj.eurown = "involved"
-rels.involved.proj.plwordnet = "unspecified subtype, time and causation inclusion"
-rels.involved.proj.pointer = ""
 
 rels.involved.name.en = "Involved"
 rels.involved.df.en = "connected by participation or association or use"
@@ -713,13 +346,6 @@ In plWordNet it is a relation between lexical units.
 
 ### Relation: involved_agent (EuroWordNet - page 29/30)
 
-rels.involved_agent.form.inOMW = True
-rels.involved_agent.form.reverse = "agent"
-
-rels.involved_agent.proj.eurown = "involved_agent"
-rels.involved_agent.proj.plwordnet = "agent inclusion"
-rels.involved_agent.proj.pointer = ""
-
 rels.involved_agent.name.en = "Involved Agent"
 rels.involved_agent.df.en = "X is the typical agent of Y"
 rels.involved_agent.dfn.en = """
@@ -736,13 +362,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: involved_patient
-
-rels.involved_patient.form.inOMW = True
-rels.involved_patient.form.reverse = "patient"
-
-rels.involved_patient.proj.eurown = "involved_patient"
-rels.involved_patient.proj.plwordnet = "patient inclusion"
-rels.involved_patient.proj.pointer = ""
 
 rels.involved_patient.name.en = "Involved Patient"
 rels.involved_patient.df.en = "X is typically the patient undergoing the action Y"
@@ -761,13 +380,6 @@ In plWordNet it is a relation between lexical units.
 
 ### Relation: involved_result
 
-rels.involved_result.form.inOMW = True
-rels.involved_result.form.reverse = "result"
-
-rels.involved_result.proj.eurown = "involved_result"
-rels.involved_result.proj.plwordnet = "result inclusion"
-rels.involved_result.proj.pointer = ""
-
 rels.involved_result.name.en = "Involved Result"
 rels.involved_result.df.en = "X exists because of Y"
 rels.involved_result.dfn.en = """
@@ -783,13 +395,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: involved_instrument
-
-rels.involved_instrument.form.inOMW = True
-rels.involved_instrument.form.reverse = "instrument"
-
-rels.involved_instrument.proj.eurown = "involved_instrument"
-rels.involved_instrument.proj.plwordnet = "instrument inclusion"
-rels.involved_instrument.proj.pointer = ""
 
 rels.involved_instrument.name.en = "Involved Instrument"
 rels.involved_instrument.df.en = "X is typically the instrument for the action Y"
@@ -807,13 +412,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: involved_location
-
-rels.involved_location.form.inOMW = True
-rels.involved_location.form.reverse = "location"
-
-rels.involved_location.proj.eurown = "involved_location"
-rels.involved_location.proj.plwordnet = "location inclusion"
-rels.involved_location.proj.pointer = ""
 
 rels.involved_location.name.en = "Involved Location"
 rels.involved_location.df.en = """
@@ -834,13 +432,6 @@ In plWordNet it is a relation between lexical units.
 
 ### Relation: involved_direction
 
-rels.involved_direction.form.inOMW = True
-rels.involved_direction.form.reverse = "direction"
-
-rels.involved_direction.proj.eurown = "involved_direction"
-rels.involved_direction.proj.plwordnet = ""
-rels.involved_direction.proj.pointer = ""
-
 rels.involved_direction.name.en = "Involved Direction"
 rels.involved_direction.df.en = """
 X is typically the direction/location of the action Y
@@ -859,13 +450,6 @@ rels.involved_direction.com.en = """
 
 ### Relation: involved_target_direction
 
-rels.involved_target_direction.form.inOMW = True
-rels.involved_target_direction.form.reverse = "target_direction"
-
-rels.involved_target_direction.proj.eurown = "involved_target_direction"
-rels.involved_target_direction.proj.plwordnet = ""
-rels.involved_target_direction.proj.pointer = ""
-
 rels.involved_target_direction.name.en = "Involved Target Direction"
 rels.involved_target_direction.df.en = "X is the place where action Y leads to"
 rels.involved_target_direction.dfn.en = """
@@ -880,13 +464,6 @@ rels.involved_target_direction.com.en = """
 
 
 ### Relation: involved_source_direction
-
-rels.involved_source_direction.form.inOMW = True
-rels.involved_source_direction.form.reverse = "source_direction"
-
-rels.involved_source_direction.proj.eurown = "involved_source_direction"
-rels.involved_source_direction.proj.plwordnet = ""
-rels.involved_source_direction.proj.pointer = ""
 
 rels.involved_source_direction.name.en = "Involved Source Direction"
 rels.involved_source_direction.df.en = """
@@ -906,12 +483,6 @@ rels.involved_source_direction.com.en = """
 
 ### Relation: co_role EDP31
 
-rels.co_role.form.inOMW = True
-rels.co_role.form.reverse = "co_role"
-
-rels.co_role.proj.eurown = "co_role"
-rels.co_role.proj.plwordnet = ""
-
 rels.co_role.name.en = "Co Role"
 rels.co_role.df.en = """
 a pair of linked role relations without an explicit event
@@ -928,12 +499,6 @@ rels.co_role.com.en = """
 
 
 ### Relation: co_agent_patient EDP32
-
-rels.co_agent_patient.form.inOMW = True
-rels.co_agent_patient.form.reverse = "co_patient_agent"
-
-rels.co_agent_patient.proj.eurown = "co_agent_patient"
-rels.co_agent_patient.proj.plwordnet = ""
 
 rels.co_agent_patient.name.en = "Co Agent Patient"
 rels.co_agent_patient.df.en = "X is the patient undergoing Y"
@@ -952,12 +517,6 @@ rels.co_agent_patient.com.en = """
 
 ### Relation: co_agent_instrument EDP32
 
-rels.co_agent_instrument.form.inOMW = True
-rels.co_agent_instrument.form.reverse = "co_instrument_agent"
-
-rels.co_agent_instrument.proj.eurown = "co_agent_instrument"
-rels.co_agent_instrument.proj.plwordnet = ""
-
 rels.co_agent_instrument.name.en = "Co Agent Instrument"
 rels.co_agent_instrument.df.en = "guitar player/guitar"
 rels.co_agent_instrument.dfn.en = """
@@ -974,12 +533,6 @@ rels.co_agent_instrument.com.en = """
 
 
 ### Relation: co_agent_result EDP32
-
-rels.co_agent_result.form.inOMW = True
-rels.co_agent_result.form.reverse = "co_result_agent"
-
-rels.co_agent_result.proj.eurown = "co_agent_result"
-rels.co_agent_result.proj.plwordnet = ""
 
 rels.co_agent_result.name.en = "Co Agent Result"
 rels.co_agent_result.df.en = "X is the result of action Y"
@@ -998,12 +551,6 @@ rels.co_agent_result.com.en = """
 
 ### Relation: co_patient_agent EDP32
 
-rels.co_patient_agent.form.inOMW = True
-rels.co_patient_agent.form.reverse = "co_agent_patient"
-
-rels.co_patient_agent.proj.eurown = "co_patient_agent"
-rels.co_patient_agent.proj.plwordnet = ""
-
 rels.co_patient_agent.name.en = "Co Patient Agent"
 rels.co_patient_agent.df.en = ""
 rels.co_patient_agent.dfn.en = """
@@ -1018,12 +565,6 @@ rels.co_patient_agent.com.en = """
 
 
 ### Relation: co_patient_instrument EDP32
-
-rels.co_patient_instrument.form.inOMW = True
-rels.co_patient_instrument.form.reverse = "co_instrument_patient"
-
-rels.co_patient_instrument.proj.eurown = "co_patient_instrument"
-rels.co_patient_instrument.proj.plwordnet = ""
 
 rels.co_patient_instrument.name.en = "Co Patient Instrument"
 rels.co_patient_instrument.df.en = ""
@@ -1040,12 +581,6 @@ rels.co_patient_instrument.com.en = """
 
 ### Relation: co_result_agent EDP32
 
-rels.co_result_agent.form.inOMW = True
-rels.co_result_agent.form.reverse = "co_agent_result"
-
-rels.co_result_agent.proj.eurown = "co_result_agent"
-rels.co_result_agent.proj.plwordnet = ""
-
 rels.co_result_agent.name.en = "Co Result Agent"
 rels.co_result_agent.df.en = ""
 rels.co_result_agent.dfn.en = """
@@ -1060,12 +595,6 @@ rels.co_result_agent.com.en = """
 
 
 ### Relation: co_result_instrument EDP32
-
-rels.co_result_instrument.form.inOMW = True
-rels.co_result_instrument.form.reverse = "co_instrument_result"
-
-rels.co_result_instrument.proj.eurown = "co_result_instrument"
-rels.co_result_instrument.proj.plwordnet = ""
 
 rels.co_result_instrument.name.en = "Co Result Instrument"
 rels.co_result_instrument.df.en = ""
@@ -1082,12 +611,6 @@ rels.co_result_instrument.com.en = """
 
 ### Relation: co_instrument_agent EDP32
 
-rels.co_instrument_agent.form.inOMW = True
-rels.co_instrument_agent.form.reverse = "co_agent_instrument"
-
-rels.co_instrument_agent.proj.eurown = "co_instrument_agent"
-rels.co_instrument_agent.proj.plwordnet = ""
-
 rels.co_instrument_agent.name.en = "Co Instrument Agent"
 rels.co_instrument_agent.df.en = ""
 rels.co_instrument_agent.dfn.en = """
@@ -1102,12 +625,6 @@ rels.co_instrument_agent.com.en = """
 
 
 ### Relation: co_instrument_patient EDP32
-
-rels.co_instrument_patient.form.inOMW = True
-rels.co_instrument_patient.form.reverse = "co_patient_instrument"
-
-rels.co_instrument_patient.proj.eurown = "co_instrument_patient"
-rels.co_instrument_patient.proj.plwordnet = ""
 
 rels.co_instrument_patient.name.en = "Co Instrument Patient"
 rels.co_instrument_patient.df.en = ""
@@ -1124,12 +641,6 @@ rels.co_instrument_patient.com.en = """
 
 ### Relation: co_instrument_result ice saw/ice
 
-rels.co_instrument_result.form.inOMW = True
-rels.co_instrument_result.form.reverse = "co_result_instrument"
-
-rels.co_instrument_result.proj.eurown = "co_instrument_result"
-rels.co_instrument_result.proj.plwordnet = ""
-
 rels.co_instrument_result.name.en = "Co Instrument Result"
 rels.co_instrument_result.df.en = ""
 rels.co_instrument_result.dfn.en = """
@@ -1144,15 +655,6 @@ rels.co_instrument_result.com.en = """
 
 
 ### Relation: state_of EDP37
-
-rels.state_of.form.inOMW = True
-rels.state_of.form.reverse = "be_in_state"
-
-rels.state_of.proj.ili = "i35578"
-rels.state_of.proj.pwn = "attribute"
-rels.state_of.proj.eurown = "state_of"
-rels.state_of.proj.plwordnet = "state"
-rels.state_of.proj.pointer = ""
 
 rels.state_of.name.en = "State Of"
 rels.state_of.df.en = """
@@ -1173,13 +675,6 @@ FCB: isn't this the same as attribute (but split into two directions)
 
 ### Relation: be_in_state EDP37
 
-rels.be_in_state.form.inOMW = True
-rels.be_in_state.form.reverse = "state_of"
-
-rels.be_in_state.proj.eurown = "be_in_state"
-rels.be_in_state.proj.plwordnet = "bearer of state"
-rels.be_in_state.proj.pointer = ""
-
 rels.be_in_state.name.en = "Be In State"
 rels.be_in_state.df.en = ""
 rels.be_in_state.dfn.en = """
@@ -1197,16 +692,6 @@ In plWordNet it is a relation between lexical units.
 
 
 ### Relation: causes EDP34
-
-rels.causes.form.inOMW = True
-rels.causes.form.reverse = "is_caused_by"
-
-rels.causes.proj.ili = "i35561"
-rels.causes.proj.pwn = "cause"
-rels.causes.proj.querywn = "caus"
-rels.causes.proj.eurown = "causes"
-rels.causes.proj.plwordnet = "causation"
-rels.causes.proj.pointer = ">"
 
 rels.causes.name.en = "Causes"
 rels.causes.df.en = """
@@ -1236,15 +721,6 @@ seems possible to just absorb PWN's links.
 
 ### Relation: is_caused_by EDP34
 
-rels.is_caused_by.form.inOMW = True
-rels.is_caused_by.form.reverse = "causes"
-
-rels.is_caused_by.proj.pwn = ""
-rels.is_caused_by.proj.querywn = "caus"
-rels.is_caused_by.proj.eurown = "is_caused_by"
-rels.is_caused_by.proj.plwordnet = ""
-rels.is_caused_by.proj.pointer = ""
-
 rels.is_caused_by.name.en = "Is Caused By"
 rels.is_caused_by.df.en = ""
 rels.is_caused_by.dfn.en = """
@@ -1259,14 +735,6 @@ The 'is caused by' relation was missing from PWN before."""
 
 
 ### Relation: subevent EDP35
-
-rels.subevent.form.inOMW = True
-rels.subevent.form.reverse = "is_subevent_of"
-
-rels.subevent.proj.querywn = "enta"
-rels.subevent.proj.eurown = "has_subevent"
-rels.subevent.proj.plwordnet = "verbal_holonymy"
-rels.subevent.proj.pointer = "\*"
 
 rels.subevent.name.en = "Subevent"
 rels.subevent.df.en = ""
@@ -1292,14 +760,6 @@ relation marked as ENTAILMENT by the PWN.
 
 ### Relation: is_subevent_of EDP35
 
-rels.is_subevent_of.form.inOMW = True
-rels.is_subevent_of.form.reverse = "subevent"
-
-rels.is_subevent_of.proj.querywn = "enta"
-rels.is_subevent_of.proj.eurown = "is_subevent_of"
-rels.is_subevent_of.proj.plwordnet = "verbal_meronymy"
-rels.is_subevent_of.proj.pointer = ""
-
 rels.is_subevent_of.name.en = "Is Subevent Of"
 rels.is_subevent_of.df.en = ""
 rels.is_subevent_of.dfn.en = """
@@ -1316,14 +776,6 @@ rels.is_subevent_of.com.en = """
 
 
 ### Relation: in_manner EDP36
-
-rels.in_manner.form.inOMW = True
-rels.in_manner.form.reverse = "manner_of"
-
-rels.in_manner.proj.querywn = "enta"
-rels.in_manner.proj.eurown = "in_manner"
-rels.in_manner.proj.plwordnet = ""
-rels.in_manner.proj.pointer = ""
 
 rels.in_manner.name.en = "In Manner"
 rels.in_manner.df.en = ""
@@ -1342,15 +794,6 @@ rels.in_manner.com.en = """
 
 ### Relation: manner_of EDP36
 
-rels.manner_of.form.inOMW = True
-rels.manner_of.form.reverse = "in_manner"
-
-rels.manner_of.proj.ili = "i62791"
-rels.manner_of.proj.querywn = "enta"
-rels.manner_of.proj.eurown = "manner_of"
-rels.manner_of.proj.plwordnet = ""
-rels.manner_of.proj.pointer = ""
-
 rels.manner_of.name.en = "Manner Of"
 rels.manner_of.df.en = "a way of acting or behaving"
 rels.manner_of.dfn.en = """
@@ -1367,16 +810,6 @@ rels.manner_of.com.en = """
 
 
 ### Relation: meronym EDP26
-
-rels.meronym.form.inOMW = True
-rels.meronym.form.reverse = "holonym"
-
-rels.meronym.proj.ili = "i69575"
-rels.meronym.proj.pwn = "meronym"
-rels.meronym.proj.querywn = "enta"
-rels.meronym.proj.eurown = "has_meronym"
-rels.meronym.proj.plwordnet = "meronym"
-rels.meronym.proj.pointer = "%"
 
 rels.meronym.name.en = "Meronym"
 rels.meronym.df.en = """
@@ -1398,15 +831,6 @@ shouldn't be a special relation.
 
 ### Relation: holonym EDP26
 
-rels.holonym.form.inOMW = True
-rels.holonym.form.reverse = "meronym"
-
-rels.holonym.proj.ili = "i69567"
-rels.holonym.proj.querywn = "enta"
-rels.holonym.proj.eurown = "has_holonym"
-rels.holonym.proj.plwordnet = "holonym"
-rels.holonym.proj.pointer = "#"
-
 rels.holonym.name.en = "Holonym"
 rels.holonym.df.en = """
 a word that names the whole of which a given word is a part
@@ -1426,15 +850,6 @@ shouldn't be a special relation.
 
 
 ### Relation: mero_part EDP27
-
-rels.mero_part.form.inOMW = True
-rels.mero_part.form.reverse = "holo_part"
-
-rels.mero_part.proj.pwn = "part meronym"
-rels.mero_part.proj.querywn = "mprt"
-rels.mero_part.proj.eurown = "has_mero_part"
-rels.mero_part.proj.plwordnet = "meronymy_part"
-rels.mero_part.proj.pointer = "%p"
 
 rels.mero_part.name.en = "Part Meronym"
 rels.mero_part.df.en = ""
@@ -1462,15 +877,6 @@ geographical inclusiveness relations.
 
 ### Relation: holo_part EDP27
 
-rels.holo_part.form.inOMW = True
-rels.holo_part.form.reverse = "mero_part"
-
-rels.holo_part.proj.pwn = "part holonym"
-rels.holo_part.proj.querywn = "hprt"
-rels.holo_part.proj.eurown = "has_holo_part"
-rels.holo_part.proj.plwordnet = "holonymy_part"
-rels.holo_part.proj.pointer = "#p"
-
 rels.holo_part.name.en = "Part Holonym"
 rels.holo_part.df.en = ""
 rels.holo_part.dfn.en = """
@@ -1491,15 +897,6 @@ rels.holo_part.com.en = """
 
 
 ### Relation: mero_member EPD27
-
-rels.mero_member.form.inOMW = True
-rels.mero_member.form.reverse = "holo_member"
-
-rels.mero_member.proj.pwn = "member meronym"
-rels.mero_member.proj.querywn = "mmem"
-rels.mero_member.proj.eurown = "has_mero_member"
-rels.mero_member.proj.plwordnet = "meronymy_member"
-rels.mero_member.proj.pointer = "%m"
 
 rels.mero_member.name.en = "Member Meronym"
 rels.mero_member.df.en = ""
@@ -1522,15 +919,6 @@ rels.mero_member.com.en = """
 
 ### Relation: holo_member EDP27
 
-rels.holo_member.form.inOMW = True
-rels.holo_member.form.reverse = "mero_member"
-
-rels.holo_member.proj.pwn = "member holonym"
-rels.holo_member.proj.querywn = "hmem"
-rels.holo_member.proj.eurown = "has_holo_member"
-rels.holo_member.proj.plwordnet = "holonymy_member"
-rels.holo_member.proj.pointer = "#m"
-
 rels.holo_member.name.en = "Member Holonym"
 rels.holo_member.df.en = ""
 rels.holo_member.dfn.en = """
@@ -1549,15 +937,6 @@ rels.holo_member.com.en = """
 
 
 ### Relation: mero_substance EDP28
-
-rels.mero_substance.form.inOMW = True
-rels.mero_substance.form.reverse = "holo_substance"
-
-rels.mero_substance.proj.pwn = "substance meronym"
-rels.mero_substance.proj.querywn = "msub"
-rels.mero_substance.proj.eurown = "has_mero_madeof"
-rels.mero_substance.proj.plwordnet = "meronymy_substance"
-rels.mero_substance.proj.pointer = "%s"
 
 rels.mero_substance.name.en = "Substance Meronym"
 rels.mero_substance.df.en = ""
@@ -1578,15 +957,6 @@ rels.mero_substance.com.en = """
 
 ### Relation: holo_substance EDP28
 
-rels.holo_substance.form.inOMW = True
-rels.holo_substance.form.reverse = "mero_substance"
-
-rels.holo_substance.proj.pwn = "substance holonym"
-rels.holo_substance.proj.querywn = "hsub"
-rels.holo_substance.proj.eurown = "has_holo_madeof"
-rels.holo_substance.proj.plwordnet = "holonymy_substance"
-rels.holo_substance.proj.pointer = "#s"
-
 rels.holo_substance.name.en = "Substance Holonym"
 rels.holo_substance.df.en = ""
 rels.holo_substance.dfn.en = """
@@ -1605,13 +975,6 @@ rels.holo_substance.com.en = """
 
 ### Relation: mero_location EDP28
 
-rels.mero_location.form.inOMW = True
-rels.mero_location.form.reverse = "holo_location"
-
-rels.mero_location.proj.querywn = "hsub"
-rels.mero_location.proj.eurown = "has_mero_location"
-rels.mero_location.proj.plwordnet = "meronymy_location"
-
 rels.mero_location.name.en = "Location Meronym"
 rels.mero_location.df.en = ""
 rels.mero_location.dfn.en = """
@@ -1628,13 +991,6 @@ rels.mero_location.com.en = """
 
 ### Relation: holo_location EDP28
 
-rels.holo_location.form.inOMW = True
-rels.holo_location.form.reverse = "mero_location"
-
-rels.holo_location.proj.querywn = "hsub"
-rels.holo_location.proj.eurown = "has_holo_location"
-rels.holo_location.proj.plwordnet = "holonymy_location"
-
 rels.holo_location.name.en = "Location Holonym"
 rels.holo_location.df.en = ""
 rels.holo_location.dfn.en = """
@@ -1649,15 +1005,6 @@ rels.holo_location.com.en = """
 
 
 ### Relation: mero_portion EDP27
-
-rels.mero_portion.form.inOMW = True
-rels.mero_portion.form.reverse = "holo_portion"
-
-rels.mero_portion.proj.pwn = "portion meronym"
-rels.mero_portion.proj.querywn = "hsub"
-rels.mero_portion.proj.eurown = "has_mero_portion"
-rels.mero_portion.proj.plwordnet = "meronymy_portion"
-rels.mero_portion.proj.pointer = ""
 
 rels.mero_portion.name.en = "Portion Meronym"
 rels.mero_portion.df.en = ""
@@ -1675,14 +1022,6 @@ rels.mero_portion.com.en = """
 
 ### Relation: holo_portion EDP27
 
-rels.holo_portion.form.inOMW = True
-rels.holo_portion.form.reverse = "mero_portion"
-
-rels.holo_portion.proj.querywn = "hsub"
-rels.holo_portion.proj.eurown = "has_holo_portion"
-rels.holo_portion.proj.plwordnet = "holonymy_portion"
-rels.holo_portion.proj.pointer = ""
-
 rels.holo_portion.name.en = "Portion Holonym"
 rels.holo_portion.df.en = ""
 rels.holo_portion.dfn.en = """
@@ -1697,13 +1036,6 @@ rels.holo_portion.com.en = """
 
 
 ### Relation: eq_synonym
-
-rels.eq_synonym.form.inOMW = True
-rels.eq_synonym.form.reverse = "eq_synonym"
-
-rels.eq_synonym.proj.ili = "i69607"
-rels.eq_synonym.proj.eurown = "eq_synonym"
-rels.eq_synonym.proj.plwordnet = ""
 
 rels.eq_synonym.name.en = "Equal Synonym"
 rels.eq_synonym.df.en = """
@@ -1736,15 +1068,6 @@ rels.eq_synonym.com.en = """
 
 ### Relation: instance_hypernym
 
-rels.instance_hypernym.form.inOMW = True
-rels.instance_hypernym.form.reverse = "instance_hyponym"
-
-rels.instance_hypernym.proj.pwn = "Instance Hypernym"
-rels.instance_hypernym.proj.querywn = "inst"
-rels.instance_hypernym.proj.eurown = "HAS_INSTANCE"
-rels.instance_hypernym.proj.plwordnet = "type"
-rels.instance_hypernym.proj.pointer = "@i"
-
 rels.instance_hypernym.name.en = "Instance Hypernym"
 rels.instance_hypernym.df.en = "the type of an instance"
 rels.instance_hypernym.dfn.en = """
@@ -1771,16 +1094,6 @@ Sometimes modelled as hyponomy/hypernymy relations.
 
 
 ### Relation: instance_hyponym
-
-rels.instance_hyponym.form.inOMW = True
-rels.instance_hyponym.form.reverse = "instance_hypernym"
-
-rels.instance_hyponym.proj.ili = "i75102"
-rels.instance_hyponym.proj.pwn = "Instance Hypernym"
-rels.instance_hyponym.proj.querywn = "hasi"
-rels.instance_hyponym.proj.eurown = "BELONGS_To_CLASS"
-rels.instance_hyponym.proj.plwordnet = "instance"
-rels.instance_hyponym.proj.pointer = "~i"
 
 rels.instance_hyponym.name.en = "Instance Hyponym"
 rels.instance_hyponym.df.en = "an occurrence of something"
@@ -1810,15 +1123,6 @@ rels.instance_hyponym.com.en = """
 
 ### Relation: exemplifies
 
-rels.exemplifies.form.inOMW = True
-rels.exemplifies.form.reverse = "is_exemplified_by"
-
-rels.exemplifies.proj.ili = "i26682"
-rels.exemplifies.proj.pwn = "Domain of synset - USAGE"
-rels.exemplifies.proj.querywn = "dmnu"
-rels.exemplifies.proj.plwordnet = ""
-rels.exemplifies.proj.pointer = ";u"
-
 rels.exemplifies.name.en = "Exemplifies"
 rels.exemplifies.df.en = "clarify by giving an example of"
 rels.exemplifies.dfn.en = """
@@ -1835,14 +1139,6 @@ too different from the standard meaning of domain.
 
 
 ### Relation: is_exemplified_by
-
-rels.is_exemplified_by.form.inOMW = True
-rels.is_exemplified_by.form.reverse = "exemplifies"
-
-rels.is_exemplified_by.proj.pwn = "domain term usage"
-rels.is_exemplified_by.proj.querywn = "dmtu"
-rels.is_exemplified_by.proj.plwordnet = ""
-rels.is_exemplified_by.proj.pointer = "-u"
 
 rels.is_exemplified_by.name.en = "Is Exemplified By"
 rels.is_exemplified_by.df.en = ""
@@ -1861,14 +1157,6 @@ propose 'Exemplified_By'.
 
 ### Relation: domain_topic
 
-rels.domain_topic.form.inOMW = True
-rels.domain_topic.form.reverse = "has_domain_topic"
-
-rels.domain_topic.proj.pwn = "domain category"
-rels.domain_topic.proj.querywn = "Domain of synset - TOPIC"
-rels.domain_topic.proj.plwordnet = ""
-rels.domain_topic.proj.pointer = ";c"
-
 rels.domain_topic.name.en = "Domain Topic"
 rels.domain_topic.df.en = ""
 rels.domain_topic.dfn.en = """
@@ -1884,13 +1172,6 @@ rels.domain_topic.com.en = """
 
 ### Relation: has_domain_topic
 
-rels.has_domain_topic.form.inOMW = True
-rels.has_domain_topic.form.reverse = "domain_topic"
-
-rels.has_domain_topic.proj.querywn = "dmtc"
-rels.has_domain_topic.proj.plwordnet = ""
-rels.has_domain_topic.proj.pointer = "-c"
-
 rels.has_domain_topic.name.en = "Has Domain Topic"
 rels.has_domain_topic.df.en = ""
 rels.has_domain_topic.dfn.en = """
@@ -1905,14 +1186,6 @@ rels.has_domain_topic.com.en = """
 
 
 ### Relation: domain_region
-
-rels.domain_region.form.inOMW = True
-rels.domain_region.form.reverse = "has_domain_region"
-
-rels.domain_region.proj.pwn = "Domain of synset - REGION"
-rels.domain_region.proj.querywn = "dmnr"
-rels.domain_region.proj.plwordnet = ""
-rels.domain_region.proj.pointer = ";r"
 
 rels.domain_region.name.en = "Domain Region"
 rels.domain_region.df.en = ""
@@ -1934,13 +1207,6 @@ what...
 
 ### Relation: has_domain_region
 
-rels.has_domain_region.form.inOMW = True
-rels.has_domain_region.form.reverse = "domain_region"
-
-rels.has_domain_region.proj.querywn = "dmtr"
-rels.has_domain_region.proj.plwordnet = ""
-rels.has_domain_region.proj.pointer = "-r"
-
 rels.has_domain_region.name.en = "Has Domain Region"
 rels.has_domain_region.df.en = ""
 rels.has_domain_region.dfn.en = """
@@ -1958,15 +1224,6 @@ a good name.
 
 
 ### Relation: attribute
-
-rels.attribute.form.inOMW = True
-rels.attribute.form.reverse = "attribute"
-
-rels.attribute.proj.ili = "i35577"
-rels.attribute.proj.pwn = "attribute"
-rels.attribute.proj.querywn = "attr"
-rels.attribute.proj.plwordnet = "value_of_the_attribute"
-rels.attribute.proj.pointer = "="
 
 rels.attribute.name.en = "Attribute"
 rels.attribute.df.en = """
@@ -1996,13 +1253,6 @@ adjectives to nouns.
 
 ### Relation: restricts
 
-rels.restricts.form.inOMW = True
-rels.restricts.form.reverse = "restricted_by"
-
-rels.restricts.proj.ili = "i22888"
-rels.restricts.proj.plwordnet = ""
-rels.restricts.proj.pointer = ""
-
 rels.restricts.name.en = "Restricts"
 rels.restricts.df.en = """
 place limits on (extent or amount or access)
@@ -2025,12 +1275,6 @@ now marked as domain usage. (to be corrected soon'ish)
 
 ### Relation: restricted_by
 
-rels.restricted_by.form.inOMW = True
-rels.restricted_by.form.reverse = "restricts"
-
-rels.restricted_by.proj.plwordnet = ""
-rels.restricted_by.proj.pointer = ""
-
 rels.restricted_by.name.en = "Restricted By"
 rels.restricted_by.df.en = ""
 rels.restricted_by.dfn.en = """
@@ -2047,13 +1291,6 @@ rels.restricted_by.com.en = """
 
 
 ### Relation: classifies
-
-rels.classifies.form.inOMW = True
-rels.classifies.form.reverse = "classified_by"
-
-rels.classifies.proj.ili = "i25399"
-rels.classifies.proj.plwordnet = ""
-rels.classifies.proj.pointer = ""
 
 rels.classifies.name.en = "Classifies"
 rels.classifies.df.en = """
@@ -2074,13 +1311,6 @@ will do it for other POS (e.g. v)
 
 ### Relation: classified_by
 
-rels.classified_by.form.inOMW = True
-rels.classified_by.form.reverse = "classifies"
-
-rels.classified_by.proj.ili = "i25002"
-rels.classified_by.proj.plwordnet = ""
-rels.classified_by.proj.pointer = ""
-
 rels.classified_by.name.en = "Classified By"
 rels.classified_by.df.en = """
 arrange or order by classes or categories
@@ -2097,15 +1327,6 @@ rels.classified_by.com.en = """
 
 
 ### Relation: also (no ili)
-
-rels.also.form.inOMW = True
-rels.also.form.reverse = 'also'
-
-rels.also.proj.pwn = "also see"
-rels.also.proj.querywn = "also"
-rels.also.proj.eurown = ""
-rels.also.proj.plwordnet = "inchoativity, iterativity, distributivity, anteriority"
-rels.also.proj.pointer = "^"
 
 rels.also.name.en = "See also"
 rels.also.df.en = """
@@ -2132,16 +1353,6 @@ Also known as fuzzynym
 
 
 ### Relation: antonym
-
-rels.antonym.form.inOMW = True
-rels.antonym.form.reverse = 'antonym'
-
-rels.antonym.proj.ili = "i69547"
-rels.antonym.proj.pwn = ""
-rels.antonym.proj.querywn = "antonym"
-rels.antonym.proj.eurown = ""
-rels.antonym.proj.plwordnet = "complementary, proper and converse antonymy"
-rels.antonym.proj.pointer = "!"
 
 rels.antonym.name.en = "Antonym"
 rels.antonym.df.en = """
@@ -2177,16 +1388,6 @@ make it avaiable for wordnets that do not yet have sense level links.
 
 ### Relation: entails
 
-rels.entails.form.inOMW = True
-rels.entails.form.reverse = 'is_entailed_by'
-
-rels.entails.proj.ili = "i34846"
-rels.entails.proj.pwn = "entailment"
-rels.entails.proj.querywn = "participle"
-rels.entails.proj.eurown = ""
-rels.entails.proj.plwordnet = ""
-rels.entails.proj.pointer = ""
-
 rels.entails.name.en = "Entails"
 rels.entails.df.en = """
 impose, involve, or imply as a necessary accompaniment or result
@@ -2206,14 +1407,6 @@ rels.entails.com.en = """
 
 ### Relation: is_entailed_by
 
-rels.is_entailed_by.form.inOMW = True
-
-rels.is_entailed_by.proj.pwn = ""
-rels.is_entailed_by.proj.querywn = "participle"
-rels.is_entailed_by.proj.eurown = ""
-rels.is_entailed_by.proj.plwordnet = ""
-rels.is_entailed_by.proj.pointer = ""
-
 rels.is_entailed_by.name.en = "Is Entailed By"
 rels.is_entailed_by.df.en = ""
 rels.is_entailed_by.dfn.en = """
@@ -2226,10 +1419,6 @@ rels.is_entailed_by.com.en = """
 
 
 ### Relation: other
-
-rels.other.form.inOMW = True
-
-rels.other.proj.ili = "i11342"
 
 rels.other.name.en = "Other"
 rels.other.df.en = "any other semantic relation"
@@ -2303,9 +1492,3 @@ rels.source_direction.df.en = "X is the place from where the event expressed by 
 rels.state_of.df.en = "Y is qualified by X"
 rels.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
 rels.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
-
-
-if __name__ == '__main__':
-    import json
-    d = {'relations': [rels[relname] for relname in RELATIONS]}
-    print(json.dumps(d, indent=2))

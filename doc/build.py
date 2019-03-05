@@ -12,7 +12,7 @@ import jinja2
 
 sys.path.insert(1, os.path.dirname(os.path.dirname(__file__)))
 import gwadoc
-gwadoc.preferred_language='en'
+gwadoc.set_preferred_language('en')
 
 
 def rst_renderer(fmt):

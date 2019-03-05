@@ -2,6 +2,11 @@ body {
     font-family: sans-serif;
 }
 
+a:link { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h2 { font-size: xx-large; }
+h3 { font-size: x-large; }
 .rel-id {
     font-family: monospace;
 }
@@ -16,18 +21,15 @@ div.description {
     margin-left: 40px;
 }
 
-.relation dl {
-    margin-left: 20px;
+article table {
+    margin: 10px 0px 10px 0px;
+    border: none;
 }
-.relation dt {
-    display: inline-block;
-    min-width: 80px;
+article table th, article table td {
+    border: none;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+table.fieldlist th  {
     font-weight: bold;
-}
-.relation dd {
-    display: inline;
-}
-.relation dd:after {
-    display: block;
-    content: '';
 }

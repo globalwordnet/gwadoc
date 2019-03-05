@@ -1,20 +1,20 @@
 <article class="relation">
-  <h3 id="{{ id }}">{{ rel.name }} ({{ rel_id(id) }})</h3>
+  <h3 id="{{ id }}">{{ rel.name }} (<a href="#{{ id }}">{{ rel_id(id) }}</a>)</h3>
   <div class="description">
     {% if rel.df -%}
     <span class="short definition">"{{ rel.df }}"</span>
     {%- endif %}
-    <dl>
+    <table class="fieldlist">
       {% if rel.name.symbol -%}
-      <dt>symbol</dt><dd>{{ rel.name.symbol }}</dd>
+      <tr><th>symbol</th><td>{{ rel.name.symbol }}</td></tr>
       {%- endif %}
       {% if rel.form.reverse -%}
-      <dt>reverse</dt><dd>{{ rel_id(rel.form.reverse) }}</dd>
+      <tr><th>reverse</th><td>{{ rel_id(rel.form.reverse) }}</td></tr>
       {%- endif %}
       {% if rel.ex -%}
-      <dt>example</dt><dd>{{ rel.ex | render_rst }}</dd>
+      <tr><th>example</th><td>{{ rel.ex | render_rst }}</td></tr>
       {% endif %}
-    </dl>
+    </table>
     {% if rel.dfn -%}
     <h4>Definition</h4>
     {{ rel.dfn | render_rst }}
