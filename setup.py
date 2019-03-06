@@ -9,7 +9,7 @@ setup(
                  'for the Open Multilingual Wordnet'),
     #long_description=long_description,
     url='https://github.com/globalwordnet/gwadoc',
-    author='Francis Bond',
+    author='GWA Documentation Working Group',
     author_email='bond@ieee.org',
     license='CC-BY 4.0',
     classifiers=[
