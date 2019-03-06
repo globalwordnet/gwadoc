@@ -45,7 +45,7 @@ class AttrBase(dict):
         return self._inventory
 
     def __bool__(self):
-        return any(self.get(key) is not None for key in self._inventory)
+        return any(self.get(key) for key in self._inventory)
 
 
 class MultiString(AttrBase):
@@ -56,10 +56,13 @@ class MultiString(AttrBase):
         return '<MultiString ({!s})>'.format(self)
 
     def __str__(self):
-        return self.get(preferred_language, self.get('en', '---'))
+        return self.get(preferred_language, self.get('en', ''))
 
     def __len__(self):
         return len(str(self))
+
+    def __bool__(self):
+        return bool(str(self))
 
 
 class Forms(AttrBase):
@@ -104,5 +107,42 @@ class Relations(AttrBase):
         for rel in self._inventory:
             setattr(self, rel, Parts())
 
+    def hierarchy(self):
+        """
+        Return the relation hierarchy.
+
+        The hierarchy is built with nodes of the form:
+
+            (relation, [children])
+        """
+        d = self._build_child_dict()
+        def _expand(ids):
+            return [(rel_id, _expand(d.get(rel_id, []))) for rel_id in ids]
+        return (None, _expand(d[None]))
+
+    def hierarchy_with_reversals(self):
+        d = self._build_child_dict()
+        seen = set()
+        def _expand(ids):
+            children = []
+            for rel_id in ids:
+                if rel_id in seen:
+                    continue
+                children.append((rel_id,
+                                 self[rel_id].form.reverse,
+                                 _expand(d.get(rel_id, []))))
+                seen.add(rel_id)
+                seen.add(self[rel_id].form.reverse)
+            return children
+        h = (None, None, _expand(d[None]))
+        if seen.difference([None]) != self._inventory:
+            raise ValueError('asymmetric hierarchy with reversals')
+        return h
+
+    def _build_child_dict(self):
+        d = {}
+        for rel_id in RELATIONS:
+            d.setdefault(self[rel_id].form.parent, []).append(rel_id)
+        return d
 
 rels = Relations()

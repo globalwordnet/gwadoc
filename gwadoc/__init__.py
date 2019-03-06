@@ -43,3 +43,29 @@ import gwadoc.rels_en
 import gwadoc.rels_pl
 import gwadoc.rels_ja
 # add your language module here
+
+
+### CLEAN UP
+
+import textwrap
+
+def _cleanup(obj, key):
+    s = obj.get(key)
+    if isinstance(s, str):
+        if s.strip() == '':
+            obj[key] = ''
+        else:
+            obj[key] = textwrap.dedent(obj[key].strip('\n'))
+
+for rel_id in RELATIONS:
+    rel = rels[rel_id]
+    for part in PARTS:
+        if part == 'form':
+            for form in FORMS:
+                _cleanup(rel[part], form)
+        elif part == 'proj':
+            for proj in PROJECTS:
+                _cleanup(rel[part], proj)
+        else:
+            for lg in LANGUAGES:
+                _cleanup(rel[part], lg)

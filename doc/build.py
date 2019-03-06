@@ -19,6 +19,11 @@ def rst_renderer(fmt):
     @jinja2.evalcontextfilter
     def render_rst(eval_ctx, s):
         s = docutils.core.publish_parts(str(s), writer_name=fmt)['body']
+        s = s.strip()
+        # remove (hopefully) unnecessary <p>...</p>
+        if s[:3] == '<p>' and s[-4:] == '</p>':
+            s = s[3:-4]
+        # make sure Jinja2 doesn't try to escape the HTML markup
         if eval_ctx.autoescape:
             s = jinja2.Markup(s)
         return s

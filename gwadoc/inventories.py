@@ -116,7 +116,7 @@ PARTS = {
 
 
 FORMS = {
+    'parent': 'Parent Relation',
     'reverse': 'Reverse Relation',
-    'constitutive': 'Constitutive Relation',
     'inOMW': 'Relation used in OMW'
 }

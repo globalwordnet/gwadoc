@@ -3,15 +3,7 @@
 {% block title %}Global Wordnet Association Sense Relation Documentation{% endblock %}
 {% block content %}
 <h2>Contents</h2>
-<section>
-  <nav id="relnav">
-    <ul>
-      {% for id in gwadoc.RELATIONS -%}
-      <li><a href="#{{ id }}">{{ gwadoc.rels[id].name }} ({{ rel_id(id) }})</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-</section>
+{% include "toc.html" %}
 <h2>Relations</h2>
 {% for id in gwadoc.RELATIONS -%}
 {% set rel = gwadoc.rels[id] -%}
