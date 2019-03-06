@@ -1,5 +1,5 @@
 <article class="relation">
-  <h3 id="{{ id }}"><a href="#{{ id }}">{{ rel.name }}</a> ({{ rel_id(id) }})</h3>
+  <h3 id="{{ id }}"><a href="#{{ id }}">{{ rel.name }}</a> ({{ rel_id(id) }}){{ to_top() }}</h3>
   <div class="description">
     {% if rel.df -%}
     <span class="short definition">"{{ rel.df }}"</span>

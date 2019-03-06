@@ -5,6 +5,8 @@ body {
 a:link { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+a.toplink { float: right; font-size: medium; }
+
 h2 { font-size: xx-large; }
 h3 { font-size: x-large; }
 h4 { font-size: large; }
