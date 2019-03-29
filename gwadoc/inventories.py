@@ -6,21 +6,21 @@ from collections import OrderedDict as od
 ### Inventories
 
 PROJECTS = od([
-    ('pwn', 'Princeton WordNet Relation Name'),
-    ('pointer', 'Princeton WordNet Pointer'),
-    ('eurown', 'Euro WordNet Relation Name'),
+    ('pwn',       'Princeton WordNet Relation Name'),
+    ('pointer',   'Princeton WordNet Pointer'),
+    ('eurown',    'Euro WordNet Relation Name'),
     ('plwordnet', 'PlWordNet Relation Name'),
-    ('querywn', 'PERL WordNet-QueryData Module'),
-    ('skos', 'SKOS type'),
-    ('ili', 'Interlingual Index Node'),
-    ('SUMO', 'Sumo Relation Type'),
+    ('querywn',   'PERL WordNet-QueryData Module'),
+    ('skos',      'SKOS type'),
+    ('ili',       'Interlingual Index Node'),
+    ('SUMO',      'Sumo Relation Type'),
 ])
 
 
 LANGUAGES = od([
-    ('en', 'English'),
-    ('pl', 'Polish'),
-    ('ja', 'Japanese'),
+    ('en',     'English'),
+    ('pl',     'Polish'),
+    ('ja',     'Japanese'),
     ('symbol', 'Symbol'),
 ])
 
@@ -103,20 +103,20 @@ RELATIONS = (
 )
 
 PARTS = {
-    'com': 'Comments',
-    'df': 'Short Definition',
-    'dfn': 'Long Definition',
-    'ex': 'Short Example',
-    'exe': 'Long Examples',
-    'form': '',
+    'com':  'Comments',
+    'df':   'Short Definition',
+    'dfn':  'Long Definition',
+    'ex':   'Short Example',
+    'exe':  'Long Examples',
+    'fa':   'Formal Attributes',
     'name': 'Relation Name',
     'proj': 'Relation Name in Project',
     'test': 'Tests',
 }
 
 
-FORMS = {
-    'parent': 'Parent Relation',
+FORMALATTRIBUTES = {
+    'parent':  'Parent Relation',
     'reverse': 'Reverse Relation',
-    'inOMW': 'Relation used in OMW'
+    'inOMW':   'Relation used in OMW'
 }

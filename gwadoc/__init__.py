@@ -5,7 +5,7 @@ from gwadoc.inventories import (
     LANGUAGES,
     RELATIONS,
     PARTS,
-    FORMS
+    FORMALATTRIBUTES
 )
 import gwadoc.base
 
@@ -60,9 +60,9 @@ def _cleanup(obj, key):
 for rel_id in RELATIONS:
     rel = rels[rel_id]
     for part in PARTS:
-        if part == 'form':
-            for form in FORMS:
-                _cleanup(rel[part], form)
+        if part == 'fa':
+            for fa in FORMALATTRIBUTES:
+                _cleanup(rel[part], fa)
         elif part == 'proj':
             for proj in PROJECTS:
                 _cleanup(rel[part], proj)

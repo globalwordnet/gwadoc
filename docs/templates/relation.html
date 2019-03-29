@@ -7,8 +7,8 @@
     <table class="fieldlist">
       <tr><th>symbol</th><td>{{ rel.name.symbol or "(no symbol defined)" }}</td></tr>
       <tr><th>reverse</th><td>
-	  {%- if rel.form.reverse -%}
-	  <a href="#{{ rel.form.reverse }}">{{ rel_id(rel.form.reverse) }}</a>
+	  {%- if rel.fa.reverse -%}
+	  <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>
 	  {%- else -%}
 	  (no reverse relation defined)
 	  {%- endif -%}

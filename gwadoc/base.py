@@ -5,7 +5,7 @@ from gwadoc.inventories import (
     LANGUAGES,
     RELATIONS,
     PARTS,
-    FORMS
+    FORMALATTRIBUTES
 )
 
 
@@ -65,13 +65,13 @@ class MultiString(AttrBase):
         return bool(str(self))
 
 
-class Forms(AttrBase):
+class FormalAttributes(AttrBase):
 
-    _inventory = FORMS
+    _inventory = FORMALATTRIBUTES
 
     def __init__(self):
-        for form in self._inventory:
-            setattr(self, form, None)
+        for fa in self._inventory:
+            setattr(self, fa, None)
 
 
 class Projects(AttrBase):
@@ -93,7 +93,7 @@ class Parts(AttrBase):
         self.dfn = MultiString()
         self.ex = MultiString()
         self.exe = MultiString()
-        self.form = Forms()
+        self.fa = FormalAttributes()
         self.name = MultiString()
         self.proj = Projects()
         self.test = MultiString()
@@ -129,10 +129,10 @@ class Relations(AttrBase):
                 if rel_id in seen:
                     continue
                 children.append((rel_id,
-                                 self[rel_id].form.reverse,
+                                 self[rel_id].fa.reverse,
                                  _expand(d.get(rel_id, []))))
                 seen.add(rel_id)
-                seen.add(self[rel_id].form.reverse)
+                seen.add(self[rel_id].fa.reverse)
             return children
         h = (None, None, _expand(d[None]))
         if seen.difference([None]) != self._inventory:
@@ -142,7 +142,7 @@ class Relations(AttrBase):
     def _build_child_dict(self):
         d = {}
         for rel_id in RELATIONS:
-            d.setdefault(self[rel_id].form.parent, []).append(rel_id)
+            d.setdefault(self[rel_id].fa.parent, []).append(rel_id)
         return d
 
 rels = Relations()
