@@ -3,13 +3,15 @@
 from gwadoc.inventories import (
     PROJECTS,
     LANGUAGES,
-    RELATIONS,
+    SENSE_RELATIONS,
+    SYNSET_RELATIONS,
     PARTS,
-    FORMALATTRIBUTES
+    FORMAL_ATTRIBUTES
 )
 import gwadoc.base
 
-rels = gwadoc.base.rels
+sense_rels = gwadoc.base.Relations(SENSE_RELATIONS)
+synset_rels = gwadoc.base.Relations(SYNSET_RELATIONS)
 
 
 def set_preferred_language(lg):
@@ -20,14 +22,14 @@ def set_preferred_language(lg):
     language is not specified. If a field is not defined for the
     preferred language, it backs off to English. For instance:
 
-    >>> print(rels.hypernym.name.en)
+    >>> print(synset_rels.hypernym.name.en)
     Hypernym
-    >>> print(rels.hypernym.name.ja)
+    >>> print(synset_rels.hypernym.name.ja)
     上位語
-    >>> print(rels.hypernym.name)
+    >>> print(synset_rels.hypernym.name)
     Hypernym
     >>> gwadoc.set_preferred_language('ja')
-    >>> print(rels.hypernym.name)
+    >>> print(synset_rels.hypernym.name)
     上位語
     """
     LANGUAGES[lg]  # check for KeyError
@@ -36,12 +38,12 @@ def set_preferred_language(lg):
 
 # Import these last to avoid potential import cycles
 
-# import gwadoc.rels_basic to load general and project-level information
-import gwadoc.rels_basic
+# import gwadoc.doc_basic to load general and project-level information
+import gwadoc.doc_basic
 # import language-specific modules to get names, definitions, etc.
-import gwadoc.rels_en
-import gwadoc.rels_pl
-import gwadoc.rels_ja
+import gwadoc.doc_en
+import gwadoc.doc_pl
+import gwadoc.doc_ja
 # add your language module here
 
 
@@ -57,11 +59,11 @@ def _cleanup(obj, key):
         else:
             obj[key] = textwrap.dedent(obj[key].strip('\n'))
 
-for rel_id in RELATIONS:
-    rel = rels[rel_id]
+for rel_id in SYNSET_RELATIONS:
+    rel = synset_rels[rel_id]
     for part in PARTS:
         if part == 'fa':
-            for fa in FORMALATTRIBUTES:
+            for fa in FORMAL_ATTRIBUTES:
                 _cleanup(rel[part], fa)
         elif part == 'proj':
             for proj in PROJECTS:

@@ -25,7 +25,10 @@ LANGUAGES = od([
 ])
 
 
-RELATIONS = (
+SENSE_RELATIONS = (
+)
+
+SYNSET_RELATIONS = (
     'constitutive',
     'hyponym',
     'hypernym',
@@ -115,7 +118,7 @@ PARTS = {
 }
 
 
-FORMALATTRIBUTES = {
+FORMAL_ATTRIBUTES = {
     'parent':  'Parent Relation',
     'reverse': 'Reverse Relation',
     'inOMW':   'Relation used in OMW'

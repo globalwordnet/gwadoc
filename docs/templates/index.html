@@ -5,8 +5,8 @@
 <h2>Contents</h2>
 {% include "toc.html" %}
 <h2>Relations</h2>
-{% for id in gwadoc.RELATIONS -%}
-{% set rel = gwadoc.rels[id] -%}
+{% for id in gwadoc.SYNSET_RELATIONS -%}
+{% set rel = gwadoc.synset_rels[id] -%}
 {% include "relation.html" %}
 
 {% endfor %}

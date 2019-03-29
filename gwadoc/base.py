@@ -3,9 +3,10 @@
 from gwadoc.inventories import (
     PROJECTS,
     LANGUAGES,
-    RELATIONS,
+    SENSE_RELATIONS,
+    SYNSET_RELATIONS,
     PARTS,
-    FORMALATTRIBUTES
+    FORMAL_ATTRIBUTES
 )
 
 
@@ -67,7 +68,7 @@ class MultiString(AttrBase):
 
 class FormalAttributes(AttrBase):
 
-    _inventory = FORMALATTRIBUTES
+    _inventory = FORMAL_ATTRIBUTES
 
     def __init__(self):
         for fa in self._inventory:
@@ -101,9 +102,8 @@ class Parts(AttrBase):
 
 class Relations(AttrBase):
 
-    _inventory = set(RELATIONS)
-
-    def __init__(self):
+    def __init__(self, inventory):
+        object.__setattr__(self, '_inventory', inventory)
         for rel in self._inventory:
             setattr(self, rel, Parts())
 
@@ -135,14 +135,12 @@ class Relations(AttrBase):
                 seen.add(self[rel_id].fa.reverse)
             return children
         h = (None, None, _expand(d[None]))
-        if seen.difference([None]) != self._inventory:
+        if seen.difference([None]) != set(self._inventory):
             raise ValueError('asymmetric hierarchy with reversals')
         return h
 
     def _build_child_dict(self):
         d = {}
-        for rel_id in RELATIONS:
+        for rel_id in self._inventory:
             d.setdefault(self[rel_id].fa.parent, []).append(rel_id)
         return d
-
-rels = Relations()
