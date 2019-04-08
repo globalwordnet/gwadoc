@@ -3,15 +3,13 @@
 from gwadoc.inventories import (
     PROJECTS,
     LANGUAGES,
-    SENSE_RELATIONS,
-    SYNSET_RELATIONS,
+    RELATIONS,
     PARTS,
     FORMAL_ATTRIBUTES
 )
 import gwadoc.base
 
-sense_rels = gwadoc.base.Relations(SENSE_RELATIONS)
-synset_rels = gwadoc.base.Relations(SYNSET_RELATIONS)
+relations = gwadoc.base.Relations(RELATIONS)
 
 
 def set_preferred_language(lg):
@@ -22,14 +20,14 @@ def set_preferred_language(lg):
     language is not specified. If a field is not defined for the
     preferred language, it backs off to English. For instance:
 
-    >>> print(synset_rels.hypernym.name.en)
+    >>> print(relations.hypernym.name.en)
     Hypernym
-    >>> print(synset_rels.hypernym.name.ja)
+    >>> print(relations.hypernym.name.ja)
     上位語
-    >>> print(synset_rels.hypernym.name)
+    >>> print(relations.hypernym.name)
     Hypernym
     >>> gwadoc.set_preferred_language('ja')
-    >>> print(synset_rels.hypernym.name)
+    >>> print(relations.hypernym.name)
     上位語
     """
     LANGUAGES[lg]  # check for KeyError
@@ -59,8 +57,8 @@ def _cleanup(obj, key):
         else:
             obj[key] = textwrap.dedent(obj[key].strip('\n'))
 
-for rel_id in SYNSET_RELATIONS:
-    rel = synset_rels[rel_id]
+for rel_id in RELATIONS:
+    rel = relations[rel_id]
     for part in PARTS:
         if part == 'fa':
             for fa in FORMAL_ATTRIBUTES:

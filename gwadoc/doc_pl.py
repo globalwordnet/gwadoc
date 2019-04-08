@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from gwadoc import sense_rels, synset_rels
+from gwadoc import relations
 
 
 ###############################################################################
@@ -19,7 +19,7 @@ from gwadoc import sense_rels, synset_rels
 ### Relation: Hypernym
 ### X ⊃ Y,  X is a hypernym of Y
 
-synset_rels.hypernym.df.pl="""
+relations.hypernym.df.pl="""
 Relacja łącząca znaczenie z drugim, ogólniejszym, niż to pierwsze, ale
 należącym do tej samej części mowy, co ono
 """

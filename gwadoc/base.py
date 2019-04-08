@@ -3,8 +3,6 @@
 from gwadoc.inventories import (
     PROJECTS,
     LANGUAGES,
-    SENSE_RELATIONS,
-    SYNSET_RELATIONS,
     PARTS,
     FORMAL_ATTRIBUTES
 )

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from gwadoc import sense_rels, synset_rels
+from gwadoc import relations
 
 ###############################################################################
 ### Relations Definitions
@@ -18,9 +18,9 @@ from gwadoc import sense_rels, synset_rels
 ### Relation: Hypernym
 ### X ⊃ Y,  X is a hypernym of Y
 
-synset_rels.hypernym.name.ja="上位語"
-synset_rels.hypernym.dfn.ja="当該synsetが相手synsetに包含される"
-synset_rels.hypernym.ex.ja="動物は犬の上位語"
+relations.hypernym.name.ja="上位語"
+relations.hypernym.dfn.ja="当該synsetが相手synsetに包含される"
+relations.hypernym.ex.ja="動物は犬の上位語"
 
 
 ### Relation: hyponym

@@ -25,10 +25,7 @@ LANGUAGES = od([
 ])
 
 
-SENSE_RELATIONS = (
-)
-
-SYNSET_RELATIONS = (
+RELATIONS = (
     'constitutive',
     'hyponym',
     'hypernym',

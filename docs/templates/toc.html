@@ -1,12 +1,12 @@
 <section>
   <nav id="relnav">
     <ul>
-      {% set agenda = gwadoc.synset_rels.hierarchy_with_reversals()[2] %}
+      {% set agenda = gwadoc.relations.hierarchy_with_reversals()[2] %}
       {% for id, rev, children in agenda recursive %}
-      <li><a href="#{{ id }}">{{ gwadoc.synset_rels[id].name }}</a> ({{ rel_id(id) }})
+      <li><a href="#{{ id }}">{{ gwadoc.relations[id].name }}</a> ({{ rel_id(id) }})
 	{%- if rev is not none and rev != id -%}
 	<span class="revchar">⇔</span>
-	<a href="#{{ rev }}">{{ gwadoc.synset_rels[rev].name }}</a> ({{ rel_id(rev) }})
+	<a href="#{{ rev }}">{{ gwadoc.relations[rev].name }}</a> ({{ rel_id(rev) }})
 	{%- endif -%}
 	{% if children %}
 	<ul>{{ loop(children) }}</ul>
