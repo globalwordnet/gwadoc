@@ -10,18 +10,27 @@ from gwadoc import relations
 ### Relation: domain
 
 relations.domain.fa.parent = None
+relations.domain.fa.synset_synset = True
+relations.domain.fa.sense_synset = False
+relations.domain.fa.sense_sense = False
 relations.domain.fa.reverse = 'has_domain'
 
 
 ### Relation: has_domain
 
 relations.has_domain.fa.parent = None
+relations.has_domain.fa.synset_synset = True
+relations.has_domain.fa.sense_synset = False
+relations.has_domain.fa.sense_sense = False
 relations.has_domain.fa.reverse = 'domain'
 
 
 ### Relation: constitutive
 
 relations.constitutive.fa.parent = None
+relations.constitutive.fa.synset_synset = False
+relations.constitutive.fa.sense_synset = False
+relations.constitutive.fa.sense_sense = False
 
 
 ### Relation: Hypernym
@@ -30,6 +39,9 @@ relations.constitutive.fa.parent = None
 relations.hypernym.name.symbol = "⊃"
 
 relations.hypernym.fa.parent = 'constitutive'
+relations.hypernym.fa.synset_synset = True
+relations.hypernym.fa.sense_synset = False
+relations.hypernym.fa.sense_sense = False
 relations.hypernym.fa.inOMW = True
 relations.hypernym.fa.reverse = "hyponym"
 
@@ -46,6 +58,9 @@ relations.hypernym.proj.pointer = "@"
 relations.hyponym.name.symbol = "⊂"
 
 relations.hyponym.fa.parent = 'constitutive'
+relations.hyponym.fa.synset_synset = True
+relations.hyponym.fa.sense_synset = False
+relations.hyponym.fa.sense_sense = False
 relations.hyponym.fa.inOMW = True
 relations.hyponym.fa.reverse = "hypernym"
 
@@ -60,6 +75,9 @@ relations.hyponym.proj.pointer = "~"
 ### Relation: similar
 
 relations.similar.fa.parent = 'constitutive'
+relations.similar.fa.synset_synset = True
+relations.similar.fa.sense_synset = False
+relations.similar.fa.sense_sense = True
 relations.similar.fa.inOMW = True
 relations.similar.fa.reverse = "similar"
 
@@ -74,6 +92,9 @@ relations.similar.proj.pointer = "&"
 ### Relation: role
 
 relations.role.fa.parent = None
+relations.role.fa.synset_synset = True
+relations.role.fa.sense_synset = False
+relations.role.fa.sense_sense = False
 relations.role.fa.inOMW = True
 relations.role.fa.reverse = "involved"
 
@@ -86,6 +107,9 @@ relations.role.proj.pointer = ""
 ### Relation: agent
 
 relations.agent.fa.parent = 'role'
+relations.agent.fa.synset_synset = True
+relations.agent.fa.sense_synset = False
+relations.agent.fa.sense_sense = False
 relations.agent.fa.inOMW = True
 relations.agent.fa.reverse = "involved_agent"
 
@@ -98,6 +122,9 @@ relations.agent.proj.pointer = ""
 ### Relation: patient
 
 relations.patient.fa.parent = 'role'
+relations.patient.fa.synset_synset = True
+relations.patient.fa.sense_synset = False
+relations.patient.fa.sense_sense = False
 relations.patient.fa.inOMW = True
 relations.patient.fa.reverse = "involved_patient"
 
@@ -110,6 +137,9 @@ relations.patient.proj.pointer = ""
 ### Relation: result
 
 relations.result.fa.parent = 'role'
+relations.result.fa.synset_synset = True
+relations.result.fa.sense_synset = False
+relations.result.fa.sense_sense = False
 relations.result.fa.inOMW = True
 relations.result.fa.reverse = "involved_result"
 
@@ -122,6 +152,9 @@ relations.result.proj.pointer = ""
 ### Relation: instrument
 
 relations.instrument.fa.parent = 'role'
+relations.instrument.fa.synset_synset = True
+relations.instrument.fa.sense_synset = False
+relations.instrument.fa.sense_sense = False
 relations.instrument.fa.inOMW = True
 relations.instrument.fa.reverse = "involved_instrument"
 
@@ -134,6 +167,9 @@ relations.instrument.proj.pointer = ""
 ### Relation: location
 
 relations.location.fa.parent = 'role'
+relations.location.fa.synset_synset = True
+relations.location.fa.sense_synset = False
+relations.location.fa.sense_sense = False
 relations.location.fa.inOMW = True
 relations.location.fa.reverse = "involved_location"
 
@@ -146,6 +182,9 @@ relations.location.proj.pointer = ""
 ### Relation: direction
 
 relations.direction.fa.parent = 'role'
+relations.direction.fa.synset_synset = True
+relations.direction.fa.sense_synset = False
+relations.direction.fa.sense_sense = False
 relations.direction.fa.inOMW = True
 relations.direction.fa.reverse = "involved_direction"
 
@@ -158,6 +197,9 @@ relations.direction.proj.pointer = ""
 ### Relation: target_direction
 
 relations.target_direction.fa.parent = 'role'
+relations.target_direction.fa.synset_synset = True
+relations.target_direction.fa.sense_synset = False
+relations.target_direction.fa.sense_sense = False
 relations.target_direction.fa.inOMW = True
 relations.target_direction.fa.reverse = "involved_target_direction"
 
@@ -170,6 +212,9 @@ relations.target_direction.proj.pointer = ""
 ### Relation: source_direction
 
 relations.source_direction.fa.parent = 'role'
+relations.source_direction.fa.synset_synset = True
+relations.source_direction.fa.sense_synset = False
+relations.source_direction.fa.sense_sense = False
 relations.source_direction.fa.inOMW = True
 relations.source_direction.fa.reverse = "involved_source_direction"
 
@@ -182,6 +227,9 @@ relations.source_direction.proj.pointer = ""
 ### Relation: involved
 
 relations.involved.fa.parent = None
+relations.involved.fa.synset_synset = True
+relations.involved.fa.sense_synset = False
+relations.involved.fa.sense_sense = False
 relations.involved.fa.inOMW = True
 relations.involved.fa.reverse = "role"
 
@@ -194,6 +242,9 @@ relations.involved.proj.pointer = ""
 ### Relation: involved_agent (EuroWordNet - page 29/30)
 
 relations.involved_agent.fa.parent = 'involved'
+relations.involved_agent.fa.synset_synset = True
+relations.involved_agent.fa.sense_synset = False
+relations.involved_agent.fa.sense_sense = False
 relations.involved_agent.fa.inOMW = True
 relations.involved_agent.fa.reverse = "agent"
 
@@ -205,6 +256,9 @@ relations.involved_agent.proj.pointer = ""
 ### Relation: involved_patient
 
 relations.involved_patient.fa.parent = 'involved'
+relations.involved_patient.fa.synset_synset = True
+relations.involved_patient.fa.sense_synset = False
+relations.involved_patient.fa.sense_sense = False
 relations.involved_patient.fa.inOMW = True
 relations.involved_patient.fa.reverse = "patient"
 
@@ -216,6 +270,9 @@ relations.involved_patient.proj.pointer = ""
 ### Relation: involved_result
 
 relations.involved_result.fa.parent = 'involved'
+relations.involved_result.fa.synset_synset = True
+relations.involved_result.fa.sense_synset = False
+relations.involved_result.fa.sense_sense = False
 relations.involved_result.fa.inOMW = True
 relations.involved_result.fa.reverse = "result"
 
@@ -227,6 +284,9 @@ relations.involved_result.proj.pointer = ""
 ### Relation: involved_instrument
 
 relations.involved_instrument.fa.parent = 'involved'
+relations.involved_instrument.fa.synset_synset = True
+relations.involved_instrument.fa.sense_synset = False
+relations.involved_instrument.fa.sense_sense = False
 relations.involved_instrument.fa.inOMW = True
 relations.involved_instrument.fa.reverse = "instrument"
 
@@ -238,6 +298,9 @@ relations.involved_instrument.proj.pointer = ""
 ### Relation: involved_location
 
 relations.involved_location.fa.parent = 'involved'
+relations.involved_location.fa.synset_synset = True
+relations.involved_location.fa.sense_synset = False
+relations.involved_location.fa.sense_sense = False
 relations.involved_location.fa.inOMW = True
 relations.involved_location.fa.reverse = "location"
 
@@ -249,6 +312,9 @@ relations.involved_location.proj.pointer = ""
 ### Relation: involved_direction
 
 relations.involved_direction.fa.parent = 'involved'
+relations.involved_direction.fa.synset_synset = True
+relations.involved_direction.fa.sense_synset = False
+relations.involved_direction.fa.sense_sense = False
 relations.involved_direction.fa.inOMW = True
 relations.involved_direction.fa.reverse = "direction"
 
@@ -260,6 +326,9 @@ relations.involved_direction.proj.pointer = ""
 ### Relation: involved_target_direction
 
 relations.involved_target_direction.fa.parent = 'involved'
+relations.involved_target_direction.fa.synset_synset = True
+relations.involved_target_direction.fa.sense_synset = False
+relations.involved_target_direction.fa.sense_sense = False
 relations.involved_target_direction.fa.inOMW = True
 relations.involved_target_direction.fa.reverse = "target_direction"
 
@@ -271,6 +340,9 @@ relations.involved_target_direction.proj.pointer = ""
 ### Relation: involved_source_direction
 
 relations.involved_source_direction.fa.parent = 'involved'
+relations.involved_source_direction.fa.synset_synset = True
+relations.involved_source_direction.fa.sense_synset = False
+relations.involved_source_direction.fa.sense_sense = False
 relations.involved_source_direction.fa.inOMW = True
 relations.involved_source_direction.fa.reverse = "source_direction"
 
@@ -282,6 +354,9 @@ relations.involved_source_direction.proj.pointer = ""
 ### Relation: co_role EDP31
 
 relations.co_role.fa.parent = 'role'
+relations.co_role.fa.synset_synset = True
+relations.co_role.fa.sense_synset = False
+relations.co_role.fa.sense_sense = False
 relations.co_role.fa.inOMW = True
 relations.co_role.fa.reverse = "co_role"
 
@@ -292,6 +367,9 @@ relations.co_role.proj.plwordnet = ""
 ### Relation: co_agent_patient EDP32
 
 relations.co_agent_patient.fa.parent = 'co_role'
+relations.co_agent_patient.fa.synset_synset = True
+relations.co_agent_patient.fa.sense_synset = False
+relations.co_agent_patient.fa.sense_sense = False
 relations.co_agent_patient.fa.inOMW = True
 relations.co_agent_patient.fa.reverse = "co_patient_agent"
 
@@ -302,6 +380,9 @@ relations.co_agent_patient.proj.plwordnet = ""
 ### Relation: co_agent_instrument EDP32
 
 relations.co_agent_instrument.fa.parent = 'co_role'
+relations.co_agent_instrument.fa.synset_synset = True
+relations.co_agent_instrument.fa.sense_synset = False
+relations.co_agent_instrument.fa.sense_sense = False
 relations.co_agent_instrument.fa.inOMW = True
 relations.co_agent_instrument.fa.reverse = "co_instrument_agent"
 
@@ -312,6 +393,9 @@ relations.co_agent_instrument.proj.plwordnet = ""
 ### Relation: co_agent_result EDP32
 
 relations.co_agent_result.fa.parent = 'co_role'
+relations.co_agent_result.fa.synset_synset = True
+relations.co_agent_result.fa.sense_synset = False
+relations.co_agent_result.fa.sense_sense = False
 relations.co_agent_result.fa.inOMW = True
 relations.co_agent_result.fa.reverse = "co_result_agent"
 
@@ -322,6 +406,9 @@ relations.co_agent_result.proj.plwordnet = ""
 ### Relation: co_patient_agent EDP32
 
 relations.co_patient_agent.fa.parent = 'co_role'
+relations.co_patient_agent.fa.synset_synset = True
+relations.co_patient_agent.fa.sense_synset = False
+relations.co_patient_agent.fa.sense_sense = False
 relations.co_patient_agent.fa.inOMW = True
 relations.co_patient_agent.fa.reverse = "co_agent_patient"
 
@@ -332,6 +419,9 @@ relations.co_patient_agent.proj.plwordnet = ""
 ### Relation: co_patient_instrument EDP32
 
 relations.co_patient_instrument.fa.parent = 'co_role'
+relations.co_patient_instrument.fa.synset_synset = True
+relations.co_patient_instrument.fa.sense_synset = False
+relations.co_patient_instrument.fa.sense_sense = False
 relations.co_patient_instrument.fa.inOMW = True
 relations.co_patient_instrument.fa.reverse = "co_instrument_patient"
 
@@ -342,6 +432,9 @@ relations.co_patient_instrument.proj.plwordnet = ""
 ### Relation: co_result_agent EDP32
 
 relations.co_result_agent.fa.parent = 'co_role'
+relations.co_result_agent.fa.synset_synset = True
+relations.co_result_agent.fa.sense_synset = False
+relations.co_result_agent.fa.sense_sense = False
 relations.co_result_agent.fa.inOMW = True
 relations.co_result_agent.fa.reverse = "co_agent_result"
 
@@ -352,6 +445,9 @@ relations.co_result_agent.proj.plwordnet = ""
 ### Relation: co_result_instrument EDP32
 
 relations.co_result_instrument.fa.parent = 'co_role'
+relations.co_result_instrument.fa.synset_synset = True
+relations.co_result_instrument.fa.sense_synset = False
+relations.co_result_instrument.fa.sense_sense = False
 relations.co_result_instrument.fa.inOMW = True
 relations.co_result_instrument.fa.reverse = "co_instrument_result"
 
@@ -362,6 +458,9 @@ relations.co_result_instrument.proj.plwordnet = ""
 ### Relation: co_instrument_agent EDP32
 
 relations.co_instrument_agent.fa.parent = 'co_role'
+relations.co_instrument_agent.fa.synset_synset = True
+relations.co_instrument_agent.fa.sense_synset = False
+relations.co_instrument_agent.fa.sense_sense = False
 relations.co_instrument_agent.fa.inOMW = True
 relations.co_instrument_agent.fa.reverse = "co_agent_instrument"
 
@@ -372,6 +471,9 @@ relations.co_instrument_agent.proj.plwordnet = ""
 ### Relation: co_instrument_patient EDP32
 
 relations.co_instrument_patient.fa.parent = 'co_role'
+relations.co_instrument_patient.fa.synset_synset = True
+relations.co_instrument_patient.fa.sense_synset = False
+relations.co_instrument_patient.fa.sense_sense = False
 relations.co_instrument_patient.fa.inOMW = True
 relations.co_instrument_patient.fa.reverse = "co_patient_instrument"
 
@@ -382,6 +484,9 @@ relations.co_instrument_patient.proj.plwordnet = ""
 ### Relation: co_instrument_result ice saw/ice
 
 relations.co_instrument_result.fa.parent = 'co_role'
+relations.co_instrument_result.fa.synset_synset = True
+relations.co_instrument_result.fa.sense_synset = False
+relations.co_instrument_result.fa.sense_sense = False
 relations.co_instrument_result.fa.inOMW = True
 relations.co_instrument_result.fa.reverse = "co_result_instrument"
 
@@ -392,6 +497,9 @@ relations.co_instrument_result.proj.plwordnet = ""
 ### Relation: state_of EDP37
 
 relations.state_of.fa.parent = 'other'
+relations.state_of.fa.synset_synset = True
+relations.state_of.fa.sense_synset = False
+relations.state_of.fa.sense_sense = False
 relations.state_of.fa.inOMW = True
 relations.state_of.fa.reverse = "be_in_state"
 
@@ -405,6 +513,9 @@ relations.state_of.proj.pointer = ""
 ### Relation: be_in_state EDP37
 
 relations.be_in_state.fa.parent = 'other'
+relations.be_in_state.fa.synset_synset = True
+relations.be_in_state.fa.sense_synset = False
+relations.be_in_state.fa.sense_sense = False
 relations.be_in_state.fa.inOMW = True
 relations.be_in_state.fa.reverse = "state_of"
 
@@ -416,6 +527,9 @@ relations.be_in_state.proj.pointer = ""
 ### Relation: causes EDP34
 
 relations.causes.fa.parent = 'other'
+relations.causes.fa.synset_synset = True
+relations.causes.fa.sense_synset = False
+relations.causes.fa.sense_sense = False
 relations.causes.fa.inOMW = True
 relations.causes.fa.reverse = "is_caused_by"
 
@@ -430,6 +544,9 @@ relations.causes.proj.pointer = ">"
 ### Relation: is_caused_by EDP34
 
 relations.is_caused_by.fa.parent = 'other'
+relations.is_caused_by.fa.synset_synset = True
+relations.is_caused_by.fa.sense_synset = False
+relations.is_caused_by.fa.sense_sense = False
 relations.is_caused_by.fa.inOMW = True
 relations.is_caused_by.fa.reverse = "causes"
 
@@ -443,6 +560,9 @@ relations.is_caused_by.proj.pointer = ""
 ### Relation: subevent EDP35
 
 relations.subevent.fa.parent = 'other'
+relations.subevent.fa.synset_synset = True
+relations.subevent.fa.sense_synset = False
+relations.subevent.fa.sense_sense = False
 relations.subevent.fa.inOMW = True
 relations.subevent.fa.reverse = "is_subevent_of"
 
@@ -455,6 +575,9 @@ relations.subevent.proj.pointer = "\*"
 ### Relation: is_subevent_of EDP35
 
 relations.is_subevent_of.fa.parent = 'other'
+relations.is_subevent_of.fa.synset_synset = True
+relations.is_subevent_of.fa.sense_synset = False
+relations.is_subevent_of.fa.sense_sense = False
 relations.is_subevent_of.fa.inOMW = True
 relations.is_subevent_of.fa.reverse = "subevent"
 
@@ -467,6 +590,9 @@ relations.is_subevent_of.proj.pointer = ""
 ### Relation: in_manner EDP36
 
 relations.in_manner.fa.parent = 'other'
+relations.in_manner.fa.synset_synset = True
+relations.in_manner.fa.sense_synset = False
+relations.in_manner.fa.sense_sense = False
 relations.in_manner.fa.inOMW = True
 relations.in_manner.fa.reverse = "manner_of"
 
@@ -479,6 +605,9 @@ relations.in_manner.proj.pointer = ""
 ### Relation: manner_of EDP36
 
 relations.manner_of.fa.parent = 'other'
+relations.manner_of.fa.synset_synset = True
+relations.manner_of.fa.sense_synset = False
+relations.manner_of.fa.sense_sense = False
 relations.manner_of.fa.inOMW = True
 relations.manner_of.fa.reverse = "in_manner"
 
@@ -492,6 +621,9 @@ relations.manner_of.proj.pointer = ""
 ### Relation: meronym EDP26
 
 relations.meronym.fa.parent = 'constitutive'
+relations.meronym.fa.synset_synset = True
+relations.meronym.fa.sense_synset = False
+relations.meronym.fa.sense_sense = False
 relations.meronym.fa.inOMW = True
 relations.meronym.fa.reverse = "holonym"
 
@@ -506,6 +638,9 @@ relations.meronym.proj.pointer = "%"
 ### Relation: holonym EDP26
 
 relations.holonym.fa.parent = 'constitutive'
+relations.holonym.fa.synset_synset = True
+relations.holonym.fa.sense_synset = False
+relations.holonym.fa.sense_sense = False
 relations.holonym.fa.inOMW = True
 relations.holonym.fa.reverse = "meronym"
 
@@ -519,6 +654,9 @@ relations.holonym.proj.pointer = "#"
 ### Relation: mero_part EDP27
 
 relations.mero_part.fa.parent = 'meronym'
+relations.mero_part.fa.synset_synset = True
+relations.mero_part.fa.sense_synset = False
+relations.mero_part.fa.sense_sense = False
 relations.mero_part.fa.inOMW = True
 relations.mero_part.fa.reverse = "holo_part"
 
@@ -532,6 +670,9 @@ relations.mero_part.proj.pointer = "%p"
 ### Relation: holo_part EDP27
 
 relations.holo_part.fa.parent = 'holonym'
+relations.holo_part.fa.synset_synset = True
+relations.holo_part.fa.sense_synset = False
+relations.holo_part.fa.sense_sense = False
 relations.holo_part.fa.inOMW = True
 relations.holo_part.fa.reverse = "mero_part"
 
@@ -545,6 +686,9 @@ relations.holo_part.proj.pointer = "#p"
 ### Relation: mero_member EPD27
 
 relations.mero_member.fa.parent = 'meronym'
+relations.mero_member.fa.synset_synset = True
+relations.mero_member.fa.sense_synset = False
+relations.mero_member.fa.sense_sense = False
 relations.mero_member.fa.inOMW = True
 relations.mero_member.fa.reverse = "holo_member"
 
@@ -558,6 +702,9 @@ relations.mero_member.proj.pointer = "%m"
 ### Relation: holo_member EDP27
 
 relations.holo_member.fa.parent = 'holonym'
+relations.holo_member.fa.synset_synset = True
+relations.holo_member.fa.sense_synset = False
+relations.holo_member.fa.sense_sense = False
 relations.holo_member.fa.inOMW = True
 relations.holo_member.fa.reverse = "mero_member"
 
@@ -571,6 +718,9 @@ relations.holo_member.proj.pointer = "#m"
 ### Relation: mero_substance EDP28
 
 relations.mero_substance.fa.parent = 'meronym'
+relations.mero_substance.fa.synset_synset = True
+relations.mero_substance.fa.sense_synset = False
+relations.mero_substance.fa.sense_sense = False
 relations.mero_substance.fa.inOMW = True
 relations.mero_substance.fa.reverse = "holo_substance"
 
@@ -584,6 +734,9 @@ relations.mero_substance.proj.pointer = "%s"
 ### Relation: holo_substance EDP28
 
 relations.holo_substance.fa.parent = 'holonym'
+relations.holo_substance.fa.synset_synset = True
+relations.holo_substance.fa.sense_synset = False
+relations.holo_substance.fa.sense_sense = False
 relations.holo_substance.fa.inOMW = True
 relations.holo_substance.fa.reverse = "mero_substance"
 
@@ -597,6 +750,9 @@ relations.holo_substance.proj.pointer = "#s"
 ### Relation: mero_location EDP28
 
 relations.mero_location.fa.parent = 'meronym'
+relations.mero_location.fa.synset_synset = True
+relations.mero_location.fa.sense_synset = False
+relations.mero_location.fa.sense_sense = False
 relations.mero_location.fa.inOMW = True
 relations.mero_location.fa.reverse = "holo_location"
 
@@ -608,6 +764,9 @@ relations.mero_location.proj.plwordnet = "meronymy_location"
 ### Relation: holo_location EDP28
 
 relations.holo_location.fa.parent = 'holonym'
+relations.holo_location.fa.synset_synset = True
+relations.holo_location.fa.sense_synset = False
+relations.holo_location.fa.sense_sense = False
 relations.holo_location.fa.inOMW = True
 relations.holo_location.fa.reverse = "mero_location"
 
@@ -619,6 +778,9 @@ relations.holo_location.proj.plwordnet = "holonymy_location"
 ### Relation: mero_portion EDP27
 
 relations.mero_portion.fa.parent = 'meronym'
+relations.mero_portion.fa.synset_synset = True
+relations.mero_portion.fa.sense_synset = False
+relations.mero_portion.fa.sense_sense = False
 relations.mero_portion.fa.inOMW = True
 relations.mero_portion.fa.reverse = "holo_portion"
 
@@ -632,6 +794,9 @@ relations.mero_portion.proj.pointer = ""
 ### Relation: holo_portion EDP27
 
 relations.holo_portion.fa.parent = 'holonym'
+relations.holo_portion.fa.synset_synset = True
+relations.holo_portion.fa.sense_synset = False
+relations.holo_portion.fa.sense_sense = False
 relations.holo_portion.fa.inOMW = True
 relations.holo_portion.fa.reverse = "mero_portion"
 
@@ -644,6 +809,9 @@ relations.holo_portion.proj.pointer = ""
 ### Relation: eq_synonym
 
 relations.eq_synonym.fa.parent = 'constitutive'
+relations.eq_synonym.fa.synset_synset = True
+relations.eq_synonym.fa.sense_synset = False
+relations.eq_synonym.fa.sense_sense = False
 relations.eq_synonym.fa.inOMW = True
 relations.eq_synonym.fa.reverse = "eq_synonym"
 
@@ -655,6 +823,9 @@ relations.eq_synonym.proj.plwordnet = ""
 ### Relation: instance_hypernym
 
 relations.instance_hypernym.fa.parent = 'constitutive'
+relations.instance_hypernym.fa.synset_synset = True
+relations.instance_hypernym.fa.sense_synset = False
+relations.instance_hypernym.fa.sense_sense = False
 relations.instance_hypernym.fa.inOMW = True
 relations.instance_hypernym.fa.reverse = "instance_hyponym"
 
@@ -668,6 +839,9 @@ relations.instance_hypernym.proj.pointer = "@i"
 ### Relation: instance_hyponym
 
 relations.instance_hyponym.fa.parent = 'constitutive'
+relations.instance_hyponym.fa.synset_synset = True
+relations.instance_hyponym.fa.sense_synset = False
+relations.instance_hyponym.fa.sense_sense = False
 relations.instance_hyponym.fa.inOMW = True
 relations.instance_hyponym.fa.reverse = "instance_hypernym"
 
@@ -682,6 +856,9 @@ relations.instance_hyponym.proj.pointer = "~i"
 ### Relation: exemplifies
 
 relations.exemplifies.fa.parent = 'domain'
+relations.exemplifies.fa.synset_synset = True
+relations.exemplifies.fa.sense_synset = True
+relations.exemplifies.fa.sense_sense = True
 relations.exemplifies.fa.inOMW = True
 relations.exemplifies.fa.reverse = "is_exemplified_by"
 
@@ -695,6 +872,9 @@ relations.exemplifies.proj.pointer = ";u"
 ### Relation: is_exemplified_by
 
 relations.is_exemplified_by.fa.parent = 'has_domain'
+relations.is_exemplified_by.fa.synset_synset = True
+relations.is_exemplified_by.fa.sense_synset = False
+relations.is_exemplified_by.fa.sense_sense = True
 relations.is_exemplified_by.fa.inOMW = True
 relations.is_exemplified_by.fa.reverse = "exemplifies"
 
@@ -707,6 +887,9 @@ relations.is_exemplified_by.proj.pointer = "-u"
 ### Relation: domain_topic
 
 relations.domain_topic.fa.parent = 'domain'
+relations.domain_topic.fa.synset_synset = True
+relations.domain_topic.fa.sense_synset = True
+relations.domain_topic.fa.sense_sense = True
 relations.domain_topic.fa.inOMW = True
 relations.domain_topic.fa.reverse = "has_domain_topic"
 
@@ -719,6 +902,9 @@ relations.domain_topic.proj.pointer = ";c"
 ### Relation: has_domain_topic
 
 relations.has_domain_topic.fa.parent = 'has_domain'
+relations.has_domain_topic.fa.synset_synset = True
+relations.has_domain_topic.fa.sense_synset = False
+relations.has_domain_topic.fa.sense_sense = True
 relations.has_domain_topic.fa.inOMW = True
 relations.has_domain_topic.fa.reverse = "domain_topic"
 
@@ -730,6 +916,9 @@ relations.has_domain_topic.proj.pointer = "-c"
 ### Relation: domain_region
 
 relations.domain_region.fa.parent = 'domain'
+relations.domain_region.fa.synset_synset = True
+relations.domain_region.fa.sense_synset = True
+relations.domain_region.fa.sense_sense = True
 relations.domain_region.fa.inOMW = True
 relations.domain_region.fa.reverse = "has_domain_region"
 
@@ -742,6 +931,9 @@ relations.domain_region.proj.pointer = ";r"
 ### Relation: has_domain_region
 
 relations.has_domain_region.fa.parent = 'has_domain'
+relations.has_domain_region.fa.synset_synset = True
+relations.has_domain_region.fa.sense_synset = False
+relations.has_domain_region.fa.sense_sense = True
 relations.has_domain_region.fa.inOMW = True
 relations.has_domain_region.fa.reverse = "domain_region"
 
@@ -753,6 +945,9 @@ relations.has_domain_region.proj.pointer = "-r"
 ### Relation: attribute
 
 relations.attribute.fa.parent = 'other'
+relations.attribute.fa.synset_synset = True
+relations.attribute.fa.sense_synset = False
+relations.attribute.fa.sense_sense = False
 relations.attribute.fa.inOMW = True
 relations.attribute.fa.reverse = "attribute"
 
@@ -766,6 +961,9 @@ relations.attribute.proj.pointer = "="
 ### Relation: restricts
 
 relations.restricts.fa.parent = 'other'
+relations.restricts.fa.synset_synset = True
+relations.restricts.fa.sense_synset = False
+relations.restricts.fa.sense_sense = False
 relations.restricts.fa.inOMW = True
 relations.restricts.fa.reverse = "restricted_by"
 
@@ -777,6 +975,9 @@ relations.restricts.proj.pointer = ""
 ### Relation: restricted_by
 
 relations.restricted_by.fa.parent = 'other'
+relations.restricted_by.fa.synset_synset = True
+relations.restricted_by.fa.sense_synset = False
+relations.restricted_by.fa.sense_sense = False
 relations.restricted_by.fa.inOMW = True
 relations.restricted_by.fa.reverse = "restricts"
 
@@ -787,6 +988,9 @@ relations.restricted_by.proj.pointer = ""
 ### Relation: classifies
 
 relations.classifies.fa.parent = 'other'
+relations.classifies.fa.synset_synset = True
+relations.classifies.fa.sense_synset = False
+relations.classifies.fa.sense_sense = False
 relations.classifies.fa.inOMW = True
 relations.classifies.fa.reverse = "classified_by"
 
@@ -798,6 +1002,9 @@ relations.classifies.proj.pointer = ""
 ### Relation: classified_by
 
 relations.classified_by.fa.parent = 'other'
+relations.classified_by.fa.synset_synset = True
+relations.classified_by.fa.sense_synset = False
+relations.classified_by.fa.sense_sense = False
 relations.classified_by.fa.inOMW = True
 relations.classified_by.fa.reverse = "classifies"
 
@@ -809,6 +1016,9 @@ relations.classified_by.proj.pointer = ""
 ### Relation: also (no ili)
 
 relations.also.fa.parent = 'other'
+relations.also.fa.synset_synset = True
+relations.also.fa.sense_synset = False
+relations.also.fa.sense_sense = True
 relations.also.fa.inOMW = True
 relations.also.fa.reverse = 'also'
 
@@ -822,6 +1032,9 @@ relations.also.proj.pointer = "^"
 ### Relation: antonym
 
 relations.antonym.fa.parent = 'constitutive'
+relations.antonym.fa.synset_synset = True
+relations.antonym.fa.sense_synset = False
+relations.antonym.fa.sense_sense = True
 relations.antonym.fa.inOMW = True
 relations.antonym.fa.reverse = 'antonym'
 
@@ -836,6 +1049,9 @@ relations.antonym.proj.pointer = "!"
 ### Relation: entails
 
 relations.entails.fa.parent = 'other'
+relations.entails.fa.synset_synset = True
+relations.entails.fa.sense_synset = False
+relations.entails.fa.sense_sense = False
 relations.entails.fa.inOMW = True
 relations.entails.fa.reverse = 'is_entailed_by'
 
@@ -850,6 +1066,9 @@ relations.entails.proj.pointer = ""
 ### Relation: is_entailed_by
 
 relations.is_entailed_by.fa.parent = 'other'
+relations.is_entailed_by.fa.synset_synset = True
+relations.is_entailed_by.fa.sense_synset = False
+relations.is_entailed_by.fa.sense_sense = False
 relations.is_entailed_by.fa.inOMW = True
 relations.is_entailed_by.fa.reverse = 'entails'
 
@@ -863,6 +1082,33 @@ relations.is_entailed_by.proj.pointer = ""
 ### Relation: other
 
 relations.other.fa.parent = None
+relations.other.fa.synset_synset = True
+relations.other.fa.sense_synset = False
+relations.other.fa.sense_sense = True
 relations.other.fa.inOMW = True
 
 relations.other.proj.ili = "i11342"
+
+
+### Relation: participle
+
+relations.participle.fa.parent = None
+relations.participle.fa.synset_synset = False
+relations.participle.fa.sense_synset = False
+relations.participle.fa.sense_sense = True
+
+
+### Relation: pertainym
+
+relations.pertainym.fa.parent = None
+relations.pertainym.fa.synset_synset = False
+relations.pertainym.fa.sense_synset = False
+relations.pertainym.fa.sense_sense = True
+
+
+### Relation: derivation
+
+relations.derivation.fa.parent = None
+relations.derivation.fa.synset_synset = False
+relations.derivation.fa.sense_synset = False
+relations.derivation.fa.sense_sense = True

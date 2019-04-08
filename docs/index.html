@@ -12,13 +12,10 @@
     <h1>Global Wordnet Association Documentation</h1>
   </header>
   <main>
-    
-<h2>Contents</h2>
+    <h2>Contents</h2>
 <section>
   <nav id="relnav">
     <ul>
-      
-      
       <li><a href="#constitutive">Constitutive</a> (<span class="rel-id">constitutive</span>)
 	<ul>
       <li><a href="#hyponym">Hyponym</a> (<span class="rel-id">hyponym</span>)<span class="revchar">⇔</span>
@@ -61,10 +58,8 @@
 	<a href="#holo_substance">Substance Holonym</a> (<span class="rel-id">holo_substance</span>)
       </li>
       </ul>
-	
       </li>
       </ul>
-	
       </li>
       
       <li><a href="#other">Other</a> (<span class="rel-id">other</span>)
@@ -103,7 +98,6 @@
 	<a href="#is_entailed_by">Is Entailed By</a> (<span class="rel-id">is_entailed_by</span>)
       </li>
       </ul>
-	
       </li>
       
       <li><a href="#domain">Domain</a> (<span class="rel-id">domain</span>)<span class="revchar">⇔</span>
@@ -121,7 +115,6 @@
 	<a href="#is_exemplified_by">Is Exemplified By</a> (<span class="rel-id">is_exemplified_by</span>)
       </li>
       </ul>
-	
       </li>
       
       <li><a href="#role">Role</a> (<span class="rel-id">role</span>)<span class="revchar">⇔</span>
@@ -181,10 +174,17 @@
 	<a href="#co_instrument_result">Co Instrument Result</a> (<span class="rel-id">co_instrument_result</span>)
       </li>
       </ul>
-	
       </li>
       </ul>
-	
+      </li>
+      
+      <li><a href="#participle">Participle</a> (<span class="rel-id">participle</span>)
+      </li>
+      
+      <li><a href="#pertainym">Pertainym</a> (<span class="rel-id">pertainym</span>)
+      </li>
+      
+      <li><a href="#derivation">Derivation</a> (<span class="rel-id">derivation</span>)
       </li>
       
     </ul>
@@ -197,6 +197,7 @@
     <span class="short definition">"Core semantic relations that define synsets"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td>(not directly applicable)</td></tr>
       <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -230,6 +231,11 @@ Language Resources and Evaluation, 47(3), pp 769–79</td></tr>
     <span class="short definition">"a word that is more specific than a given word"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>⊂</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#hypernym"><span class="rel-id">hypernym</span></a></td></tr>
       <tr><th>example</th><td><em>dog</em> is a hyponym of <em>animal</em></td></tr>
     </table>
@@ -353,6 +359,11 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p>
     <span class="short definition">"a word that is more general than a given word"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>⊃</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#hyponym"><span class="rel-id">hyponym</span></a></td></tr>
       <tr><th>example</th><td><em>animal</em> is a hypernym of <em>dog</em></td></tr>
     </table>
@@ -440,6 +451,11 @@ extended to adjectives and adverbs.</p>
     <span class="short definition">"an occurrence of something"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#instance_hypernym"><span class="rel-id">instance_hypernym</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -501,6 +517,11 @@ Instances are expressed by proper nouns.</p>
     <span class="short definition">"the type of an instance"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#instance_hyponym"><span class="rel-id">instance_hyponym</span></a></td></tr>
       <tr><th>example</th><td><em>city/Manchester</em></td></tr>
     </table>
@@ -571,6 +592,11 @@ Instances are expressed by proper nouns.</p>
     <span class="short definition">"An opposite and inherently incompatible word"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#antonym"><span class="rel-id">antonym</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -632,6 +658,11 @@ make it avaiable for wordnets that do not yet have sense level links.</p>
     <span class="short definition">"X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#eq_synonym"><span class="rel-id">eq_synonym</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -681,6 +712,11 @@ chengyu (成语), a traditional four-character Chinese idiom.</p>
     <span class="short definition">"(of words) expressing closely related meanings"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#similar"><span class="rel-id">similar</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -752,6 +788,11 @@ relation which is why it is not given in the mappings below.</p>
     <span class="short definition">"Y makes up a part of X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holonym"><span class="rel-id">holonym</span></a></td></tr>
       <tr><th>example</th><td>hand/finger</td></tr>
     </table>
@@ -812,6 +853,11 @@ shouldn't be a special relation.</p>
     <span class="short definition">"X makes up a part of Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#meronym"><span class="rel-id">meronym</span></a></td></tr>
       <tr><th>example</th><td>finger/hand</td></tr>
     </table>
@@ -867,6 +913,11 @@ shouldn't be a special relation.</p>
     <span class="short definition">"X is a place located in Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_location"><span class="rel-id">holo_location</span></a></td></tr>
       <tr><th>example</th><td>city/centre</td></tr>
     </table>
@@ -910,6 +961,11 @@ located in concept Y.</p>
     <span class="short definition">"Y is a place located in X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#mero_location"><span class="rel-id">mero_location</span></a></td></tr>
       <tr><th>example</th><td>centre/city</td></tr>
     </table>
@@ -953,6 +1009,11 @@ located in concept X.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_member"><span class="rel-id">holo_member</span></a></td></tr>
       <tr><th>example</th><td>player/team</td></tr>
     </table>
@@ -1010,6 +1071,11 @@ instances of Concept-X form Concept-Y.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#mero_member"><span class="rel-id">mero_member</span></a></td></tr>
       <tr><th>example</th><td>team/player</td></tr>
     </table>
@@ -1067,6 +1133,11 @@ instances of Concept-X form Concept-Y.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_part"><span class="rel-id">holo_part</span></a></td></tr>
       <tr><th>example</th><td>car/wheel</td></tr>
     </table>
@@ -1126,6 +1197,11 @@ geographical inclusiveness relations.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#mero_part"><span class="rel-id">mero_part</span></a></td></tr>
       <tr><th>example</th><td>wheel/car</td></tr>
     </table>
@@ -1184,6 +1260,11 @@ inclusiveness relations.</p>
     <span class="short definition">"X is an amount/piece/portion of Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_portion"><span class="rel-id">holo_portion</span></a></td></tr>
       <tr><th>example</th><td>drop/liquid</td></tr>
     </table>
@@ -1232,6 +1313,11 @@ amount/piece/portion of concept Y.</p>
     <span class="short definition">"Y is an amount/piece/portion of X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#mero_portion"><span class="rel-id">mero_portion</span></a></td></tr>
       <tr><th>example</th><td>liquid/drop</td></tr>
     </table>
@@ -1275,6 +1361,11 @@ amount/piece/portion of concept X</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_substance"><span class="rel-id">holo_substance</span></a></td></tr>
       <tr><th>example</th><td>stick/wood</td></tr>
     </table>
@@ -1331,6 +1422,11 @@ Concept-Y is a substance of Concept-X”.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#mero_substance"><span class="rel-id">mero_substance</span></a></td></tr>
       <tr><th>example</th><td>wood/stick</td></tr>
     </table>
@@ -1387,6 +1483,11 @@ Concept-Y is a substance of Concept-X”.</p>
     <span class="short definition">"Any relation not otherwise specified"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -1423,6 +1524,11 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
     <span class="short definition">"a word having a loose or fuzzy semantic relation to another word"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#also"><span class="rel-id">also</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -1477,6 +1583,11 @@ all parts-of-speech.</p>
     <span class="short definition">"Y is qualified by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#be_in_state"><span class="rel-id">be_in_state</span></a></td></tr>
       <tr><th>example</th><td>poor/poor (a poor person)</td></tr>
     </table>
@@ -1526,6 +1637,11 @@ FCB: isn't this the same as attribute (but split into two directions)</p>
     <span class="short definition">"X is qualified by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#state_of"><span class="rel-id">state_of</span></a></td></tr>
       <tr><th>example</th><td>poor (a poor person)/poor</td></tr>
     </table>
@@ -1566,6 +1682,11 @@ concept Y.</p>
 results"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#is_caused_by"><span class="rel-id">is_caused_by</span></a></td></tr>
       <tr><th>example</th><td>kill/die</td></tr>
     </table>
@@ -1632,6 +1753,11 @@ seems possible to just absorb PWN's links.</p>
     <span class="short definition">"X comes about because of Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#causes"><span class="rel-id">causes</span></a></td></tr>
       <tr><th>example</th><td>die/kill</td></tr>
     </table>
@@ -1670,6 +1796,11 @@ as a result of concept Y.</p>
     <span class="short definition">"Y takes place during or as part of X, and whenever Y takes place, X takes place"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#is_subevent_of"><span class="rel-id">is_subevent_of</span></a></td></tr>
       <tr><th>example</th><td>sleep/snore</td></tr>
     </table>
@@ -1724,6 +1855,11 @@ relation marked as ENTAILMENT by the PWN.</p>
     <span class="short definition">"X takes place during or as part of Y, and whenever X takes place, Y takes place"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#subevent"><span class="rel-id">subevent</span></a></td></tr>
       <tr><th>example</th><td>snore/sleep</td></tr>
     </table>
@@ -1768,6 +1904,11 @@ place, concept Y takes place.</p>
     <span class="short definition">"X qualifies the manner in which an action or event expressed by Y takes place"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#in_manner"><span class="rel-id">in_manner</span></a></td></tr>
       <tr><th>example</th><td>noisely/slurp</td></tr>
     </table>
@@ -1812,6 +1953,11 @@ Y takes place.</p>
     <span class="short definition">"Y qualifies the manner in which an action or event expressed by X takes place"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#manner_of"><span class="rel-id">manner_of</span></a></td></tr>
       <tr><th>example</th><td>slurp/noisely</td></tr>
     </table>
@@ -1851,6 +1997,11 @@ X takes place.</p>
     <span class="short definition">"an abstraction belonging to or characteristic of an entity"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#attribute"><span class="rel-id">attribute</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -1914,6 +2065,11 @@ adjectives to nouns.</p>
     <span class="short definition">"A relation between an adjectival X (quantifier/determiner) and a nominal (pronominal) Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#restricted_by"><span class="rel-id">restricted_by</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -1951,6 +2107,11 @@ now marked as domain usage. (to be corrected soon'ish)</p>
     <span class="short definition">"A relation between nominal (pronominal) Y and an adjectival X (quantifier/determiner)"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#restricts"><span class="rel-id">restricts</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -1979,6 +2140,11 @@ adjectival concept X (quantifier/determiner).</p>
     <span class="short definition">"A relation between a classifier X and Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#classified_by"><span class="rel-id">classified_by</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2013,6 +2179,11 @@ will do it for other POS (e.g. v)</p>
     <span class="short definition">"A relation between Y and a classifier X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#classifies"><span class="rel-id">classifies</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2046,6 +2217,11 @@ between Y and a classifier X</p>
     <span class="short definition">"impose, involve, or imply as a necessary accompaniment or result"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#is_entailed_by"><span class="rel-id">is_entailed_by</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2091,6 +2267,11 @@ which Verb-Y has to take place before or during Verb-X.</p>
     <span class="short definition">"Opposite of entails"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#entails"><span class="rel-id">entails</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2123,6 +2304,11 @@ which Verb-Y has to take place before or during Verb-X.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#has_domain"><span class="rel-id">has_domain</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2147,6 +2333,11 @@ which Verb-Y has to take place before or during Verb-X.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#domain"><span class="rel-id">domain</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2171,6 +2362,11 @@ which Verb-Y has to take place before or during Verb-X.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    <li>sense&ndash;synset</li>
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#has_domain_topic"><span class="rel-id">has_domain_topic</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2214,6 +2410,11 @@ domain (e.g. computing, sport, biology, etc.) of concept X.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#domain_topic"><span class="rel-id">domain_topic</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2252,6 +2453,11 @@ domain (e.g. computing, sport, biology, etc.) of concept Y.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    <li>sense&ndash;synset</li>
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#has_domain_region"><span class="rel-id">has_domain_region</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2299,6 +2505,11 @@ what...</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#domain_region"><span class="rel-id">domain_region</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2339,6 +2550,11 @@ a good name.</p>
     <span class="short definition">"clarify by giving an example of"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    <li>sense&ndash;synset</li>
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#is_exemplified_by"><span class="rel-id">is_exemplified_by</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2388,6 +2604,11 @@ too different from the standard meaning of domain.</p>
     
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#exemplifies"><span class="rel-id">exemplifies</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2431,6 +2652,11 @@ propose 'Exemplified_By'.</p>
     <span class="short definition">"X is typically involved in the action or event expressed by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved"><span class="rel-id">involved</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2479,6 +2705,11 @@ supertype of <tt class="docutils literal">agent</tt>, <tt class="docutils litera
     <span class="short definition">"Y is typically involved in the action or event expressed by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#role"><span class="rel-id">role</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2528,6 +2759,11 @@ X. Involved is the supertype of <tt class="docutils literal">involved_agent</tt>
     <span class="short definition">"X is typically the agent of the action expressed by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_agent"><span class="rel-id">involved_agent</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2573,6 +2809,11 @@ intentionally. X is typically the agent of the action expressed by Y</p>
     <span class="short definition">"Y is typically the agent of the action expressed by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#agent"><span class="rel-id">agent</span></a></td></tr>
       <tr><th>example</th><td>teach/teacher</td></tr>
     </table>
@@ -2613,6 +2854,11 @@ the agent of the action expressed by concept X.</p>
     <span class="short definition">"X is the patient undergoing an action or event expressed by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_patient"><span class="rel-id">involved_patient</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2657,6 +2903,11 @@ the agent of the action expressed by concept X.</p>
     <span class="short definition">"Y is typically the patient un-dergoing an action or event expressed by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#patient"><span class="rel-id">patient</span></a></td></tr>
       <tr><th>example</th><td>teach/learner</td></tr>
     </table>
@@ -2696,6 +2947,11 @@ concept A.</p>
     <span class="short definition">"X comes into existence as a result of Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_result"><span class="rel-id">involved_result</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2741,6 +2997,11 @@ X is the result of Y or, (A/an) X is created by Y.</p>
     <span class="short definition">"Y comes into existence as a result of X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#result"><span class="rel-id">result</span></a></td></tr>
       <tr><th>example</th><td>freeze/ice</td></tr>
     </table>
@@ -2779,6 +3040,11 @@ into existence as a result of concept A.</p>
     <span class="short definition">"X is the instrument necessary for the action or event expressed by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_instrument"><span class="rel-id">involved_instrument</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2828,6 +3094,11 @@ used to Y (with)</p>
     <span class="short definition">"Y is typically the instrument necessary for the action or event expressed by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#instrument"><span class="rel-id">instrument</span></a></td></tr>
       <tr><th>example</th><td>paint/paint-brush</td></tr>
     </table>
@@ -2867,6 +3138,11 @@ by concept A.</p>
     <span class="short definition">"X is the location where the action or event expressed by Y takes place"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_location"><span class="rel-id">involved_location</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2912,6 +3188,11 @@ location where the action or event expressed by concept Y takes place.</p>
     <span class="short definition">"Y is typically the location where the action or event expressed by X takes place"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#location"><span class="rel-id">location</span></a></td></tr>
       <tr><th>example</th><td>swim/water</td></tr>
     </table>
@@ -2951,6 +3232,11 @@ A takes place.</p>
     <span class="short definition">"X is typically the direction or location of the action or event expressed by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_direction"><span class="rel-id">involved_direction</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -2992,6 +3278,11 @@ Y. It is possible to Y from/to/over/across/through a place (X)</p>
     <span class="short definition">"Y is typically the direction or location of the action or event expressed by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#direction"><span class="rel-id">direction</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -3026,6 +3317,11 @@ by concept A.</p>
     <span class="short definition">"X is the place to which the action or event expressed by Y leads"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_target_direction"><span class="rel-id">involved_target_direction</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -3065,6 +3361,11 @@ by concept A.</p>
     <span class="short definition">"Y is the place where the action or event expressed by X leads to"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#target_direction"><span class="rel-id">target_direction</span></a></td></tr>
       <tr><th>example</th><td>go back home/home</td></tr>
     </table>
@@ -3098,6 +3399,11 @@ where the action or event expressed by concept A leads to.</p>
     <span class="short definition">"X is the place from where the event expressed by Y begins"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#involved_source_direction"><span class="rel-id">involved_source_direction</span></a></td></tr>
       <tr><th>example</th><td>start/race</td></tr>
     </table>
@@ -3139,6 +3445,11 @@ begins/starts/happens.</p>
     <span class="short definition">"Y is the place from where the action or event expressed by X begins/starts/happens"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#source_direction"><span class="rel-id">source_direction</span></a></td></tr>
       <tr><th>example</th><td>disembark/ship</td></tr>
     </table>
@@ -3173,6 +3484,11 @@ begins/starts/happens.</p>
     <span class="short definition">"One concept undergoes an action in which the other concept is involved (bidirectional)"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_role"><span class="rel-id">co_role</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -3206,6 +3522,11 @@ which concept Y is involved (bidirectional).</p>
     <span class="short definition">"Y is the patient undergoing an action carried out by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_patient_agent"><span class="rel-id">co_patient_agent</span></a></td></tr>
       <tr><th>example</th><td>novel writer/poet</td></tr>
     </table>
@@ -3240,6 +3561,11 @@ undergoing an action carried out by concept X.</p>
     <span class="short definition">"Y undergoes an action carried out by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_agent_patient"><span class="rel-id">co_agent_patient</span></a></td></tr>
       <tr><th>example</th><td>poet/novel writer</td></tr>
     </table>
@@ -3273,6 +3599,11 @@ carried out by concept X.</p>
     <span class="short definition">"Y is the instrument used by X in a certain action"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_instrument_agent"><span class="rel-id">co_instrument_agent</span></a></td></tr>
       <tr><th>example</th><td>(no example given)</td></tr>
     </table>
@@ -3307,6 +3638,11 @@ by concept X in a certain action.</p>
     <span class="short definition">"X is the instrument used by Y for a certain action"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_agent_instrument"><span class="rel-id">co_agent_instrument</span></a></td></tr>
       <tr><th>example</th><td>guitar/guitar player</td></tr>
     </table>
@@ -3340,6 +3676,11 @@ by concept Y for a certain action.</p>
     <span class="short definition">"Y is the result of an action carried out by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_result_agent"><span class="rel-id">co_result_agent</span></a></td></tr>
       <tr><th>example</th><td>pastry dough/bread dough</td></tr>
     </table>
@@ -3374,6 +3715,11 @@ action carried out by concept X.</p>
     <span class="short definition">"X is the result of an action carried out by Y"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_agent_result"><span class="rel-id">co_agent_result</span></a></td></tr>
       <tr><th>example</th><td>bread dough/pastry dough</td></tr>
     </table>
@@ -3407,6 +3753,11 @@ action carried out by concept Y.</p>
     <span class="short definition">"X undergoes an action for which the instrument expressed by X is used"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_instrument_patient"><span class="rel-id">co_instrument_patient</span></a></td></tr>
       <tr><th>example</th><td>ice/ice saw</td></tr>
     </table>
@@ -3440,6 +3791,11 @@ for which the instrument expressed by concept X is used.</p>
     <span class="short definition">"Y undergoes an action for which the instrument expressed by X is used"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_patient_instrument"><span class="rel-id">co_patient_instrument</span></a></td></tr>
       <tr><th>example</th><td>ice saw/ice</td></tr>
     </table>
@@ -3473,6 +3829,11 @@ for which the instrument expressed by concept X is used.</p>
     <span class="short definition">"X is the result of an action for which the instrument expressed by Y is used"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_instrument_result"><span class="rel-id">co_instrument_result</span></a></td></tr>
       <tr><th>example</th><td>photograph/camera</td></tr>
     </table>
@@ -3506,6 +3867,11 @@ action for which the instrument expressed by concept Y is used.</p>
     <span class="short definition">"Y is the result of an action carried out by the instrument expressed by X"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    <li>synset&ndash;synset</li>
+	    
+	    
+	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#co_result_instrument"><span class="rel-id">co_result_instrument</span></a></td></tr>
       <tr><th>example</th><td>camera/photograph</td></tr>
     </table>
@@ -3529,6 +3895,93 @@ action carried out by the instrument expressed by concept X.</p>
         
       </tbody>
     </table>
+    
+  </div>
+</article>
+
+<article class="relation">
+  <h3 id="participle"><a href="#participle">Participle</a> (<span class="rel-id">participle</span>)<a class="toplink" href="#">back to top</a></h3>
+  <div class="description">
+    
+    <table class="fieldlist">
+      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
+      <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
+      <tr><th>example</th><td>(no example given)</td></tr>
+    </table>
+    <h4>Definition</h4>
+    <p>(no definition)</p>
+    <h4>Examples</h4>
+    <p>(no more examples)</p>
+    <h4>Tests</h4>
+    <p>(no tests defined)</p>
+    <h4>Comments</h4>
+    <p>(no comments)</p>
+    <h4>Project-specific Names</h4>
+    
+    <p>(no project names defined)</p>
+    
+  </div>
+</article>
+
+<article class="relation">
+  <h3 id="pertainym"><a href="#pertainym">Pertainym</a> (<span class="rel-id">pertainym</span>)<a class="toplink" href="#">back to top</a></h3>
+  <div class="description">
+    
+    <table class="fieldlist">
+      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
+      <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
+      <tr><th>example</th><td>(no example given)</td></tr>
+    </table>
+    <h4>Definition</h4>
+    <p>(no definition)</p>
+    <h4>Examples</h4>
+    <p>(no more examples)</p>
+    <h4>Tests</h4>
+    <p>(no tests defined)</p>
+    <h4>Comments</h4>
+    <p>(no comments)</p>
+    <h4>Project-specific Names</h4>
+    
+    <p>(no project names defined)</p>
+    
+  </div>
+</article>
+
+<article class="relation">
+  <h3 id="derivation"><a href="#derivation">Derivation</a> (<span class="rel-id">derivation</span>)<a class="toplink" href="#">back to top</a></h3>
+  <div class="description">
+    
+    <table class="fieldlist">
+      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>applicability</th><td><ul>
+	    
+	    
+	    <li>sense&ndash;sense</li>
+	  </ul></td></tr>
+      <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
+      <tr><th>example</th><td>(no example given)</td></tr>
+    </table>
+    <h4>Definition</h4>
+    <p>(no definition)</p>
+    <h4>Examples</h4>
+    <p>(no more examples)</p>
+    <h4>Tests</h4>
+    <p>(no tests defined)</p>
+    <h4>Comments</h4>
+    <p>(no comments)</p>
+    <h4>Project-specific Names</h4>
+    
+    <p>(no project names defined)</p>
     
   </div>
 </article>

@@ -6,6 +6,17 @@
     {%- endif %}
     <table class="fieldlist">
       <tr><th>symbol</th><td>{{ rel.name.symbol or "(no symbol defined)" }}</td></tr>
+      <tr><th>applicability</th><td>
+	  {%- if rel.fa.synset_synset or rel.fa.sense_synset or rel.fa.sense_sense -%}
+	  {%- set dash="&ndash;" -%}
+	  <ul>
+	    {% if rel.fa.synset_synset %}<li>synset{{ dash|safe }}synset</li>{% endif %}
+	    {% if rel.fa.sense_synset %}<li>sense{{ dash|safe }}synset</li>{% endif %}
+	    {% if rel.fa.sense_sense %}<li>sense{{ dash|safe }}sense</li>{% endif %}
+	  </ul>
+	  {%- else -%}
+	  (not directly applicable)
+	  {%- endif -%}</td></tr>
       <tr><th>reverse</th><td>
 	  {%- if rel.fa.reverse -%}
 	  <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>

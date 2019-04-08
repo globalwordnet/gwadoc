@@ -28,6 +28,14 @@ div.description p, div.description ul {
     padding: 0px;
 }
 
+table.fieldlist th {
+    vertical-align: top;
+}
+table.fieldlist td ul {
+    margin: 0 0 0 0px;
+    list-style: none;
+}
+
 span.revchar { padding: 0px 10px; }
 
 article table {

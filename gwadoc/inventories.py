@@ -100,6 +100,9 @@ RELATIONS = (
     'co_instrument_patient',
     'co_result_instrument',
     'co_instrument_result',
+    'participle',
+    'pertainym',
+    'derivation',
 )
 
 PARTS = {
@@ -117,6 +120,9 @@ PARTS = {
 
 FORMAL_ATTRIBUTES = {
     'parent':  'Parent Relation',
+    'synset_synset': 'Applicability to synset -> synset links',
+    'sense_synset': 'Applicability to sense -> synset links',
+    'sense_sense': 'Applicability to sense -> sense links',
     'reverse': 'Reverse Relation',
     'inOMW':   'Relation used in OMW'
 }

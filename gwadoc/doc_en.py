@@ -1438,6 +1438,34 @@ relations.other.com.en = """
 Because we don't know what it means, we cannot give it a reverse relation.
 """
 
+### Relation: participle
+
+relations.participle.name.en = "Participle"
+relations.participle.df.en = ""
+relations.participle.dfn.en = ""
+relations.participle.ex.en = ""
+relations.participle.exe.en = ""
+relations.participle.com.en = ""
+
+### Relation: pertainym
+
+relations.pertainym.name.en = "Pertainym"
+relations.pertainym.df.en = ""
+relations.pertainym.dfn.en = ""
+relations.pertainym.ex.en = ""
+relations.pertainym.exe.en = ""
+relations.pertainym.com.en = ""
+
+
+### Relation: derivation
+
+relations.derivation.name.en = "Derivation"
+relations.derivation.df.en = ""
+relations.derivation.dfn.en = ""
+relations.derivation.ex.en = ""
+relations.derivation.exe.en = ""
+relations.derivation.com.en = ""
+
 
 ### New short definitions based on http://globalwordnet.github.io/schemas/
 
