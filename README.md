@@ -1,5 +1,5 @@
 # gwadoc
-documentation for things like relations and parts of speech used by wordnets
+<a href='https://globalwordnet.github.io/gwadoc'>Documentation</a> for things like relations and parts of speech used by wordnets
 
 # License
 
