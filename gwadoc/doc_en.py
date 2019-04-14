@@ -1441,29 +1441,40 @@ Because we don't know what it means, we cannot give it a reverse relation.
 ### Relation: participle
 
 relations.participle.name.en = "Participle"
-relations.participle.df.en = ""
-relations.participle.dfn.en = ""
-relations.participle.ex.en = ""
+relations.participle.df.en = "links from a participial adjective to a verb"
+relations.participle.dfn.en = """A relation where X is a participial adjective and Y is the verb it is derived from"""
+relations.participle.ex.en = "*interesting* is the participial adjective from *interest*"
 relations.participle.exe.en = ""
-relations.participle.com.en = ""
+relations.participle.com.en = "These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can see, anywhere FCB)"
 
 ### Relation: pertainym
 
 relations.pertainym.name.en = "Pertainym"
-relations.pertainym.df.en = ""
-relations.pertainym.dfn.en = ""
-relations.pertainym.ex.en = ""
-relations.pertainym.exe.en = ""
+relations.pertainym.df.en = "X is of or pertaining to Y"
+relations.pertainym.dfn.en = "links a relational adjective X  to the noun Y it is about, or an adverb X to the adjective it is about Y"
+relations.pertainym.ex.en = "*naval* has pertainym *navy*; *slowly* has pertainym *slow*"
+relations.pertainym.exe.en = """*lunar* has pertainym *moon*
+*naval* has pertainym *navy*; *slowly* has pertainym *slow*
+*English* has pertainym *England*; 
+*English* has pertainym *English* "language" """
 relations.pertainym.com.en = ""
 
 
 ### Relation: derivation
 
 relations.derivation.name.en = "Derivation"
-relations.derivation.df.en = ""
-relations.derivation.dfn.en = ""
-relations.derivation.ex.en = ""
-relations.derivation.exe.en = ""
+relations.derivation.df.en = "X is a derivationally related form of Y"
+relations.derivation.dfn.en = """X is a derivationally related form of Y, this may be specialized
+ further.  It includes zero derivations.  Gnerally it is used for different
+ syntactic categories that have the same root form and are
+ semantically related.  Wordnet does not say which is the baseform,
+ the relationship is fully reversible.  """
+relations.derivation.ex.en = "*yearly* is derivationally related to *year*"
+relations.derivation.exe.en = """*yearly* is derivationally related to *year*
+*want n* is derivationally related to *want v*
+*wanter n* is derivationally related to *want v*
+*provision n* is derivationally related to *provide v*
+"""
 relations.derivation.com.en = ""
 
 
