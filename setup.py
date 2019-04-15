@@ -33,10 +33,11 @@ setup(
     ],
     install_requires=[
     ],
-    extra_requires={
+    extras_require={
         "build": [
             'jinja2',
             'docutils',
+            'pygments'
         ]
     }
 )
