@@ -12,8 +12,9 @@ This package has two main uses:
 # Installation
 
 You can use `pip` to install gwadoc (use of a virtual environment is
-strongly recommended; see [here][virtualenv]). As gwadoc is not on
-[PyPI](https://pypi.org/), you can give the GitHub URL to `pip`:
+strongly recommended; see [here][virtualenv]). The minimum Python
+version is 3.5. As gwadoc is not on [PyPI](https://pypi.org/), you can
+give the GitHub URL to `pip`:
 
 ``` bash
 ~$ pip install git+git://github.com/globalwordnet/gwadoc.git
