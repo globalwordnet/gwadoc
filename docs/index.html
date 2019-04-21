@@ -591,7 +591,7 @@ Instances are expressed by proper nouns.</p>
   <div class="description">
     <span class="short definition">"An opposite and inherently incompatible word"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td>⇔</td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1523,7 +1523,7 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
   <div class="description">
     <span class="short definition">"a word having a loose or fuzzy semantic relation to another word"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td>☞</td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -3902,7 +3902,7 @@ action carried out by the instrument expressed by concept X.</p>
 <article class="relation">
   <h3 id="participle"><a href="#participle">Participle</a> (<span class="rel-id">participle</span>)<a class="toplink" href="#">back to top</a></h3>
   <div class="description">
-    
+    <span class="short definition">"links from a participial adjective to a verb"</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
       <tr><th>applicability</th><td><ul>
@@ -3911,16 +3911,16 @@ action carried out by the instrument expressed by concept X.</p>
 	    <li>sense&ndash;sense</li>
 	  </ul></td></tr>
       <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
-      <tr><th>example</th><td>(no example given)</td></tr>
+      <tr><th>example</th><td><em>interesting</em> is the participial adjective from <em>interest</em></td></tr>
     </table>
     <h4>Definition</h4>
-    <p>(no definition)</p>
+    <p>A relation where X is a participial adjective and Y is the verb it is derived from</p>
     <h4>Examples</h4>
     <p>(no more examples)</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
+    <p>These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can see, anywhere FCB)</p>
     <h4>Project-specific Names</h4>
     
     <p>(no project names defined)</p>
@@ -3931,21 +3931,24 @@ action carried out by the instrument expressed by concept X.</p>
 <article class="relation">
   <h3 id="pertainym"><a href="#pertainym">Pertainym</a> (<span class="rel-id">pertainym</span>)<a class="toplink" href="#">back to top</a></h3>
   <div class="description">
-    
+    <span class="short definition">"X is of or pertaining to Y"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td>⊞</td></tr>
       <tr><th>applicability</th><td><ul>
 	    
 	    
 	    <li>sense&ndash;sense</li>
 	  </ul></td></tr>
       <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
-      <tr><th>example</th><td>(no example given)</td></tr>
+      <tr><th>example</th><td><em>naval</em> has pertainym <em>navy</em>; <em>slowly</em> has pertainym <em>slow</em></td></tr>
     </table>
     <h4>Definition</h4>
-    <p>(no definition)</p>
+    <p>links a relational adjective X  to the noun Y it is about, or an adverb X to the adjective it is about Y</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p><em>lunar</em> has pertainym <em>moon</em>
+<em>naval</em> has pertainym <em>navy</em>; <em>slowly</em> has pertainym <em>slow</em>
+<em>English</em> has pertainym <em>England</em>;
+<em>English</em> has pertainym <em>English</em> &quot;language&quot;</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
@@ -3960,21 +3963,30 @@ action carried out by the instrument expressed by concept X.</p>
 <article class="relation">
   <h3 id="derivation"><a href="#derivation">Derivation</a> (<span class="rel-id">derivation</span>)<a class="toplink" href="#">back to top</a></h3>
   <div class="description">
-    
+    <span class="short definition">"X is a derivationally related form of Y"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td>⊳</td></tr>
       <tr><th>applicability</th><td><ul>
 	    
 	    
 	    <li>sense&ndash;sense</li>
 	  </ul></td></tr>
-      <tr><th>reverse</th><td>(no reverse relation defined)</td></tr>
-      <tr><th>example</th><td>(no example given)</td></tr>
+      <tr><th>reverse</th><td><a href="#derivation"><span class="rel-id">derivation</span></a></td></tr>
+      <tr><th>example</th><td><em>yearly</em> is derivationally related to <em>year</em></td></tr>
     </table>
     <h4>Definition</h4>
-    <p>(no definition)</p>
+    <p><dl class="docutils">
+<dt>X is a derivationally related form of Y, this may be specialized</dt>
+<dd>further.  It includes zero derivations.  Gnerally it is used for different
+syntactic categories that have the same root form and are
+semantically related.  Wordnet does not say which is the baseform,
+the relationship is fully reversible.</dd>
+</dl></p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p><em>yearly</em> is derivationally related to <em>year</em>
+<em>want n</em> is derivationally related to <em>want v</em>
+<em>wanter n</em> is derivationally related to <em>want v</em>
+<em>provision n</em> is derivationally related to <em>provide v</em></p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>

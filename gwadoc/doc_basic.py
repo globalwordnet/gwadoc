@@ -1015,6 +1015,8 @@ relations.classified_by.proj.pointer = ""
 
 ### Relation: also (no ili)
 
+relations.also.name.symbol = 	'☞'
+
 relations.also.fa.parent = 'other'
 relations.also.fa.synset_synset = True
 relations.also.fa.sense_synset = False
@@ -1030,6 +1032,8 @@ relations.also.proj.pointer = "^"
 
 
 ### Relation: antonym
+
+relations.antonym.name.symbol = '⇔'
 
 relations.antonym.fa.parent = 'constitutive'
 relations.antonym.fa.synset_synset = True
@@ -1100,6 +1104,8 @@ relations.participle.fa.sense_sense = True
 
 ### Relation: pertainym
 
+relations.pertainym.name.symbol = '⊞'
+
 relations.pertainym.fa.parent = None
 relations.pertainym.fa.synset_synset = False
 relations.pertainym.fa.sense_synset = False
@@ -1107,6 +1113,8 @@ relations.pertainym.fa.sense_sense = True
 
 
 ### Relation: derivation
+
+relations.derivation.name.symbol = '⊳'
 
 relations.derivation.fa.parent = None
 relations.derivation.fa.synset_synset = False
