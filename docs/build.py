@@ -12,7 +12,7 @@ import jinja2
 
 sys.path.insert(1, os.path.dirname(os.path.dirname(__file__)))
 import gwadoc
-gwadoc.set_preferred_language('en')
+#gwadoc.set_preferred_language('en')
 
 
 def rst_renderer(fmt):
@@ -31,7 +31,8 @@ def rst_renderer(fmt):
 
 
 def build(args):
-
+    gwadoc.set_preferred_language(args.lang)
+        
     loader =  jinja2.FileSystemLoader(
         os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates')))
 
@@ -81,5 +82,6 @@ def build(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('format', choices=('html', 'latex'), default='html')
+    parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
