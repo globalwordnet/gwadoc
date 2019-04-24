@@ -3,23 +3,34 @@
 <meta charset="utf-8">
 
 <head>
-  {% block head -%}
   <link rel="stylesheet" href="static/gwadoc.css" />
-  <title>{% block title %}{% endblock %}</title>
-  {%- endblock %}
+  <title>GWA Documentation Working Group</title>
 </head>
 
 <body>
   <header>
-    {% block header -%}
-    <h1>Open Wordnet Documentation</h1>
-    {%- endblock %}
+    <h1>GWA Documentation Working Group</h1>
   </header>
   <main>
-    {% block content %}{% endblock %}
+    <section>
+<h2>Members</h2>
+
+<ul>
+  <li>Maciej Piasecki (leader)
+  <li>Ewa Rudnicka
+  <li>Francis Bond
+  <li>Alexandre Rademaker
+  <li>Luis Morgado da Costa
+  <li>Michael Goodman
+</ul>
+
+<p>As of April 2019.
+
+<p><a href='https://github.com/globalwordnet/gwadoc/graphs/contributors'>Contributors
+    to the repository</a>
+  </section>
   </main>
   <footer>
-    {% block footer -%}
     <p>
       If you notice any errors or omissions, please
       <a href="https://github.com/globalwordnet/gwadoc/issues/new">submit an issue</a>
@@ -39,7 +50,6 @@
 by the <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">GWA Documentation Working Group</span>
 is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </p>
-    {%- endblock %}
   </footer>
 </body>
 
