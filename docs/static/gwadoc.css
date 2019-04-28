@@ -52,6 +52,8 @@ article table td {
 div.description > ul { list-style: none; }
 div.description > ul li { padding: 5px 0px; }
 
+div.highlight { background-color: #F4F4F4 }
+
 @media screen and (max-width: 799px) {
     body { font-size: small; }
     h2, h3, h4 { margin: 10px 0px; }
