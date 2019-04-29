@@ -34,10 +34,12 @@
     <p>{{ rel.test | render_rst or "(no tests defined)" }}</p>
     <h4>Comments</h4>
     <p>{{ rel.com | render_rst or "(no comments)" }}</p>
-
+    {%- if rel.fa.synset_synset or rel.fa.sense_sense -%}
     <h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:
+	format for Wordnet LMF</a> the relation should be shown like
+      this:
+      {%- endif -%}
       {%- if rel.fa.synset_synset -%}
 <div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>

@@ -218,11 +218,7 @@ Language Resources and Evaluation, 47(3), pp 769–79</td></tr>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
-    <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<h4>Project-specific Names</h4>
+    <p>(no comments)</p><h4>Project-specific Names</h4>
     
     <p>(no project names defined)</p>
     
@@ -316,11 +312,10 @@ Y-phrase.</li>
 </dl></p>
     <h4>Comments</h4>
     <p>This is the fundamental relation, generally used for nouns and
-verbs. In plWordNet it is also extended to adjectives and adverbs.</p>
-
-    <h4>XML</h4>
+verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;hyponym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -420,11 +415,10 @@ applies to the Y-phrase</li>
     <p>This is the fundamental relation, generally used for nouns and
 verbs. In the original Princeton WordNet the name 'troponym' was used
 for this relation when relating to verbs. In plWordNet it is also
-extended to adjectives and adverbs.</p>
-
-    <h4>XML</h4>
+extended to adjectives and adverbs.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;hypernym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -489,11 +483,10 @@ Instances are expressed by proper nouns.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;instance_hyponym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -577,11 +570,10 @@ Instances are expressed by proper nouns.</p>
 </table>
 <p>Condition: X is a proper noun (or named entity), Y is a common noun.</p></p>
     <h4>Comments</h4>
-    <p>Sometimes modelled as hyponomy/hypernymy relations.</p>
-
-    <h4>XML</h4>
+    <p>Sometimes modelled as hyponomy/hypernymy relations.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;instance_hypernym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -656,11 +648,10 @@ with the same part-of-speech.</p>
     <h4>Comments</h4>
     <p>It is primarily a relation between senses, but sense level antonymy
 implies a looser synset level relation, which we automatically add to
-make it avaiable for wordnets that do not yet have sense level links.</p>
-
-    <h4>XML</h4>
+make it avaiable for wordnets that do not yet have sense level links.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;antonym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -733,11 +724,10 @@ chengyu (成语), a traditional four-character Chinese idiom.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;eq_synonym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -797,11 +787,10 @@ nouns, the similarity link helps showing relations between them.</p>
     <p>This relation coerces PWN Similar to relation for adjectives, Verb
 Group relation for verbs and EWN NEAR_SYNONYM for nouns and verbs. In
 plWN Similarity relation for adjectives to nouns is a unilateral sense
-relation which is why it is not given in the mappings below.</p>
-
-    <h4>XML</h4>
+relation which is why it is not given in the mappings below.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;similar&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -875,11 +864,10 @@ concept X.</p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
-shouldn't be a special relation.</p>
-
-    <h4>XML</h4>
+shouldn't be a special relation.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;meronym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -948,11 +936,10 @@ part of concept Y.</p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
-shouldn't be a special relation.</p>
-
-    <h4>XML</h4>
+shouldn't be a special relation.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;holonym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1014,11 +1001,10 @@ located in concept Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;mero_location&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1070,11 +1056,10 @@ located in concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;holo_location&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1130,11 +1115,10 @@ instances of Concept-X form Concept-Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;mero_member&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1200,11 +1184,10 @@ instances of Concept-X form Concept-Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;holo_member&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1272,11 +1255,10 @@ inclusiveness relations.</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>This relation is also frequently used by PWN to denote
-geographical inclusiveness relations.</p>
-
-    <h4>XML</h4>
+geographical inclusiveness relations.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;mero_part&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1343,11 +1325,10 @@ inclusiveness relations.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;holo_part&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1409,11 +1390,10 @@ amount/piece/portion of concept Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;mero_portion&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1470,11 +1450,10 @@ amount/piece/portion of concept X</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;holo_portion&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1529,11 +1508,10 @@ Concept-Y is a substance of Concept-X”.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;mero_substance&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1598,11 +1576,10 @@ Concept-Y is a substance of Concept-X”.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;holo_substance&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1667,11 +1644,10 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>Because we don't know what it means, we cannot give it a reverse relation.</p>
-
-    <h4>XML</h4>
+    <p>Because we don't know what it means, we cannot give it a reverse relation.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;other&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1724,11 +1700,10 @@ all parts-of-speech.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>Also known as fuzzynym</p>
-
-    <h4>XML</h4>
+    <p>Also known as fuzzynym</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;also&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1791,11 +1766,10 @@ concept X.</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>In plWordNet it is a relation between lexical units.
-FCB: isn't this the same as attribute (but split into two directions)</p>
-
-    <h4>XML</h4>
+FCB: isn't this the same as attribute (but split into two directions)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;state_of&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1853,11 +1827,10 @@ concept Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;be_in_state&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1913,11 +1886,10 @@ this relation.</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>EUWN's definition of CAUSES is broader than that of PWN. It
-seems possible to just absorb PWN's links.</p>
-
-    <h4>XML</h4>
+seems possible to just absorb PWN's links.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;causes&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -1984,11 +1956,10 @@ as a result of concept Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>The 'is caused by' relation was missing from PWN before.</p>
-
-    <h4>XML</h4>
+    <p>The 'is caused by' relation was missing from PWN before.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;is_caused_by&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2041,11 +2012,10 @@ way that it actually includes links that were linked as
 ENTAILMENT by the PWN (e.g. to suceed IS_CAUSED_BY to try;
 to try CAUSES succeed [non-factive, intention]). This means
 that HAS_SUBVENT and IS_SUBVENT_OF should not include every
-relation marked as ENTAILMENT by the PWN.</p>
-
-    <h4>XML</h4>
+relation marked as ENTAILMENT by the PWN.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;subevent&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2103,11 +2073,10 @@ place, concept Y takes place.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;is_subevent_of&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2160,11 +2129,10 @@ Y takes place.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;manner_of&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2217,11 +2185,10 @@ X takes place.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;in_manner&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2278,11 +2245,10 @@ nouns and vice-versa.</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>In plWN Value_of_the_attribute is a unilateral relation from
-adjectives to nouns.</p>
-
-    <h4>XML</h4>
+adjectives to nouns.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;attribute&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2348,11 +2314,10 @@ a nominal (pronominal) concept Y.</p>
 pronouns, or 'every' in everybody, or 'male' for male
 personal pronouns, but not masculine agreeement in gendered
 languages. This relation will include some things that are
-now marked as domain usage. (to be corrected soon'ish)</p>
-
-    <h4>XML</h4>
+now marked as domain usage. (to be corrected soon'ish)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;restricts&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2397,11 +2362,10 @@ adjectival concept X (quantifier/determiner).</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;restricted_by&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2436,11 +2400,10 @@ between a classifier X and Y</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>currently we only have links for nominal concepts, but we
-will do it for other POS (e.g. v)</p>
-
-    <h4>XML</h4>
+will do it for other POS (e.g. v)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;classifies&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2482,11 +2445,10 @@ between Y and a classifier X</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;classified_by&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2530,11 +2492,10 @@ which Verb-Y has to take place before or during Verb-X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;entails&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2585,11 +2546,10 @@ which Verb-Y has to take place before or during Verb-X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;is_entailed_by&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2630,11 +2590,10 @@ which Verb-Y has to take place before or during Verb-X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;domain&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2667,11 +2626,10 @@ which Verb-Y has to take place before or during Verb-X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;has_domain&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2705,11 +2663,10 @@ domain (e.g. computing, sport, biology, etc.) of concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;domain_topic&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2766,11 +2723,10 @@ domain (e.g. computing, sport, biology, etc.) of concept Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;has_domain_topic&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2826,11 +2782,10 @@ related geographical region.</p>
     <h4>Comments</h4>
     <p>We also agreed to change the name for these (to include both
 geographical and cultural regions)! But I'm not sure to
-what...</p>
-
-    <h4>XML</h4>
+what...</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;domain_region&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2889,11 +2844,10 @@ cultural domain of concept Y.</p>
     <h4>Comments</h4>
     <p>We have discussed changing the name for these (as they include both
 geographical and cultural regions).  But we have not yet come up with
-a good name.</p>
-
-    <h4>XML</h4>
+a good name.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;has_domain_region&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -2946,11 +2900,10 @@ X. such as idiom, honorific or classifier.</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>The name was changed from &quot;Domain of synset - USAGE&quot; as we found it
-too different from the standard meaning of domain.</p>
-
-    <h4>XML</h4>
+too different from the standard meaning of domain.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;exemplifies&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3012,11 +2965,10 @@ too different from the standard meaning of domain.</p>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
     <p>We agreed to change the name for these with Christiane! We
-propose 'Exemplified_By'.</p>
-
-    <h4>XML</h4>
+propose 'Exemplified_By'.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;is_exemplified_by&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3078,11 +3030,10 @@ supertype of <tt class="docutils literal">agent</tt>, <tt class="docutils litera
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;role&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3140,11 +3091,10 @@ X. Involved is the supertype of <tt class="docutils literal">involved_agent</tt>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3198,11 +3148,10 @@ intentionally. X is typically the agent of the action expressed by Y</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;agent&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3256,11 +3205,10 @@ the agent of the action expressed by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_agent&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3308,11 +3256,10 @@ the agent of the action expressed by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;patient&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3365,11 +3312,10 @@ concept A.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_patient&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3418,11 +3364,10 @@ X is the result of Y or, (A/an) X is created by Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;result&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3474,11 +3419,10 @@ into existence as a result of concept A.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_result&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3531,11 +3475,10 @@ used to Y (with)</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;instrument&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3588,11 +3531,10 @@ by concept A.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_instrument&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3641,11 +3583,10 @@ location where the action or event expressed by concept Y takes place.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;location&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3698,11 +3639,10 @@ A takes place.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>In plWordNet it is a relation between lexical units.</p>
-
-    <h4>XML</h4>
+    <p>In plWordNet it is a relation between lexical units.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_location&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3752,11 +3692,10 @@ Y. It is possible to Y from/to/over/across/through a place (X)</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;direction&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3804,11 +3743,10 @@ by concept A.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_direction&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3851,11 +3789,10 @@ by concept A.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;target_direction&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3902,11 +3839,10 @@ where the action or event expressed by concept A leads to.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_target_direction&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -3951,11 +3887,10 @@ begins/starts/happens.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;source_direction&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4003,11 +3938,10 @@ begins/starts/happens.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;involved_source_direction&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4049,11 +3983,10 @@ which concept Y is involved (bidirectional).</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_role&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4096,11 +4029,10 @@ undergoing an action carried out by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_agent_patient&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4142,11 +4074,10 @@ carried out by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_patient_agent&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4189,11 +4120,10 @@ by concept X in a certain action.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_agent_instrument&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4235,11 +4165,10 @@ by concept Y for a certain action.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_instrument_agent&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4282,11 +4211,10 @@ action carried out by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_agent_result&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4328,11 +4256,10 @@ action carried out by concept Y.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_result_agent&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4374,11 +4301,10 @@ for which the instrument expressed by concept X is used.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_patient_instrument&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4420,11 +4346,10 @@ for which the instrument expressed by concept X is used.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_instrument_patient&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4466,11 +4391,10 @@ action for which the instrument expressed by concept Y is used.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_result_instrument&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4512,11 +4436,10 @@ action carried out by the instrument expressed by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre>
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre>
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;co_instrument_result&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4557,11 +4480,10 @@ action carried out by the instrument expressed by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can see, anywhere FCB)</p>
-
-    <h4>XML</h4>
+    <p>These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can see, anywhere FCB)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre> 
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre> 
 <span class="nt">&lt;Sense</span> <span class="na">id=</span><span class="s">&quot;wn-sense-X&quot;</span> <span class="na">synset=</span><span class="s">&quot;wn-synset-X&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;SenseRelation</span> <span class="na">relType=</span><span class="s">&quot;participle&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-sense-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4597,11 +4519,10 @@ action carried out by the instrument expressed by concept X.</p>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre> 
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre> 
 <span class="nt">&lt;Sense</span> <span class="na">id=</span><span class="s">&quot;wn-sense-X&quot;</span> <span class="na">synset=</span><span class="s">&quot;wn-synset-X&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;SenseRelation</span> <span class="na">relType=</span><span class="s">&quot;pertainym&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-sense-Y&quot;</span><span class="nt">/&gt;</span>
@@ -4643,11 +4564,10 @@ the relationship is fully reversible.</dd>
     <h4>Tests</h4>
     <p>(no tests defined)</p>
     <h4>Comments</h4>
-    <p>(no comments)</p>
-
-    <h4>XML</h4>
+    <p>(no comments)</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like this:<div class="highlight"><pre> 
+	format for Wordnet LMF</a> the relation should be shown like
+      this:<div class="highlight"><pre> 
 <span class="nt">&lt;Sense</span> <span class="na">id=</span><span class="s">&quot;wn-sense-X&quot;</span> <span class="na">synset=</span><span class="s">&quot;wn-synset-X&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;SenseRelation</span> <span class="na">relType=</span><span class="s">&quot;derivation&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-sense-Y&quot;</span><span class="nt">/&gt;</span>
