@@ -3,12 +3,24 @@
 <meta charset="utf-8">
 
 <head>
-  <link rel="stylesheet" href="static/gwadoc.css" />
-  <link rel="stylesheet" href="static/pygment.css" />
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="static/gwadoc.css" />
+    <link rel="stylesheet" href="static/pygment.css" />
   <title>Open Wordnet Documentation</title>
 </head>
 
-<body>
+<body clas="d-flex flex-column">
+
+<div id="container" class="container">
   <header>
     <h1>Open Wordnet Documentation</h1>
   </header>
@@ -336,7 +348,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
         <tr>
           <th>Euro WordNet Relation Name</th>
           <td>
-            HAS_HYPERONYM</td>
+            has_hyponym</td>
         </tr>
         <tr>
           <th>PlWordNet Relation Name</th>
@@ -379,7 +391,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
 if X is a hypernym of Y, then all Y are X.</p>
     <h4>Examples</h4>
     <p><ul class="simple">
-<li><em>meat</em> <tt class="docutils literal">hypernym</tt> <em>beef</em></li>
+<li>pwn('calendar month', '15209413-n') {{ rel_id('hypernym') }} pwn('Hindu Calendar month', '15219351-n')</li>
 <li><em>edible fruit</em> <tt class="docutils literal">hypernym</tt> <em>pear</em></li>
 <li><em>wordbook</em> <tt class="docutils literal">hypernym</tt> <em>dictionary</em></li>
 </ul></p>
@@ -435,7 +447,7 @@ extended to adjectives and adverbs.</p><h4>XML</h4>
         <tr>
           <th>Euro WordNet Relation Name</th>
           <td>
-            HAS_HYPONYM</td>
+            has_hyperonym</td>
         </tr>
         <tr>
           <th>PlWordNet Relation Name</th>
@@ -595,7 +607,7 @@ Instances are expressed by proper nouns.</p>
         <tr>
           <th>Euro WordNet Relation Name</th>
           <td>
-            HAS_INSTANCE</td>
+            has_instance</td>
         </tr>
         <tr>
           <th>PlWordNet Relation Name</th>
@@ -4604,6 +4616,13 @@ by the <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionN
 is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </p>
   </footer>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  
 </body>
 
 </html>
