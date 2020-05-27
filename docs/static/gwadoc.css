@@ -2,6 +2,24 @@ body {
     font-family: sans-serif;
 }
 
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+#title {
+    position: relative;
+    top: 0px;
+    left:200px;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 a:link { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -62,3 +80,13 @@ div.highlight { background-color: #F4F4F4 }
     article table { margin: 2px 0px 2px 0px; }
     article table td { padding: 1px 0px 1px 5px; }
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
