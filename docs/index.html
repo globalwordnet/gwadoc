@@ -857,7 +857,7 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
 <article class="relation">
   <h3 id="meronym"><a href="#meronym">Meronym</a> (<span class="rel-id">meronym</span>)<a class="toplink" href="#">back to top</a></h3>
   <div class="description">
-    <span class="short definition">"Y makes up a part of X"</span>
+    <span class="short definition">"A word that denotes a constituent part or a member of something."</span>
     <table class="fieldlist">
       <tr><th>symbol</th><td>(no symbol defined)</td></tr>
       <tr><th>applicability</th><td><ul>
@@ -866,15 +866,81 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
 	    
 	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holonym"><span class="rel-id">holonym</span></a></td></tr>
-      <tr><th>example</th><td>hand/finger</td></tr>
+      <tr><th>example</th><td>Finger is a meronym of Hand.</td></tr>
     </table>
     <h4>Definition</h4>
     <p>A relation between two concepts where concept Y makes up a part of
 concept X.</p>
-    <h4>Examples</h4>
-    <p>(no more examples)</p>
-    <h4>Tests</h4>
-    <p>(no tests defined)</p>
+
+<h4>Examples</h4>
+<p><ul class="simple">
+<li><em>Lens</em> <tt class="docutils literal"> is a meronym of </tt> <em>Camera</em></li>
+<li><em>Face</em> <tt class="docutils literal"> is a meronym of </tt> <em>Person</em></li>
+<li><em>Wheel</em> <tt class="docutils literal"> is a meronym of </tt> <em>Automobile</em></li>
+
+</ul></p>
+<h4>Tests</h4>
+<p><p>General Meronymy for noun </p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="2%" />
+<col width="91%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>yes</td>
+<td>a</td>
+<td><em>(A/An) X makes up a part of (a/an) Y </em></td>
+</tr>
+<tr><td>.</td>
+<td>.</td>
+<td><em>(a/an)Y has (a/an) Xs </em></td>
+
+<tr><td>no</td>
+<td>b</td>
+<td>the converse of the a relations </td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Conditions:</dt>
+<dd><ul class="first last simple">
+<li>X and Y are concrete nouns and are interpreted generically.</li>
+</ul>
+</dd>
+</dl>
+
+
+<p>MEMBER/GROUP meronymy for nouns using a relational member noun.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="3%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>yes</td>
+<td>a</td>
+<td><em>(A/An) X is a member/element of (a/an/the) Y</em></td>
+</tr>
+<tr><td>no</td>
+<td>b</td>
+<td><em>the converse of a</em></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Conditions:</dt>
+<dd><ul class="first last simple">
+<li>X is a single object-denoting noun.</li>
+<li>Y is a multiform noun (either a group-noun, a collective-noun or as a
+  lexicalized plural denoting multiple objects).</li>
+<li>Preferably humans, animals, plants or vehicles or closed sets such as the
+  number system, or the alphabet. </li>
+</ul>
+</dd>
+</dl></p>
+    
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
