@@ -871,10 +871,46 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
     <h4>Definition</h4>
     <p>A relation between two concepts where concept Y makes up a part of
 concept X.</p>
-    <h4>Examples</h4>
-    <p>(no more examples)</p>
-    <h4>Tests</h4>
-    <p>(no tests defined)</p>
+<h4>Examples</h4>
+<p><ul class="simple">
+  <li><em>person</em> <tt class="docutils literal">meronym</tt> <em>crowd</em></li>
+  <li><em>wheel</em> <tt class="docutils literal">meronym</tt> <em>car</em></li>
+  <li><em>leaf</em> <tt class="docutils literal">meronym</tt> <em>tree</em></li>
+  </ul></p>
+<h4>Tests</h4>
+<p>
+  <p>Meronymy between verb synsets (EWN test 11)</p>
+  <table border="1" class="docutils">
+    <colgroup>
+      <col width="8%" />
+      <col width="3%" />
+      <col width="90%" />
+    </colgroup>
+    <tbody valign="top">
+      <tr>
+        <td>yes</td>
+        <td>a</td>
+        <td><em>to Y is to do a part of X + AdvP/AdjP/NP/PP</em></td>
+      </tr>
+      <tr>
+        <td>no</td>
+        <td>b</td>
+        <td><em>to X is to do a part of Y + AdvP/AdjP/NP/PP</em></td>
+      </tr>
+    </tbody>
+  </table>
+  <dl class="docutils">
+    <dt>Conditions:</dt>
+    <dd>
+      <ul class="first last simple">
+        <li>X is a verb in the infinitive form</li>
+        <li>Y is a verb in the infinitive form</li>
+        <li>there is at least one specifying modifier (AdvP, NP or PP) that
+          applies to the Y-phrase</li>
+      </ul>
+    </dd>
+  </dl>
+  </p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
@@ -943,10 +979,46 @@ shouldn't be a special relation.</p><h4>XML</h4>
     <h4>Definition</h4>
     <p>A relation between two concepts where concept X makes up a
 part of concept Y.</p>
-    <h4>Examples</h4>
-    <p>(no more examples)</p>
-    <h4>Tests</h4>
-    <p>(no tests defined)</p>
+<h4>Examples</h4>
+<p><ul class="simple">
+  <li><em>crowd</em> <tt class="docutils literal">holonym</tt> <em>person</em></li>
+  <li><em>car</em> <tt class="docutils literal">holonym</tt> <em>wheel</em></li>
+  <li><em>tree</em> <tt class="docutils literal">holonym</tt> <em>leaf</em></li>
+  </ul></p>
+<h4>Tests</h4>
+<p>
+  <p>Meronymy between verb synsets (EWN test 11)</p>
+  <table border="1" class="docutils">
+    <colgroup>
+      <col width="8%" />
+      <col width="3%" />
+      <col width="90%" />
+    </colgroup>
+    <tbody valign="top">
+      <tr>
+        <td>yes</td>
+        <td>a</td>
+        <td><em>to X is to do a part of Y + AdvP/AdjP/NP/PP</em></td>
+      </tr>
+      <tr>
+        <td>no</td>
+        <td>b</td>
+        <td><em>to Y is to do a part of X + AdvP/AdjP/NP/PP</em></td>
+      </tr>
+    </tbody>
+  </table>
+  <dl class="docutils">
+    <dt>Conditions:</dt>
+    <dd>
+      <ul class="first last simple">
+        <li>X is a verb in the infinitive form</li>
+        <li>Y is a verb in the infinitive form</li>
+        <li>there is at least one specifying modifier (AdvP, NP or PP) that
+          applies to the Y-phrase</li>
+      </ul>
+    </dd>
+  </dl>
+  </p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
