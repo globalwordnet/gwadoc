@@ -821,6 +821,35 @@ concept X.
 """
 relations.meronym.ex.en = "hand/finger"
 relations.meronym.exe.en = """
+ * *person* ``meronym`` *crowd*
+ * *wheel* ``meronym`` *car*
+ * *leaf* ``meronym`` *plant*
+"""
+relations.meronym.test.en="""
+Meronymy-relation between nouns (EWN test 9)
+
+===     =   ==========================================
+yes     a   *An X is formed of Y and other constituents*
+.       .   *a Y is a component of X*
+no      b   the converse of any of the (a) sentences.
+===     =   ==========================================
+
+Conditions:
+ - both X and Y are singular nouns or plural nouns.
+
+Meronymy between verb synsets (EWN test 11)
+
+===     =   ===================================
+yes     a   *to Y is to do a part of X + AdvP/AdjP/NP/PP*
+no      b   *to X is to do a part of Y + AdvP/AdjP/NP/PP*
+===     =   ===================================
+
+Conditions:
+ - X is a verb in the infinitive form
+ - Y is a verb in the infinitive form
+ - there is at least one specifying AdvP, NP or PP that applies to the
+   Y-phrase.
+
 """
 relations.meronym.com.en = """
 This is an unspecified relation that covers all the
@@ -841,6 +870,35 @@ part of concept Y.
 """
 relations.holonym.ex.en = "finger/hand"
 relations.holonym.exe.en = """
+ * *crowd* ``holonym`` *person*
+ * *car* ``holonym`` *wheel*
+ * *plant* ``holonym`` *leaf*
+"""
+relations.holonym.test.en="""
+Holonymy-relation between nouns (EWN test 9)
+
+===     =   ==========================================
+yes     a   *A Y is formed of X and other constituents*
+.       .   *a X is a component of Y*
+no      b   the converse of any of the (a) sentences.
+===     =   ==========================================
+
+Conditions:
+ - both X and Y are singular nouns or plural nouns.
+
+Holonymy between verb synsets (EWN test 11)
+
+===     =   ===================================
+yes     a   *to X is to do a part of Y + AdvP/AdjP/NP/PP*
+no      b   *to Y is to do a part of X + AdvP/AdjP/NP/PP*
+===     =   ===================================
+
+Conditions:
+ - X is a verb in the infinitive form
+ - Y is a verb in the infinitive form
+ - there is at least one specifying AdvP, NP or PP that applies to the
+   Y-phrase.
+
 """
 relations.holonym.com.en = """
 This is an unspecified relation that covers all the

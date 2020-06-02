@@ -392,7 +392,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
 if X is a hypernym of Y, then all Y are X.</p>
     <h4>Examples</h4>
     <p><ul class="simple">
-<li>pwn('calendar month', '15209413-n') {{ rel_id('hypernym') }} pwn('Hindu Calendar month', '15219351-n')</li>
+<li><em>meat</em> <tt class="docutils literal">hypernym</tt> <em>beef</em></li>
 <li><em>edible fruit</em> <tt class="docutils literal">hypernym</tt> <em>pear</em></li>
 <li><em>wordbook</em> <tt class="docutils literal">hypernym</tt> <em>dictionary</em></li>
 </ul></p>
@@ -872,9 +872,69 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
     <p>A relation between two concepts where concept Y makes up a part of
 concept X.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p><ul class="simple">
+<li><em>person</em> <tt class="docutils literal">meronym</tt> <em>crowd</em></li>
+<li><em>wheel</em> <tt class="docutils literal">meronym</tt> <em>car</em></li>
+<li><em>leaf</em> <tt class="docutils literal">meronym</tt> <em>plant</em></li>
+</ul></p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p><p>Meronymy-relation between nouns (EWN test 9)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="2%" />
+<col width="92%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>yes</td>
+<td>a</td>
+<td><em>An X is formed of Y and other constituents</em></td>
+</tr>
+<tr><td>.</td>
+<td>.</td>
+<td><em>a Y is a component of X</em></td>
+</tr>
+<tr><td>no</td>
+<td>b</td>
+<td>the converse of any of the (a) sentences.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Conditions:</dt>
+<dd><ul class="first last simple">
+<li>both X and Y are singular nouns or plural nouns.</li>
+</ul>
+</dd>
+</dl>
+<p>Meronymy between verb synsets (EWN test 11)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="2%" />
+<col width="92%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>yes</td>
+<td>a</td>
+<td><em>to Y is to do a part of X + AdvP/AdjP/NP/PP</em></td>
+</tr>
+<tr><td>no</td>
+<td>b</td>
+<td><em>to X is to do a part of Y + AdvP/AdjP/NP/PP</em></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Conditions:</dt>
+<dd><ul class="first last simple">
+<li>X is a verb in the infinitive form</li>
+<li>Y is a verb in the infinitive form</li>
+<li>there is at least one specifying AdvP, NP or PP that applies to the
+Y-phrase.</li>
+</ul>
+</dd>
+</dl></p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
@@ -944,9 +1004,69 @@ shouldn't be a special relation.</p><h4>XML</h4>
     <p>A relation between two concepts where concept X makes up a
 part of concept Y.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p><ul class="simple">
+<li><em>crowd</em> <tt class="docutils literal">holonym</tt> <em>person</em></li>
+<li><em>car</em> <tt class="docutils literal">holonym</tt> <em>wheel</em></li>
+<li><em>plant</em> <tt class="docutils literal">holonym</tt> <em>leaf</em></li>
+</ul></p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p><p>Holonymy-relation between nouns (EWN test 9)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="2%" />
+<col width="91%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>yes</td>
+<td>a</td>
+<td><em>A Y is formed of X and other constituents</em></td>
+</tr>
+<tr><td>.</td>
+<td>.</td>
+<td><em>a X is a component of Y</em></td>
+</tr>
+<tr><td>no</td>
+<td>b</td>
+<td>the converse of any of the (a) sentences.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Conditions:</dt>
+<dd><ul class="first last simple">
+<li>both X and Y are singular nouns or plural nouns.</li>
+</ul>
+</dd>
+</dl>
+<p>Holonymy between verb synsets (EWN test 11)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="2%" />
+<col width="92%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>yes</td>
+<td>a</td>
+<td><em>to X is to do a part of Y + AdvP/AdjP/NP/PP</em></td>
+</tr>
+<tr><td>no</td>
+<td>b</td>
+<td><em>to Y is to do a part of X + AdvP/AdjP/NP/PP</em></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Conditions:</dt>
+<dd><ul class="first last simple">
+<li>X is a verb in the infinitive form</li>
+<li>Y is a verb in the infinitive form</li>
+<li>there is at least one specifying AdvP, NP or PP that applies to the
+Y-phrase.</li>
+</ul>
+</dd>
+</dl></p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
