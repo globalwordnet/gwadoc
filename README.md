@@ -68,16 +68,16 @@ Where `gwadoc.RELATIONS` is the inventory of relation names, and
 `gwadoc.relations` is the data structure containing documentation
 about each relation. For each relation, there are several fields:
 
-| Field  | Description            |
-| ------ | ---------------------- |
-| `df`   | short definition       |
-| `dfn`  | long definition        |
-| `ex`   | short example          |
-| `exe`  | more examples          |
-| `fa`   | formal attributes      |
-| `name` | relation name          |
-| `proj` | project-specific names |
-| `test` | linguistic tests       |
+| Field  | Description            | Comments                         | 
+| ------ | ---------------------- |----------------------------------|
+| `df`   | short definition       | Suitable for use in a mouseover  |
+| `ex`   | short example          | Suitable for use in a mouseover  |
+| `dfn`  | long definition        |                                  |
+| `exe`  | more examples          |                                  |
+| `fa`   | formal attributes      |                                  |
+| `name` | relation name          |                                  |
+| `proj` | project-specific names |                                  |
+| `test` | linguistic tests       | Probably language specific       |
 
 For the formal attributes and project names that are available, see
 [`gwadoc.inventories`](gwadoc/inventories.py). The data structure
@@ -116,6 +116,13 @@ After installing the requirements, you can build the HTML documentation:
 
 Note: if you installed the requirements in a virtual environment make
 sure you activate it before building the documentation.
+
+# Contributing
+
+Please add to the documentation using restructured text in the files in
+the gwadoc directory.  `doc-en.py` is the most complete at the
+moment, use the entries for `hypernym/hyponym` as good examples.
+
 
 # License
 
