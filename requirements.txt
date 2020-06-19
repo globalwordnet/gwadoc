@@ -1,0 +1,2 @@
+gwadoc==0.1.0
+git+git://github.com/globalwordnet/gwadoc.git

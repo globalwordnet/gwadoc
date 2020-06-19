@@ -67,7 +67,7 @@
       <li><a href="#mero_portion">Portion Meronym</a> (<span class="rel-id">mero_portion</span>)<span class="revchar">⇔</span>
 	<a href="#holo_portion">Portion Holonym</a> (<span class="rel-id">holo_portion</span>)
       </li>
-      
+
       <li><a href="#mero_substance">Substance Meronym</a> (<span class="rel-id">mero_substance</span>)<span class="revchar">⇔</span>
 	<a href="#holo_substance">Substance Holonym</a> (<span class="rel-id">holo_substance</span>)
       </li>
@@ -850,20 +850,19 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
         
       </tbody>
     </table>
-    
+
   </div>
 </article>
 
 <article class="relation">
   <h3 id="meronym"><a href="#meronym">Meronym</a> (<span class="rel-id">meronym</span>)<a class="toplink" href="#">back to top</a></h3>
   <div class="description">
-    <span class="short definition">"Y makes up a part of X"</span>
+    <span class="short definition">"A term used to denote a thing that is a part of something else."</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td>></td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
-	    
-	    
+
 	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holonym"><span class="rel-id">holonym</span></a></td></tr>
       <tr><th>example</th><td>hand/finger</td></tr>
@@ -872,9 +871,46 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
     <p>A relation between two concepts where concept Y makes up a part of
 concept X.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p><ul class="simple">
+      <li><em>wheels</em> <tt class="docutils literal">meronym</tt> <em>automobile</em></li>
+      <li><em>crown</em> <tt class="docutils literal">meronym</tt> <em>hat</em></li>
+      <li><em>faces</em> <tt class="docutils literal">meronym</tt> <em>people</em></li>
+      <li><em>leaf</em> <tt class="docutils literal">meronym</tt> <em>tree</em></li>
+      </ul></p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>Meronymy-relation between nouns (EWN test 21)</p>
+    <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an X makes up a part of A/an Y </em></td>
+      </tr>
+      <tr><td>.</td>
+      <td>.</td>
+      <td><em>A/an Y has A/an Xs </em></td>
+      </tr>
+      <tr><td>.</td>
+      <td>.</td>
+      <td><em> X is a meronym of "Y" if Xs are parts of Y(s)</em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td>the converse of the (a) relations.</td>
+      </tr>
+      </tbody>
+      </table>
+      <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+      <li>X and Y are concrete nouns and are interpreted generically.</li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
@@ -929,9 +965,9 @@ shouldn't be a special relation.</p><h4>XML</h4>
 <article class="relation">
   <h3 id="holonym"><a href="#holonym">Holonym</a> (<span class="rel-id">holonym</span>)<a class="toplink" href="#">back to top</a></h3>
   <div class="description">
-    <span class="short definition">"X makes up a part of Y"</span>
+    <span class="short definition">"defines the relationship between a term denoting the whole and a term denoting a part of, or a member of, the whole."</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td><</td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -941,12 +977,36 @@ shouldn't be a special relation.</p><h4>XML</h4>
       <tr><th>example</th><td>finger/hand</td></tr>
     </table>
     <h4>Definition</h4>
-    <p>A relation between two concepts where concept X makes up a
-part of concept Y.</p>
+    <p>A relation between two concepts where concept X makes up a part of concept Y.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p><ul class="simple">
+      <li><em>face</em> <tt class="docutils literal">holonym</tt> <em>eye</em></li>
+      <li><em>body</em> <tt class="docutils literal">holonym</tt> <em>arm, leg, heart</em></li>
+      <li><em>word</em> <tt class="docutils literal">holonym</tt> <em>letter</em></li>
+      </ul></p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>Holonymy-relation between nouns </p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em> X is a holonym of Y if Ys are parts of Xs</em></td>
+      </tr>
+      <tr><td>.</td>
+      <td>.</td>
+      <td><em> X is a holonym of Y if Ys are members of Xs</em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td>the converse of any of the (a) sentences.</td>
+      </tr>
+      </tbody>
+      </table>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
@@ -986,7 +1046,7 @@ shouldn't be a special relation.</p><h4>XML</h4>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69567">i69567</a>⟫</td>
         </tr>
-        
+
       </tbody>
     </table>
     
@@ -998,24 +1058,47 @@ shouldn't be a special relation.</p><h4>XML</h4>
   <div class="description">
     <span class="short definition">"X is a place located in Y"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
-	    
-	    
+
 	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_location"><span class="rel-id">holo_location</span></a></td></tr>
       <tr><th>example</th><td>city/centre</td></tr>
     </table>
     <h4>Definition</h4>
-    <p>A relation between two concepts where concept X is a place
-located in concept Y.</p>
+    <p>A relation between two concepts where concept X is a place located in concept Y.</p>
     <h4>Examples</h4>
     <p>desert &gt; oasis</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>location meronymy -relation between nouns (EWN test 26)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an/the X is a place located in a/an/the Y</em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td> the converse of (a) </td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+      <li> X is a concrete noun </li>
+        <li> Y is a concrete noun </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p>if X is the meronym of Y, Y is the holonym of X </p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1053,7 +1136,7 @@ located in concept Y.</p>
   <div class="description">
     <span class="short definition">"Y is a place located in X"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> < </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1063,14 +1146,38 @@ located in concept Y.</p>
       <tr><th>example</th><td>centre/city</td></tr>
     </table>
     <h4>Definition</h4>
-    <p>A relation between two concepts where concept Y is a place
-located in concept X.</p>
+    <p>A relation between two concepts where concept Y is a place located in concept X.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p>land &gt; building</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>location meronymy - relation between nouns (EWN test 26)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an/the Y is a place located in a/an/the X</em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td> the converse of (a) </td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+      <li> Y is a concrete noun </li>
+        <li> X is a concrete noun </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p>if Y is the holonym of X, X is the meronym of Y.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1108,7 +1215,7 @@ located in concept X.</p>
   <div class="description">
     
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1127,9 +1234,35 @@ instances of Concept-X form Concept-Y.</p>
     <h4>Examples</h4>
     <p>fleet &gt; ship</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>member meronymy - relation between nouns (EWN test 22)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an X is a member/element of a/an/the Y </em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td> the converse of (a) </td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+      <li>  X is a single object-denoting noun </li>
+        <li>Y is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects) </li>
+        <li> preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p> X is a single object</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1177,7 +1310,7 @@ instances of Concept-X form Concept-Y.</p>
   <div class="description">
     
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> < </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1194,11 +1327,37 @@ it does not relates a subkind of a concept. It links groups to members
 — Concept-Y is composed of many members of Concept-X; and many
 instances of Concept-X form Concept-Y.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p>people > individual</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+      <p>member meronymy - relation between nouns (EWN test 22)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an Y is a member/element of a/an/the X </em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td> the converse of (a) </td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+        <li>Y is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects) </li>
+        <li>  X is a single object-denoting noun </li>
+        <li> preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p> Y denotes multiple objects </p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1246,11 +1405,10 @@ instances of Concept-X form Concept-Y.</p>
   <div class="description">
     
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
-	    
-	    
+
 	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#holo_part"><span class="rel-id">holo_part</span></a></td></tr>
       <tr><th>example</th><td>car/wheel</td></tr>
@@ -1266,7 +1424,32 @@ inclusiveness relations.</p>
     <h4>Examples</h4>
     <p>hand &gt; finger</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+        <p>part meronymy - relation between nouns (EWN test 24)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an X is a component of a/an Y  </em></td>
+      </tr>
+      <tr><td>yes</td>
+      <td>b</td>
+      <td><em> A/an Y is a whole/system/complex/network/arrangement/construction of parts/components among which a/an X  </em></td>
+      </tr>
+
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+        <li>X and Y are concrete nouns denoting objects, there must be several Xs </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
     <p>This relation is also frequently used by PWN to denote
 geographical inclusiveness relations.</p><h4>XML</h4>
@@ -1317,7 +1500,7 @@ geographical inclusiveness relations.</p><h4>XML</h4>
   <div class="description">
     
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1335,11 +1518,35 @@ separated into Concept-Y”; and Concept-Y is a part of some Concept-X.</p>
 <p>This relation is also frequently used to denote geographical
 inclusiveness relations.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p>finger > hand</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>part meronymy - relation between nouns (EWN test 24)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an Y is a whole of a/an X </em></td>
+      </tr>
+      <tr><td>yes</td>
+      <td>b</td>
+      <td><em> A/an X is are parts/components of  a/an Y  </em></td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+        <li>Y and X are concrete nouns denoting objects, there must be single Y </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p> The has_holo relation typically relates components to their wholes </p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1387,7 +1594,7 @@ inclusiveness relations.</p>
   <div class="description">
     <span class="short definition">"X is an amount/piece/portion of Y"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1397,14 +1604,37 @@ inclusiveness relations.</p>
       <tr><th>example</th><td>drop/liquid</td></tr>
     </table>
     <h4>Definition</h4>
-    <p>A relation between two concepts where concept X is an
-amount/piece/portion of concept Y.</p>
+    <p>A relation between two concepts where concept X is an amount/piece/portion of concept Y.</p>
     <h4>Examples</h4>
     <p>bread &gt; slice</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+   <p>portion meronymy - relation between nouns (EWN test 23)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an X is an amount/piece/portion of Y </em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td><em> the converse of (a)  </em></td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+        <li>X and Y are substance denoting nouns </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p>Sometimes portions are sufficiently common in a particular language to become lexicalized</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1447,7 +1677,7 @@ amount/piece/portion of concept Y.</p>
   <div class="description">
     <span class="short definition">"Y is an amount/piece/portion of X"</span>
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1460,11 +1690,35 @@ amount/piece/portion of concept Y.</p>
     <p>A relation between two concepts where concept Y is an
 amount/piece/portion of concept X</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p>slice > bread</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+    <p>portion meronymy - relation between nouns (EWN test 23)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an Y is the whole linked portions of X </em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td><em> the converse of (a)  </em></td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+        <li>Y and X are substance denoting nouns </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p>Lexical items will be linked to their wholes by means of a has_holo_portion</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1502,7 +1756,7 @@ amount/piece/portion of concept X</p>
   <div class="description">
     
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> > </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
 	    
@@ -1520,9 +1774,34 @@ Concept-Y is a substance of Concept-X”.</p>
     <h4>Examples</h4>
     <p>book &gt; paper</p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+      <p>subtance meronymy - relation between nouns (EWN test 25)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an X is made of Y </em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td><em> the converse of (a)  </em></td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+        <li>X is a concrete object </li>
+          <li>Y is a concrete substance </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p>The relation between things and the stuff which compose them is called MADE_OF.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
@@ -1570,11 +1849,10 @@ Concept-Y is a substance of Concept-X”.</p>
   <div class="description">
     
     <table class="fieldlist">
-      <tr><th>symbol</th><td>(no symbol defined)</td></tr>
+      <tr><th>symbol</th><td> < </td></tr>
       <tr><th>applicability</th><td><ul>
 	    <li>synset&ndash;synset</li>
-	    
-	    
+
 	  </ul></td></tr>
       <tr><th>reverse</th><td><a href="#mero_substance"><span class="rel-id">mero_substance</span></a></td></tr>
       <tr><th>example</th><td>wood/stick</td></tr>
@@ -1586,11 +1864,37 @@ higher bound between part and whole. Separating/removing the substance
 part, will change the whole — Concept-X is made of Concept-Y; and
 Concept-Y is a substance of Concept-X”.</p>
     <h4>Examples</h4>
-    <p>(no more examples)</p>
+    <p> Building > wall </p>
     <h4>Tests</h4>
-    <p>(no tests defined)</p>
+     <p>subtance meronymy - relation between nouns (EWN test 25)</p>
+      <table border="1" class="docutils">
+      <colgroup>
+      <col width="7%" />
+      <col width="2%" />
+      <col width="91%" />
+      </colgroup>
+      <tbody valign="top">
+      <tr><td>yes</td>
+      <td>a</td>
+      <td><em>A/an Y is made of concept X </em></td>
+      </tr>
+      <tr><td>no</td>
+      <td>b</td>
+      <td><em> the converse of (a)  </em></td>
+      </tr>
+      </tbody>
+      </table>
+    <dl class="docutils">
+      <dt>Conditions:</dt>
+      <dd><ul class="first last simple">
+          <li>Y is a concrete substance </li>
+           <li>X is a concrete object </li>
+      </ul>
+      </dd>
+      </dl>
     <h4>Comments</h4>
-    <p>(no comments)</p><h4>XML</h4>
+    <p>There are two basic ways of viewing entities in the world, namely either as an individuated thing or as
+the stuff from which they are made of.</p><h4>XML</h4>
     <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
 	format for Wordnet LMF</a> the relation should be shown like
       this:<div class="highlight"><pre>
