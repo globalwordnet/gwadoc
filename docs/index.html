@@ -28,195 +28,341 @@
 <body class="d-flex flex-column">
 
 	<div id="relnav" class="sidenav">
-        <div><a  href="#constitutive"><strong>Constitutive</strong></a>(<span class="rel-id"><strong>constitutive</strong></span>)
-		<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn1"><i class="fa fa-caret-down"></i></button>
+		<a href="#tableofcontent">Table of Content</a>
+        <div><a  href="#constitutive">Constitutive</a>
+		<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn1"><i id="sp1-status" class="fa fa-plus-circle"></i></button>
 		</div>
 		<div class="dropdown-container" id="dropList1">
-                            <ul>
-                                <li><a href="#hyponym">Hyponym</a> (<span class="rel-id">hyponym</span>)<span class="revchar">⇔</span>
-                                    <a href="#hypernym">Hypernym</a> (<span class="rel-id">hypernym</span>)
-                                </li>
+            <ul>
+                <li><a href="#hyponym">Hyponym</a>&hArr;<a href="#hypernym">Hypernym</a> 
+                </li>
 
-                                <li><a href="#instance_hyponym">Instance Hyponym</a> (<span class="rel-id">instance_hyponym</span>)<span class="revchar">⇔</span>
-                                    <a href="#instance_hypernym">Instance Hypernym</a> (<span class="rel-id">instance_hypernym</span>)
-                                </li>
+                <li><a href="#instance_hyponym">Instance Hyponym</a>&hArr;<a href="#instance_hypernym">Instance Hypernym</a>
+                </li>
 
-                                <li><a href="#antonym">Antonym</a> (<span class="rel-id">antonym</span>)
-                                </li>
+                <li><a href="#antonym">Antonym</a></li>
 
-                                <li><a href="#eq_synonym">Equal Synonym</a> (<span class="rel-id">eq_synonym</span>)
-                                </li>
+                <li><a href="#eq_synonym">Equal Synonym</a></li>
 
-                                <li><a href="#similar">Similar</a> (<span class="rel-id">similar</span>)
-                                </li>
+                <li><a href="#similar">Similar</a></li>
 
-                                <li><a href="#meronym">Meronym</a> (<span class="rel-id">meronym</span>)<span class="revchar">⇔</span>
-                                    <a href="#holonym">Holonym</a> (<span class="rel-id">holonym</span>)
-                                    <ul>
-                                        <li><a href="#mero_location">Location Meronym</a> (<span class="rel-id">mero_location</span>)<span class="revchar">⇔</span>
-                                            <a href="#holo_location">Location Holonym</a> (<span class="rel-id">holo_location</span>)
-                                        </li>
+                <li><a href="#meronym">Meronym</a>&hArr;<a href="#holonym">Holonym</a>
+                    <ul>
+                        <li><a href="#mero_location">Location Meronym</a>&hArr;<a href="#holo_location">Location Holonym</a>
+                        </li>
 
-                                        <li><a href="#mero_member">Member Meronym</a> (<span class="rel-id">mero_member</span>)<span class="revchar">⇔</span>
-                                            <a href="#holo_member">Member Holonym</a> (<span class="rel-id">holo_member</span>)
-                                        </li>
+                        <li><a href="#mero_member">Member Meronym</a>&hArr;<a href="#holo_member">Member Holonym</a>
+                        </li>
 
-                                        <li><a href="#mero_part">Part Meronym</a> (<span class="rel-id">mero_part</span>)<span class="revchar">⇔</span>
-                                            <a href="#holo_part">Part Holonym</a> (<span class="rel-id">holo_part</span>)
-                                        </li>
+                        <li><a href="#mero_part">Part Meronym</a>&hArr;<a href="#holo_part">Part Holonym</a>
+                        </li>
 
-                                        <li><a href="#mero_portion">Portion Meronym</a> (<span class="rel-id">mero_portion</span>)<span class="revchar">⇔</span>
-                                            <a href="#holo_portion">Portion Holonym</a> (<span class="rel-id">holo_portion</span>)
-                                        </li>
+                        <li><a href="#mero_portion">Portion Meronym</a>&hArr;<a href="#holo_portion">Portion Holonym</a>
+                        </li>
 
-                                        <li><a href="#mero_substance">Substance Meronym</a> (<span class="rel-id">mero_substance</span>)<span class="revchar">⇔</span>
-                                            <a href="#holo_substance">Substance Holonym</a> (<span class="rel-id">holo_substance</span>)
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-						
+                        <li><a href="#mero_substance">Substance Meronym</a>&hArr;<a href="#holo_substance">Substance Holonym</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+         </div>
 
-				<div style="clear:both;"></div>
-				<div><a href="#other"><strong>Other</strong></a> (<span class="rel-id"><strong>other</strong></span>)
-				<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn2"><i class="fa fa-caret-down"></i></button></div>
+		<div style="clear:both;"></div>
+		
+				<div><a href="#other">Other</a>
+				<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn2"><i id="sp2-status" class="fa fa-plus-circle"></i></button></div>
 				<div class="dropdown-container" id="dropList2">
-                            <ul>
-                                <li><a href="#also">See also</a> (<span class="rel-id">also</span>)
-                                </li>
+                    <ul>
+                        <li><a href="#also">See also</a></li>
 
-                                <li><a href="#state_of">State Of</a> (<span class="rel-id">state_of</span>)<span class="revchar">⇔</span>
-                                    <a href="#be_in_state">Be In State</a> (<span class="rel-id">be_in_state</span>)
-                                </li>
+                        <li><a href="#state_of">State Of</a>&hArr;<a href="#be_in_state">Be In State</a>
+                        </li>
 
-                                <li><a href="#causes">Causes</a> (<span class="rel-id">causes</span>)<span class="revchar">⇔</span>
-                                    <a href="#is_caused_by">Is Caused By</a> (<span class="rel-id">is_caused_by</span>)
-                                </li>
+                        <li><a href="#causes">Causes</a>&hArr;<a href="#is_caused_by">Is Caused By</a>
+                        </li>
 
-                                <li><a href="#subevent">Subevent</a> (<span class="rel-id">subevent</span>)<span class="revchar">⇔</span>
-                                    <a href="#is_subevent_of">Is Subevent Of</a> (<span class="rel-id">is_subevent_of</span>)
-                                </li>
+                        <li><a href="#subevent">Subevent</a>&hArr;<a href="#is_subevent_of">Is Subevent Of</a>
+                        </li>
 
-                                <li><a href="#manner_of">Manner Of</a> (<span class="rel-id">manner_of</span>)<span class="revchar">⇔</span>
-                                    <a href="#in_manner">In Manner</a> (<span class="rel-id">in_manner</span>)
-                                </li>
+                        <li><a href="#manner_of">Manner Of</a>&hArr;<a href="#in_manner">In Manner</a>
+                        </li>
 
-                                <li><a href="#attribute">Attribute</a> (<span class="rel-id">attribute</span>)
-                                </li>
+                        <li><a href="#attribute">Attribute</a></li>
 
-                                <li><a href="#restricts">Restricts</a> (<span class="rel-id">restricts</span>)<span class="revchar">⇔</span>
-                                    <a href="#restricted_by">Restricted By</a> (<span class="rel-id">restricted_by</span>)
-                                </li>
+                        <li><a href="#restricts">Restricts</a>&hArr;<a href="#restricted_by">Restricted By</a>
+                        </li>
 
-                                <li><a href="#classifies">Classifies</a> (<span class="rel-id">classifies</span>)<span class="revchar">⇔</span>
-                                    <a href="#classified_by">Classified By</a> (<span class="rel-id">classified_by</span>)
-                                </li>
+                        <li><a href="#classifies">Classifies</a>&hArr;<a href="#classified_by">Classified By</a>
+                        </li>
 
-                                <li><a href="#entails">Entails</a> (<span class="rel-id">entails</span>)<span class="revchar">⇔</span>
-                                    <a href="#is_entailed_by">Is Entailed By</a> (<span class="rel-id">is_entailed_by</span>)
-                                </li>
-                            </ul>
-                        </div>
+                        <li><a href="#entails">Entails</a>&hArr;<a href="#is_entailed_by">Is Entailed By</a>
+                        </li>
+                    </ul>
+        </div>
+		
+		<div style="clear:both;"></div>
 
-                        <div><a href="#domain"><strong>Domain</strong></a> (<span class="rel-id"><strong>domain</strong></span>)<span class="revchar">⇔</span>
-                            <a href="#has_domain"><strong>In Domain</strong></a> (<span class="rel-id"><strong>has_domain</strong></span>)
-							<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn3"><i class="fa fa-caret-down"></i></button>
-                        </div>  
-						<div class="dropdown-container" id="dropList3">
-							<ul>
-                                <li><a href="#domain_topic">Domain Topic</a> (<span class="rel-id">domain_topic</span>)<span class="revchar">⇔</span>
-                                    <a href="#has_domain_topic">Has Domain Topic</a> (<span class="rel-id">has_domain_topic</span>)
-                                </li>
+        <div><a href="#domain">Domain</a>&hArr;<a href="#has_domain">In Domain</a>
+			<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn3"><i id="sp3-status" class="fa fa-plus-circle"></i></button>
+        </div>  
+		<div class="dropdown-container" id="dropList3">
+			<ul>
+                <li><a href="#domain_topic">Domain Topic</a>&hArr;<a href="#has_domain_topic">Has Domain Topic</a>
+                </li>
 
-                                <li><a href="#domain_region">Domain Region</a> (<span class="rel-id">domain_region</span>)<span class="revchar">⇔</span>
-                                    <a href="#has_domain_region">Has Domain Region</a> (<span class="rel-id">has_domain_region</span>)
-                                </li>
+                <li><a href="#domain_region">Domain Region</a>&hArr;<a href="#has_domain_region">Has Domain Region</a>
+                </li>
 
-                                <li><a href="#exemplifies">Exemplifies</a> (<span class="rel-id">exemplifies</span>)<span class="revchar">⇔</span>
-                                    <a href="#is_exemplified_by">Is Exemplified By</a> (<span class="rel-id">is_exemplified_by</span>)
-                                </li>
-                            </ul>
-                        </div>
+                <li><a href="#exemplifies">Exemplifies</a>&hArr;<a href="#is_exemplified_by">Is Exemplified By</a>
+                </li>
+            </ul>
+        </div>
+		
+		<div style="clear:both;"></div>
 
-                        <div><a href="#role"><strong>Role</strong></a> (<span class="rel-id"><strong>role</strong></span>)<span class="revchar">⇔</span>
-                            <a href="#involved"><strong>Involved</strong></a> (<span class="rel-id"><strong>involved</strong></span>)
-						<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn4"><i class="fa fa-caret-down"></i></button>
-						</div>
-						<div class="dropdown-container" id="dropList4">
-							<ul>
-                                <li><a href="#agent">Agent</a> (<span class="rel-id">agent</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_agent">Involved Agent</a> (<span class="rel-id">involved_agent</span>)
-                                </li>
+        <div><a href="#role">Role</a>&hArr;<a href="#involved">Involved</a>
+		<button style="border:none;display:block;float:right" class="dropdown-btn" id="dp-btn4"><i id="sp4-status" class="fa fa-plus-circle"></i></button>
+		</div>
+		<div class="dropdown-container" id="dropList4">
+			<ul>
+                <li><a href="#agent">Agent</a>&hArr;<a href="#involved_agent">Involved Agent</a>
+                </li>
 
-                                <li><a href="#patient">Patient</a> (<span class="rel-id">patient</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_patient">Involved Patient</a> (<span class="rel-id">involved_patient</span>)
-                                </li>
+                <li><a href="#patient">Patient</a>&hArr;<a href="#involved_patient">Involved Patient</a>
+                </li>
 
-                                <li><a href="#result">Result</a> (<span class="rel-id">result</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_result">Involved Result</a> (<span class="rel-id">involved_result</span>)
-                                </li>
+                <li><a href="#result">Result</a>&hArr;<a href="#involved_result">Involved Result</a>
+                </li>
 
-                                <li><a href="#instrument">Instrument</a> (<span class="rel-id">instrument</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_instrument">Involved Instrument</a> (<span class="rel-id">involved_instrument</span>)
-                                </li>
+                <li><a href="#instrument">Instrument</a>&hArr;<a href="#involved_instrument">Involved Instrument</a>
+                </li>
 
-                                <li><a href="#location">Location</a> (<span class="rel-id">location</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_location">Involved Location</a> (<span class="rel-id">involved_location</span>)
-                                </li>
+                <li><a href="#location">Location</a>&hArr;<a href="#involved_location">Involved Location</a>
+                </li>
 
-                                <li><a href="#direction">Direction</a> (<span class="rel-id">direction</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_direction">Involved Direction</a> (<span class="rel-id">involved_direction</span>)
-                                </li>
+                <li><a href="#direction">Direction</a>&hArr;<a href="#involved_direction">Involved Direction</a>
+                </li>
 
-                                <li><a href="#target_direction">Target Direction</a> (<span class="rel-id">target_direction</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_target_direction">Involved Target Direction</a> (<span class="rel-id">involved_target_direction</span>)
-                                </li>
+                <li><a href="#target_direction">Target Direction</a>&hArr;<a href="#involved_target_direction">Involved Target Direction</a>
+                </li>
 
-                                <li><a href="#source_direction">Source Direction</a> (<span class="rel-id">source_direction</span>)<span class="revchar">⇔</span>
-                                    <a href="#involved_source_direction">Involved Source Direction</a> (<span class="rel-id">involved_source_direction</span>)
-                                </li>
+                <li><a href="#source_direction">Source Direction</a>&hArr;<a href="#involved_source_direction">Involved Source Direction</a>
+                </li>
 
-                                <li><a href="#co_role">Co Role</a> (<span class="rel-id">co_role</span>)
-                                    <ul>
-                                        <li><a href="#co_agent_patient">Co Agent Patient</a> (<span class="rel-id">co_agent_patient</span>)<span class="revchar">⇔</span>
-                                            <a href="#co_patient_agent">Co Patient Agent</a> (<span class="rel-id">co_patient_agent</span>)
-                                        </li>
+                <li><a href="#co_role">Co Role</a>
+                    <ul>
+                        <li><a href="#co_agent_patient">Co Agent Patient</a>&hArr;<a href="#co_patient_agent">Co Patient Agent</a>
+                        </li>
 
-                                        <li><a href="#co_agent_instrument">Co Agent Instrument</a> (<span class="rel-id">co_agent_instrument</span>)<span class="revchar">⇔</span>
-                                            <a href="#co_instrument_agent">Co Instrument Agent</a> (<span class="rel-id">co_instrument_agent</span>)
-                                        </li>
+                        <li><a href="#co_agent_instrument">Co Agent Instrument</a>&hArr;<a href="#co_instrument_agent">Co Instrument Agent</a>
+                        </li>
 
-                                        <li><a href="#co_agent_result">Co Agent Result</a> (<span class="rel-id">co_agent_result</span>)<span class="revchar">⇔</span>
-                                            <a href="#co_result_agent">Co Result Agent</a> (<span class="rel-id">co_result_agent</span>)
-                                        </li>
+                        <li><a href="#co_agent_result">Co Agent Result</a>&hArr;<a href="#co_result_agent">Co Result Agent</a>
+                        </li>
 
-                                        <li><a href="#co_patient_instrument">Co Patient Instrument</a> (<span class="rel-id">co_patient_instrument</span>)<span class="revchar">⇔</span>
-                                            <a href="#co_instrument_patient">Co Instrument Patient</a> (<span class="rel-id">co_instrument_patient</span>)
-                                        </li>
+                        <li><a href="#co_patient_instrument">Co Patient Instrument</a>&hArr;<a href="#co_instrument_patient">Co Instrument Patient</a>
+                        </li>
 
-                                        <li><a href="#co_result_instrument">Co Result Instrument</a> (<span class="rel-id">co_result_instrument</span>)<span class="revchar">⇔</span>
-                                            <a href="#co_instrument_result">Co Instrument Result</a> (<span class="rel-id">co_instrument_result</span>)
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        <li><a href="#co_result_instrument">Co Result Instrument</a>&hArr;<a href="#co_instrument_result">Co Instrument Result</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-                        <div><a href="#participle"><strong>Participle</strong></a> (<span class="rel-id"><strong>participle</strong></span>)</div>
+        <div><a href="#participle">Participle</a></div>
                         
-
-                        <div><a href="#pertainym"><strong>Pertainym</strong></a> (<span class="rel-id"><strong>pertainym</strong></span>)</div>
+		<div><a href="#pertainym">Pertainym</a></div>
                         
-
-                        <div><a href="#derivation"><strong>Derivation</strong></a> (<span class="rel-id"><strong>derivation</strong></span>)</div>
+		<div><a href="#derivation">Derivation</a></div>
                              
 	</div>
+	
+	
 
     <div id="container" class="container">
         <header style="margin-left:290px">
             <h1>Open Wordnet Documentation</h1>
         </header>
+		
+
+		<div id="toc"style="padding-left:60px">
+			<h2 id="tableofcontent">Table of Content</h2>
+			<ul>
+			  <li><a href="#constitutive">Constitutive</a> (<span class="rel-id">constitutive</span>)
+			<ul>
+			  <li><a href="#hyponym">Hyponym</a> (<span class="rel-id">hyponym</span>)<span class="revchar">⇔</span>
+			<a href="#hypernym">Hypernym</a> (<span class="rel-id">hypernym</span>)
+			  </li>
+			  
+			  <li><a href="#instance_hyponym">Instance Hyponym</a> (<span class="rel-id">instance_hyponym</span>)<span class="revchar">⇔</span>
+			<a href="#instance_hypernym">Instance Hypernym</a> (<span class="rel-id">instance_hypernym</span>)
+			  </li>
+			  
+			  <li><a href="#antonym">Antonym</a> (<span class="rel-id">antonym</span>)
+			  </li>
+			  
+			  <li><a href="#eq_synonym">Equal Synonym</a> (<span class="rel-id">eq_synonym</span>)
+			  </li>
+			  
+			  <li><a href="#similar">Similar</a> (<span class="rel-id">similar</span>)
+			  </li>
+			  
+			  <li><a href="#meronym">Meronym</a> (<span class="rel-id">meronym</span>)<span class="revchar">⇔</span>
+			<a href="#holonym">Holonym</a> (<span class="rel-id">holonym</span>)
+			<ul>
+			  <li><a href="#mero_location">Location Meronym</a> (<span class="rel-id">mero_location</span>)<span class="revchar">⇔</span>
+			<a href="#holo_location">Location Holonym</a> (<span class="rel-id">holo_location</span>)
+			  </li>
+			  
+			  <li><a href="#mero_member">Member Meronym</a> (<span class="rel-id">mero_member</span>)<span class="revchar">⇔</span>
+			<a href="#holo_member">Member Holonym</a> (<span class="rel-id">holo_member</span>)
+			  </li>
+			  
+			  <li><a href="#mero_part">Part Meronym</a> (<span class="rel-id">mero_part</span>)<span class="revchar">⇔</span>
+			<a href="#holo_part">Part Holonym</a> (<span class="rel-id">holo_part</span>)
+			  </li>
+			  
+			  <li><a href="#mero_portion">Portion Meronym</a> (<span class="rel-id">mero_portion</span>)<span class="revchar">⇔</span>
+			<a href="#holo_portion">Portion Holonym</a> (<span class="rel-id">holo_portion</span>)
+			  </li>
+			  
+			  <li><a href="#mero_substance">Substance Meronym</a> (<span class="rel-id">mero_substance</span>)<span class="revchar">⇔</span>
+			<a href="#holo_substance">Substance Holonym</a> (<span class="rel-id">holo_substance</span>)
+			  </li>
+			  </ul>
+			  </li>
+			  </ul>
+			  </li>
+			  
+			  <li><a href="#other">Other</a> (<span class="rel-id">other</span>)
+			<ul>
+			  <li><a href="#also">See also</a> (<span class="rel-id">also</span>)
+			  </li>
+			  
+			  <li><a href="#state_of">State Of</a> (<span class="rel-id">state_of</span>)<span class="revchar">⇔</span>
+			<a href="#be_in_state">Be In State</a> (<span class="rel-id">be_in_state</span>)
+			  </li>
+			  
+			  <li><a href="#causes">Causes</a> (<span class="rel-id">causes</span>)<span class="revchar">⇔</span>
+			<a href="#is_caused_by">Is Caused By</a> (<span class="rel-id">is_caused_by</span>)
+			  </li>
+			  
+			  <li><a href="#subevent">Subevent</a> (<span class="rel-id">subevent</span>)<span class="revchar">⇔</span>
+			<a href="#is_subevent_of">Is Subevent Of</a> (<span class="rel-id">is_subevent_of</span>)
+			  </li>
+			  
+			  <li><a href="#manner_of">Manner Of</a> (<span class="rel-id">manner_of</span>)<span class="revchar">⇔</span>
+			<a href="#in_manner">In Manner</a> (<span class="rel-id">in_manner</span>)
+			  </li>
+			  
+			  <li><a href="#attribute">Attribute</a> (<span class="rel-id">attribute</span>)
+			  </li>
+			  
+			  <li><a href="#restricts">Restricts</a> (<span class="rel-id">restricts</span>)<span class="revchar">⇔</span>
+			<a href="#restricted_by">Restricted By</a> (<span class="rel-id">restricted_by</span>)
+			  </li>
+			  
+			  <li><a href="#classifies">Classifies</a> (<span class="rel-id">classifies</span>)<span class="revchar">⇔</span>
+			<a href="#classified_by">Classified By</a> (<span class="rel-id">classified_by</span>)
+			  </li>
+			  
+			  <li><a href="#entails">Entails</a> (<span class="rel-id">entails</span>)<span class="revchar">⇔</span>
+			<a href="#is_entailed_by">Is Entailed By</a> (<span class="rel-id">is_entailed_by</span>)
+			  </li>
+			  </ul>
+			  </li>
+			  
+			  <li><a href="#domain">Domain</a> (<span class="rel-id">domain</span>)<span class="revchar">⇔</span>
+			<a href="#has_domain">In Domain</a> (<span class="rel-id">has_domain</span>)
+			<ul>
+			  <li><a href="#domain_topic">Domain Topic</a> (<span class="rel-id">domain_topic</span>)<span class="revchar">⇔</span>
+			<a href="#has_domain_topic">Has Domain Topic</a> (<span class="rel-id">has_domain_topic</span>)
+			  </li>
+			  
+			  <li><a href="#domain_region">Domain Region</a> (<span class="rel-id">domain_region</span>)<span class="revchar">⇔</span>
+			<a href="#has_domain_region">Has Domain Region</a> (<span class="rel-id">has_domain_region</span>)
+			  </li>
+			  
+			  <li><a href="#exemplifies">Exemplifies</a> (<span class="rel-id">exemplifies</span>)<span class="revchar">⇔</span>
+			<a href="#is_exemplified_by">Is Exemplified By</a> (<span class="rel-id">is_exemplified_by</span>)
+			  </li>
+			  </ul>
+			  </li>
+			  
+			  <li><a href="#role">Role</a> (<span class="rel-id">role</span>)<span class="revchar">⇔</span>
+			<a href="#involved">Involved</a> (<span class="rel-id">involved</span>)
+			<ul>
+			  <li><a href="#agent">Agent</a> (<span class="rel-id">agent</span>)<span class="revchar">⇔</span>
+			<a href="#involved_agent">Involved Agent</a> (<span class="rel-id">involved_agent</span>)
+			  </li>
+			  
+			  <li><a href="#patient">Patient</a> (<span class="rel-id">patient</span>)<span class="revchar">⇔</span>
+			<a href="#involved_patient">Involved Patient</a> (<span class="rel-id">involved_patient</span>)
+			  </li>
+			  
+			  <li><a href="#result">Result</a> (<span class="rel-id">result</span>)<span class="revchar">⇔</span>
+			<a href="#involved_result">Involved Result</a> (<span class="rel-id">involved_result</span>)
+			  </li>
+			  
+			  <li><a href="#instrument">Instrument</a> (<span class="rel-id">instrument</span>)<span class="revchar">⇔</span>
+			<a href="#involved_instrument">Involved Instrument</a> (<span class="rel-id">involved_instrument</span>)
+			  </li>
+			  
+			  <li><a href="#location">Location</a> (<span class="rel-id">location</span>)<span class="revchar">⇔</span>
+			<a href="#involved_location">Involved Location</a> (<span class="rel-id">involved_location</span>)
+			  </li>
+			  
+			  <li><a href="#direction">Direction</a> (<span class="rel-id">direction</span>)<span class="revchar">⇔</span>
+			<a href="#involved_direction">Involved Direction</a> (<span class="rel-id">involved_direction</span>)
+			  </li>
+			  
+			  <li><a href="#target_direction">Target Direction</a> (<span class="rel-id">target_direction</span>)<span class="revchar">⇔</span>
+			<a href="#involved_target_direction">Involved Target Direction</a> (<span class="rel-id">involved_target_direction</span>)
+			  </li>
+			  
+			  <li><a href="#source_direction">Source Direction</a> (<span class="rel-id">source_direction</span>)<span class="revchar">⇔</span>
+			<a href="#involved_source_direction">Involved Source Direction</a> (<span class="rel-id">involved_source_direction</span>)
+			  </li>
+			  
+			  <li><a href="#co_role">Co Role</a> (<span class="rel-id">co_role</span>)
+			<ul>
+			  <li><a href="#co_agent_patient">Co Agent Patient</a> (<span class="rel-id">co_agent_patient</span>)<span class="revchar">⇔</span>
+			<a href="#co_patient_agent">Co Patient Agent</a> (<span class="rel-id">co_patient_agent</span>)
+			  </li>
+			  
+			  <li><a href="#co_agent_instrument">Co Agent Instrument</a> (<span class="rel-id">co_agent_instrument</span>)<span class="revchar">⇔</span>
+			<a href="#co_instrument_agent">Co Instrument Agent</a> (<span class="rel-id">co_instrument_agent</span>)
+			  </li>
+			  
+			  <li><a href="#co_agent_result">Co Agent Result</a> (<span class="rel-id">co_agent_result</span>)<span class="revchar">⇔</span>
+			<a href="#co_result_agent">Co Result Agent</a> (<span class="rel-id">co_result_agent</span>)
+			  </li>
+			  
+			  <li><a href="#co_patient_instrument">Co Patient Instrument</a> (<span class="rel-id">co_patient_instrument</span>)<span class="revchar">⇔</span>
+			<a href="#co_instrument_patient">Co Instrument Patient</a> (<span class="rel-id">co_instrument_patient</span>)
+			  </li>
+			  
+			  <li><a href="#co_result_instrument">Co Result Instrument</a> (<span class="rel-id">co_result_instrument</span>)<span class="revchar">⇔</span>
+			<a href="#co_instrument_result">Co Instrument Result</a> (<span class="rel-id">co_instrument_result</span>)
+			  </li>
+			  </ul>
+			  </li>
+			  </ul>
+			  </li>
+			  
+			  <li><a href="#participle">Participle</a> (<span class="rel-id">participle</span>)
+			  </li>
+			  
+			  <li><a href="#pertainym">Pertainym</a> (<span class="rel-id">pertainym</span>)
+			  </li>
+			  
+			  <li><a href="#derivation">Derivation</a> (<span class="rel-id">derivation</span>)
+			  </li>
+			  
+			</ul>
+		</div>
+		
         <main>
 
             <h2>Relations</h2>
