@@ -821,13 +821,29 @@ concept X.
 """
 relations.meronym.ex.en = "hand/finger"
 relations.meronym.exe.en = """
+ * *wheels* ``meronym`` *automobile*
+ * *crown* ``meronym`` *hat*
+ * *faces* ``meronym`` *people*
+ * *leaf* ``meronym`` *tree*
+"""
+relations.meronym.test.en="""
+Meronymy-relation between nouns (EWN test 21)
+
+===     =   ======================================================
+yes     a   *A/an X makes up a part of A/an Y*
+.       .   *A/an Y has A/an Xs*
+.       .   *X is a meronym of "Y" if Xs are parts of Y(s)*
+no      b   the converse of the (a) relations.
+===     =   ======================================================
+
+Conditions:
+ - X and Y are concrete nouns and are interpreted generically.
 """
 relations.meronym.com.en = """
 This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
 shouldn't be a special relation.
 """
-
 
 ### Relation: holonym EDP26
 
@@ -841,13 +857,24 @@ part of concept Y.
 """
 relations.holonym.ex.en = "finger/hand"
 relations.holonym.exe.en = """
+ * *face* ``holonym`` *eye*
+ * *body* ``holonym`` *arm, leg, heart*
+ * *word* ``holonym`` *letter*
+"""
+relations.holonym.test.en="""
+Holonymy-relation between nouns 
+
+===     =   ======================================================
+yes     a   *X is a holonym of Y if Ys are parts of Xs*
+.       .   *X is a holonym of Y if Ys are members of Xs*
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
 """
 relations.holonym.com.en = """
 This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
 shouldn't be a special relation.
 """
-
 
 ### Relation: mero_part EDP27
 
