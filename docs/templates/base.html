@@ -16,19 +16,26 @@
     
     <link rel="stylesheet" href="static/gwadoc.css" />
     <link rel="stylesheet" href="static/pygment.css" />
+	<link rel="stylesheet" href="static/sidenav.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<!-- fa icon CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="static/jquery-1.9.1.min.js"></script>
+	<script src="static/sidenav.js"></script>
+
     <title>{% block title %}{% endblock %}</title>
   {%- endblock %}
 </head>
 
 <body clas="d-flex flex-column">
-
+ {% include "sidenav.html" %} 
 <div id="container" class="container">
-  <header>
+  <header style="margin-left:290px">
     {% block header -%}
     <h1>Open Wordnet Documentation</h1>
     {%- endblock %}
   </header>
+
   <main>
     {% block content %}{% endblock %}
   </main>

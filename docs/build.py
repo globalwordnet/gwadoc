@@ -3,12 +3,17 @@
 # thanks: http://flask.pocoo.org/snippets/55/
 
 import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+
 import os.path
 import argparse
 import re
 
 import docutils.core
 import jinja2
+
 
 sys.path.insert(1, os.path.dirname(os.path.dirname(__file__)))
 import gwadoc
@@ -32,7 +37,7 @@ def rst_renderer(fmt):
 
 def build(args):
     gwadoc.set_preferred_language(args.lang)
-        
+
     loader =  jinja2.FileSystemLoader(
         os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates')))
 
@@ -85,3 +90,5 @@ if __name__ == '__main__':
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
+
+	
