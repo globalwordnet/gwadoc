@@ -9,7 +9,9 @@
 			<a href="#{{ rev }}">{{ gwadoc.relations[rev].name }}</a>
 			{%- endif -%}
 			{%- if children %}
-			<i class="pack-up fa fa-plus-circle"></i>
+				{%- if loop.depth == 1 %}
+					<i class="pack-up fa fa-plus-circle"></i>
+				{%- endif %} 
 			<ul>{{ loop(children) }}</ul>
 			{%- endif %}
 		</li>
