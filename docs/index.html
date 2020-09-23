@@ -15,20 +15,210 @@
     
     <link rel="stylesheet" href="static/gwadoc.css" />
     <link rel="stylesheet" href="static/pygment.css" />
+	<link rel="stylesheet" href="static/sidenav.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<!-- fa icon CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="static/sidenav.js"></script>
+
     <title>Open Wordnet Documentation</title>
 </head>
 
 <body clas="d-flex flex-column">
-
+ <div style="clear:both;"></div>
+<div id="relnav" class="sidenav">
+	<ul>
+		<li><a href="#constitutive">Constitutive</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#hyponym">Hyponym</a><span class="revchar">⇔</span>
+			<a href="#hypernym">Hypernym</a>
+		</li>
+		
+		<li><a href="#instance_hyponym">Instance Hyponym</a><span class="revchar">⇔</span>
+			<a href="#instance_hypernym">Instance Hypernym</a>
+		</li>
+		
+		<li><a href="#antonym">Antonym</a>
+		</li>
+		
+		<li><a href="#eq_synonym">Equal Synonym</a>
+		</li>
+		
+		<li><a href="#similar">Similar</a>
+		</li>
+		
+		<li><a href="#meronym">Meronym</a><span class="revchar">⇔</span>
+			<a href="#holonym">Holonym</a> 
+			<ul>
+		<li><a href="#mero_location">Location Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_location">Location Holonym</a>
+		</li>
+		
+		<li><a href="#mero_member">Member Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_member">Member Holonym</a>
+		</li>
+		
+		<li><a href="#mero_part">Part Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_part">Part Holonym</a>
+		</li>
+		
+		<li><a href="#mero_portion">Portion Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_portion">Portion Holonym</a>
+		</li>
+		
+		<li><a href="#mero_substance">Substance Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_substance">Substance Holonym</a>
+		</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#other">Other</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#also">See also</a>
+		</li>
+		
+		<li><a href="#state_of">State Of</a><span class="revchar">⇔</span>
+			<a href="#be_in_state">Be In State</a>
+		</li>
+		
+		<li><a href="#causes">Causes</a><span class="revchar">⇔</span>
+			<a href="#is_caused_by">Is Caused By</a>
+		</li>
+		
+		<li><a href="#subevent">Subevent</a><span class="revchar">⇔</span>
+			<a href="#is_subevent_of">Is Subevent Of</a>
+		</li>
+		
+		<li><a href="#manner_of">Manner Of</a><span class="revchar">⇔</span>
+			<a href="#in_manner">In Manner</a>
+		</li>
+		
+		<li><a href="#attribute">Attribute</a>
+		</li>
+		
+		<li><a href="#restricts">Restricts</a><span class="revchar">⇔</span>
+			<a href="#restricted_by">Restricted By</a>
+		</li>
+		
+		<li><a href="#classifies">Classifies</a><span class="revchar">⇔</span>
+			<a href="#classified_by">Classified By</a>
+		</li>
+		
+		<li><a href="#entails">Entails</a><span class="revchar">⇔</span>
+			<a href="#is_entailed_by">Is Entailed By</a>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#domain">Domain</a><span class="revchar">⇔</span>
+			<a href="#has_domain">In Domain</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#domain_topic">Domain Topic</a><span class="revchar">⇔</span>
+			<a href="#has_domain_topic">Has Domain Topic</a>
+		</li>
+		
+		<li><a href="#domain_region">Domain Region</a><span class="revchar">⇔</span>
+			<a href="#has_domain_region">Has Domain Region</a>
+		</li>
+		
+		<li><a href="#exemplifies">Exemplifies</a><span class="revchar">⇔</span>
+			<a href="#is_exemplified_by">Is Exemplified By</a>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#role">Role</a><span class="revchar">⇔</span>
+			<a href="#involved">Involved</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#agent">Agent</a><span class="revchar">⇔</span>
+			<a href="#involved_agent">Involved Agent</a>
+		</li>
+		
+		<li><a href="#patient">Patient</a><span class="revchar">⇔</span>
+			<a href="#involved_patient">Involved Patient</a>
+		</li>
+		
+		<li><a href="#result">Result</a><span class="revchar">⇔</span>
+			<a href="#involved_result">Involved Result</a>
+		</li>
+		
+		<li><a href="#instrument">Instrument</a><span class="revchar">⇔</span>
+			<a href="#involved_instrument">Involved Instrument</a>
+		</li>
+		
+		<li><a href="#location">Location</a><span class="revchar">⇔</span>
+			<a href="#involved_location">Involved Location</a>
+		</li>
+		
+		<li><a href="#direction">Direction</a><span class="revchar">⇔</span>
+			<a href="#involved_direction">Involved Direction</a>
+		</li>
+		
+		<li><a href="#target_direction">Target Direction</a><span class="revchar">⇔</span>
+			<a href="#involved_target_direction">Involved Target Direction</a>
+		</li>
+		
+		<li><a href="#source_direction">Source Direction</a><span class="revchar">⇔</span>
+			<a href="#involved_source_direction">Involved Source Direction</a>
+		</li>
+		
+		<li><a href="#co_role">Co Role</a> 
+			<ul>
+		<li><a href="#co_agent_patient">Co Agent Patient</a><span class="revchar">⇔</span>
+			<a href="#co_patient_agent">Co Patient Agent</a>
+		</li>
+		
+		<li><a href="#co_agent_instrument">Co Agent Instrument</a><span class="revchar">⇔</span>
+			<a href="#co_instrument_agent">Co Instrument Agent</a>
+		</li>
+		
+		<li><a href="#co_agent_result">Co Agent Result</a><span class="revchar">⇔</span>
+			<a href="#co_result_agent">Co Result Agent</a>
+		</li>
+		
+		<li><a href="#co_patient_instrument">Co Patient Instrument</a><span class="revchar">⇔</span>
+			<a href="#co_instrument_patient">Co Instrument Patient</a>
+		</li>
+		
+		<li><a href="#co_result_instrument">Co Result Instrument</a><span class="revchar">⇔</span>
+			<a href="#co_instrument_result">Co Instrument Result</a>
+		</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#participle">Participle</a>
+		</li>
+		
+		<li><a href="#pertainym">Pertainym</a>
+		</li>
+		
+		<li><a href="#derivation">Derivation</a>
+		</li>
+		
+	</ul>
+</div>
+<div style="clear:both;"></div> 
 <div id="container" class="container">
-  <header>
+  <header style="margin-left:290px">
     <h1>Open Wordnet Documentation</h1>
   </header>
+
   <main>
     <h2>Contents</h2>
 <section>
-  <nav id="relnav">
+  <div id="toc" style="padding-left:60px">
     <ul>
       <li><a href="#constitutive">Constitutive</a> (<span class="rel-id">constitutive</span>)
 	<ul>
@@ -202,8 +392,9 @@
       </li>
       
     </ul>
-  </nav>
+  </div>  
 </section>
+
 <h2>Relations</h2>
 <article class="relation">
   <h3 id="constitutive"><a href="#constitutive">Constitutive</a> (<span class="rel-id">constitutive</span>)<a class="toplink" href="#">back to top</a></h3>
@@ -364,7 +555,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69570">i69570</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69570">i69570</a>⟫</td>
         </tr>
         
       </tbody>
@@ -463,7 +654,7 @@ extended to adjectives and adverbs.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69569">i69569</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69569">i69569</a>⟫</td>
         </tr>
         
       </tbody>
@@ -536,7 +727,7 @@ Instances are expressed by proper nouns.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/75102">i75102</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/75102">i75102</a>⟫</td>
         </tr>
         
       </tbody>
@@ -696,7 +887,7 @@ make it avaiable for wordnets that do not yet have sense level links.</p><h4>XML
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69547">i69547</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69547">i69547</a>⟫</td>
         </tr>
         
       </tbody>
@@ -757,7 +948,7 @@ chengyu (成语), a traditional four-character Chinese idiom.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69607">i69607</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69607">i69607</a>⟫</td>
         </tr>
         
       </tbody>
@@ -845,7 +1036,7 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/13187">i13187</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/13187">i13187</a>⟫</td>
         </tr>
         
       </tbody>
@@ -949,7 +1140,7 @@ shouldn't be a special relation.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69575">i69575</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69575">i69575</a>⟫</td>
         </tr>
         
       </tbody>
@@ -1041,7 +1232,7 @@ shouldn't be a special relation.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69567">i69567</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69567">i69567</a>⟫</td>
         </tr>
         
       </tbody>
@@ -1734,7 +1925,7 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/11342">i11342</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/11342">i11342</a>⟫</td>
         </tr>
         
       </tbody>
@@ -1866,7 +2057,7 @@ FCB: isn't this the same as attribute (but split into two directions)</p><h4>XML
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35578">i35578</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/35578">i35578</a>⟫</td>
         </tr>
         
       </tbody>
@@ -1996,7 +2187,7 @@ seems possible to just absorb PWN's links.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35561">i35561</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/35561">i35561</a>⟫</td>
         </tr>
         
       </tbody>
@@ -2224,7 +2415,7 @@ Y takes place.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/62791">i62791</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/62791">i62791</a>⟫</td>
         </tr>
         
       </tbody>
@@ -2350,7 +2541,7 @@ adjectives to nouns.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35577">i35577</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/35577">i35577</a>⟫</td>
         </tr>
         
       </tbody>
@@ -2399,7 +2590,7 @@ now marked as domain usage. (to be corrected soon'ish)</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/22888">i22888</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/22888">i22888</a>⟫</td>
         </tr>
         
       </tbody>
@@ -2485,7 +2676,7 @@ will do it for other POS (e.g. v)</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/25399">i25399</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/25399">i25399</a>⟫</td>
         </tr>
         
       </tbody>
@@ -2530,7 +2721,7 @@ between Y and a classifier X</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/25002">i25002</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/25002">i25002</a>⟫</td>
         </tr>
         
       </tbody>
@@ -2587,7 +2778,7 @@ which Verb-Y has to take place before or during Verb-X.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/34846">i34846</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/34846">i34846</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3005,7 +3196,7 @@ too different from the standard meaning of domain.</p><h4>XML</h4>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/26682">i26682</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/26682">i26682</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3125,7 +3316,7 @@ supertype of <tt class="docutils literal">agent</tt>, <tt class="docutils litera
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/64041">i64041</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/64041">i64041</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3186,7 +3377,7 @@ X. Involved is the supertype of <tt class="docutils literal">involved_agent</tt>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/8315">i8315</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/8315">i8315</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3243,7 +3434,7 @@ intentionally. X is typically the agent of the action expressed by Y</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69754">i69754</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69754">i69754</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3351,7 +3542,7 @@ the agent of the action expressed by concept X.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69753">i69753</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69753">i69753</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3459,7 +3650,7 @@ X is the result of Y or, (A/an) X is created by Y.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69759">i69759</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69759">i69759</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3570,7 +3761,7 @@ used to Y (with)</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69756">i69756</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/69756">i69756</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3678,7 +3869,7 @@ location where the action or event expressed by concept Y takes place.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35580">i35580</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/35580">i35580</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3782,7 +3973,7 @@ Y. It is possible to Y from/to/over/across/through a place (X)</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/82556">i82556</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/82556">i82556</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3879,7 +4070,7 @@ by concept A.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/82007">i82007</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/82007">i82007</a>⟫</td>
         </tr>
         
       </tbody>
@@ -3977,7 +4168,7 @@ begins/starts/happens.</p>
         <tr>
           <th>Interlingual Index Node</th>
           <td>
-            ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/81759">i81759</a>⟫</td>
+            ⟪<a href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81759">i81759</a>⟫</td>
         </tr>
         
       </tbody>
@@ -4675,11 +4866,6 @@ is licensed under a <a rel="license" href="http://creativecommons.org/licenses/b
     </p>
   </footer>
 </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
   
 </body>
 
