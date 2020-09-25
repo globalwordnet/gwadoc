@@ -1,0 +1,19 @@
+<section>
+  <div id="toc" style="padding-left:60px">
+    <ul>
+      {%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
+      {%- for id, rev, children in agenda recursive %}
+      <li><a href="#{{ id }}">{{ gwadoc.relations[id].name }}</a> ({{ rel_id(id) }})
+	{%- if rev is not none and rev != id -%}
+	<span class="revchar">⇔</span>
+	<a href="#{{ rev }}">{{ gwadoc.relations[rev].name }}</a> ({{ rel_id(rev) }})
+	{%- endif -%}
+	{%- if children %}
+	<ul>{{ loop(children) }}</ul>
+	{%- endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>  
+</section>
+

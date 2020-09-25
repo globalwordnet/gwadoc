@@ -1,0 +1,9 @@
+<Synset id="wn-synset-X" ili="i?" partOfSpeech="?">
+  <SynsetRelation relType="{{id}}"
+		  target="example-en-10162692-n"/>
+</Synset>
+
+<Sense id="wn-sense-X" synset="wn-synset-X">
+   <SenseRelation relType="{{id}}"
+		  target="wn-sense-Y"/>
+ </Sense>
