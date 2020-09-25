@@ -12,6 +12,16 @@ window.onclick = function(event) {
 }
 var btn1Status=0;
 $(document).ready(function () {
+	$('body').on('click','.pack-up',function(){
+		if($(this).hasClass('fa-plus-circle')){
+			$(this).removeClass('fa-plus-circle').addClass('fa fa-minus-circle').parent('li').addClass('open');
+		}else{
+			$(this).removeClass('fa-minus-circle').addClass('fa fa-plus-circle').parent('li').removeClass('open');
+		}
+	})
+	
+	
+	
 	
 	$("#dp-btn1").click(function () {
 		$("#dropList1").toggle();
