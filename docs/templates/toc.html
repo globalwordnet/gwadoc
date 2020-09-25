@@ -1,5 +1,5 @@
 <section>
-  <nav id="relnav">
+  <div id="toc" style="padding-left:60px">
     <ul>
       {%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
       {%- for id, rev, children in agenda recursive %}
@@ -14,5 +14,6 @@
       </li>
       {% endfor %}
     </ul>
-  </nav>
+  </div>  
 </section>
+
