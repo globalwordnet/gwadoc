@@ -15,20 +15,210 @@
     
     <link rel="stylesheet" href="static/gwadoc.css" />
     <link rel="stylesheet" href="static/pygment.css" />
+	<link rel="stylesheet" href="static/sidenav.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<!-- fa icon CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="static/sidenav.js"></script>
+
     <title>Open Wordnet Documentation</title>
 </head>
 
 <body clas="d-flex flex-column">
-
+ <div style="clear:both;"></div>
+<div id="relnav" class="sidenav">
+	<ul>
+		<li><a href="#constitutive">Constitutive</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#hyponym">下位語</a><span class="revchar">⇔</span>
+			<a href="#hypernym">上位語</a>
+		</li>
+		
+		<li><a href="#instance_hyponym">事例</a><span class="revchar">⇔</span>
+			<a href="#instance_hypernym">事例あり</a>
+		</li>
+		
+		<li><a href="#antonym">対義語</a>
+		</li>
+		
+		<li><a href="#eq_synonym">同義語</a>
+		</li>
+		
+		<li><a href="#similar">近似</a>
+		</li>
+		
+		<li><a href="#meronym">被構成要素</a><span class="revchar">⇔</span>
+			<a href="#holonym">構成要素</a> 
+			<ul>
+		<li><a href="#mero_location">Location Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_location">Location Holonym</a>
+		</li>
+		
+		<li><a href="#mero_member">構成要素(構成員)</a><span class="revchar">⇔</span>
+			<a href="#holo_member">被構成要素(構成員)</a>
+		</li>
+		
+		<li><a href="#mero_part">被構成要素(部分)</a><span class="revchar">⇔</span>
+			<a href="#holo_part">構成要素(部分)</a>
+		</li>
+		
+		<li><a href="#mero_portion">Portion Meronym</a><span class="revchar">⇔</span>
+			<a href="#holo_portion">Portion Holonym</a>
+		</li>
+		
+		<li><a href="#mero_substance">被構成要素(物質・材料)</a><span class="revchar">⇔</span>
+			<a href="#holo_substance">構成要素(物質・材料)</a>
+		</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#other">その他</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#also">関連</a>
+		</li>
+		
+		<li><a href="#state_of">State Of</a><span class="revchar">⇔</span>
+			<a href="#be_in_state">Be In State</a>
+		</li>
+		
+		<li><a href="#causes">引き起こし</a><span class="revchar">⇔</span>
+			<a href="#is_caused_by">Is Caused By</a>
+		</li>
+		
+		<li><a href="#subevent">Subevent</a><span class="revchar">⇔</span>
+			<a href="#is_subevent_of">Is Subevent Of</a>
+		</li>
+		
+		<li><a href="#manner_of">Manner Of</a><span class="revchar">⇔</span>
+			<a href="#in_manner">In Manner</a>
+		</li>
+		
+		<li><a href="#attribute">属性</a>
+		</li>
+		
+		<li><a href="#restricts">Restricts</a><span class="revchar">⇔</span>
+			<a href="#restricted_by">Restricted By</a>
+		</li>
+		
+		<li><a href="#classifies">Classifies</a><span class="revchar">⇔</span>
+			<a href="#classified_by">Classified By</a>
+		</li>
+		
+		<li><a href="#entails">含意</a><span class="revchar">⇔</span>
+			<a href="#is_entailed_by">Is Entailed By</a>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#domain">Domain</a><span class="revchar">⇔</span>
+			<a href="#has_domain">In Domain</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#domain_topic">被包含領域(カテゴリ)</a><span class="revchar">⇔</span>
+			<a href="#has_domain_topic">包含領域(カテゴリ)</a>
+		</li>
+		
+		<li><a href="#domain_region">被包含領域(地域)</a><span class="revchar">⇔</span>
+			<a href="#has_domain_region">包含領域(地域)</a>
+		</li>
+		
+		<li><a href="#exemplifies">被包含領域(語法)</a><span class="revchar">⇔</span>
+			<a href="#is_exemplified_by">包含領域(語法)</a>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#role">Role</a><span class="revchar">⇔</span>
+			<a href="#involved">Involved</a>
+					<i class="pack-up fa fa-plus-circle"></i> 
+			<ul>
+		<li><a href="#agent">Agent</a><span class="revchar">⇔</span>
+			<a href="#involved_agent">Involved Agent</a>
+		</li>
+		
+		<li><a href="#patient">Patient</a><span class="revchar">⇔</span>
+			<a href="#involved_patient">Involved Patient</a>
+		</li>
+		
+		<li><a href="#result">Result</a><span class="revchar">⇔</span>
+			<a href="#involved_result">Involved Result</a>
+		</li>
+		
+		<li><a href="#instrument">Instrument</a><span class="revchar">⇔</span>
+			<a href="#involved_instrument">Involved Instrument</a>
+		</li>
+		
+		<li><a href="#location">Location</a><span class="revchar">⇔</span>
+			<a href="#involved_location">Involved Location</a>
+		</li>
+		
+		<li><a href="#direction">Direction</a><span class="revchar">⇔</span>
+			<a href="#involved_direction">Involved Direction</a>
+		</li>
+		
+		<li><a href="#target_direction">Target Direction</a><span class="revchar">⇔</span>
+			<a href="#involved_target_direction">Involved Target Direction</a>
+		</li>
+		
+		<li><a href="#source_direction">Source Direction</a><span class="revchar">⇔</span>
+			<a href="#involved_source_direction">Involved Source Direction</a>
+		</li>
+		
+		<li><a href="#co_role">Co Role</a> 
+			<ul>
+		<li><a href="#co_agent_patient">Co Agent Patient</a><span class="revchar">⇔</span>
+			<a href="#co_patient_agent">Co Patient Agent</a>
+		</li>
+		
+		<li><a href="#co_agent_instrument">Co Agent Instrument</a><span class="revchar">⇔</span>
+			<a href="#co_instrument_agent">Co Instrument Agent</a>
+		</li>
+		
+		<li><a href="#co_agent_result">Co Agent Result</a><span class="revchar">⇔</span>
+			<a href="#co_result_agent">Co Result Agent</a>
+		</li>
+		
+		<li><a href="#co_patient_instrument">Co Patient Instrument</a><span class="revchar">⇔</span>
+			<a href="#co_instrument_patient">Co Instrument Patient</a>
+		</li>
+		
+		<li><a href="#co_result_instrument">Co Result Instrument</a><span class="revchar">⇔</span>
+			<a href="#co_instrument_result">Co Instrument Result</a>
+		</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+		
+		<li><a href="#participle">Participle</a>
+		</li>
+		
+		<li><a href="#pertainym">Pertainym</a>
+		</li>
+		
+		<li><a href="#derivation">派生語</a>
+		</li>
+		
+	</ul>
+</div>
+<div style="clear:both;"></div> 
 <div id="container" class="container">
-  <header>
+  <header style="margin-left:290px">
     <h1>Open Wordnet Documentation</h1>
   </header>
+
   <main>
     <h2>Contents</h2>
 <section>
-  <nav id="relnav">
+  <div id="toc" style="padding-left:60px">
     <ul>
       <li><a href="#constitutive">Constitutive</a> (<span class="rel-id">constitutive</span>)
 	<ul>
@@ -202,8 +392,9 @@
       </li>
       
     </ul>
-  </nav>
+  </div>  
 </section>
+
 <h2>Relations</h2>
 <article class="relation">
   <h3 id="constitutive"><a href="#constitutive">Constitutive</a> (<span class="rel-id">constitutive</span>)<a class="toplink" href="#">back to top</a></h3>
@@ -336,33 +527,39 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             hyponym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             ~</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_hyponym</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             hyponymy</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hypo</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69570">i69570</a>⟫</td>
         </tr>
@@ -392,7 +589,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
     <h4>Examples</h4>
     <p>&quot;canis familiaris&quot;(02084071-n)は&quot;domestic animal&quot;(01317541-n)と&quot;canid&quot;(02083346-n)に包含される</p>
     <h4>Tests</h4>
-    <p><p>Hyperonymy/hyponymy between verb synsets (EWN test 11)</p>
+    <p><p>Hyperonymy/hyponymy between verb synsets (<a class="citation-reference" href="#ewn" id="id1">[EWN]</a> test 11, p23)</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -419,7 +616,13 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p><h4>XML</h
 applies to the Y-phrase</li>
 </ul>
 </dd>
-</dl></p>
+</dl>
+<table class="docutils citation" frame="void" id="ewn" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[EWN]</a></td><td>Piek Vossen (ed.) (1999) <a class="reference external" href="https://globalwordnet.github.io/gwadoc/pdf/EWN_general.pdf">Euro Wordnet General Documentation</a> University of Amsterdam</td></tr>
+</tbody>
+</table></p>
     <h4>Comments</h4>
     <p>This is the fundamental relation, generally used for nouns and
 verbs. In the original Princeton WordNet the name 'troponym' was used
@@ -435,28 +638,33 @@ extended to adjectives and adverbs.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             @</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_hyperonym</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             hyperonymy</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hype</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69569">i69569</a>⟫</td>
         </tr>
@@ -503,33 +711,39 @@ Instances are expressed by proper nouns.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             Instance Hypernym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             ~i</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             BELONGS_To_CLASS</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             instance</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hasi</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/75102">i75102</a>⟫</td>
         </tr>
@@ -590,28 +804,33 @@ Instances are expressed by proper nouns.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             Instance Hypernym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             @i</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_instance</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             type</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             inst</td>
         </tr>
@@ -671,23 +890,27 @@ with the same part-of-speech.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             !</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             complementary, proper and converse antonymy</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             antonym</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69547">i69547</a>⟫</td>
         </tr>
@@ -742,13 +965,15 @@ chengyu (成语), a traditional four-character Chinese idiom.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             eq_synonym</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69607">i69607</a>⟫</td>
         </tr>
@@ -810,33 +1035,39 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             Similar to and Verb Group</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             &amp;</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             near_synonym</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             near_synonymy</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             sim</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/13187">i13187</a>⟫</td>
         </tr>
@@ -882,33 +1113,39 @@ shouldn't be a special relation.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             meronym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             %</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_meronym</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             meronym</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             enta</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69575">i69575</a>⟫</td>
         </tr>
@@ -954,28 +1191,33 @@ shouldn't be a special relation.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             #</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_holonym</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             holonym</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             enta</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69567">i69567</a>⟫</td>
         </tr>
@@ -1019,18 +1261,21 @@ located in concept Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_mero_location</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             meronymy_location</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hsub</td>
         </tr>
@@ -1074,18 +1319,21 @@ located in concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_holo_location</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             holonymy_location</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hsub</td>
         </tr>
@@ -1133,28 +1381,33 @@ instances of Concept-X form Concept-Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             member meronym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             %m</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_mero_member</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             meronymy_member</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             mmem</td>
         </tr>
@@ -1202,28 +1455,33 @@ instances of Concept-X form Concept-Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             member holonym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             #m</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_holo_member</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             holonymy_member</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hmem</td>
         </tr>
@@ -1273,28 +1531,33 @@ geographical inclusiveness relations.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             part meronym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             %p</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_mero_part</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             meronymy_part</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             mprt</td>
         </tr>
@@ -1343,28 +1606,33 @@ inclusiveness relations.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             part holonym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             #p</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_holo_part</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             holonymy_part</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hprt</td>
         </tr>
@@ -1408,23 +1676,27 @@ amount/piece/portion of concept Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             portion meronym</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_mero_portion</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             meronymy_portion</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hsub</td>
         </tr>
@@ -1468,18 +1740,21 @@ amount/piece/portion of concept X</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_holo_portion</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             holonymy_portion</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hsub</td>
         </tr>
@@ -1526,28 +1801,33 @@ Concept-Y is a substance of Concept-X”.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             substance meronym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             %s</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_mero_madeof</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             meronymy_substance</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             msub</td>
         </tr>
@@ -1594,28 +1874,33 @@ Concept-Y is a substance of Concept-X”.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             substance holonym</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             #s</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_holo_madeof</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             holonymy_substance</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             hsub</td>
         </tr>
@@ -1667,8 +1952,9 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/11342">i11342</a>⟫</td>
         </tr>
@@ -1723,23 +2009,27 @@ all parts-of-speech.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             also see</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             ^</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             inchoativity, iterativity, distributivity, anteriority</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             also</td>
         </tr>
@@ -1784,23 +2074,27 @@ FCB: isn't this the same as attribute (but split into two directions)</p><h4>XML
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             attribute</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             state_of</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             state</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35578">i35578</a>⟫</td>
         </tr>
@@ -1845,13 +2139,15 @@ concept Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             be_in_state</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             bearer of state</td>
         </tr>
@@ -1903,33 +2199,39 @@ seems possible to just absorb PWN's links.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             cause</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             &gt;</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             causes</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             causation</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             caus</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35561">i35561</a>⟫</td>
         </tr>
@@ -1973,13 +2275,15 @@ as a result of concept Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             is_caused_by</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             caus</td>
         </tr>
@@ -2029,23 +2333,27 @@ relation marked as ENTAILMENT by the PWN.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             \*</td>
         </tr>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             has_subevent</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             verbal_holonymy</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             enta</td>
         </tr>
@@ -2090,18 +2398,21 @@ place, concept Y takes place.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             is_subevent_of</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             verbal_meronymy</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             enta</td>
         </tr>
@@ -2146,18 +2457,21 @@ Y takes place.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             manner_of</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             enta</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/62791">i62791</a>⟫</td>
         </tr>
@@ -2202,13 +2516,15 @@ X takes place.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             in_manner</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             enta</td>
         </tr>
@@ -2263,28 +2579,33 @@ adjectives to nouns.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             attribute</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             =</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             value_of_the_attribute</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             attr</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35577">i35577</a>⟫</td>
         </tr>
@@ -2332,8 +2653,9 @@ now marked as domain usage. (to be corrected soon'ish)</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/22888">i22888</a>⟫</td>
         </tr>
@@ -2418,8 +2740,9 @@ will do it for other POS (e.g. v)</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/25399">i25399</a>⟫</td>
         </tr>
@@ -2463,8 +2786,9 @@ between Y and a classifier X</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/25002">i25002</a>⟫</td>
         </tr>
@@ -2510,18 +2834,21 @@ which Verb-Y has to take place before or during Verb-X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             entailment</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             participle</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/34846">i34846</a>⟫</td>
         </tr>
@@ -2564,8 +2891,9 @@ which Verb-Y has to take place before or during Verb-X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             participle</td>
         </tr>
@@ -2686,18 +3014,21 @@ domain (e.g. computing, sport, biology, etc.) of concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             domain category</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             ;c</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             Domain of synset - TOPIC</td>
         </tr>
@@ -2746,13 +3077,15 @@ domain (e.g. computing, sport, biology, etc.) of concept Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             -c</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             dmtc</td>
         </tr>
@@ -2805,18 +3138,21 @@ what...</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             Domain of synset - REGION</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             ;r</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             dmnr</td>
         </tr>
@@ -2867,13 +3203,15 @@ a good name.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             -r</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             dmtr</td>
         </tr>
@@ -2923,23 +3261,27 @@ too different from the standard meaning of domain.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             Domain of synset - USAGE</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             ;u</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             dmnu</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/26682">i26682</a>⟫</td>
         </tr>
@@ -2988,18 +3330,21 @@ propose 'Exemplified_By'.</p><h4>XML</h4>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Princeton WordNet Relation Name</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wngloss7wn' title= 'Name used by the Princeton Wordnet'>Princeton WordNet Relation Name</a> </th>
           <td>
             domain term usage</td>
         </tr>
+        
         <tr>
-          <th>Princeton WordNet Pointer</th>
+          <th><a href='https://wordnet.princeton.edu/documentation/wninput5wn' title= 'Pointer symbol in the PWN text database'>Princeton WordNet Pointer</a> </th>
           <td>
             -u</td>
         </tr>
+        
         <tr>
-          <th>PERL WordNet-QueryData Module</th>
+          <th><a href='https://metacpan.org/pod/WordNet::QueryData#QUERYING' title= 'Relation name used by QueryData'>PERL WordNet-QueryData Module</a> </th>
           <td>
             dmtu</td>
         </tr>
@@ -3048,18 +3393,21 @@ supertype of <tt class="docutils literal">agent</tt>, <tt class="docutils litera
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             role_unspecified subtype and role_time</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/64041">i64041</a>⟫</td>
         </tr>
@@ -3109,18 +3457,21 @@ X. Involved is the supertype of <tt class="docutils literal">involved_agent</tt>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             unspecified subtype, time and causation inclusion</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/8315">i8315</a>⟫</td>
         </tr>
@@ -3166,18 +3517,21 @@ intentionally. X is typically the agent of the action expressed by Y</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_agent</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             role_agent</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69754">i69754</a>⟫</td>
         </tr>
@@ -3223,13 +3577,15 @@ the agent of the action expressed by concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_agent</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             agent inclusion</td>
         </tr>
@@ -3274,18 +3630,21 @@ the agent of the action expressed by concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_patient</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             role_patient</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69753">i69753</a>⟫</td>
         </tr>
@@ -3330,13 +3689,15 @@ concept A.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_patient</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             patient inclusion</td>
         </tr>
@@ -3382,18 +3743,21 @@ X is the result of Y or, (A/an) X is created by Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_result</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             role_result</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69759">i69759</a>⟫</td>
         </tr>
@@ -3437,13 +3801,15 @@ into existence as a result of concept A.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_result</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             result inclusion</td>
         </tr>
@@ -3493,18 +3859,21 @@ used to Y (with)</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_instrument</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             role_instrument</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/69756">i69756</a>⟫</td>
         </tr>
@@ -3549,13 +3918,15 @@ by concept A.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_instrument</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             instrument inclusion</td>
         </tr>
@@ -3601,18 +3972,21 @@ location where the action or event expressed by concept Y takes place.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_location</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             role_location</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/35580">i35580</a>⟫</td>
         </tr>
@@ -3657,13 +4031,15 @@ A takes place.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_location</td>
         </tr>
+        
         <tr>
-          <th>PlWordNet Relation Name</th>
+          <th><a href='http://plwordnet.pwr.wroc.pl/wordnet/about' title= 'Polish name used by the Polish WordNet'>PlWordNet Relation Name</a> </th>
           <td>
             location inclusion</td>
         </tr>
@@ -3710,13 +4086,15 @@ Y. It is possible to Y from/to/over/across/through a place (X)</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_direction</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/82556">i82556</a>⟫</td>
         </tr>
@@ -3761,8 +4139,9 @@ by concept A.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_direction</td>
         </tr>
@@ -3807,13 +4186,15 @@ by concept A.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_target_direction</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/82007">i82007</a>⟫</td>
         </tr>
@@ -3857,8 +4238,9 @@ where the action or event expressed by concept A leads to.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_target_direction</td>
         </tr>
@@ -3905,13 +4287,15 @@ begins/starts/happens.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             role_source_direction</td>
         </tr>
+        
         <tr>
-          <th>Interlingual Index Node</th>
+          <th><a href='https://lr.soh.ntu.edu.sg/omw/omw' title= 'OMW, linked by Interlingual Index'>Open Multilingual Wordnet Concept</a> </th>
           <td>
             ⟪<a href="http://compling.hss.ntu.edu.sg/iliomw/ili/concepts/81759">i81759</a>⟫</td>
         </tr>
@@ -3956,8 +4340,9 @@ begins/starts/happens.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             involved_source_direction</td>
         </tr>
@@ -4001,8 +4386,9 @@ which concept Y is involved (bidirectional).</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_role</td>
         </tr>
@@ -4047,8 +4433,9 @@ undergoing an action carried out by concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_agent_patient</td>
         </tr>
@@ -4092,8 +4479,9 @@ carried out by concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_patient_agent</td>
         </tr>
@@ -4138,8 +4526,9 @@ by concept X in a certain action.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_agent_instrument</td>
         </tr>
@@ -4183,8 +4572,9 @@ by concept Y for a certain action.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_instrument_agent</td>
         </tr>
@@ -4229,8 +4619,9 @@ action carried out by concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_agent_result</td>
         </tr>
@@ -4274,8 +4665,9 @@ action carried out by concept Y.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_result_agent</td>
         </tr>
@@ -4319,8 +4711,9 @@ for which the instrument expressed by concept X is used.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_patient_instrument</td>
         </tr>
@@ -4364,8 +4757,9 @@ for which the instrument expressed by concept X is used.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_instrument_patient</td>
         </tr>
@@ -4409,8 +4803,9 @@ action for which the instrument expressed by concept Y is used.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_result_instrument</td>
         </tr>
@@ -4454,8 +4849,9 @@ action carried out by the instrument expressed by concept X.</p>
 </pre></div><h4>Project-specific Names</h4>
     <table>
       <tbody>
+        
         <tr>
-          <th>Euro WordNet Relation Name</th>
+          <th><a href='pdf/EWN_general.pdf' title= 'Name used by Euro WordNet'>Euro WordNet Relation Name</a> </th>
           <td>
             co_instrument_result</td>
         </tr>
@@ -4611,11 +5007,6 @@ is licensed under a <a rel="license" href="http://creativecommons.org/licenses/b
     </p>
   </footer>
 </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
   
 </body>
 
