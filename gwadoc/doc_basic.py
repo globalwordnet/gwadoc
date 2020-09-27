@@ -15,6 +15,13 @@ relations.domain.fa.sense_synset = False
 relations.domain.fa.sense_sense = False
 relations.domain.fa.reverse = 'has_domain'
 
+relations.domain.proj.ili = ""
+relations.domain.proj.pwn = "domain"
+relations.domain.proj.querywn = "domn"
+relations.domain.proj.eurown = ""
+relations.domain.proj.plwordnet = ""
+relations.domain.proj.pointer = ""
+
 
 ### Relation: has_domain
 
@@ -23,6 +30,13 @@ relations.has_domain.fa.synset_synset = True
 relations.has_domain.fa.sense_synset = False
 relations.has_domain.fa.sense_sense = False
 relations.has_domain.fa.reverse = 'domain'
+
+relations.has_domain.proj.ili = ""
+relations.has_domain.proj.pwn = "domain term"
+relations.has_domain.proj.querywn = "domt"
+relations.has_domain.proj.eurown = ""
+relations.has_domain.proj.plwordnet = ""
+relations.has_domain.proj.pointer = ""
 
 
 ### Relation: constitutive
@@ -865,6 +879,7 @@ relations.exemplifies.fa.reverse = "is_exemplified_by"
 relations.exemplifies.proj.ili = "i26682"
 relations.exemplifies.proj.pwn = "Domain of synset - USAGE"
 relations.exemplifies.proj.querywn = "dmnu"
+relations.exemplifies.proj.eurown = ""
 relations.exemplifies.proj.plwordnet = ""
 relations.exemplifies.proj.pointer = ";u"
 
@@ -878,8 +893,10 @@ relations.is_exemplified_by.fa.sense_sense = True
 relations.is_exemplified_by.fa.inOMW = True
 relations.is_exemplified_by.fa.reverse = "exemplifies"
 
-relations.is_exemplified_by.proj.pwn = "domain term usage"
+relations.is_exemplified_by.proj.ili = ""
+relations.is_exemplified_by.proj.pwn = "Member of this domain - USAGE"
 relations.is_exemplified_by.proj.querywn = "dmtu"
+relations.is_exemplified_by.proj.eurown = ""
 relations.is_exemplified_by.proj.plwordnet = ""
 relations.is_exemplified_by.proj.pointer = "-u"
 
@@ -893,8 +910,10 @@ relations.domain_topic.fa.sense_sense = True
 relations.domain_topic.fa.inOMW = True
 relations.domain_topic.fa.reverse = "has_domain_topic"
 
-relations.domain_topic.proj.pwn = "domain category"
-relations.domain_topic.proj.querywn = "Domain of synset - TOPIC"
+relations.domain_topic.proj.ili = ""
+relations.domain_topic.proj.pwn = "Domain of synset - TOPIC"
+relations.domain_topic.proj.querywn = "dmnc"
+relations.domain_topic.proj.eurown = ""
 relations.domain_topic.proj.plwordnet = ""
 relations.domain_topic.proj.pointer = ";c"
 
@@ -908,7 +927,10 @@ relations.has_domain_topic.fa.sense_sense = True
 relations.has_domain_topic.fa.inOMW = True
 relations.has_domain_topic.fa.reverse = "domain_topic"
 
+relations.has_domain_topic.proj.ili = ""
+relations.has_domain_topic.proj.pwn = "Member of this domain - TOPIC"
 relations.has_domain_topic.proj.querywn = "dmtc"
+relations.has_domain_topic.proj.eurown = ""
 relations.has_domain_topic.proj.plwordnet = ""
 relations.has_domain_topic.proj.pointer = "-c"
 
@@ -922,8 +944,10 @@ relations.domain_region.fa.sense_sense = True
 relations.domain_region.fa.inOMW = True
 relations.domain_region.fa.reverse = "has_domain_region"
 
+relations.domain_region.proj.ili = ""
 relations.domain_region.proj.pwn = "Domain of synset - REGION"
 relations.domain_region.proj.querywn = "dmnr"
+relations.domain_region.proj.eurown = ""
 relations.domain_region.proj.plwordnet = ""
 relations.domain_region.proj.pointer = ";r"
 
@@ -937,7 +961,10 @@ relations.has_domain_region.fa.sense_sense = True
 relations.has_domain_region.fa.inOMW = True
 relations.has_domain_region.fa.reverse = "domain_region"
 
+relations.has_domain_region.proj.ili = ""
+relations.has_domain_region.proj.pwn = "Member of this domain - REGION"
 relations.has_domain_region.proj.querywn = "dmtr"
+relations.has_domain_region.proj.eurown = ""
 relations.has_domain_region.proj.plwordnet = ""
 relations.has_domain_region.proj.pointer = "-r"
 
