@@ -48,7 +48,7 @@ relations.hypernym.exe.en = """
  * *wordbook* ``hypernym`` *dictionary*
 """
 relations.hypernym.test.en = """
-Hyperonymy/hyponymy between verb synsets (EWN test 11)
+Hyperonymy/hyponymy between verb synsets ([EWN]_ test 11, p23)
 
 ===     =   ===================================
 yes     a   *to X is to Y + AdvP/AdjP/NP/PP*
@@ -60,6 +60,9 @@ Conditions:
  - Y is a verb in the infinitive form
  - there is at least one specifying modifier (AdvP, NP or PP) that
    applies to the Y-phrase
+
+.. [EWN] Piek Vossen (ed.) (1999) `Euro Wordnet General Documentation <https://globalwordnet.github.io/gwadoc/pdf/EWN_general.pdf>`_ University of Amsterdam
+
 """
 relations.hypernym.com.en="""
 This is the fundamental relation, generally used for nouns and
