@@ -1060,14 +1060,13 @@ relation which is why it is not given in the mappings below.</p><h4>XML</h4>
       <tr><th>example</th><td>hand/finger</td></tr>
     </table>
     <h4>Definition</h4>
-    <p>A relation between two concepts where concept Y makes up a part of
-concept X.</p>
+    <p>A relation between two concepts where concept A makes up a part of
+concept B.</p>
     <h4>Examples</h4>
     <p><ul class="simple">
-<li><em>wheels</em> <tt class="docutils literal">meronym</tt> <em>automobile</em></li>
-<li><em>crown</em> <tt class="docutils literal">meronym</tt> <em>hat</em></li>
-<li><em>faces</em> <tt class="docutils literal">meronym</tt> <em>people</em></li>
-<li><em>leaf</em> <tt class="docutils literal">meronym</tt> <em>tree</em></li>
+<li><em>&lt;sense: pwn-3.0:04574999-n:wheel&gt;</em> <tt class="docutils literal">meronym</tt> <em>&lt;sense: pwn-3.0:02958343-n:automobile&gt;</em></li>
+<li><em>&lt;sense: pwn-3.0:03138534-n:crown&gt;</em> <tt class="docutils literal">meronym</tt> <em>&lt;sense: pwn-3.0:03497657-n:hat&gt;</em></li>
+<li><em>&lt;sense: pwn-3.0:05217168-n:human body&gt;</em> <tt class="docutils literal">meronym</tt> <em>&lt;sense: pwn-3.0:00007846-n:person&gt;</em></li>
 </ul></p>
     <h4>Tests</h4>
     <p>Meronymy-relation between nouns (EWN test 21)</p>
@@ -1080,7 +1079,7 @@ concept X.</p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>A/an X makes up a part of A/an Y</em></td>
+<td><em>A/an A makes up a part of A/an B</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
@@ -1088,7 +1087,7 @@ concept X.</p>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>X is a meronym of &quot;Y&quot; if Xs are parts of Y(s)</em></td>
+<td><em>A is a meronym of &quot;B&quot; if Xs are parts of B(s)</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -1097,7 +1096,7 @@ concept X.</p>
 </tbody>
 </table>
 <p>Conditions:
-- X and Y are concrete nouns and are interpreted generically.</p>
+- A and B are concrete nouns and are interpreted generically.</p>
     <h4>Comments</h4>
     <p>This is an unspecified relation that covers all the
 relations below. This can be computed automatically, it
@@ -1130,12 +1129,12 @@ shouldn't be a special relation.</p><h4>XML</h4>
         <tr>
           <th>PlWordNet Relation Name</th>
           <td>
-            meronym</td>
+            meronimia</td>
         </tr>
         <tr>
           <th>PERL WordNet-QueryData Module</th>
           <td>
-            enta</td>
+            mero</td>
         </tr>
         <tr>
           <th>Interlingual Index Node</th>
@@ -1164,13 +1163,13 @@ shouldn't be a special relation.</p><h4>XML</h4>
       <tr><th>example</th><td>finger/hand</td></tr>
     </table>
     <h4>Definition</h4>
-    <p>A relation between two concepts where concept X makes up a
-part of concept Y.</p>
+    <p>A relation between two concepts where concept A makes up a
+part of concept B.</p>
     <h4>Examples</h4>
     <p><ul class="simple">
-<li><em>face</em> <tt class="docutils literal">holonym</tt> <em>eye</em></li>
-<li><em>body</em> <tt class="docutils literal">holonym</tt> <em>arm, leg, heart</em></li>
-<li><em>word</em> <tt class="docutils literal">holonym</tt> <em>letter</em></li>
+<li><em>&lt;sense: pwn-3.0:05600637-n:face&gt;</em> <tt class="docutils literal">holonym</tt> <em>&lt;sense: pwn-3.0:05311054-n:eye&gt;</em></li>
+<li><em>&lt;sense: pwn-3.0:05549830-n:body&gt;</em> <tt class="docutils literal">holonym</tt> <em>&lt;sense: pwn-3.0:05560787-n:leg&gt;</em></li>
+<li><em>&lt;sense: pwn-3.0:13627516-n:kilobyte&gt;</em> <tt class="docutils literal">holonym</tt> <em>&lt;sense: pwn-3.0:13626013-n:byte&gt;</em></li>
 </ul></p>
     <h4>Tests</h4>
     <p><p>Holonymy-relation between nouns</p>
@@ -1183,11 +1182,11 @@ part of concept Y.</p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>X is a holonym of Y if Ys are parts of Xs</em></td>
+<td><em>A is a holonym of B if Bs are parts of As</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>X is a holonym of Y if Ys are members of Xs</em></td>
+<td><em>A is a holonym of B if Bs are members of As</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -1222,12 +1221,12 @@ shouldn't be a special relation.</p><h4>XML</h4>
         <tr>
           <th>PlWordNet Relation Name</th>
           <td>
-            holonym</td>
+            holonimia</td>
         </tr>
         <tr>
           <th>PERL WordNet-QueryData Module</th>
           <td>
-            enta</td>
+            holo</td>
         </tr>
         <tr>
           <th>Interlingual Index Node</th>

@@ -816,28 +816,27 @@ relations.meronym.df.en = """
 a word that names a part of a larger whole
 """
 relations.meronym.dfn.en = """
-A relation between two concepts where concept Y makes up a part of
-concept X.
+A relation between two concepts where concept A makes up a part of
+concept B.
 """
 relations.meronym.ex.en = "hand/finger"
 relations.meronym.exe.en = """
- * *wheels* ``meronym`` *automobile*
- * *crown* ``meronym`` *hat*
- * *faces* ``meronym`` *people*
- * *leaf* ``meronym`` *tree*
+ * *<sense: pwn-3.0:04574999-n:wheel>* ``meronym`` *<sense: pwn-3.0:02958343-n:automobile>*
+ * *<sense: pwn-3.0:03138534-n:crown>* ``meronym`` *<sense: pwn-3.0:03497657-n:hat>*
+ * *<sense: pwn-3.0:05217168-n:human body>* ``meronym`` *<sense: pwn-3.0:00007846-n:person>*
 """
 relations.meronym.test.en="""
 Meronymy-relation between nouns (EWN test 21)
 
 ===     =   ======================================================
-yes     a   *A/an X makes up a part of A/an Y*
+yes     a   *A/an A makes up a part of A/an B*
 .       .   *A/an Y has A/an Xs*
-.       .   *X is a meronym of "Y" if Xs are parts of Y(s)*
+.       .   *A is a meronym of "B" if Xs are parts of B(s)*
 no      b   the converse of the (a) relations.
 ===     =   ======================================================
 
 Conditions:
-- X and Y are concrete nouns and are interpreted generically.
+- A and B are concrete nouns and are interpreted generically.
 """
 relations.meronym.com.en = """
 This is an unspecified relation that covers all the
@@ -853,21 +852,21 @@ relations.holonym.df.en = """
 a word that names the whole of which a given word is a part
 """
 relations.holonym.dfn.en = """
-A relation between two concepts where concept X makes up a
-part of concept Y.
+A relation between two concepts where concept A makes up a
+part of concept B.
 """
 relations.holonym.ex.en = "finger/hand"
 relations.holonym.exe.en = """
- * *face* ``holonym`` *eye*
- * *body* ``holonym`` *arm, leg, heart*
- * *word* ``holonym`` *letter*
+ * *<sense: pwn-3.0:05600637-n:face>* ``holonym`` *<sense: pwn-3.0:05311054-n:eye>*
+ * *<sense: pwn-3.0:05549830-n:body>* ``holonym`` *<sense: pwn-3.0:05560787-n:leg>*
+ * *<sense: pwn-3.0:13627516-n:kilobyte>* ``holonym`` *<sense: pwn-3.0:13626013-n:byte>*
 """
 relations.holonym.test.en = """
 Holonymy-relation between nouns 
 
 ===     =   ======================================================
-yes     a   *X is a holonym of Y if Ys are parts of Xs*
-.       .   *X is a holonym of Y if Ys are members of Xs*
+yes     a   *A is a holonym of B if Bs are parts of As*
+.       .   *A is a holonym of B if Bs are members of As*
 no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 """
