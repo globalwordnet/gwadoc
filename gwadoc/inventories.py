@@ -5,15 +5,36 @@ from collections import OrderedDict as od
 ###############################################################################
 ### Inventories
 
+### for PROJECTS
+### 'nam':  Name of the project
+### 'url':  URL to link to
+### 'exp':  mouseover text for short explanation
+
 PROJECTS = od([
-    ('pwn',       'Princeton WordNet Relation Name'),
-    ('pointer',   'Princeton WordNet Pointer'),
-    ('eurown',    'Euro WordNet Relation Name'),
-    ('plwordnet', 'PlWordNet Relation Name'),
-    ('querywn',   'PERL WordNet-QueryData Module'),
-    ('skos',      'SKOS type'),
-    ('ili',       'Interlingual Index Node'),
-    ('SUMO',      'Sumo Relation Type'),
+    ('pwn',       {'nam':'Princeton WordNet Relation Name',
+                   'url':'https://wordnet.princeton.edu/documentation/wngloss7wn',
+                   'exp':'Name used by the Princeton Wordnet'}),
+    ('pointer',   {'nam':'Princeton WordNet Pointer',
+                   'url':'https://wordnet.princeton.edu/documentation/wninput5wn',
+                   'exp':'Pointer symbol in the PWN text database'}),
+    ('eurown',    {'nam':'Euro WordNet Relation Name',
+                   'url':'pdf/EWN_general.pdf',
+                   'exp':'Name used by Euro WordNet'}),
+    ('plwordnet', {'nam':'PlWordNet Relation Name',
+                   'url':'http://plwordnet.pwr.wroc.pl/wordnet/about',
+                   'exp':'Polish name used by the Polish WordNet'}),
+    ('querywn',   {'nam':'PERL WordNet-QueryData Module',
+                   'url':'https://metacpan.org/pod/WordNet::QueryData#QUERYING',
+                   'exp':'Relation name used by QueryData'}),
+    ('skos',      {'nam':'SKOS type (Simple Knowledge Organization System)',
+                   'url':'https://www.w3.org/TR/skos-reference/#semantic-relations',
+                   'exp':'General relations from SKOS'}),
+    ('ili',       {'nam':'Open Multilingual Wordnet Concept',
+                   'url':'https://lr.soh.ntu.edu.sg/omw/omw',
+                   'exp':'OMW, linked by Interlingual Index'}),
+    ('SUMO',      {'nam':'Sumo Relation Type',
+                   'url':'http://www.adampease.org/OP/',
+                   'exp':'Relation in the Suggested Upper Merged Ontology'}),
 ])
 
 

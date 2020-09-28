@@ -62,8 +62,9 @@
     <table>
       <tbody>
         {% for proj in gwadoc.PROJECTS if rel.proj[proj] -%}
+	{% set PRJ =   gwadoc.PROJECTS[proj] %}
         <tr>
-          <th>{{ gwadoc.PROJECTS[proj] }}</th>
+          <th><a href='{{ PRJ.url }}' title= '{{ PRJ.exp }}'>{{ PRJ.nam }}</a> </th>
           <td>
             {% set sym = rel.proj[proj] -%}
             {% if sym and proj == "ili" -%}
