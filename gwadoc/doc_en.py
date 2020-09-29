@@ -1456,10 +1456,14 @@ relations.pertainym.name.en = "Pertainym"
 relations.pertainym.df.en = "X is of or pertaining to Y"
 relations.pertainym.dfn.en = "links a relational adjective X  to the noun Y it is about, or an adverb X to the adjective it is about Y"
 relations.pertainym.ex.en = "*naval* has pertainym *navy*; *slowly* has pertainym *slow*"
-relations.pertainym.exe.en = """*lunar* has pertainym *moon*
-*naval* has pertainym *navy*; *slowly* has pertainym *slow*
-*English* has pertainym *England*; 
-*English* has pertainym *English* "language" """
+relations.pertainym.exe.en = """
+* `lunar <ILIURL/15548>`_ has pertainym `moon <ILIURL/85806>`_
+* `naval <ILIURL/15629>`_ has pertainym `navy <ILIURL/80195>`_
+* `slowly <ILIURL/19235>`_ has pertainym `slow <ILIURL/5362>`_
+* `English <ILIURL/17163>`_ has pertainym `England <ILIURL/83374>`_
+* `subclinical <ILIURL/16413>`_ has pertainym `clinical <ILIURL/16412>`_
+* `clinical <ILIURL/16412>`_ has pertainym `clinic <ILIURL/79534>`_
+"""
 relations.pertainym.com.en = ""
 
 
