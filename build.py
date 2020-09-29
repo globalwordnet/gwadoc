@@ -3,24 +3,28 @@
 # thanks: http://flask.pocoo.org/snippets/55/
 
 import sys
+from pathlib import Path
 import io
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 
-import os.path
 import argparse
 import re
 
 import docutils.core
 import jinja2
 
-
-sys.path.insert(1, os.path.dirname(os.path.dirname(__file__)))
 import gwadoc
 #gwadoc.set_preferred_language('en')
 
 
+DIR = Path(__file__).parent.resolve()
+DOCS_DIR = DIR / 'docs'
+
+
 def rst_renderer(fmt):
+    """Create a function to render ReStructuredText to *fmt*."""
+
     @jinja2.evalcontextfilter
     def render_rst(eval_ctx, s):
         s = docutils.core.publish_parts(str(s), writer_name=fmt)['body']
@@ -32,14 +36,14 @@ def rst_renderer(fmt):
         if eval_ctx.autoescape:
             s = jinja2.Markup(s)
         return s
+
     return render_rst
 
 
 def build(args):
     gwadoc.set_preferred_language(args.lang)
 
-    loader =  jinja2.FileSystemLoader(
-        os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates')))
+    loader =  jinja2.FileSystemLoader(DOCS_DIR / 'templates')
 
     if args.format == 'html':
         env = jinja2.Environment(
@@ -90,5 +94,3 @@ if __name__ == '__main__':
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
-
-	
