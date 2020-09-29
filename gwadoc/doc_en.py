@@ -834,7 +834,8 @@ Meronymy-relation between nouns (EWN test 21)
 ===     =   ======================================================
 yes     a   *A/an A makes up a part of A/an B*
 .       .   *A/an Y has A/an Xs*
-.       .   *A is a meronym of "B" if Xs are parts of B(s)*
+.       .   *A is a meronym of "B" if As are parts of B(s)*
+
 no      b   the converse of the (a) relations.
 ===     =   ======================================================
 
@@ -870,6 +871,7 @@ Holonymy-relation between nouns
 ===     =   ======================================================
 yes     a   *A is a holonym of B if Bs are parts of As*
 .       .   *A is a holonym of B if Bs are members of As*
+
 no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 """
