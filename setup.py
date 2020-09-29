@@ -36,7 +36,6 @@ setup(
             'jinja2',
             'docutils',
             'pygments',
-            'ghp-import',
         ]
     }
 )
