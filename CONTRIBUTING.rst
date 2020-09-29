@@ -179,7 +179,6 @@ Interlingual Index Node            Go to https://lr.soh.ntu.edu.sg/omw/ili to ch
 ==============================     ==============================================
 
 
-
 **Technical Writer Resources**
 
 `Gwadoc <https://globalwordnet.github.io/gwadoc/>`_
@@ -187,15 +186,3 @@ Interlingual Index Node            Go to https://lr.soh.ntu.edu.sg/omw/ili to ch
 `Princeton Wordnet <https://wordnet.princeton.edu/>`_
 
 `reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_
-
-
-
-
-
-
-
-
-
-
-
-
