@@ -31,6 +31,8 @@ def rst_renderer(fmt):
         # remove (hopefully) unnecessary <p>...</p>
         if s[:3] == '<p>' and s[-4:] == '</p>':
             s = s[3:-4]
+        # replace ILIURL with the actual URL
+        s = s.replace('ILIURL', 'https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili')
         # make sure Jinja2 doesn't try to escape the HTML markup
         if eval_ctx.autoescape:
             s = jinja2.Markup(s)
