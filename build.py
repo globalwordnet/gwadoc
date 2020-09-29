@@ -19,7 +19,6 @@ import gwadoc
 
 
 DIR = Path(__file__).parent.resolve()
-DOCS_DIR = DIR / 'docs'
 
 
 def rst_renderer(fmt):
@@ -43,7 +42,7 @@ def rst_renderer(fmt):
 def build(args):
     gwadoc.set_preferred_language(args.lang)
 
-    loader =  jinja2.FileSystemLoader(DOCS_DIR / 'templates')
+    loader =  jinja2.FileSystemLoader(DIR / 'templates')
 
     if args.format == 'html':
         env = jinja2.Environment(
