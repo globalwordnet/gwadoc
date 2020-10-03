@@ -876,12 +876,12 @@ relations.exemplifies.fa.sense_sense = True
 relations.exemplifies.fa.inOMW = True
 relations.exemplifies.fa.reverse = "is_exemplified_by"
 
-relations.exemplifies.proj.ili = "i26682"
-relations.exemplifies.proj.pwn = "Domain of synset - USAGE"
-relations.exemplifies.proj.querywn = "dmnu"
+relations.exemplifies.proj.ili = "i108797"
+relations.exemplifies.proj.pwn = "Member of this domain - USAGE"
+relations.exemplifies.proj.querywn = "dmtu"
 relations.exemplifies.proj.eurown = ""
 relations.exemplifies.proj.plwordnet = ""
-relations.exemplifies.proj.pointer = ";u"
+relations.exemplifies.proj.pointer = "-u"
 
 
 ### Relation: is_exemplified_by
@@ -894,11 +894,11 @@ relations.is_exemplified_by.fa.inOMW = True
 relations.is_exemplified_by.fa.reverse = "exemplifies"
 
 relations.is_exemplified_by.proj.ili = ""
-relations.is_exemplified_by.proj.pwn = "Member of this domain - USAGE"
-relations.is_exemplified_by.proj.querywn = "dmtu"
+relations.is_exemplified_by.proj.pwn = "Domain of synset - USAGE"
+relations.is_exemplified_by.proj.querywn = "dmnu"
 relations.is_exemplified_by.proj.eurown = ""
 relations.is_exemplified_by.proj.plwordnet = ""
-relations.is_exemplified_by.proj.pointer = "-u"
+relations.is_exemplified_by.proj.pointer = ";u"
 
 
 ### Relation: domain_topic

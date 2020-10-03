@@ -18,7 +18,10 @@ Region or Usage pointer of Concept A.
 relations.domain.ex.en = ""
 relations.domain.exe.en = ""
 relations.domain.test.en = ""
-relations.domain.com.en = "Domain and In Domain are paired relations between terms / concepts of any part-of-speech."
+relations.domain.com.en = """Domain and In Domain are paired relations between terms / concepts
+ of any part-of-speech. In EuroWordNet they are moved to a separate ontology.
+ (EuroWordNet General Document pp 8–10)
+ """
 
 
 ### Relation: has_domain
@@ -32,7 +35,10 @@ Region or Usage term of Concept B.
 relations.has_domain.ex.en = ""
 relations.has_domain.exe.en = ""
 relations.has_domain.test.en = ""
-relations.domain.com.en = "Domain and In Domain are paired relations between terms / concepts of any part-of-speech."
+relations.domain.com.en = """Domain and In Domain are paired relations between terms / concepts
+ of any part-of-speech. In EuroWordNet they are moved to a separate ontology.
+ (EuroWordNet General Document pp 8–10)
+ """
 
 
 ### Relation: constitutive
@@ -1142,15 +1148,14 @@ relations.instance_hyponym.com.en = """
 ### Relation: exemplifies
 
 relations.exemplifies.name.en = "Exemplifies"
-relations.exemplifies.df.en = "A word which is the type of a given word."
+relations.exemplifies.df.en = "A word which is the example of a given word."
 relations.exemplifies.dfn.en = """
-A relation between two concepts where Concept B is a type of 
-Concept A. such as idiom, honorific or classifier.
+A relation between two concepts where Concept A is the example of Concept B.
 """
-relations.exemplifies.ex.en = "*trademark* exemplifies *Band Aid*"
+relations.exemplifies.ex.en = "*`Band Aid <ILIURL/50429>`_ * exemplifies *`trademark <ILIURL/72497>`_ *"
 relations.exemplifies.exe.en = """
-* *plural form*''exemplifies''*wings*
-* *trademark*''exemplifies''*Band Aid*
+* *`wings <ILIURL/36358>`_ * ''exemplifies'' *`plural form <ILIURL/69585>`_ *
+* *`Band Aid <ILIURL/50429>`_ * ''exemplifies'' *`trademark <ILIURL/72497>`_ *
 """
 relations.exemplifies.com.en = """
 The name was changed from "Domain of synset - USAGE" as we found it
@@ -1161,19 +1166,19 @@ too different from the standard meaning of domain.
 ### Relation: is_exemplified_by
 
 relations.is_exemplified_by.name.en = "Is Exemplified By"
-relations.is_exemplified_by.df.en = "A word which is the example of a given word."
+relations.is_exemplified_by.df.en = "A word which is the type of a given word."
 relations.is_exemplified_by.dfn.en = """
-A relation between two concepts where Concept A is the example of Concept B.
+A relation between two concepts where Concept B is a type of 
+Concept A. such as idiom, honorific or classifier.
 """
-relations.is_exemplified_by.ex.en = "*Band Aid* is exemplified by *trademark*"
+relations.is_exemplified_by.ex.en = "*`trademark <ILIURL/72497>`_ * is exemplified by *`Band Aid <ILIURL/50429>`_ *"
 relations.is_exemplified_by.exe.en = """
-* *Band Aid*''is exemplified by''*trademark*
-* *wings*''is exemplified by''*plural form*
+* *`trademark <ILIURL/72497>`_ * ''is exemplified by'' *`Band Aid <ILIURL/50429>`_ *
+* *`plural form <ILIURL/69585>`_ * ''is exemplified by'' *`wings <ILIURL/36358>`_ *
 """
 relations.is_exemplified_by.com.en = """
 We agreed to change the name for these with Christiane! We
 propose 'Exemplified_By'.
-
 """
 
 
@@ -1185,11 +1190,11 @@ relations.domain_topic.dfn.en = """
 A relation between two concepts where Concept B is a scientific
 category (e.g. computing, sport, biology, etc.) of concept A.
 """
-relations.domain_topic.ex.en = "*computer science* is a domain topic of *CPU*"
+relations.domain_topic.ex.en = "*`computer science <ILIURL/68812>`_ * is a domain topic of *`CPU <ILIURL/51710>`_ *"
 relations.domain_topic.exe.en = """
-* *football*''domain topic''*place-kick*
-* *phytology*''domain topic''*plant*
-* *ocean*''domain topic''*water*
+* *`football <ILIURL/37873>`_ * ''domain topic'' *`place-kick <ILIURL/27159>`_ *
+* *`plant <ILIURL/35564>`_ * ''domain topic'' *`evergreen <ILIURL/5001>`_ *
+* *`ocean <ILIURL/85897>`_ * ''domain topic'' *`water <ILIURL/85104>`_ *
 """
 relations.domain_topic.com.en = """
 """
@@ -1203,11 +1208,11 @@ relations.has_domain_topic.dfn.en = """
 A relation between two concepts where Concept A is a scientific
 category (e.g. computing, sport, biology, etc.) of concept B.
 """
-relations.has_domain_topic.ex.en = "*CPU* has domain topic *computer science*"
+relations.has_domain_topic.ex.en = "*`CPU <ILIURL/51710>`_ * has domain topic *`computer science <ILIURL/68812>`_ *"
 relations.has_domain_topic.exe.en = """
-* *place-kick*''has domain topic''*football*
-* *plant*''has domain topic''*phytology*
-* *water*''has domain topic''*ocean*
+* *`place-kick <ILIURL/27159>`_ * ''has domain topic'' *`football <ILIURL/37873>`_ *
+* *`evergreen <ILIURL/5001>`_ * ''has domain topic'' *`plant <ILIURL/35564>`_ *
+* *`water <ILIURL/85104>`_ * ''has domain topic'' *`ocean <ILIURL/85897>`_ *
 """
 relations.has_domain_topic.com.en = """
 """
@@ -1221,11 +1226,11 @@ relations.domain_region.dfn.en = """
 A relation between two concepts where Concept B is a geographical / 
 cultural domain of concept A. 
 """
-relations.domain_region.ex.en = "*United States* is a domain region of *billion*"
+relations.domain_region.ex.en = "*`United States <ILIURL/84182>`_ * is a domain region of *`billion <ILIURL/12132>`_ *"
 relations.domain_region.exe.en = """
-* *Japan*''domain region''*sushi*
-* *England*''domain region''*War of the Roses*
-* *Pacific*''domain region''*Philippine Sea*
+* *`Japan <ILIURL/83607>`_ * ''domain region'' *`sushi <ILIURL/78639>`_ *
+* *`England <ILIURL/83374>`_ * ''domain region'' *`War of the Roses <ILIURL/42242>`_ *
+* *`Pacific <ILIURL/85934>`_ * ''domain region'' *`Philippine Sea <ILIURL/42156>`_ *
 """
 relations.domain_region.com.en = """
 We also agreed to change the name for these (to include both
@@ -1242,15 +1247,15 @@ relations.has_domain_region.dfn.en = """
 A relation between two concepts where Concept A is a term of the geographical /
 cultural domain of concept B.
 """
-relations.has_domain_region.ex.en = "*billion* has domain region of *United States*"
+relations.has_domain_region.ex.en = "*`billion <ILIURL/12132>`_ * has domain region of *`United States <ILIURL/84182>`_ *"
 relations.has_domain_region.exe.en = """
-* *sushi*''has domain region''*Japan*
-* *War of the Roses*''has domain region''*England*
-* *Philippine Sea*''has domain region''*Pacific*
+* *`sushi <ILIURL/78639>`_ * ''has domain region'' *`Japan <ILIURL/83607>`_ *
+* *`War of the Roses <ILIURL/42242>`_ * ''has domain region'' *`England <ILIURL/83374>`_ *
+* *`Philippine Sea <ILIURL/42156>`_ * ''has domain region'' *`Pacific <ILIURL/85934>`_ *
 """
 relations.has_domain_region.com.en = """
 We have discussed changing the name for these (as they include both
-geographical and cultural regions).  But we have not yet come up with
+geographical and cultural regions). But we have not yet come up with
 a good name.
 """
 
