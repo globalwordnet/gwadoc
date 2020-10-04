@@ -819,11 +819,28 @@ relations.meronym.df.en = """
 a word that names a part of a larger whole
 """
 relations.meronym.dfn.en = """
-A relation between two concepts where concept Y makes up a part of
-concept X.
+A relation between two concepts where concept A makes up a part of
+concept B.
 """
 relations.meronym.ex.en = "hand/finger"
 relations.meronym.exe.en = """
+ * `wheel <ILIURL/61096>`_  has meronym `automobile <ILIURL/31373>`_
+ * `crown <ILIURL/52548>`_  has meronym `hat <ILIURL/54674>`_
+ * `person <ILIURL/35562>`_  has meronym `people <ILIURL/79059>`_
+"""
+relations.meronym.test.en="""
+Meronymy-relation between nouns (EWN test 21)
+
+===     =   ======================================================
+yes     a   *A/an A makes up a part of A/an B*
+.       .   *A/an Y has A/an Xs*
+.       .   *A is a meronym of "B" if As are parts of B(s)*
+
+no      b   the converse of the (a) relations.
+===     =   ======================================================
+
+Conditions:
+- A and B are concrete nouns and are interpreted generically.
 """
 relations.meronym.com.en = """
 This is an unspecified relation that covers all the
@@ -839,11 +856,24 @@ relations.holonym.df.en = """
 a word that names the whole of which a given word is a part
 """
 relations.holonym.dfn.en = """
-A relation between two concepts where concept X makes up a
-part of concept Y.
+A relation between two concepts where concept A makes up a
+part of concept B.
 """
 relations.holonym.ex.en = "finger/hand"
 relations.holonym.exe.en = """
+ * `face <ILIURL/87210>`_  has holonym `eye <ILIURL/64868>`_
+ * `body <ILIURL/64381>`_  has holonym `leg <ILIURL/66137>`_
+ * `kib <ILIURL/108305>`_  has holonym `byte <ILIURL/108298>`_
+"""
+relations.holonym.test.en = """
+Holonymy-relation between nouns 
+
+===     =   ======================================================
+yes     a   *A is a holonym of B if Bs are parts of As*
+.       .   *A is a holonym of B if Bs are members of As*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
 """
 relations.holonym.com.en = """
 This is an unspecified relation that covers all the

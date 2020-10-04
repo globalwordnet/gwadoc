@@ -629,9 +629,9 @@ relations.meronym.fa.reverse = "holonym"
 
 relations.meronym.proj.ili = "i69575"
 relations.meronym.proj.pwn = "meronym"
-relations.meronym.proj.querywn = "enta"
+relations.meronym.proj.querywn = "mero"
 relations.meronym.proj.eurown = "has_meronym"
-relations.meronym.proj.plwordnet = "meronym"
+relations.meronym.proj.plwordnet = "meronimia"
 relations.meronym.proj.pointer = "%"
 
 
@@ -645,9 +645,9 @@ relations.holonym.fa.inOMW = True
 relations.holonym.fa.reverse = "meronym"
 
 relations.holonym.proj.ili = "i69567"
-relations.holonym.proj.querywn = "enta"
+relations.holonym.proj.querywn = "holo"
 relations.holonym.proj.eurown = "has_holonym"
-relations.holonym.proj.plwordnet = "holonym"
+relations.holonym.proj.plwordnet = "holonimia"
 relations.holonym.proj.pointer = "#"
 
 
