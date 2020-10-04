@@ -824,9 +824,9 @@ concept B.
 """
 relations.meronym.ex.en = "hand/finger"
 relations.meronym.exe.en = """
- * `wheel<ILIURL/61096>`_  has meronym `automobile<ILIURL/31373>`_
- * `crown<ILIURL/52548>`_  has meronym `hat<ILIURL/54674>`_
- * `person<ILIURL/35562>`_  has meronym `people<ILIURL/79059>`_
+ * `wheel <ILIURL/61096>`_  has meronym `automobile <ILIURL/31373>`_
+ * `crown <ILIURL/52548>`_  has meronym `hat <ILIURL/54674>`_
+ * `person <ILIURL/35562>`_  has meronym `people <ILIURL/79059>`_
 """
 relations.meronym.test.en="""
 Meronymy-relation between nouns (EWN test 21)
@@ -861,9 +861,9 @@ part of concept B.
 """
 relations.holonym.ex.en = "finger/hand"
 relations.holonym.exe.en = """
- * `face<ILIURL/87210>`_  has meronym `eye<ILIURL/64868>`_
- * `body<ILIURL/64381>`_  has meronym `leg<ILIURL/66137>`_
- * `kib<ILIURL/108305>`_  has meronym `byte<ILIURL/108298>`_
+ * `face <ILIURL/87210>`_  has holonym `eye <ILIURL/64868>`_
+ * `body <ILIURL/64381>`_  has holonym `leg <ILIURL/66137>`_
+ * `kib <ILIURL/108305>`_  has holonym `byte <ILIURL/108298>`_
 """
 relations.holonym.test.en = """
 Holonymy-relation between nouns 
