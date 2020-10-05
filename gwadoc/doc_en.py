@@ -822,11 +822,11 @@ relations.meronym.dfn.en = """
 A relation between two concepts where concept A makes up a part of
 concept B.
 """
-relations.meronym.ex.en = "hand/finger"
+relations.meronym.ex.en = "hand has part-meronym finger"
 relations.meronym.exe.en = """
- * `wheel <ILIURL/61096>`_  has meronym `automobile <ILIURL/31373>`_
- * `crown <ILIURL/52548>`_  has meronym `hat <ILIURL/54674>`_
- * `person <ILIURL/35562>`_  has meronym `people <ILIURL/79059>`_
+ * `hat <ILIURL/54674>`_ has part-meronym `crown <ILIURL/52548>`_
+ * `people <ILIURL/79059>`_ has member-meronym `person <ILIURL/35562>`_
+ * `water <ILIURL/115069>`_ has substance-meronym `hydrogen <ILIURL/113946>`_
 """
 relations.meronym.test.en="""
 Meronymy-relation between nouns (EWN test 21)
@@ -859,14 +859,14 @@ relations.holonym.dfn.en = """
 A relation between two concepts where concept A makes up a
 part of concept B.
 """
-relations.holonym.ex.en = "finger/hand"
+relations.holonym.ex.en = "finger has part-holonym hand"
 relations.holonym.exe.en = """
- * `face <ILIURL/87210>`_  has holonym `eye <ILIURL/64868>`_
- * `body <ILIURL/64381>`_  has holonym `leg <ILIURL/66137>`_
- * `kib <ILIURL/108305>`_  has holonym `byte <ILIURL/108298>`_
+ * `eye <ILIURL/64868>`_ has part-holonym `face <ILIURL/87210>`_
+ * `planet <ILIURL/85986>`_ has member-holonym `solar system <ILIURL/86215>`_
+ * `kibibyte <ILIURL/108305>`_ has part-holonym `mebibyte <ILIURL/108309>`_
 """
 relations.holonym.test.en = """
-Holonymy-relation between nouns 
+Holonymy-relation between nouns
 
 ===     =   ======================================================
 yes     a   *A is a holonym of B if Bs are parts of As*
