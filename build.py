@@ -6,17 +6,13 @@ import sys
 
 from pathlib import Path
 import io
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
-import os.path
 import argparse
 import re
 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+
 import docutils.core
 import jinja2
-
-
-sys.path.insert(1, os.path.dirname(os.path.dirname(__file__)))
 import gwadoc
 #gwadoc.set_preferred_language('en')
 
@@ -97,4 +93,3 @@ if __name__ == '__main__':
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
-
