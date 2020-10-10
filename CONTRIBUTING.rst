@@ -16,31 +16,16 @@ Submitting Pull Request (PR)
 
 We're happy to receive pull requests to the  `master branch <https://github.com/globalwordnet/gwadoc/pulls>`_
 
-Please submit a Pull Request (PR) with a clear list of what you have done. Also reference the issue number for which the PR fixes. Please follow the documentation style guide, PR template and make sure you write a commit message for each feature.
+If you're not sure how to submit pull requests, here are a few resources:
 
-Small pull requests are fine, but it's best if they can be "complete" in some sense. This means that if the pull request is for adding information about 1 or 2 relations, all the relevant information is included. Furthermore, the pull request should not bundle unrelated changes (e.g., a UI or settings change).
-
-The purpose of these guidelines is to make reviewing the pull request easier . It's easiest when we can clearly see all the relevant changes without other noise and to keep the Git history clean so later we can point to where something changed.
-
-Always write a clear log message for your commits. One-line messages are fine for small changes, but bigger changes should look like this:
-> git commit -m “A paragraph describing what changed and its impact”
-
-**Before opening a PR**
-
-Create a git branch for the issue you are working on, rather than working directly on master.
-Rebase your work onto the latest version from master and fix any merge conflicts. (See `README <https://github.com/globalwordnet/gwadoc/blob/master/README.md>`_ for common Git procedures.)
-
-Check that only the relevant files are being changed.
-If you have a messy git history, squash your commits to clean it up.
-
-**PR format**
-
-Title your pull request to indicate its purpose. (This will likely be similar to the title of the issue it addresses.)
-Include a reference to the issue(s).
+* `How Write Good Commit Messages: A Practical Git Guide <https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/>`_
+* `How to Write the Perfect Pull Request <https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/>`_
+* `ProGit 6.2: GitHub -- Contributing to a Project <https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project>`_
 
 Please keep pull requests minimal and specific to the issue they are addressing, and give them a clear description. Those containing irrelevant files (such as generated HTML files) or changes may be rejected.
 
-**Documentation Convention**
+Documentation Convention
+=========================
 
 Our documentation project setup can be found in the `README. <https://github.com/globalwordnet/gwadoc/blob/master/README.md>`_
 
@@ -49,7 +34,8 @@ We indent using two spaces.
 Most of our contributions happen in the doc_en.py file and we generate the html file
 When writing consider your readers, as this is an open source software. The goal is to make the documentation readers friendly.
 
-**Relation Style Guide**
+Relation Style Guide
+=====================
 
 +----------+-----------------------------------------------------------+
 | Name     | Description                                               |
