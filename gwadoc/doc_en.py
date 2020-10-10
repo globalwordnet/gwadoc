@@ -819,11 +819,28 @@ relations.meronym.df.en = """
 a word that names a part of a larger whole
 """
 relations.meronym.dfn.en = """
-A relation between two concepts where concept Y makes up a part of
-concept X.
+A relation between two concepts where concept A makes up a part of
+concept B.
 """
-relations.meronym.ex.en = "hand/finger"
+relations.meronym.ex.en = "hand has part-meronym finger"
 relations.meronym.exe.en = """
+ * `hat <ILIURL/54674>`_ has part-meronym `crown <ILIURL/52548>`_
+ * `people <ILIURL/79059>`_ has member-meronym `person <ILIURL/35562>`_
+ * `water <ILIURL/115069>`_ has substance-meronym `hydrogen <ILIURL/113946>`_
+"""
+relations.meronym.test.en="""
+Meronymy-relation between nouns (EWN test 21)
+
+===     =   ======================================================
+yes     a   *A/an A makes up a part of A/an B*
+.       .   *A/an Y has A/an Xs*
+.       .   *A is a meronym of "B" if As are parts of B(s)*
+
+no      b   the converse of the (a) relations.
+===     =   ======================================================
+
+Conditions:
+- A and B are concrete nouns and are interpreted generically.
 """
 relations.meronym.com.en = """
 This is an unspecified relation that covers all the
@@ -839,11 +856,24 @@ relations.holonym.df.en = """
 a word that names the whole of which a given word is a part
 """
 relations.holonym.dfn.en = """
-A relation between two concepts where concept X makes up a
-part of concept Y.
+A relation between two concepts where concept A makes up a
+part of concept B.
 """
-relations.holonym.ex.en = "finger/hand"
+relations.holonym.ex.en = "finger has part-holonym hand"
 relations.holonym.exe.en = """
+ * `eye <ILIURL/64868>`_ has part-holonym `face <ILIURL/87210>`_
+ * `planet <ILIURL/85986>`_ has member-holonym `solar system <ILIURL/86215>`_
+ * `kibibyte <ILIURL/108305>`_ has part-holonym `mebibyte <ILIURL/108309>`_
+"""
+relations.holonym.test.en = """
+Holonymy-relation between nouns
+
+===     =   ======================================================
+yes     a   *A is a holonym of B if Bs are parts of As*
+.       .   *A is a holonym of B if Bs are members of As*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
 """
 relations.holonym.com.en = """
 This is an unspecified relation that covers all the
@@ -1456,10 +1486,14 @@ relations.pertainym.name.en = "Pertainym"
 relations.pertainym.df.en = "X is of or pertaining to Y"
 relations.pertainym.dfn.en = "links a relational adjective X  to the noun Y it is about, or an adverb X to the adjective it is about Y"
 relations.pertainym.ex.en = "*naval* has pertainym *navy*; *slowly* has pertainym *slow*"
-relations.pertainym.exe.en = """*lunar* has pertainym *moon*
-*naval* has pertainym *navy*; *slowly* has pertainym *slow*
-*English* has pertainym *England*; 
-*English* has pertainym *English* "language" """
+relations.pertainym.exe.en = """
+* `lunar <ILIURL/15548>`_ has pertainym `moon <ILIURL/85806>`_
+* `naval <ILIURL/15629>`_ has pertainym `navy <ILIURL/80195>`_
+* `slowly <ILIURL/19235>`_ has pertainym `slow <ILIURL/5362>`_
+* `English <ILIURL/17163>`_ has pertainym `England <ILIURL/83374>`_
+* `subclinical <ILIURL/16413>`_ has pertainym `clinical <ILIURL/16412>`_
+* `clinical <ILIURL/16412>`_ has pertainym `clinic <ILIURL/79534>`_
+"""
 relations.pertainym.com.en = ""
 
 

@@ -8,8 +8,7 @@ The documentation primarily uses reStructuredText (ReST). This means to get star
 
 Creating Issues
 ===============
-
-If you want to request for a new feature to be added to the documentation or modification to existing features use the feature request issue template.
+Feel free to raise issues if you want to request for a new feature to be added to the documentation or make modifications to existing features.
 
 
 Submitting Pull Request (PR)
