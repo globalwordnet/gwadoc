@@ -937,7 +937,7 @@ inclusiveness relations.
 """
 relations.holo_part.ex.en = "wheel holo-part car"
 relations.holo_part.exe.en = """
- * `finger <ILIURL/53712>`_ has part-meronym `glove <ILIURL/54319>`_
+ * `thumb <ILIURL/60231>`_ has part-holonym `glove <ILIURL/54319>`_
 """
 relations.holo_part.test.en = """
 Holonymy-relation between nouns (EWN test 24)
@@ -1029,37 +1029,73 @@ relations.holo_member.com.en = """
 ### Relation: mero_substance EDP28
 
 relations.mero_substance.name.en = "Substance Meronym"
-relations.mero_substance.df.en = ""
+relations.mero_substance.df.en = "Concept A is made of concept B."
 relations.mero_substance.dfn.en = """
-A relation between two concepts where concept X is made of concept
-Y. Meronym and Holonym Substance is a paired relation that denotes a
+A relation between two concepts where concept A is made of concept
+B. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-X is made of Concept-Y; and
-Concept-Y is a substance of Concept-X”.
+part, will change the whole — Concept-A is made of Concept-B; and
+Concept-B is a substance of Concept-A”.
 """
-relations.mero_substance.ex.en = "stick/wood"
+relations.mero_substance.ex.en = "stick has mero-substance wood"
 relations.mero_substance.exe.en = """
-book > paper
+ * `paper <ILIURL/115832>`_ has substance-meronym `cellulose <ILIURL/114776>`_
+ * `wood <ILIURL/116549>`_ has substance-meronym `lignin <ILIURL/115606>`_
+"""
+relations.mero_substance.test.en = """
+Substance meronymy -relation between nouns (EWN test 25)
+
+===     =   ======================================================
+yes     a   * a/an A is made of B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A is a concrete object
+- B is a concrete substance
+
 """
 relations.mero_substance.com.en = """
+There are two basic ways of viewing entities in the world, 
+namely either as an individuated thing or as the stuff from 
+which they are made of. This way, for instance a book can
+be alternatively named “a book” or “paper”.
+The relation between things and the stuff which compose them is called MADE_OF.
 """
 
 
 ### Relation: holo_substance EDP28
 
 relations.holo_substance.name.en = "Substance Holonym"
-relations.holo_substance.df.en = ""
+relations.holo_substance.df.en = "Concept-B is a substance of Concept-A"
 relations.holo_substance.dfn.en = """
-A relation between two concepts where concept Y is made of concept
-X. Meronym and Holonym Substance is a paired relation that denotes a
+A relation between two concepts where concept B is made of concept
+A. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-X is made of Concept-Y; and
-Concept-Y is a substance of Concept-X”.
+part, will change the whole — Concept-A is made of Concept-Y; and
+Concept-B is a substance of Concept-A”.
 """
 relations.holo_substance.ex.en = "wood/stick"
 relations.holo_substance.exe.en = """
+ * `wood <ILIURL/116549>`_ has substance-holonym `beam <ILIURL/50617>`_
+"""
+relations.holo_substance.test.en = """
+Substance holonymy -relation between nouns (EWN test 25)
+
+===     =   ======================================================
+yes     a   * a/an B is substance of A
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B is a concrete substance
+- A is a concrete object
+
 """
 relations.holo_substance.com.en = """
+Complex holonyms can also contain substances but in that case the MADE_OF relation is used.
 """
 
 
