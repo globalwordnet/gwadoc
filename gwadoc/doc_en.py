@@ -1126,31 +1126,64 @@ relations.holo_location.com.en = """
 ### Relation: mero_portion EDP27
 
 relations.mero_portion.name.en = "Portion Meronym"
-relations.mero_portion.df.en = ""
+relations.mero_portion.df.en = "Concept A is an amount of Concept B"
 relations.mero_portion.dfn.en = """
-A relation between two concepts where concept X is an
-amount/piece/portion of concept Y.
+A relation between two concepts where concept A is an
+amount/piece/portion of concept B.
 """
-relations.mero_portion.ex.en = "drop/liquid"
+relations.mero_portion.ex.en = "drop has mero-portion liquid"
 relations.mero_portion.exe.en = """
-bread > slice
+ * `Nigeria <ILIURL/83853>`_ has part-meronym `Abuja <ILIURL/83854>`_
+"""
+relations.mero_portion.test.en = """
+Portion meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * (a/an) A is an (amount/piece/portion) of B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A and B are substance denoting nouns
+
 """
 relations.mero_portion.com.en = """
+usually portions (as concepts) do not receive a separate lexical item but are realized by sense
+extension (for instance, there is no lexical item equivalent to “portion of cake”);
 """
 
 
 ### Relation: holo_portion EDP27
 
 relations.holo_portion.name.en = "Portion Holonym"
-relations.holo_portion.df.en = ""
+relations.holo_portion.df.en = "Concept B is the whole amount/piece of A"
 relations.holo_portion.dfn.en = """
-A relation between two concepts where concept Y is an
-amount/piece/portion of concept X
+A relation between two concepts where concept B is an
+amount/piece/portion of concept A
 """
-relations.holo_portion.ex.en = "liquid/drop"
+relations.holo_portion.ex.en = "liquid  has holo-portion drop"
 relations.holo_portion.exe.en = """
+ * `Africa <ILIURL/84937>`_ has part-holonym `Eastern Hemisphere <ILIURL/81982>`_
+
+"""
+relations.holo_portion.test.en = """
+Portion holonymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * (a/an) B is the whole amount/piece of A
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B and A are substance denoting nouns
+
 """
 relations.holo_portion.com.en = """
+The whole always pre-exist the portion.Sometimes portions are sufficiently 
+common in a particular language to become lexicalized.
+These lexical items will be linked to their wholes by means of a has_holo_portion
 """
 
 
