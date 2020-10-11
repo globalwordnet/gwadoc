@@ -885,20 +885,33 @@ shouldn't be a special relation.
 ### Relation: mero_part EDP27
 
 relations.mero_part.name.en = "Part Meronym"
-relations.mero_part.df.en = ""
+relations.mero_part.df.en = "concept A is a component of concept B"
 relations.mero_part.dfn.en = """
-A relation between two concepts where concept Y is a component of
-concept X. Meronym and Holonym Part is a paired relation that denotes
+A relation between two concepts where concept A is a component of
+concept B. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
-relation even if the physical link is broken — Concept-X can be
-separated into Concept-Y”; and Concept-Y is a part of some Concept-X.
+relation even if the physical link is broken — Concept-A can be
+separated into Concept-B”; and Concept-B is a part of some Concept-A.
 
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.mero_part.ex.en = "car/wheel"
+relations.mero_part.ex.en = "car mero-part wheel"
 relations.mero_part.exe.en = """
-hand > finger
+ * `glove <ILIURL/54319>`_ has part-meronym `finger <ILIURL/53712>`_
+"""
+
+relations.mero_part.test.en = """
+Meronymy-relation between nouns (EWN test 24)
+
+===     =   ======================================================
+yes     a   * a/an A is a component of a/an B
+.       b   * a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A
+
+===     =   ======================================================
+
+Conditions:
+- A and B are concrete nouns denoting objects, there must be several As
 
 """
 relations.mero_part.com.en = """
@@ -911,39 +924,67 @@ geographical inclusiveness relations.
 ### Relation: holo_part EDP27
 
 relations.holo_part.name.en = "Part Holonym"
-relations.holo_part.df.en = ""
+relations.holo_part.df.en = "Concept B is the whole of parts of Concept A"
 relations.holo_part.dfn.en = """
-A relation between two concepts where concept X is a component of
-concept Y. Meronym and Holonym Part is a paired relation that denotes
+A relation between two concepts where concept B is the whole of the different component of
+concept A. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
-relation even if the physical link is broken — Concept-X can be
-separated into Concept-Y”; and Concept-Y is a part of some Concept-X.
+relation even if the physical link is broken — Concept-A can be
+separated into Concept-B”; and Concept-B is a part of some Concept-A.
 
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.holo_part.ex.en = "wheel/car"
+relations.holo_part.ex.en = "wheel holo-part car"
 relations.holo_part.exe.en = """
+ * `thumb <ILIURL/60231>`_ has part-holonym `glove <ILIURL/54319>`_
+"""
+relations.holo_part.test.en = """
+Holonymy-relation between nouns (EWN test 24)
+
+===     =   ======================================================
+yes     a   * a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A
+.       b   * a/an A is a component of a/an B
+
+===     =   ======================================================
+
+Conditions:
+- B and A are concrete nouns denoting objects, B typically includes a larger entity
+
 """
 relations.holo_part.com.en = """
+The has_holo-part relation typically relates components to their wholes, namely: something which is either topologically or temporally included in a larger entity and which as well bears some kind of autonomy (non-arbitrary boundaries) and a definite function with respect to the whole.
 """
 
 
 ### Relation: mero_member EPD27
 
 relations.mero_member.name.en = "Member Meronym"
-relations.mero_member.df.en = ""
+relations.mero_member.df.en = "Concept A is a member of Concept B"
 relations.mero_member.dfn.en = """
-A relation between two concepts where concept Y is a member/ element
-of concept X. Meronym and Holonym Membership is a paired relation that
+A relation between two concepts where concept A is a member/ element
+of concept B. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
-it does not relates a subkind of a concept. It links groups to members
-— Concept-Y is composed of many members of Concept-X; and many
-instances of Concept-X form Concept-Y.
+it does not relates a sub-kind of a concept. It links groups to members
+— Many instances of Concept-A form Concept-B; and Concept-B is composed of many members of Concept-A. 
 """
-relations.mero_member.ex.en = "player/team"
+relations.mero_member.ex.en = "player has mero-member team"
 relations.mero_member.exe.en = """
-fleet > ship
+ * `fleet <ILIURL/80725>`_ has member-meronym `ship <ILIURL/58798>`_
+"""
+relations.mero_member.test.en = """
+Member meronymy -relation between nouns (EWN test 22)
+
+===     =   ======================================================
+yes     a   * a/an A is a member/element of (a/an/the) B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A is a single object-denoting noun
+- B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
+- preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
 
 """
 relations.mero_member.com.en = """
@@ -953,17 +994,33 @@ relations.mero_member.com.en = """
 ### Relation: holo_member EDP27
 
 relations.holo_member.name.en = "Member Holonym"
-relations.holo_member.df.en = ""
+relations.holo_member.df.en = "Concept B is a member of Concept A"
 relations.holo_member.dfn.en = """
-A relation between two concepts where concept X is a member/ element
-of concept Y. Meronym and Holonym Membership is a paired relation that
+A relation between two concepts where concept B is a member/ element
+of concept A. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
-it does not relates a subkind of a concept. It links groups to members
-— Concept-Y is composed of many members of Concept-X; and many
-instances of Concept-X form Concept-Y.
+it does not relates a sub-kind of a concept. It links groups to members
+— Concept-B is composed of many members of Concept-A; and many
+instances of Concept-A form Concept-B.
 """
-relations.holo_member.ex.en = "team/player"
+relations.holo_member.ex.en = "team has holo-member player"
 relations.holo_member.exe.en = """
+ * `ship <ILIURL/58798>`_ has member-holonym `fleet <ILIURL/80725>`_
+"""
+relations.holo_member.test.en = """
+Member holonymy -relation between nouns (EWN test 22)
+
+===     =   ======================================================
+yes     a   * a/an B is a member/element of (a/an/the) A
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
+- A is a single object-denoting noun
+- preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
+
 """
 relations.holo_member.com.en = """
 """
@@ -972,51 +1029,101 @@ relations.holo_member.com.en = """
 ### Relation: mero_substance EDP28
 
 relations.mero_substance.name.en = "Substance Meronym"
-relations.mero_substance.df.en = ""
+relations.mero_substance.df.en = "Concept A is made of concept B."
 relations.mero_substance.dfn.en = """
-A relation between two concepts where concept X is made of concept
-Y. Meronym and Holonym Substance is a paired relation that denotes a
+A relation between two concepts where concept A is made of concept
+B. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-X is made of Concept-Y; and
-Concept-Y is a substance of Concept-X”.
+part, will change the whole — Concept-A is made of Concept-B; and
+Concept-B is a substance of Concept-A”.
 """
-relations.mero_substance.ex.en = "stick/wood"
+relations.mero_substance.ex.en = "stick has mero-substance wood"
 relations.mero_substance.exe.en = """
-book > paper
+ * `paper <ILIURL/115832>`_ has substance-meronym `cellulose <ILIURL/114776>`_
+ * `wood <ILIURL/116549>`_ has substance-meronym `lignin <ILIURL/115606>`_
+"""
+relations.mero_substance.test.en = """
+Substance meronymy -relation between nouns (EWN test 25)
+
+===     =   ======================================================
+yes     a   * a/an A is made of B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A is a concrete object
+- B is a concrete substance
+
 """
 relations.mero_substance.com.en = """
+There are two basic ways of viewing entities in the world, 
+namely either as an individuated thing or as the stuff from 
+which they are made of. This way, for instance a book can
+be alternatively named “a book” or “paper”.
+The relation between things and the stuff which compose them is called MADE_OF.
 """
 
 
 ### Relation: holo_substance EDP28
 
 relations.holo_substance.name.en = "Substance Holonym"
-relations.holo_substance.df.en = ""
+relations.holo_substance.df.en = "Concept-B is a substance of Concept-A"
 relations.holo_substance.dfn.en = """
-A relation between two concepts where concept Y is made of concept
-X. Meronym and Holonym Substance is a paired relation that denotes a
+A relation between two concepts where concept B is made of concept
+A. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-X is made of Concept-Y; and
-Concept-Y is a substance of Concept-X”.
+part, will change the whole — Concept-A is made of Concept-Y; and
+Concept-B is a substance of Concept-A”.
 """
 relations.holo_substance.ex.en = "wood/stick"
 relations.holo_substance.exe.en = """
+ * `wood <ILIURL/116549>`_ has substance-holonym `beam <ILIURL/50617>`_
+"""
+relations.holo_substance.test.en = """
+Substance holonymy -relation between nouns (EWN test 25)
+
+===     =   ======================================================
+yes     a   * a/an B is substance of A
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B is a concrete substance
+- A is a concrete object
+
 """
 relations.holo_substance.com.en = """
+Complex holonyms can also contain substances but in that case the MADE_OF relation is used.
 """
 
 
 ### Relation: mero_location EDP28
 
 relations.mero_location.name.en = "Location Meronym"
-relations.mero_location.df.en = ""
+relations.mero_location.df.en = "A is a place located in B"
 relations.mero_location.dfn.en = """
-A relation between two concepts where concept X is a place
-located in concept Y.
+A relation between two concepts where concept A is a place
+located in concept B.
 """
-relations.mero_location.ex.en = "city/centre"
+relations.mero_location.ex.en = "city has mero-location centre"
 relations.mero_location.exe.en = """
-desert > oasis
+ * `desert <ILIURL/81751>`_ has part-meronym `oasis <ILIURL/81753>`_
+"""
+relations.mero_location.test.en = """
+Location meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * a/an/the A is a place located in a/an/the B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A is a concrete noun
+- B is a concrete noun
+
 """
 relations.mero_location.com.en = """
 """
@@ -1025,13 +1132,28 @@ relations.mero_location.com.en = """
 ### Relation: holo_location EDP28
 
 relations.holo_location.name.en = "Location Holonym"
-relations.holo_location.df.en = ""
+relations.holo_location.df.en = "B is a place located in A"
 relations.holo_location.dfn.en = """
-A relation between two concepts where concept Y is a place
-located in concept X.
+A relation between two concepts where concept B is a place
+located in concept A.
 """
-relations.holo_location.ex.en = "centre/city"
+relations.holo_location.ex.en = "centre has holo-location city"
 relations.holo_location.exe.en = """
+ * `space <ILIURL/81724>`_ has part-holonym `aerospace <ILIURL/81733>`_
+"""
+relations.holo_location.test.en = """
+Location meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * a/an/the B is a place located in a/an/the A*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B is a concrete noun
+- A is a concrete noun
+
 """
 relations.holo_location.com.en = """
 """
@@ -1040,31 +1162,64 @@ relations.holo_location.com.en = """
 ### Relation: mero_portion EDP27
 
 relations.mero_portion.name.en = "Portion Meronym"
-relations.mero_portion.df.en = ""
+relations.mero_portion.df.en = "Concept A is an amount of Concept B"
 relations.mero_portion.dfn.en = """
-A relation between two concepts where concept X is an
-amount/piece/portion of concept Y.
+A relation between two concepts where concept A is an
+amount/piece/portion of concept B.
 """
-relations.mero_portion.ex.en = "drop/liquid"
+relations.mero_portion.ex.en = "drop has mero-portion liquid"
 relations.mero_portion.exe.en = """
-bread > slice
+ * `Nigeria <ILIURL/83853>`_ has part-meronym `Abuja <ILIURL/83854>`_
+"""
+relations.mero_portion.test.en = """
+Portion meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * (a/an) A is an (amount/piece/portion) of B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A and B are substance denoting nouns
+
 """
 relations.mero_portion.com.en = """
+usually portions (as concepts) do not receive a separate lexical item but are realized by sense
+extension (for instance, there is no lexical item equivalent to “portion of cake”);
 """
 
 
 ### Relation: holo_portion EDP27
 
 relations.holo_portion.name.en = "Portion Holonym"
-relations.holo_portion.df.en = ""
+relations.holo_portion.df.en = "Concept B is the whole amount/piece of A"
 relations.holo_portion.dfn.en = """
-A relation between two concepts where concept Y is an
-amount/piece/portion of concept X
+A relation between two concepts where concept B is an
+amount/piece/portion of concept A
 """
-relations.holo_portion.ex.en = "liquid/drop"
+relations.holo_portion.ex.en = "liquid  has holo-portion drop"
 relations.holo_portion.exe.en = """
+ * `Africa <ILIURL/84937>`_ has part-holonym `Eastern Hemisphere <ILIURL/81982>`_
+
+"""
+relations.holo_portion.test.en = """
+Portion holonymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * (a/an) B is the whole amount/piece of A
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B and A are substance denoting nouns
+
 """
 relations.holo_portion.com.en = """
+The whole always pre-exist the portion.Sometimes portions are sufficiently 
+common in a particular language to become lexicalized.
+These lexical items will be linked to their wholes by means of a has_holo_portion
 """
 
 
