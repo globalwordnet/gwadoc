@@ -885,20 +885,33 @@ shouldn't be a special relation.
 ### Relation: mero_part EDP27
 
 relations.mero_part.name.en = "Part Meronym"
-relations.mero_part.df.en = ""
+relations.mero_part.df.en = "concept A is a component of concept B"
 relations.mero_part.dfn.en = """
-A relation between two concepts where concept Y is a component of
-concept X. Meronym and Holonym Part is a paired relation that denotes
+A relation between two concepts where concept A is a component of
+concept B. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
-relation even if the physical link is broken — Concept-X can be
-separated into Concept-Y”; and Concept-Y is a part of some Concept-X.
+relation even if the physical link is broken — Concept-A can be
+separated into Concept-B”; and Concept-B is a part of some Concept-A.
 
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.mero_part.ex.en = "car/wheel"
+relations.mero_part.ex.en = "car mero-part wheel"
 relations.mero_part.exe.en = """
-hand > finger
+ * `glove <ILIURL/54319>`_ has part-meronym `finger <ILIURL/53712>`_
+"""
+
+relations.mero_part.test.en = """
+Meronymy-relation between nouns (EWN test 24)
+
+===     =   ======================================================
+yes     a   * a/an A is a component of a/an B
+.       b   * a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A
+
+===     =   ======================================================
+
+Conditions:
+- A and B are concrete nouns denoting objects, there must be several As
 
 """
 relations.mero_part.com.en = """
@@ -911,39 +924,67 @@ geographical inclusiveness relations.
 ### Relation: holo_part EDP27
 
 relations.holo_part.name.en = "Part Holonym"
-relations.holo_part.df.en = ""
+relations.holo_part.df.en = "Concept B is the whole of parts of Concept A"
 relations.holo_part.dfn.en = """
-A relation between two concepts where concept X is a component of
-concept Y. Meronym and Holonym Part is a paired relation that denotes
+A relation between two concepts where concept B is the whole of the different component of
+concept A. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
-relation even if the physical link is broken — Concept-X can be
-separated into Concept-Y”; and Concept-Y is a part of some Concept-X.
+relation even if the physical link is broken — Concept-A can be
+separated into Concept-B”; and Concept-B is a part of some Concept-A.
 
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.holo_part.ex.en = "wheel/car"
+relations.holo_part.ex.en = "wheel holo-part car"
 relations.holo_part.exe.en = """
+ * `finger <ILIURL/53712>`_ has part-meronym `glove <ILIURL/54319>`_
+"""
+relations.holo_part.test.en = """
+Holonymy-relation between nouns (EWN test 24)
+
+===     =   ======================================================
+yes     a   * a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A
+.       b   * a/an A is a component of a/an B
+
+===     =   ======================================================
+
+Conditions:
+- B and A are concrete nouns denoting objects, B typically includes a larger entity
+
 """
 relations.holo_part.com.en = """
+The has_holo-part relation typically relates components to their wholes, namely: something which is either topologically or temporally included in a larger entity and which as well bears some kind of autonomy (non-arbitrary boundaries) and a definite function with respect to the whole.
 """
 
 
 ### Relation: mero_member EPD27
 
 relations.mero_member.name.en = "Member Meronym"
-relations.mero_member.df.en = ""
+relations.mero_member.df.en = "Concept A is a member of Concept B"
 relations.mero_member.dfn.en = """
-A relation between two concepts where concept Y is a member/ element
-of concept X. Meronym and Holonym Membership is a paired relation that
+A relation between two concepts where concept A is a member/ element
+of concept B. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
-it does not relates a subkind of a concept. It links groups to members
-— Concept-Y is composed of many members of Concept-X; and many
-instances of Concept-X form Concept-Y.
+it does not relates a sub-kind of a concept. It links groups to members
+— Many instances of Concept-A form Concept-B; and Concept-B is composed of many members of Concept-A. 
 """
-relations.mero_member.ex.en = "player/team"
+relations.mero_member.ex.en = "player has mero-member team"
 relations.mero_member.exe.en = """
-fleet > ship
+ * `fleet <ILIURL/80725>`_ has member-meronym `ship <ILIURL/58798>`_
+"""
+relations.mero_member.test.en = """
+Member meronymy -relation between nouns (EWN test 22)
+
+===     =   ======================================================
+yes     a   * a/an A is a member/element of (a/an/the) B
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A is a single object-denoting noun
+- B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
+- preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
 
 """
 relations.mero_member.com.en = """
@@ -953,17 +994,33 @@ relations.mero_member.com.en = """
 ### Relation: holo_member EDP27
 
 relations.holo_member.name.en = "Member Holonym"
-relations.holo_member.df.en = ""
+relations.holo_member.df.en = "Concept B is a member of Concept A"
 relations.holo_member.dfn.en = """
-A relation between two concepts where concept X is a member/ element
-of concept Y. Meronym and Holonym Membership is a paired relation that
+A relation between two concepts where concept B is a member/ element
+of concept A. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
-it does not relates a subkind of a concept. It links groups to members
-— Concept-Y is composed of many members of Concept-X; and many
-instances of Concept-X form Concept-Y.
+it does not relates a sub-kind of a concept. It links groups to members
+— Concept-B is composed of many members of Concept-A; and many
+instances of Concept-A form Concept-B.
 """
-relations.holo_member.ex.en = "team/player"
+relations.holo_member.ex.en = "team has holo-member player"
 relations.holo_member.exe.en = """
+ * `ship <ILIURL/58798>`_ has member-holonym `fleet <ILIURL/80725>`_
+"""
+relations.holo_member.test.en = """
+Member holonymy -relation between nouns (EWN test 22)
+
+===     =   ======================================================
+yes     a   * a/an B is a member/element of (a/an/the) A
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
+- A is a single object-denoting noun
+- preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
+
 """
 relations.holo_member.com.en = """
 """
@@ -1014,7 +1071,7 @@ relations.mero_location.dfn.en = """
 A relation between two concepts where concept A is a place
 located in concept B.
 """
-relations.mero_location.ex.en = "city has part-meronym centre"
+relations.mero_location.ex.en = "city has mero-location centre"
 relations.mero_location.exe.en = """
  * `desert <ILIURL/81751>`_ has part-meronym `oasis <ILIURL/81753>`_
 """
@@ -1022,7 +1079,7 @@ relations.mero_location.test.en = """
 Location meronymy -relation between nouns (EWN test 26)
 
 ===     =   ======================================================
-yes     a   * A/an/the A is a place located in a/an/the B*
+yes     a   * a/an/the A is a place located in a/an/the B
 
 no      b   the converse of (a).
 ===     =   ======================================================
@@ -1039,13 +1096,28 @@ relations.mero_location.com.en = """
 ### Relation: holo_location EDP28
 
 relations.holo_location.name.en = "Location Holonym"
-relations.holo_location.df.en = ""
+relations.holo_location.df.en = "B is a place located in A"
 relations.holo_location.dfn.en = """
-A relation between two concepts where concept Y is a place
-located in concept X.
+A relation between two concepts where concept B is a place
+located in concept A.
 """
-relations.holo_location.ex.en = "centre/city"
+relations.holo_location.ex.en = "centre has holo-location city"
 relations.holo_location.exe.en = """
+ * `space <ILIURL/81724>`_ has part-holonym `aerospace <ILIURL/81733>`_
+"""
+relations.holo_location.test.en = """
+Location meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * a/an/the B is a place located in a/an/the A*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- B is a concrete noun
+- A is a concrete noun
+
 """
 relations.holo_location.com.en = """
 """
