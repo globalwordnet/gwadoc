@@ -1009,14 +1009,28 @@ relations.holo_substance.com.en = """
 ### Relation: mero_location EDP28
 
 relations.mero_location.name.en = "Location Meronym"
-relations.mero_location.df.en = ""
+relations.mero_location.df.en = "A is a place located in B"
 relations.mero_location.dfn.en = """
-A relation between two concepts where concept X is a place
-located in concept Y.
+A relation between two concepts where concept A is a place
+located in concept B.
 """
-relations.mero_location.ex.en = "city/centre"
+relations.mero_location.ex.en = "city has part-meronym centre"
 relations.mero_location.exe.en = """
-desert > oasis
+ * `desert <ILIURL/81751>`_ has part-meronym `oasis <ILIURL/81753>`_
+"""
+relations.mero_location.test.en = """
+Location meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   * A/an/the A is a place located in a/an/the B*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+- A is a concrete noun
+- B is a concrete noun
+
 """
 relations.mero_location.com.en = """
 """
