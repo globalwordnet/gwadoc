@@ -905,12 +905,13 @@ relations.mero_part.test.en = """
 Meronymy-relation between nouns (EWN test 24)
 
 ===     =   ======================================================
-yes     a   * a/an A is a component of a/an B
-.       b   * a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A
+yes     a   *a/an A is a component of a/an B*
+.       b   *a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A*
 
 ===     =   ======================================================
 
-Conditions:
+Condition: 
+
 - A and B are concrete nouns denoting objects, there must be several As
 
 """
@@ -924,7 +925,7 @@ geographical inclusiveness relations.
 ### Relation: holo_part EDP27
 
 relations.holo_part.name.en = "Part Holonym"
-relations.holo_part.df.en = "Concept B is the whole of parts of Concept A"
+relations.holo_part.df.en = "Concept B is the whole parts of Concept A"
 relations.holo_part.dfn.en = """
 A relation between two concepts where concept B is the whole of the different component of
 concept A. Meronym and Holonym Part is a paired relation that denotes
@@ -943,12 +944,13 @@ relations.holo_part.test.en = """
 Holonymy-relation between nouns (EWN test 24)
 
 ===     =   ======================================================
-yes     a   * a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A
-.       b   * a/an A is a component of a/an B
+yes     a   *a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A*
+.       b   *a/an A is a component of a/an B*
 
 ===     =   ======================================================
 
-Conditions:
+Condition:
+
 - B and A are concrete nouns denoting objects, B typically includes a larger entity
 
 """
@@ -976,12 +978,13 @@ relations.mero_member.test.en = """
 Member meronymy -relation between nouns (EWN test 22)
 
 ===     =   ======================================================
-yes     a   * a/an A is a member/element of (a/an/the) B
+yes     a   *a/an A is a member/element of (a/an/the) B*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - A is a single object-denoting noun
 - B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
 - preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
@@ -1011,12 +1014,13 @@ relations.holo_member.test.en = """
 Member holonymy -relation between nouns (EWN test 22)
 
 ===     =   ======================================================
-yes     a   * a/an B is a member/element of (a/an/the) A
+yes     a   *a/an B is a member/element of (a/an/the) A*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
 - A is a single object-denoting noun
 - preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
@@ -1046,12 +1050,13 @@ relations.mero_substance.test.en = """
 Substance meronymy -relation between nouns (EWN test 25)
 
 ===     =   ======================================================
-yes     a   * a/an A is made of B
+yes     a   *a/an A is made of B*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - A is a concrete object
 - B is a concrete substance
 
@@ -1084,12 +1089,13 @@ relations.holo_substance.test.en = """
 Substance holonymy -relation between nouns (EWN test 25)
 
 ===     =   ======================================================
-yes     a   * a/an B is substance of A
+yes     a   *a/an B is substance of A*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - B is a concrete substance
 - A is a concrete object
 
@@ -1115,12 +1121,13 @@ relations.mero_location.test.en = """
 Location meronymy -relation between nouns (EWN test 26)
 
 ===     =   ======================================================
-yes     a   * a/an/the A is a place located in a/an/the B
+yes     a   *a/an/the A is a place located in a/an/the B*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - A is a concrete noun
 - B is a concrete noun
 
@@ -1145,12 +1152,13 @@ relations.holo_location.test.en = """
 Location meronymy -relation between nouns (EWN test 26)
 
 ===     =   ======================================================
-yes     a   * a/an/the B is a place located in a/an/the A*
+yes     a   *a/an/the B is a place located in a/an/the A*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - B is a concrete noun
 - A is a concrete noun
 
@@ -1175,12 +1183,13 @@ relations.mero_portion.test.en = """
 Portion meronymy -relation between nouns (EWN test 26)
 
 ===     =   ======================================================
-yes     a   * (a/an) A is an (amount/piece/portion) of B
+yes     a   *(a/an) A is an (amount/piece/portion) of B*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - A and B are substance denoting nouns
 
 """
@@ -1207,12 +1216,13 @@ relations.holo_portion.test.en = """
 Portion holonymy -relation between nouns (EWN test 26)
 
 ===     =   ======================================================
-yes     a   * (a/an) B is the whole amount/piece of A
+yes     a   *(a/an) B is the whole amount/piece of A*
 
 no      b   the converse of (a).
 ===     =   ======================================================
 
 Conditions:
+
 - B and A are substance denoting nouns
 
 """
