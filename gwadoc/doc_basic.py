@@ -663,8 +663,8 @@ relations.mero_part.fa.reverse = "holo_part"
 relations.mero_part.proj.pwn = "part meronym"
 relations.mero_part.proj.querywn = "mprt"
 relations.mero_part.proj.eurown = "has_mero_part"
-relations.mero_part.proj.plwordnet = "meronymy_part"
-relations.mero_part.proj.pointer = "%p"
+relations.mero_part.proj.plwordnet = "część"
+relations.mero_part.proj.pointer = "#p"
 
 
 ### Relation: holo_part EDP27
@@ -679,8 +679,8 @@ relations.holo_part.fa.reverse = "mero_part"
 relations.holo_part.proj.pwn = "part holonym"
 relations.holo_part.proj.querywn = "hprt"
 relations.holo_part.proj.eurown = "has_holo_part"
-relations.holo_part.proj.plwordnet = "holonymy_part"
-relations.holo_part.proj.pointer = "#p"
+relations.holo_part.proj.plwordnet = "część"
+relations.holo_part.proj.pointer = "%p"
 
 
 ### Relation: mero_member EPD27
