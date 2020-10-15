@@ -727,8 +727,8 @@ relations.mero_substance.fa.reverse = "holo_substance"
 relations.mero_substance.proj.pwn = "substance meronym"
 relations.mero_substance.proj.querywn = "msub"
 relations.mero_substance.proj.eurown = "has_mero_madeof"
-relations.mero_substance.proj.plwordnet = "meronymy_substance"
-relations.mero_substance.proj.pointer = "%s"
+relations.mero_substance.proj.plwordnet = "materiał"
+relations.mero_substance.proj.pointer = "#s"
 
 
 ### Relation: holo_substance EDP28
@@ -743,8 +743,8 @@ relations.holo_substance.fa.reverse = "mero_substance"
 relations.holo_substance.proj.pwn = "substance holonym"
 relations.holo_substance.proj.querywn = "hsub"
 relations.holo_substance.proj.eurown = "has_holo_madeof"
-relations.holo_substance.proj.plwordnet = "holonymy_substance"
-relations.holo_substance.proj.pointer = "#s"
+relations.holo_substance.proj.plwordnet = "materiał"
+relations.holo_substance.proj.pointer = "%s"
 
 
 ### Relation: mero_location EDP28
