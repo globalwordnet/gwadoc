@@ -695,8 +695,8 @@ relations.mero_member.fa.reverse = "holo_member"
 relations.mero_member.proj.pwn = "member meronym"
 relations.mero_member.proj.querywn = "mmem"
 relations.mero_member.proj.eurown = "has_mero_member"
-relations.mero_member.proj.plwordnet = "meronymy_member"
-relations.mero_member.proj.pointer = "%m"
+relations.mero_member.proj.plwordnet = "element kolekcji"
+relations.mero_member.proj.pointer = "#m"
 
 
 ### Relation: holo_member EDP27
@@ -711,8 +711,8 @@ relations.holo_member.fa.reverse = "mero_member"
 relations.holo_member.proj.pwn = "member holonym"
 relations.holo_member.proj.querywn = "hmem"
 relations.holo_member.proj.eurown = "has_holo_member"
-relations.holo_member.proj.plwordnet = "holonymy_member"
-relations.holo_member.proj.pointer = "#m"
+relations.holo_member.proj.plwordnet = "element kolekcji"
+relations.holo_member.proj.pointer = "%m"
 
 
 ### Relation: mero_substance EDP28
