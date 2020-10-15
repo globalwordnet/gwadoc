@@ -756,9 +756,11 @@ relations.mero_location.fa.sense_sense = False
 relations.mero_location.fa.inOMW = True
 relations.mero_location.fa.reverse = "holo_location"
 
-relations.mero_location.proj.querywn = "hsub"
+relations.mero_location.proj.querywn = "mero"
 relations.mero_location.proj.eurown = "has_mero_location"
-relations.mero_location.proj.plwordnet = "meronymy_location"
+relations.mero_location.proj.plwordnet = "miejsce"
+relations.mero_location.proj.pointer = "%"
+
 
 
 ### Relation: holo_location EDP28
