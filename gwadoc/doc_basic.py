@@ -789,10 +789,10 @@ relations.mero_portion.fa.inOMW = True
 relations.mero_portion.fa.reverse = "holo_portion"
 
 relations.mero_portion.proj.pwn = "portion meronym"
-relations.mero_portion.proj.querywn = "hsub"
+relations.mero_portion.proj.querywn = "mprt"
 relations.mero_portion.proj.eurown = "has_mero_portion"
-relations.mero_portion.proj.plwordnet = "meronymy_portion"
-relations.mero_portion.proj.pointer = ""
+relations.mero_portion.proj.plwordnet = "porcja"
+relations.mero_portion.proj.pointer = "#p"
 
 
 ### Relation: holo_portion EDP27
@@ -804,10 +804,10 @@ relations.holo_portion.fa.sense_sense = False
 relations.holo_portion.fa.inOMW = True
 relations.holo_portion.fa.reverse = "mero_portion"
 
-relations.holo_portion.proj.querywn = "hsub"
+relations.holo_portion.proj.querywn = "hprt"
 relations.holo_portion.proj.eurown = "has_holo_portion"
-relations.holo_portion.proj.plwordnet = "holonymy_portion"
-relations.holo_portion.proj.pointer = ""
+relations.holo_portion.proj.plwordnet = "porcja"
+relations.holo_portion.proj.pointer = "%p"
 
 
 ### Relation: eq_synonym
