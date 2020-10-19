@@ -847,7 +847,7 @@ relations.instance_hyponym.fa.reverse = "instance_hypernym"
 
 relations.instance_hyponym.proj.ili = "i75102"
 relations.instance_hyponym.proj.pwn = "Instance Hyponym"
-relations.instance_hyponym.proj.querywn = "hypos"
+relations.instance_hyponym.proj.querywn = "hasi"
 relations.instance_hyponym.proj.eurown = "instance_hyponym"
 relations.instance_hyponym.proj.plwordnet = "typ"
 relations.instance_hyponym.proj.pointer = "~i"
