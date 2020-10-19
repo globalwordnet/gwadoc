@@ -1139,8 +1139,8 @@ Instances are expressed by proper nouns.
 An ``instance hypernym`` can also be referred to as a ``type``
 """
 relations.instance_hyponym.ex.en = ""
-relations.instance_hypernym.exe.en = """"""
-relations.instance_hypernym.test.en = """
+relations.instance_hyponym.exe.en = """"""
+relations.instance_hyponym.test.en = """
 === ==================
 Yes X is one of the Ys
 No  Y is one of the Xs
