@@ -85,7 +85,7 @@ relations.similar.proj.ili = "i13187"
 relations.similar.proj.pwn = "Similar to and Verb Group"
 relations.similar.proj.querywn = "sim"
 relations.similar.proj.eurown = "near_synonym"
-relations.similar.proj.plwordnet = "near_synonymy"
+relations.similar.proj.plwordnet = "podobny"
 relations.similar.proj.pointer = "&"
 
 
@@ -631,7 +631,7 @@ relations.meronym.proj.ili = "i69575"
 relations.meronym.proj.pwn = "meronym"
 relations.meronym.proj.querywn = "mero"
 relations.meronym.proj.eurown = "has_meronym"
-relations.meronym.proj.plwordnet = "meronimia"
+relations.meronym.proj.plwordnet = "meronim"
 relations.meronym.proj.pointer = "%"
 
 
@@ -647,7 +647,7 @@ relations.holonym.fa.reverse = "meronym"
 relations.holonym.proj.ili = "i69567"
 relations.holonym.proj.querywn = "holo"
 relations.holonym.proj.eurown = "has_holonym"
-relations.holonym.proj.plwordnet = "holonimia"
+relations.holonym.proj.plwordnet = "holonim"
 relations.holonym.proj.pointer = "#"
 
 
@@ -817,7 +817,7 @@ relations.eq_synonym.fa.reverse = "eq_synonym"
 
 relations.eq_synonym.proj.ili = "i69607"
 relations.eq_synonym.proj.eurown = "eq_synonym"
-relations.eq_synonym.proj.plwordnet = ""
+relations.eq_synonym.proj.plwordnet = "synonim"
 
 
 ### Relation: instance_hypernym
@@ -1043,10 +1043,10 @@ relations.antonym.fa.inOMW = True
 relations.antonym.fa.reverse = 'antonym'
 
 relations.antonym.proj.ili = "i69547"
-relations.antonym.proj.pwn = ""
+relations.antonym.proj.pwn = "antonym"
 relations.antonym.proj.querywn = "antonym"
-relations.antonym.proj.eurown = ""
-relations.antonym.proj.plwordnet = "complementary, proper and converse antonymy"
+relations.antonym.proj.eurown = "antonym"
+relations.antonym.proj.plwordnet = "antonim"
 relations.antonym.proj.pointer = "!"
 
 
