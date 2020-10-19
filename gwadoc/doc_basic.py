@@ -830,7 +830,7 @@ relations.instance_hypernym.fa.inOMW = True
 relations.instance_hypernym.fa.reverse = "instance_hyponym"
 
 relations.instance_hypernym.proj.pwn = "Instance Hypernym"
-relations.instance_hypernym.proj.querywn = "inst"
+relations.instance_hypernym.proj.querywn = "hypes"
 relations.instance_hypernym.proj.eurown = "has_instance"
 relations.instance_hypernym.proj.plwordnet = "type"
 relations.instance_hypernym.proj.pointer = "@i"
@@ -846,10 +846,10 @@ relations.instance_hyponym.fa.inOMW = True
 relations.instance_hyponym.fa.reverse = "instance_hypernym"
 
 relations.instance_hyponym.proj.ili = "i75102"
-relations.instance_hyponym.proj.pwn = "Instance Hypernym"
-relations.instance_hyponym.proj.querywn = "hasi"
-relations.instance_hyponym.proj.eurown = "BELONGS_To_CLASS"
-relations.instance_hyponym.proj.plwordnet = "instance"
+relations.instance_hyponym.proj.pwn = "Instance Hyponym"
+relations.instance_hyponym.proj.querywn = "hypos"
+relations.instance_hyponym.proj.eurown = "instance_hyponym"
+relations.instance_hyponym.proj.plwordnet = "typ"
 relations.instance_hyponym.proj.pointer = "~i"
 
 
