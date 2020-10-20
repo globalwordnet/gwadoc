@@ -10,11 +10,41 @@ from gwadoc import relations
 ### Relation: domain
 
 relations.domain.name.en = "Domain"
+relations.domain.df.en = "A concept which is a Topic, Region or Usage pointer of a given concept."
+relations.domain.dfn.en = """
+Domain is an underspecified relation between two concepts where Concept B is a Topic (scientific category), 
+Region or Usage pointer of Concept A.
+"""
+relations.domain.ex.en = ""
+relations.domain.exe.en = ""
+relations.domain.test.en = ""
+relations.domain.com.en = """
+This is an underspecified relation that covers Domain Topic, Domain Region, and Is Exemplified By. 
+As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
+employ it as a general relation covering all its subtypes. 
+
+In EuroWordNet, Domain is moved to a separate ontology.(EuroWordNet General Document pp 8–10)
+ """
 
 
 ### Relation: has_domain
 
 relations.has_domain.name.en = "In Domain"
+relations.has_domain.df.en = "A concept which is a term of a given Topic, Region or Usage concept."
+relations.has_domain.dfn.en = """
+In Domain is an underspecified relation between two concepts where Concept A is a Topic (scientific category, 
+Region or Usage term of Concept B.
+"""
+relations.has_domain.ex.en = ""
+relations.has_domain.exe.en = ""
+relations.has_domain.test.en = ""
+relations.has_domain.com.en = """
+This is an underspecified relation that covers Has Domain Topic, Has Domain Region, and Exemplifies. 
+As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
+employ it as a general relation covering all its subtypes. 
+
+In EuroWordNet, In Domain is moved to a separate ontology.(EuroWordNet General Document pp 8–10)
+ """
 
 
 ### Relation: constitutive
@@ -124,11 +154,11 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.
 relations.similar.name.en = "Similar"
 relations.similar.df.en = "(of words) expressing closely related meanings"
 relations.similar.dfn.en = """
-A relation between two concepts where concept X and concept Y are
+A relation between two concepts where concept A and concept B are
 closely related in meaning but are not in the same synset. Similarity
 is a self-reciprocal link (the two directions of this relation share
-the same meaning) — Concept-X is similar to Concept-Y, and Concept-Y
-is similar to Concept-X.
+the same meaning) — Concept-A is similar to Concept-B, and Concept-B
+is similar to Concept-A.
 
 This link was originally used to relate adjectives, but we have
 unconstrained this use, and we're making use of this link to relate
@@ -139,9 +169,25 @@ synonymy that all lemmas in a concept must share.  As adjectives are
 not structured hierarchically (hyponymy/hypernymy) like verbs or
 nouns, the similarity link helps showing relations between them.
 """
-relations.similar.ex.en = ""
+relations.similar.ex.en = "tools near_synonym instrument"
 relations.similar.exe.en = """
+ * `instrument <ILIURL/i33440>`_ has near_synonym `tools <ILIURL/36325>`_
 """
+
+relations.similar.test.en = """
+Similar-relation between nouns (EWN 3)
+
+===     =   ======================================================
+yes     a   *if it is a/an A then it is also a kind of B but you usually do not call Cn Bs*
+.       b   *if it is a/an B then it is also a kind of A but you usually do not call Cm As*
+
+===     =   ======================================================
+
+Conditions:
+ - Cn are hyponyms of A, Cm are hypnyms of B.
+
+"""
+
 relations.similar.com.en = """
 This relation coerces PWN Similar to relation for adjectives, Verb
 Group relation for verbs and EWN NEAR_SYNONYM for nouns and verbs. In
@@ -153,19 +199,32 @@ relation which is why it is not given in the mappings below.
 ### Relation: role
 
 relations.role.name.en = "Role"
-relations.role.df.en = "what something is used for"
+relations.role.df.en = "A concept which is involved in the action or event expressed by a given concept."
 relations.role.dfn.en = """
-X Role Y: A relation between two concepts where concept X is typically
-involved in the action or event expressed by concept Y. It is the
-supertype of ``agent``, ``instrument``, ``patient``, ``result``,
-``location``, ``direction``, ``target_direction``, and
-``source_direction``.
+Role is an underspecified relation between two concepts where concept A is typically involved 
+in the action or event expressed by concept B.
 """
 relations.role.ex.en = ""
-relations.role.exe.en = """
-* *hammer* ``role`` *to hammer*
+relations.role.exe.en = ""
+relations.role.test.en = """
+Role / Involved as general relation (EWN test 29)
+
+===========    ================================================================
+yes            (a/an) A is the one/that who/which is typically involved in Bing
+Conditions     A is a noun
+.              B is a verb in the infinitive form
+Example:       A hammer is that which is typically involved in hammering
+Effect:        {\ hammer}\ (A)     ROLE      {\ to hammer}\ (B)
+.              {\ to hammer}\ (B)  INVOLVED  {\ hammer}\ (A)
+===========    ================================================================
+
 """
 relations.role.com.en = """
+This is an underspecified relation that covers Agent, Patient, Result, Instrument, 
+Location, Direction, Target Direction, and Source Direction. 
+As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
+employ it as a general relation covering all its subtypes. 
+
 In plWordNet it is a relation between lexical units.
 """
 
@@ -173,17 +232,27 @@ In plWordNet it is a relation between lexical units.
 ### Relation: agent
 
 relations.agent.name.en = "Agent"
-relations.agent.df.en = """
-the semantic role of the animate entity that instigates or causes the
-happening denoted by the verb in the clause
-"""
+relations.agent.df.en = "A concept which is typically the one/that who/which does the action denoted by a given concept."
 relations.agent.dfn.en = """
-X Role Y: (A/an) X is the one/that who/which does the Y, typically
-intentionally. X is typically the agent of the action expressed by Y
+Agent is a relation between two concepts where Concept A is the semantic role of the 
+animate entity that instigates or causes the happening of Concept B, typically intentionally. 
 """
-relations.agent.ex.en = ""
+relations.agent.ex.en = "`teacher <ILIURL/93557>`_ is the agent of `to teach <ILIURL/25800>`_ "
 relations.agent.exe.en = """
-* *teacher* ``agent`` *to teach*
+* `teacher <ILIURL/93557>`_ is the agent of `to teach <ILIURL/25800>`_
+"""
+relations.agent.test.en = """
+Agent Involvement (EWN test 28)
+
+===========     =   ======================================================================
+yes             a   (A/an) A is the one/that who/which does the B, typically intentionally
+Conditions:     .   - A is a noun
+.               .   - Y is a verb in the gerundive form
+Example:        a   A teacher is the one who does the teaching intentionally
+Effect:         .   {\ teacher}\ (A) AGENT {\ to teach}\ (B)
+.               .   {\ to teach}\ (B) INVOLVED AGENT {\ teacher}\ (A) 
+===========     =   ======================================================================
+
 """
 relations.agent.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -193,17 +262,27 @@ In plWordNet it is a relation between lexical units.
 ### Relation: patient
 
 relations.patient.name.en = "Patient"
-relations.patient.df.en = """
-the semantic role of an entity that is not the agent but is directly
-involved in or affected by the happening denoted by the verb in the
-clause
-"""
+relations.patient.df.en = "A concept which is the one/that who/which undergoes a given concept."
 relations.patient.dfn.en = """
-X Role Y: (A/an) X is the one/that who/which undergoes the Y.
+Patient is a relation between two concepts where Concept A is the semantic role of an entity 
+that is not the agent but is directly involved in or affected by the happening denoted by Concept B.
 """
-relations.patient.ex.en = ""
+relations.patient.ex.en = "`learner <ILIURL/90958>`_ is the patient of `to learn <ILIURL/24750>`_ "
 relations.patient.exe.en = """
-* *learner* ``patient`` *to learn*
+* `learner <ILIURL/90958>`_ is the patient of `to learn <ILIURL/24750>`_ 
+"""
+relations.patient.test.en = """
+Patient Involvement (EWN test 29)
+
+===========     =   ===================================================
+yes             a   (A/an) A is the one/that who/which undergoes the B 
+Conditions:     .   - A is a noun
+.               .   - B is a verb in the gerundive form
+Example:        a   A learner is the one who undergoes the learning
+Effect:         .   {\ learner}\ (A) PATIENT {\ to learn}\ (B) 
+.               .   {\ to learn}\ (B) INVOLVED PATIENT {\ learner}\ (A) 
+===========     =   ===================================================
+
 """
 relations.patient.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -213,17 +292,32 @@ In plWordNet it is a relation between lexical units.
 ### Relation: result
 
 relations.result.name.en = "Result"
-relations.result.df.en = """
-the semantic role of the noun phrase whose referent exists only by
-virtue of the activity denoted by the verb in the clause
-"""
+relations.result.df.en = "A concept which comes into existence as a result of a given concept."
 relations.result.dfn.en = """
-X Role Y: (A/an) X is comes into existence as a result of Y or, (A/an)
-X is the result of Y or, (A/an) X is created by Y.
+Result is a relation between two concepts where Concept A exists as a result only by virtue of 
+the activity denoted by Concept B.
 """
-relations.result.ex.en = ""
+relations.result.ex.en = "`crystal <ILIURL/85286>`_ is the result of `to crystalize <ILIURL/23949>`_ "
 relations.result.exe.en = """
-* *crystal* ``result`` *to crystalize*
+* `crystal <ILIURL/85286>`_ is the result of `to crystalize <ILIURL/23949>`_ 
+* `ice <ILIURL/115475>`_ is the result of `to freeze <ILIURL/23605>`_
+"""
+relations.result.test.en = """
+Result Involvement (EWN test 30)
+
+===========     =   ===================================================================================
+yes             a   (A/an) A comes into existence as a result of B
+yes             b   (A/an) A is the result of B
+yes             c   (A/an) A is created by B 
+Conditions:     .   - A is a noun
+.               .   - B is a verb in the gerundive form and a hyponym of “make”, “produce”, “enerate”.
+Example:        a   a crystal comes into existence as a result of crystalizing
+.               b   a crystal is the result of crystalizing
+.               c   a crystal is created by crystalizing
+Effect:         .   {\ crystal}\ (A) RESULT {\ to crystalize}\ (B)
+.               .   {\ to crystalize}\ (B) INVOLVED RESULT {\ crystal}\ (A) 
+===========     =   ===================================================================================
+
 """
 relations.result.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -233,21 +327,38 @@ In plWordNet it is a relation between lexical units.
 ### Relation: instrument
 
 relations.instrument.name.en = "Instrument"
-relations.instrument.df.en = """
-the semantic role of the entity (usually inanimate) that the agent
-uses to perform an action or start a process
-"""
+relations.instrument.df.en = "A concept which is the instrument necessary for the action or event expressed by a given concept."
 relations.instrument.dfn.en = """
-X Role Y: (A/an) X is either i) the instrument that or ii) what is
-used to Y (with)
+Instrument is a relation between two concepts where Concept A is the semantic role of 
+the entity (usually inanimate) that the agent uses to perform an action or start a process
+expressed by Concept B.
 """
-relations.instrument.ex.en = ""
+relations.instrument.ex.en = "`hammer <ILIURL/54582>`_ is the instrument of `to hammer <ILIURL/28810>`_ "
 relations.instrument.exe.en = """
-* *hammer* ``instrument`` *to hammer*
-* *sail* ``instrument`` *to sail*
-* *pen* ``instrument`` *to write*
-* *ink* ``instrument`` *to write*
-* *paper* ``instrument`` *to write*
+* `hammer <ILIURL/54582>`_ is the instrument of `to hammer <ILIURL/28810>`_ 
+* `sail <ILIURL/58403>`_ is the instrument of `to sail <ILIURL/31452>`_ 
+* `pen <ILIURL/28810>`_ is the instrument of `to write <ILIURL/30198>`_ 
+* `ink <ILIURL/115490>`_ is the instrument of `to write <ILIURL/30198>`_ 
+* `paper <ILIURL/69377>`_ is the instrument of `to write <ILIURL/30198>`_ 
+"""
+relations.instrument.test.en = """
+Instrument Involvement (EWN test 31)
+
+============     =   =========================================================================
+yes              a   (A/an) A is either i) the instrument that or ii) what is used to Y (with) 
+Conditions:      .   - A is a noun
+.                .   - B is a verb in the infinitive form
+Example (1):     .   An hammer is the instrument that is used to hammer
+Effect:          .   {\ hammer}\ (A) INSTRUMENT {\ to hammer}\ (B) 
+Effect:          .   {\ to hammer}\ (B) INVOLVED INSTRUMENT {\ hammer}\ (A)
+Example (2):     .   A sailing boat is what is used to sail with
+Effect:          .   {\ sail}\ (A) INSTRUMENT {\ to sail}\ (B) 
+Example (3):     .   Pen/Ink/Paper is what is used to write
+Effect:          .   {\ pen}\ (A) INSTRUMENT {\ to write}\ (B) 
+.                .   {\ ink}\ (A) INSTRUMENT {\ to write}\ (B) 
+.                .   {\ paper}\ (A) INSTRUMENT {\ to write}\ (B) 
+============     =   =========================================================================
+
 """
 relations.instrument.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -257,14 +368,28 @@ In plWordNet it is a relation between lexical units.
 ### Relation: location
 
 relations.location.name.en = "Location"
-relations.location.df.en = "a point or extent in space"
+relations.location.df.en = "A concept which is the place where the event expressed by a given concept happens."
 relations.location.dfn.en = """
-X Role Y: A relation between two concepts where concept X is the
-location where the action or event expressed by concept Y takes place.
+Location is a relation between two concepts where concept A is the
+location where the action or event expressed by concept B takes place.
 """
-relations.location.ex.en = ""
+relations.location.ex.en = "`school <ILIURL/58518>`_ is the location of `to teach <ILIURL/25800>`_"
 relations.location.exe.en = """
-* *school* ``location`` *to teach*
+* `school <ILIURL/58518>`_ is the location of `to teach <ILIURL/25800>`_
+* `water <ILIURL/85104>`_ is the location of `to swim <ILIURL/31242>`_
+"""
+relations.location.test.en = """
+Location Involvement (EWN test 32)
+
+===========     =   ===================================================
+yes             a   (A/an) A is the place where the B happens
+Conditions:     .   - A is a noun
+.               .   - B is a verb in the gerundive form
+Example:        a   A school is the place where the teaching happens 
+Effect:         .   {\ school}\ (A) LOCATION {\ to teach}\ (B) 
+.               .   {\ to teach}\ (B) INVOLVED LOCATION {\ school}\ (A) 
+===========     =   ===================================================
+
 """
 relations.location.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -274,17 +399,26 @@ In plWordNet it is a relation between lexical units.
 ### Relation: direction
 
 relations.direction.name.en = "Direction"
-relations.direction.df.en = """
-a line leading to a place or point
-"""
+relations.direction.df.en = "A concept which is the direction of the action or event expressed by a given concept."
 relations.direction.dfn.en = """
-X Role Y: A relation between two concepts where concept X is typically
-the direction or location of the action or event expressed by concept
-Y. It is possible to Y from/to/over/across/through a place (X)
+Direction is a relation between two concepts where concept A is typically
+the direction or location of the action or event expressed by concept B.
 """
-relations.direction.ex.en = ""
+relations.direction.ex.en = "`place <ILIURL/82372>`_ is the direction of `to pass <ILIURL/27684>`_"
 relations.direction.exe.en = """
-* *place* ``direction`` *pass*
+* `place <ILIURL/82372>`_ is the direction of `to pass <ILIURL/27684>`_
+"""
+relations.direction.test.en = """
+Direction Involvement (EWN test 33)
+
+===========     =   ===========================================================
+yes             a   It is possible to B from/to/over/across/through a place (A) 
+Conditions:     .   - B is a verb in the infinitive form
+Example:        a   It is possible to pass though a place 
+Effect:         .   {\ place}\ (A) DIRECTION {\ to pass}\ (B)
+.               .   {\ to pass}\ (B) INVOLVED DIRECTION {\ place}\ (A) 
+===========     =   ===========================================================
+
 """
 relations.direction.com.en = """
 """
@@ -293,15 +427,28 @@ relations.direction.com.en = """
 ### Relation: target_direction
 
 relations.target_direction.name.en = "Target Direction"
-relations.target_direction.df.en = """
-the place designated as the end (as of a race or journey)
-"""
+relations.target_direction.df.en = "A concept which is the place where the action or event expressed by a given concept leads to."
 relations.target_direction.dfn.en = """
-X Role Y: (a/an/the) X is the place to which Ying happens / one Ys
+Target Direction is a relation between two concepts where Concept A is the place designated as the 
+end (as of a race or journey) of an action or event expressed by Concept B.
 """
-relations.target_direction.ex.en = ""
+relations.target_direction.ex.en = "`ground <ILIURL/85674>`_ is the target direction of `to collapse <ILIURL/113799>`_, `to fall <ILIURL/31590>`_ heavily"
 relations.target_direction.exe.en = """
-* *ground* ``target_direction`` *to collapse, to fall heavily*
+* `ground <ILIURL/85674>`_ is the target direction of `to collapse <ILIURL/113799>`_, to `fall <ILIURL/31590>`_ heavily
+* `home <ILIURL/53274>`_ is the target direction of `to go back <ILIURL/26394>`_ 
+"""
+relations.target_direction.test.en = """
+Target-Direction Involvement (EWN test 35)
+
+===========     =   ===============================================================================
+yes             a   (a/an/the) A is the place to which Ying happens / one Bs
+Conditions:     .   - A is a noun
+.               .   - B is a verb
+Example:        a   The ground is the place to which one collapses/falls heavily 
+Effect:         .   {\ ground}\ (A)  TARGET DIRECTION {\ to collapse, to fall heavily}\ (B)
+.               .   {\ to collapse, to fall heavily}\ (B) INVOLVED TARGET DIRECTION {\ ground}\ (A) 
+===========     =   ===============================================================================
+
 """
 relations.target_direction.com.en = """
 """
@@ -310,17 +457,28 @@ relations.target_direction.com.en = """
 ### Relation: source_direction
 
 relations.source_direction.name.en = "Source Direction"
-relations.source_direction.df.en = """
-the place where something begins, where it springs into being
-"""
+relations.source_direction.df.en = "A concept which is the place from where the event expressed by a given concept begins."
 relations.source_direction.dfn.en = """
-X Role Y: A relation between two concepts where concept X is the place
-from where the action or event expressed by concept Y
-begins/starts/happens.
+Source Direction is a relation between two concepts where concept A is the place
+from where the action or event expressed by concept B begins/starts/happens.
 """
-relations.source_direction.ex.en = "start/race"
+relations.source_direction.ex.en = "the `start <ILIURL/75187>`_ is the source direction of `to race <ILIURL/27023>`_ "
 relations.source_direction.exe.en = """
-* *the start* ``source_direction`` *to race*
+* the `start <ILIURL/75187>`_ is the source direction of `to race <ILIURL/27023>`_ 
+* `ship <ILIURL/58798>`_ is the source direction of `to debark <ILIURL/31629>`_
+"""
+relations.source_direction.test.en = """
+Source-Direction Involvement (EWN test 34)
+
+===========     =   ========================================================================
+yes             a   (A/an/the) A is the place from where Bing begins/starts/happens / one Bs 
+Conditions:     .   - A is a noun
+.               .   - B is a verb
+Example:        a   The start is the place from where the racing starts
+Effect:         .   {\ the start}\ (A) SOURCE DIRECTION {\ to race}\ (B)
+.               .   {\ to race}\ (B) INVOLVED SOURCE DIRECTION {\ the start}\ (A) 
+===========     =   ========================================================================
+
 """
 relations.source_direction.com.en = """
 """
@@ -329,20 +487,33 @@ relations.source_direction.com.en = """
 ### Relation: involved
 
 relations.involved.name.en = "Involved"
-relations.involved.df.en = "connected by participation or association or use"
+relations.involved.df.en = "A concept which is the action or event a given concept typically involved in."
 relations.involved.dfn.en = """
-Y involved X: A relation between two concepts where concept Y is
-typically involved in the action or event expressed by concept
-X. Involved is the supertype of ``involved_agent``,
-``involved_patient``, ``involved_result``, ``involved_instrument``,
-``involved_location``, ``involved_direction``,
-``involved_target_direction``, and ``involved_source_direction``.
+Involved is an underspecified relation between two concepts where concept B is the action 
+or event concept A typically involved in. 
 """
 relations.involved.ex.en = ""
-relations.involved.exe.en = """
-* *to hammer* ``involved`` *hammer*
+relations.involved.exe.en = ""
+relations.involved.test.en = """
+Role / Involved as general relation (EWN test 29)
+
+===========    ================================================================
+yes            (a/an) A is the one/that who/which is typically involved in Bing
+Conditions     A is a noun
+.              B is a verb in the infinitive form
+Example:       A hammer is that which is typically involved in hammering
+Effect:        {\ hammer}\ (A)     ROLE      {\ to hammer}\ (B)
+.              {\ to hammer}\ (B)  INVOLVED  {\ hammer}\ (A)
+===========    ================================================================
+
 """
 relations.involved.com.en = """
+This is an underspecified relation that covers Involved Agent, Involved Patient, Involved Result, 
+Involved Instrument, Involved Location, Involved Direction, Involved Target Direction, and 
+Involved Source Direction. 
+As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
+employ it as a general relation covering all its subtypes. 
+
 In plWordNet it is a relation between lexical units.
 """
 
@@ -350,14 +521,27 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_agent (EuroWordNet - page 29/30)
 
 relations.involved_agent.name.en = "Involved Agent"
-relations.involved_agent.df.en = "X is the typical agent of Y"
+relations.involved_agent.df.en = "A concept which is the action done by an agent expressed by a given concept."
 relations.involved_agent.dfn.en = """
-Y involved X: A relation between two concepts where concept Y is typically
-the agent of the action expressed by concept X.
+Involved Agent is a relation between two concepts where concept B is typically the action 
+done by the agent expressed by concept A.
 """
-relations.involved_agent.ex.en = "teach/teacher"
+relations.involved_agent.ex.en = "`to teach <ILIURL/25800>`_ involved agent `teacher <ILIURL/93557>`_ "
 relations.involved_agent.exe.en = """
-* *to teach* ``involved_agent`` *teacher*
+* `to teach <ILIURL/25800>`_ involved agent `teacher <ILIURL/93557>`_ 
+"""
+relations.involved_agent.test.en = """
+Agent Involvement (EWN test 28)
+
+===========     =   ======================================================================
+yes             a   (A/an) A is the one/that who/which does the B, typically intentionally
+Conditions:     .   - A is a noun
+.               .   - Y is a verb in the gerundive form
+Example:        a   A teacher is the one who does the teaching intentionally
+Effect:         .   {\ teacher}\ (A) AGENT {\ to teach}\ (B)
+.               .   {\ to teach}\ (B) INVOLVED AGENT {\ teacher}\ (A) 
+===========     =   ======================================================================
+
 """
 relations.involved_agent.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -367,14 +551,27 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_patient
 
 relations.involved_patient.name.en = "Involved Patient"
-relations.involved_patient.df.en = "X is typically the patient undergoing the action Y"
+relations.involved_patient.df.en = "A concept which is the action that the patient expressed by a given concept undergoing."
 relations.involved_patient.dfn.en = """
-Y involved X: A relation between two concepts where concept B is
-typically the patient undergoing an action or event expressed by
-concept A.
+Involved Patient is a relation between two concepts where Concept B is
+typically an action or event that the patient expressed by Concept A undergoing.
 """
-relations.involved_patient.ex.en = "teach/learner"
+relations.involved_patient.ex.en = "`to learn <ILIURL/24750>`_ involved patient `learner <ILIURL/90958>`_ "
 relations.involved_patient.exe.en = """
+* `to learn <ILIURL/24750>`_ involved patient `learner <ILIURL/90958>`_ 
+"""
+relations.involved_patient.test.en = """
+Patient Involvement (EWN test 29)
+
+===========     =   ===================================================
+yes             a   (A/an) A is the one/that who/which undergoes the B 
+Conditions:     .   - A is a noun
+.               .   - B is a verb in the gerundive form
+Example:        a   A learner is the one who undergoes the learning
+Effect:         .   {\ learner}\ (A) PATIENT {\ to learn}\ (B) 
+.               .   {\ to learn}\ (B) INVOLVED PATIENT {\ learner}\ (A) 
+===========     =   ===================================================
+
 """
 relations.involved_patient.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -384,13 +581,32 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_result
 
 relations.involved_result.name.en = "Involved Result"
-relations.involved_result.df.en = "X exists because of Y"
+relations.involved_result.df.en = "A concept which is the action or event with a result of a given concept comes into existence."
 relations.involved_result.dfn.en = """
-Y involved X: A relation between two concepts where concept B comes
+Involved Result is a relation between two concepts where concept B comes
 into existence as a result of concept A.
 """
-relations.involved_result.ex.en = "freeze/ice"
+relations.involved_result.ex.en = "`to crystalize <ILIURL/23949>`_ involved result of `crystal <ILIURL/85286>`_"
 relations.involved_result.exe.en = """
+* `to crystalize <ILIURL/23949>`_ involved result of `crystal <ILIURL/85286>`_
+* `to freeze <ILIURL/23605>`_ involved result of `ice <ILIURL/115475>`_
+"""
+relations.involved_result.test.en = """
+Result Involvement (EWN test 30)
+
+===========     =   ===================================================================================
+yes             a   (A/an) A comes into existence as a result of B
+yes             b   (A/an) A is the result of B
+yes             c   (A/an) A is created by B 
+Conditions:     .   - A is a noun
+.               .   - B is a verb in the gerundive form and a hyponym of “make”, “produce”, “enerate”.
+Example:        a   a crystal comes into existence as a result of crystalizing
+.               b   a crystal is the result of crystalizing
+.               c   a crystal is created by crystalizing
+Effect:         .   {\ crystal}\ (A) RESULT {\ to crystalize}\ (B)
+.               .   {\ to crystalize}\ (B) INVOLVED RESULT {\ crystal}\ (A) 
+===========     =   ===================================================================================
+
 """
 relations.involved_result.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -400,14 +616,37 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_instrument
 
 relations.involved_instrument.name.en = "Involved Instrument"
-relations.involved_instrument.df.en = "X is typically the instrument for the action Y"
+relations.involved_instrument.df.en = "A concept which is typically the action with the instrument expressed by a given concept."
 relations.involved_instrument.dfn.en = """
-Y involved X: A relation between two concepts where concept B is
-typically the instrument necessary for the action or event expressed
-by concept A.
+Involved Instrument is a relation between two concepts where concept B is
+typically the action or event with the usage of instrument expressed by concept A.
 """
-relations.involved_instrument.ex.en = "paint/paint-brush"
+relations.involved_instrument.ex.en = "`to hammer <ILIURL/28810>`_ involved instrument `hammer <ILIURL/54582>`_"
 relations.involved_instrument.exe.en = """
+* `to hammer <ILIURL/28810>`_ involved instrument `hammer <ILIURL/54582>`_
+* `to sail <ILIURL/31452>`_ involved instrument `sail <ILIURL/58403>`_
+* `to write <ILIURL/30198>`_ involved instrument `pen <ILIURL/28810>`_
+* `to write <ILIURL/30198>`_ involved instrument `ink <ILIURL/115490>`_ 
+* `to write <ILIURL/30198>`_ involved instrument `paper <ILIURL/69377>`_
+"""
+relations.involved_instrument.test.en = """
+Instrument Involvement (EWN test 31)
+
+============     =   =========================================================================
+yes              a   (A/an) A is either i) the instrument that or ii) what is used to Y (with) 
+Conditions:      .   - A is a noun
+.                .   - B is a verb in the infinitive form
+Example (1):     .   An hammer is the instrument that is used to hammer
+Effect:          .   {\ hammer}\ (A) INSTRUMENT {\ to hammer}\ (B) 
+Effect:          .   {\ to hammer}\ (B) INVOLVED INSTRUMENT {\ hammer}\ (A)
+Example (2):     .   A sailing boat is what is used to sail with
+Effect:          .   {\ sail}\ (A) INSTRUMENT {\ to sail}\ (B) 
+Example (3):     .   Pen/Ink/Paper is what is used to write
+Effect:          .   {\ pen}\ (A) INSTRUMENT {\ to write}\ (B) 
+.                .   {\ ink}\ (A) INSTRUMENT {\ to write}\ (B) 
+.                .   {\ paper}\ (A) INSTRUMENT {\ to write}\ (B) 
+============     =   =========================================================================
+
 """
 relations.involved_instrument.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -417,16 +656,28 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_location
 
 relations.involved_location.name.en = "Involved Location"
-relations.involved_location.df.en = """
-X is typically the location where the action Y takes place
-"""
+relations.involved_location.df.en = "A concept which is the event happening in a place expressed by a given concept."
 relations.involved_location.dfn.en = """
-Y involved X: A relation between two concepts where concept B is
-typically the location where the action or event expressed by concept
-A takes place.
+Involved Location is a relation between two concepts where concept B is
+typically the action or event which takes place in the location expressed by concept A.
 """
-relations.involved_location.ex.en = "swim/water"
+relations.involved_location.ex.en = "`to teach <ILIURL/25800>`_ involved location `school <ILIURL/58518>`_"
 relations.involved_location.exe.en = """
+* `to teach <ILIURL/25800>`_ involved location `school <ILIURL/58518>`_
+* `to swim <ILIURL/31242>`_ involved location `water <ILIURL/85104>`_
+"""
+relations.involved_location.test.en = """
+Location Involvement (EWN test 32)
+
+===========     =   ===================================================
+yes             a   (A/an) A is the place where the B happens
+Conditions:     .   - A is a noun
+.               .   - B is a verb in the gerundive form
+Example:        a   A school is the place where the teaching happens 
+Effect:         .   {\ school}\ (A) LOCATION {\ to teach}\ (B) 
+.               .   {\ to teach}\ (B) INVOLVED LOCATION {\ school}\ (A) 
+===========     =   ===================================================
+
 """
 relations.involved_location.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -436,16 +687,26 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_direction
 
 relations.involved_direction.name.en = "Involved Direction"
-relations.involved_direction.df.en = """
-X is typically the direction/location of the action Y
-"""
+relations.involved_direction.df.en = "A concept which is the action with the direction expressed by a given concept."
 relations.involved_direction.dfn.en = """
-Y involved X: A relation between two concepts where concept B is
-typically the direction or location of the action or event expressed
-by concept A.
+Involved Direction is a relation between two concepts where concept B is
+typically the action or event with the direction or location expressed by concept A.
 """
-relations.involved_direction.ex.en = "" ### couldn't find an example
+relations.involved_direction.ex.en = "`to pass <ILIURL/27684>`_ involved direction `place <ILIURL/82372>`_ " 
 relations.involved_direction.exe.en = """
+* `to pass <ILIURL/27684>`_ involved direction `place <ILIURL/82372>`_
+"""
+relations.involved_direction.test.en = """
+Direction Involvement (EWN test 33)
+
+===========     =   ===========================================================
+yes             a   It is possible to B from/to/over/across/through a place (A) 
+Conditions:     .   - B is a verb in the infinitive form
+Example:        a   It is possible to pass though a place 
+Effect:         .   {\ place}\ (A) DIRECTION {\ to pass}\ (B)
+.               .   {\ to pass}\ (B) INVOLVED DIRECTION {\ place}\ (A) 
+===========     =   ===========================================================
+
 """
 relations.involved_direction.com.en = """
 """
@@ -454,13 +715,28 @@ relations.involved_direction.com.en = """
 ### Relation: involved_target_direction
 
 relations.involved_target_direction.name.en = "Involved Target Direction"
-relations.involved_target_direction.df.en = "X is the place where action Y leads to"
+relations.involved_target_direction.df.en = "A concept which is the action or event leading to a place expressed by a given concept."
 relations.involved_target_direction.dfn.en = """
-Y involved X: A relation between two concepts where concept B is the place
-where the action or event expressed by concept A leads to.
+Involved Target Direction is a relation between two concepts where concept B is the the action 
+or event leading to a place expressed by concept A.
 """
-relations.involved_target_direction.ex.en = "go back home/home"
+relations.involved_target_direction.ex.en = "`to collapse <ILIURL/113799>`_, `to fall <ILIURL/31590>`_ heavily involved target direction `ground <ILIURL/85674>`_"
 relations.involved_target_direction.exe.en = """
+* `to collapse <ILIURL/113799>`_, `to fall <ILIURL/31590>`_ heavily involved target direction `ground <ILIURL/85674>`_
+* `to go back <ILIURL/26394>`_ involved target direction `home <ILIURL/53274>`_
+"""
+relations.involved_target_direction.test.en = """
+Target-Direction Involvement (EWN test 35)
+
+===========     =   ===============================================================================
+yes             a   (a/an/the) A is the place to which Ying happens / one Bs
+Conditions:     .   - A is a noun
+.               .   - B is a verb
+Example:        a   The ground is the place to which one collapses/falls heavily 
+Effect:         .   {\ ground}\ (A)  TARGET DIRECTION { \to collapse, to fall heavily}\ (B)
+.               .   {\ to collapse, to fall heavily}\ (B) INVOLVED TARGET DIRECTION {\ ground}\ (A) 
+===========     =   ===============================================================================
+
 """
 relations.involved_target_direction.com.en = """
 """
@@ -469,16 +745,28 @@ relations.involved_target_direction.com.en = """
 ### Relation: involved_source_direction
 
 relations.involved_source_direction.name.en = "Involved Source Direction"
-relations.involved_source_direction.df.en = """
-X is the place from where the action Y begins
-"""
+relations.involved_source_direction.df.en = "A concept which is the action beginning from a place of a given concept."
 relations.involved_source_direction.dfn.en = """
-Y involved X: A relation between two concepts where concept B is the
-place from where the action or event expressed by concept A
-begins/starts/happens.
+Involved Source Direction is a relation between two concepts where concept B is the action or event 
+which begins/starts/happens from a place expressed by concept A.
 """
-relations.involved_source_direction.ex.en = "disembark/ship"
+relations.involved_source_direction.ex.en = "`to race <ILIURL/27023>`_ involved source direction the `start <ILIURL/75187>`_ "
 relations.involved_source_direction.exe.en = """
+* `to race <ILIURL/27023>`_ involved source direction the `start <ILIURL/75187>`_  
+* `to debark <ILIURL/31629>`_ involved source direction `ship <ILIURL/58798>`_ 
+"""
+relations.involved_source_direction.test.en = """
+Source-Direction Involvement (EWN test 34)
+
+===========     =   ========================================================================
+yes             a   (A/an/the) A is the place from where Bing begins/starts/happens / one Bs 
+Conditions:     .   - A is a noun
+.               .   - B is a verb
+Example:        a   The start is the place from where the racing starts
+Effect:         .   {\ the start}\ (A) SOURCE DIRECTION {\ to race}\ (B)
+.               .   {\ to race}\ (B) INVOLVED SOURCE DIRECTION {\ the start}\ (A) 
+===========     =   ========================================================================
+
 """
 relations.involved_source_direction.com.en = """
 """
@@ -1076,12 +1364,12 @@ two words that can be interchanged in a context are said to be
 synonymous relative to that context
 """
 relations.eq_synonym.dfn.en = """
-A relation between two concepts where X and Y are equivalent concepts
+A relation between two concepts where A and B are equivalent concepts
 but their nature requires that they remain separate.
 
 Equality is a self-reciprocal link (the two directions of this
-relation share the same meaning) — Concept-X is equal to Concept-Y,
-and Concept-Y is equal to Concept-X.
+relation share the same meaning) — Concept-A is equal to Concept-B,
+and Concept-B is equal to Concept-A.
 
 It denotes a special kind full synonimity that allows separation of
 synonym lemmas in two different synsets. It can occur with any type of
@@ -1090,12 +1378,45 @@ part-of-speech.
 At the moment, we're currently making use of this in order to isolate
 chengyu (成语), a traditional four-character Chinese idiom.
 """
-relations.eq_synonym.ex.en = ""
+relations.eq_synonym.ex.en = "people has equal synonyms folks"
 relations.eq_synonym.exe.en = """
 * 一模一样 (70100056-a) EQUALS identical (02068946-a)  identical
 * (02068946-a) EQUALS  一模一样 (70100056-a)
+* `people <ILIURL/79059>`_ has equal-synonym `folks <ILIURL/79084>`_
+* `cop <ILIURL/88724>`_ has equal-synonym `policeman <ILIURL/92109>`_
+* `fiddle <ILIURL/30406>`_ has equal-synonym `violin <ILIURL/60869>`_
+* `begin <ILIURL/23466>`_ has equal-synonym `start <ILIURL/23481>`_
+
+"""
+relations.eq_synonym.test.en = """
+Equal Synonym-relation between nouns (EWN 1)
+
+===     =   ======================================================
+yes     a   *if it is (a/an) A then it is also (a/an) B*
+.       b   *if it is (a/an) B then it is also (a/an) A*
+
+===     =   ======================================================
+
+Conditions:
+ - A and B are singular or plural nouns
+ 
+Equal Synonym-relation between verbs (EWN 2)
+
+===     =   ======================================================
+yes     a   *If something/someone/it As then something/someone/it Bs*
+.       b   *If something/someone/it Bs then something/someone/it As*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the third person singular form
+ - B is a verb in the third person singular form
+ - there are no specifying PPs that apply to the A-phrase or the B-phrase
+
 """
 relations.eq_synonym.com.en = """
+In principle all semantically equivalent words should belong to the same synsets 
+(where they can be differentiated by labels on the appropriate usage). 
 """
 
 
@@ -1104,22 +1425,24 @@ relations.eq_synonym.com.en = """
 relations.instance_hypernym.name.en = "Instance Hypernym"
 relations.instance_hypernym.df.en = "the type of an instance"
 relations.instance_hypernym.dfn.en = """
-A relation between two concepts where concept X (``instance_hyponym``)
-is a type of concept Y (``instance_hypernym``), and where X is an
-individual entity.  X will be a terminal node in the hierarchy.
+A relation between two concepts where concept A (``instance_hyponym``)
+is a type of concept B (``instance_hypernym``), and where A is an
+individual entity.  A will be a terminal node in the hierarchy.
 Instances are expressed by proper nouns.
 
 An ``instance hypernym`` can also be referred to as a ``type``
 """
-relations.instance_hypernym.ex.en = "*city/Manchester*"
-relations.instance_hypernym.exe.en = """"""
+relations.instance_hypernym.ex.en = "*manchester belongs_to_class city*"
+relations.instance_hypernym.exe.en = """
+ * `manchester <ILIURL/83395>`_ has instance_hypernym `city <ILIURL/81847>`_
+"""
 relations.instance_hypernym.test.en = """
 === ==================
-Yes X is one of the Ys
-No  Y is one of the Xs
+Yes A is one of the Bs
+No  B is one of the As
 === ==================
 
-Condition: X is a proper noun (or named entity), Y is a common noun.
+Condition: A is a proper noun (or named entity), B is a common noun.
 """
 relations.instance_hypernym.com.en = """
 Sometimes modelled as hyponomy/hypernymy relations.
@@ -1131,42 +1454,47 @@ Sometimes modelled as hyponomy/hypernymy relations.
 relations.instance_hyponym.name.en = "Instance Hyponym"
 relations.instance_hyponym.df.en = "an occurrence of something"
 relations.instance_hyponym.dfn.en = """
-A relation between two concepts where concept X (``instance_hyponym``)
-is a type of concept Y (``instance_hypernym``), and where X is an
-individual entity.  X will be a terminal node in the hierarchy.
+A relation between two concepts where concept A (``instance_hyponym``)
+is a type of concept B (``instance_hypernym``), and where A is an
+individual entity.  A will be a terminal node in the hierarchy.
 Instances are expressed by proper nouns.
 
-An ``instance hypernym`` can also be referred to as a ``type``
+An ``instance hyponym`` can also be referred to as a ``type``
 """
-relations.instance_hyponym.ex.en = ""
-relations.instance_hypernym.exe.en = """"""
-relations.instance_hypernym.test.en = """
+relations.instance_hyponym.ex.en = "city HAS_INSTANCE Manchester"
+relations.instance_hyponym.exe.en = """
+ * `city <ILIURL/81847>`_ has instance_hyponym `manchester <ILIURL/83395>`_
+"""
+relations.instance_hyponym.test.en = """
 === ==================
-Yes X is one of the Ys
-No  Y is one of the Xs
+Yes A is one of the Bs
+No  B is one of the As
 === ==================
 
-Condition: X is a proper noun (or named entity), Y is a common noun.
-"""
-relations.instance_hyponym.exe.en = """
+Condition: A is a proper noun (or named entity), B is a common noun.
 """
 relations.instance_hyponym.com.en = """
+Hyponymy is a relation between classes of entities. Individual entities can also be said to belong to some class. 
+Although we do not find many instances in a lexical database, the relation is useful for users 
+that want to add particular instances and do not want to consult a separate database. 
+To distinguish it from class hyponymy the relation is dubbed has_instance.
 """
 
 
 ### Relation: exemplifies
 
 relations.exemplifies.name.en = "Exemplifies"
-relations.exemplifies.df.en = "clarify by giving an example of"
+relations.exemplifies.df.en = "A concept which is the example of a given concept."
 relations.exemplifies.dfn.en = """
-A relation between two concepts where Y is a type of concept
-X. such as idiom, honorific or classifier.
+Exemplifies is a relation between two concepts where Concept A is the example of Concept B.
 """
-relations.exemplifies.ex.en = ""
+relations.exemplifies.ex.en = "`Band Aid <ILIURL/50429>`_ exemplifies `trademark <ILIURL/72497>`_ "
 relations.exemplifies.exe.en = """
+* `wings <ILIURL/36358>`_ exemplifies `plural form <ILIURL/69585>`_ 
+* `Band Aid <ILIURL/50429>`_ exemplifies `trademark <ILIURL/72497>`_ 
 """
 relations.exemplifies.com.en = """
-The name was changed from "Domain of synset - USAGE" as we found it
+The name was changed from "Member of this domain - USAGE" as we found it
 too different from the standard meaning of domain.
 """
 
@@ -1174,30 +1502,35 @@ too different from the standard meaning of domain.
 ### Relation: is_exemplified_by
 
 relations.is_exemplified_by.name.en = "Is Exemplified By"
-relations.is_exemplified_by.df.en = ""
+relations.is_exemplified_by.df.en = "A concept which is the type of a given concept."
 relations.is_exemplified_by.dfn.en = """
-A relation between two concepts where A is an example of the type B.
+Is Exemplified By is a relation between two concepts where Concept B is a type of 
+Concept A, such as idiom, honorific or classifier.
 """
-relations.is_exemplified_by.ex.en = ""
+relations.is_exemplified_by.ex.en = "`trademark <ILIURL/72497>`_ is exemplified by `Band Aid <ILIURL/50429>`_ "
 relations.is_exemplified_by.exe.en = """
+* `trademark <ILIURL/72497>`_ is exemplified by `Band Aid <ILIURL/50429>`_ 
+* `plural form <ILIURL/69585>`_ is exemplified by `wings <ILIURL/36358>`_ 
 """
 relations.is_exemplified_by.com.en = """
 We agreed to change the name for these with Christiane! We
 propose 'Exemplified_By'.
-
 """
 
 
 ### Relation: domain_topic
 
 relations.domain_topic.name.en = "Domain Topic"
-relations.domain_topic.df.en = ""
+relations.domain_topic.df.en = "A concept which is the scientific category pointer of a given concept."
 relations.domain_topic.dfn.en = """
-A relation between two concepts where Y is a scientific
-domain (e.g. computing, sport, biology, etc.) of concept X.
+Domain Topic is a relation between two concepts where Concept B is a scientific
+category (e.g. computing, sport, biology, etc.) of concept A.
 """
-relations.domain_topic.ex.en = ""
+relations.domain_topic.ex.en = "`computer science <ILIURL/68812>`_ is a domain topic of `CPU <ILIURL/51710>`_ "
 relations.domain_topic.exe.en = """
+* `football <ILIURL/37873>`_ is a domain topic of `place-kick <ILIURL/27159>`_ 
+* `plant <ILIURL/35564>`_ is a domain topic of `evergreen <ILIURL/5001>`_ 
+* `ocean <ILIURL/85897>`_ is a domain topic of `water <ILIURL/85104>`_ 
 """
 relations.domain_topic.com.en = """
 """
@@ -1206,13 +1539,16 @@ relations.domain_topic.com.en = """
 ### Relation: has_domain_topic
 
 relations.has_domain_topic.name.en = "Has Domain Topic"
-relations.has_domain_topic.df.en = ""
+relations.has_domain_topic.df.en = "A concept which is a term in the scientific category of a given concept."
 relations.has_domain_topic.dfn.en = """
-A relation between two concepts where X is a scientific
-domain (e.g. computing, sport, biology, etc.) of concept Y.
+Has Domain Topic is a relation between two concepts where Concept A is a scientific
+category (e.g. computing, sport, biology, etc.) of concept B.
 """
-relations.has_domain_topic.ex.en = ""
+relations.has_domain_topic.ex.en = "`CPU <ILIURL/51710>`_ has domain topic of `computer science <ILIURL/68812>`_ "
 relations.has_domain_topic.exe.en = """
+* `place-kick <ILIURL/27159>`_ has domain topic of `football <ILIURL/37873>`_ 
+* `evergreen <ILIURL/5001>`_ has domain topic of `plant <ILIURL/35564>`_ 
+* `water <ILIURL/85104>`_ has domain topic of `ocean <ILIURL/85897>`_ 
 """
 relations.has_domain_topic.com.en = """
 """
@@ -1221,15 +1557,16 @@ relations.has_domain_topic.com.en = """
 ### Relation: domain_region
 
 relations.domain_region.name.en = "Domain Region"
-relations.domain_region.df.en = ""
+relations.domain_region.df.en = "A concept which is a geographical / cultural domain pointer of a given concept."
 relations.domain_region.dfn.en = """
-A relation between two concepts where Y is a geographical / cultural
-domain of concept X. Domain(Region) and Domain-Term(Region) is a
-paired relation between terms/concepts of any part-of-speech and a
-related geographical region.
+Domain Region is a relation between two concepts where Concept B is a geographical / 
+cultural domain of concept A. 
 """
-relations.domain_region.ex.en = ""
+relations.domain_region.ex.en = "`United States <ILIURL/84182>`_ is a domain region of `billion <ILIURL/12132>`_ "
 relations.domain_region.exe.en = """
+* `Japan <ILIURL/83607>`_ is a domain region of `sushi <ILIURL/78639>`_ 
+* `England <ILIURL/83374>`_ is a domain region of `War of the Roses <ILIURL/42242>`_ 
+* `Pacific <ILIURL/85934>`_ is a domain region of `Philippine Sea <ILIURL/42156>`_ 
 """
 relations.domain_region.com.en = """
 We also agreed to change the name for these (to include both
@@ -1241,17 +1578,20 @@ what...
 ### Relation: has_domain_region
 
 relations.has_domain_region.name.en = "Has Domain Region"
-relations.has_domain_region.df.en = ""
+relations.has_domain_region.df.en = "A concept which is the term in the geographical / cultural domain of a given concept."
 relations.has_domain_region.dfn.en = """
-A relation between two concepts where X is a geographical /
-cultural domain of concept Y.
+Has Domain Region is a relation between two concepts where Concept A is a term of the geographical /
+cultural domain of concept B.
 """
-relations.has_domain_region.ex.en = ""
+relations.has_domain_region.ex.en = "`billion <ILIURL/12132>`_ has domain region of `United States <ILIURL/84182>`_ "
 relations.has_domain_region.exe.en = """
+* `sushi <ILIURL/78639>`_ has domain region of `Japan <ILIURL/83607>`_ 
+* `War of the Roses <ILIURL/42242>`_ has domain region of `England <ILIURL/83374>`_ 
+* `Philippine Sea <ILIURL/42156>`_ has domain region of `Pacific <ILIURL/85934>`_ 
 """
 relations.has_domain_region.com.en = """
 We have discussed changing the name for these (as they include both
-geographical and cultural regions).  But we have not yet come up with
+geographical and cultural regions). But we have not yet come up with
 a good name.
 """
 
@@ -1409,9 +1749,62 @@ with the same part-of-speech.
 
 An opposite and inherently incompatible word.
 """
-relations.antonym.ex.en = ""
+relations.antonym.ex.en = "Smart has antonym Stupid"
 relations.antonym.exe.en = """
+ * `man <ILIURL/48657>`_ has antonym `woman <ILIURL/94168>`_
+ * `superior <ILIURL/93443>`_ has antonym `inferior <ILIURL/90690>`_
+ * `buy <ILIURL/32788>`_ has antonym `sell <ILIURL/41243>`_
+ * `northen <ILIURL/8760>`_ has antonym `southern <ILIURL/8772>`_
+ * `homosexual <ILIURL/90552>`_ has antonym `heterosexual <ILIURL/6566>`_
+ * `sister <ILIURL/93015>`_ has antonym `brother <ILIURL/88710>`_
+
 """
+
+relations.antonym.test.en = """
+Antonym-relation between nouns (EWN 16)
+
+===     =   ======================================================
+yes     a   *A and B are both a kind of C but A is the opposite of B*
+.       b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A and B are singular or plural nouns
+ - C is a hyperonym of both A and C and within a reasonable, competitive denotational range.
+ 
+ Antonym-relation between verb (EWN 17)
+
+===     =   ======================================================
+yes     a   *If something/someone/it As then something/someone/it does not B*
+.       b   *If something/someone/it Bs then something/someone/it does not A)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a synset variant in the third person singular form
+ - B is a synset variant in the third person singular form
+ - A and B are members of co-hyponym synsets
+ - there is a hyperonym of A which is opposite to a hyperonym of B
+ - the situation referred to by A has an addressee and the addressee is the
+   protagonist of the situation referred to by B
+   
+ Antonym-relation between verbs and adjectives (or adverbs) EWN 20
+
+===     =   ======================================================
+yes     a   *If something/someone/it As then something/someone/it is not B*
+.       b   *If something/someone/it is B then something/someone/it does not A*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the third person singular form
+ - B is an adjective
+ - A and Y are (XPOS) co-hyponyms
+ 
+ """
+
+
 relations.antonym.com.en = """
 It is primarily a relation between senses, but sense level antonymy
 implies a looser synset level relation, which we automatically add to
@@ -1517,7 +1910,7 @@ relations.derivation.com.en = ""
 
 ### New short definitions based on http://globalwordnet.github.io/schemas/
 
-relations.agent.df.en = "X is typically the agent of the action expressed by Y"
+#relations.agent.df.en = "X is typically the agent of the action expressed by Y"
 relations.antonym.df.en = "An opposite and inherently incompatible word"
 relations.be_in_state.df.en = "X is qualified by Y"
 relations.classified_by.df.en = "A relation between Y and a classifier X"
@@ -1533,38 +1926,38 @@ relations.co_patient_instrument.df.en = "X undergoes an action for which the ins
 relations.co_result_agent.df.en = "X is the result of an action carried out by Y"
 relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
 relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
-relations.direction.df.en = "X is typically the direction or location of the action or event expressed by Y"
+#relations.direction.df.en = "X is typically the direction or location of the action or event expressed by Y"
 relations.eq_synonym.df.en = "X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
 relations.holo_location.df.en = "Y is a place located in X"
 relations.holo_portion.df.en = "Y is an amount/piece/portion of X"
 relations.holonym.df.en = "X makes up a part of Y"
 relations.in_manner.df.en = "Y qualifies the manner in which an action or event expressed by X takes place"
-relations.instrument.df.en = "X is the instrument necessary for the action or event expressed by Y"
-relations.involved_agent.df.en = "Y is typically the agent of the action expressed by X"
-relations.involved_direction.df.en = "Y is typically the direction or location of the action or event expressed by X"
-relations.involved_instrument.df.en = "Y is typically the instrument necessary for the action or event expressed by X"
-relations.involved_location.df.en = "Y is typically the location where the action or event expressed by X takes place"
-relations.involved_patient.df.en = "Y is typically the patient un-dergoing an action or event expressed by X"
-relations.involved_result.df.en = "Y comes into existence as a result of X"
-relations.involved_source_direction.df.en = "Y is the place from where the action or event expressed by X begins/starts/happens"
-relations.involved_target_direction.df.en = "Y is the place where the action or event expressed by X leads to"
-relations.involved.df.en = "Y is typically involved in the action or event expressed by X"
+#relations.instrument.df.en = "X is the instrument necessary for the action or event expressed by Y"
+#relations.involved_agent.df.en = "Y is typically the agent of the action expressed by X"
+#relations.involved_direction.df.en = "Y is typically the direction or location of the action or event expressed by X"
+#relations.involved_instrument.df.en = "Y is typically the instrument necessary for the action or event expressed by X"
+#relations.involved_location.df.en = "Y is typically the location where the action or event expressed by X takes place"
+#relations.involved_patient.df.en = "Y is typically the patient un-dergoing an action or event expressed by X"
+#relations.involved_result.df.en = "Y comes into existence as a result of X"
+#relations.involved_source_direction.df.en = "Y is the place from where the action or event expressed by X begins/starts/happens"
+#relations.involved_target_direction.df.en = "Y is the place where the action or event expressed by X leads to"
+#relations.involved.df.en = "Y is typically involved in the action or event expressed by X"
 relations.is_caused_by.df.en = "X comes about because of Y"
 relations.is_entailed_by.df.en = "Opposite of entails"
 relations.is_subevent_of.df.en = "X takes place during or as part of Y, and whenever X takes place, Y takes place"
-relations.location.df.en = "X is the location where the action or event expressed by Y takes place"
+#relations.location.df.en = "X is the location where the action or event expressed by Y takes place"
 relations.manner_of.df.en = "X qualifies the manner in which an action or event expressed by Y takes place"
 relations.mero_location.df.en = "X is a place located in Y"
 relations.mero_portion.df.en = "X is an amount/piece/portion of Y"
 relations.meronym.df.en = "Y makes up a part of X"
 relations.other.df.en = "Any relation not otherwise specified"
-relations.patient.df.en = "X is the patient undergoing an action or event expressed by Y"
+#relations.patient.df.en = "X is the patient undergoing an action or event expressed by Y"
 #rels.pertainym.df.en =  "X is of or pertaining to Y"
 relations.restricted_by.df.en = "A relation between nominal (pronominal) Y and an adjectival X (quantifier/determiner)"
 relations.restricts.df.en = "A relation between an adjectival X (quantifier/determiner) and a nominal (pronominal) Y"
-relations.result.df.en = "X comes into existence as a result of Y"
-relations.role.df.en = "X is typically involved in the action or event expressed by Y"
-relations.source_direction.df.en = "X is the place from where the event expressed by Y begins"
+#relations.result.df.en = "X comes into existence as a result of Y"
+#relations.role.df.en = "X is typically involved in the action or event expressed by Y"
+#relations.source_direction.df.en = "X is the place from where the event expressed by Y begins"
 relations.state_of.df.en = "Y is qualified by X"
 relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
-relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
+#relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"

@@ -15,6 +15,13 @@ relations.domain.fa.sense_synset = False
 relations.domain.fa.sense_sense = False
 relations.domain.fa.reverse = 'has_domain'
 
+relations.domain.proj.ili = ""
+relations.domain.proj.pwn = "domain"
+relations.domain.proj.querywn = "domn"
+relations.domain.proj.eurown = ""
+relations.domain.proj.plwordnet = ""
+relations.domain.proj.pointer = ""
+
 
 ### Relation: has_domain
 
@@ -23,6 +30,13 @@ relations.has_domain.fa.synset_synset = True
 relations.has_domain.fa.sense_synset = False
 relations.has_domain.fa.sense_sense = False
 relations.has_domain.fa.reverse = 'domain'
+
+relations.has_domain.proj.ili = ""
+relations.has_domain.proj.pwn = "domain term"
+relations.has_domain.proj.querywn = "domt"
+relations.has_domain.proj.eurown = ""
+relations.has_domain.proj.plwordnet = ""
+relations.has_domain.proj.pointer = ""
 
 
 ### Relation: constitutive
@@ -85,7 +99,7 @@ relations.similar.proj.ili = "i13187"
 relations.similar.proj.pwn = "Similar to and Verb Group"
 relations.similar.proj.querywn = "sim"
 relations.similar.proj.eurown = "near_synonym"
-relations.similar.proj.plwordnet = "near_synonymy"
+relations.similar.proj.plwordnet = "podobny"
 relations.similar.proj.pointer = "&"
 
 
@@ -99,8 +113,10 @@ relations.role.fa.inOMW = True
 relations.role.fa.reverse = "involved"
 
 relations.role.proj.ili = "i64041"
+relations.role.proj.pwn = ""
+relations.role.proj.querywn = ""
 relations.role.proj.eurown = "role"
-relations.role.proj.plwordnet = "role_unspecified subtype and role_time"
+relations.role.proj.plwordnet = "rola"
 relations.role.proj.pointer = ""
 
 
@@ -114,8 +130,10 @@ relations.agent.fa.inOMW = True
 relations.agent.fa.reverse = "involved_agent"
 
 relations.agent.proj.ili = "i69754"
+relations.agent.proj.pwn = ""
+relations.agent.proj.querywn = ""
 relations.agent.proj.eurown = "role_agent"
-relations.agent.proj.plwordnet = "role_agent"
+relations.agent.proj.plwordnet = ""
 relations.agent.proj.pointer = ""
 
 
@@ -129,8 +147,10 @@ relations.patient.fa.inOMW = True
 relations.patient.fa.reverse = "involved_patient"
 
 relations.patient.proj.ili = "i69753"
+relations.patient.proj.pwn = ""
+relations.patient.proj.querywn = ""
 relations.patient.proj.eurown = "role_patient"
-relations.patient.proj.plwordnet = "role_patient"
+relations.patient.proj.plwordnet = ""
 relations.patient.proj.pointer = ""
 
 
@@ -144,8 +164,10 @@ relations.result.fa.inOMW = True
 relations.result.fa.reverse = "involved_result"
 
 relations.result.proj.ili = "i69759"
+relations.result.proj.pwn = ""
+relations.result.proj.querywn = ""
 relations.result.proj.eurown = "role_result"
-relations.result.proj.plwordnet = "role_result"
+relations.result.proj.plwordnet = ""
 relations.result.proj.pointer = ""
 
 
@@ -159,8 +181,10 @@ relations.instrument.fa.inOMW = True
 relations.instrument.fa.reverse = "involved_instrument"
 
 relations.instrument.proj.ili = "i69756"
+relations.instrument.proj.pwn = ""
+relations.instrument.proj.querywn = ""
 relations.instrument.proj.eurown = "role_instrument"
-relations.instrument.proj.plwordnet = "role_instrument"
+relations.instrument.proj.plwordnet = ""
 relations.instrument.proj.pointer = ""
 
 
@@ -174,8 +198,10 @@ relations.location.fa.inOMW = True
 relations.location.fa.reverse = "involved_location"
 
 relations.location.proj.ili = "i35580"
+relations.location.proj.pwn = ""
+relations.location.proj.querywn = ""
 relations.location.proj.eurown = "role_location"
-relations.location.proj.plwordnet = "role_location"
+relations.location.proj.plwordnet = ""
 relations.location.proj.pointer = ""
 
 
@@ -189,6 +215,8 @@ relations.direction.fa.inOMW = True
 relations.direction.fa.reverse = "involved_direction"
 
 relations.direction.proj.ili = "i82556"
+relations.direction.proj.pwn = ""
+relations.direction.proj.querywn = ""
 relations.direction.proj.eurown = "role_direction"
 relations.direction.proj.plwordnet = ""
 relations.direction.proj.pointer = ""
@@ -204,6 +232,8 @@ relations.target_direction.fa.inOMW = True
 relations.target_direction.fa.reverse = "involved_target_direction"
 
 relations.target_direction.proj.ili = "i82007" ###(ili doesn't have target in it)
+relations.target_direction.proj.pwn = ""
+relations.target_direction.proj.querywn = ""
 relations.target_direction.proj.eurown = "role_target_direction"
 relations.target_direction.proj.plwordnet = ""
 relations.target_direction.proj.pointer = ""
@@ -219,6 +249,8 @@ relations.source_direction.fa.inOMW = True
 relations.source_direction.fa.reverse = "involved_source_direction"
 
 relations.source_direction.proj.ili = "i81759"
+relations.source_direction.proj.pwn = ""
+relations.source_direction.proj.querywn = ""
 relations.source_direction.proj.eurown = "role_source_direction"
 relations.source_direction.proj.plwordnet = ""
 relations.source_direction.proj.pointer = ""
@@ -234,6 +266,8 @@ relations.involved.fa.inOMW = True
 relations.involved.fa.reverse = "role"
 
 relations.involved.proj.ili = "i8315"
+relations.involved.proj.pwn = ""
+relations.involved.proj.querywn = ""
 relations.involved.proj.eurown = "involved"
 relations.involved.proj.plwordnet = "unspecified subtype, time and causation inclusion"
 relations.involved.proj.pointer = ""
@@ -248,6 +282,9 @@ relations.involved_agent.fa.sense_sense = False
 relations.involved_agent.fa.inOMW = True
 relations.involved_agent.fa.reverse = "agent"
 
+relations.involved_agent.proj.ili = ""
+relations.involved_agent.proj.pwn = ""
+relations.involved_agent.proj.querywn = ""
 relations.involved_agent.proj.eurown = "involved_agent"
 relations.involved_agent.proj.plwordnet = "agent inclusion"
 relations.involved_agent.proj.pointer = ""
@@ -262,6 +299,9 @@ relations.involved_patient.fa.sense_sense = False
 relations.involved_patient.fa.inOMW = True
 relations.involved_patient.fa.reverse = "patient"
 
+relations.involved_patient.proj.ili = ""
+relations.involved_patient.proj.pwn = ""
+relations.involved_patient.proj.querywn = ""
 relations.involved_patient.proj.eurown = "involved_patient"
 relations.involved_patient.proj.plwordnet = "patient inclusion"
 relations.involved_patient.proj.pointer = ""
@@ -276,6 +316,9 @@ relations.involved_result.fa.sense_sense = False
 relations.involved_result.fa.inOMW = True
 relations.involved_result.fa.reverse = "result"
 
+relations.involved_result.proj.ili = ""
+relations.involved_result.proj.pwn = ""
+relations.involved_result.proj.querywn = ""
 relations.involved_result.proj.eurown = "involved_result"
 relations.involved_result.proj.plwordnet = "result inclusion"
 relations.involved_result.proj.pointer = ""
@@ -290,6 +333,9 @@ relations.involved_instrument.fa.sense_sense = False
 relations.involved_instrument.fa.inOMW = True
 relations.involved_instrument.fa.reverse = "instrument"
 
+relations.involved_instrument.proj.ili = ""
+relations.involved_instrument.proj.pwn = ""
+relations.involved_instrument.proj.querywn = ""
 relations.involved_instrument.proj.eurown = "involved_instrument"
 relations.involved_instrument.proj.plwordnet = "instrument inclusion"
 relations.involved_instrument.proj.pointer = ""
@@ -304,6 +350,9 @@ relations.involved_location.fa.sense_sense = False
 relations.involved_location.fa.inOMW = True
 relations.involved_location.fa.reverse = "location"
 
+relations.involved_location.proj.ili = ""
+relations.involved_location.proj.pwn = ""
+relations.involved_location.proj.querywn = ""
 relations.involved_location.proj.eurown = "involved_location"
 relations.involved_location.proj.plwordnet = "location inclusion"
 relations.involved_location.proj.pointer = ""
@@ -318,6 +367,9 @@ relations.involved_direction.fa.sense_sense = False
 relations.involved_direction.fa.inOMW = True
 relations.involved_direction.fa.reverse = "direction"
 
+relations.involved_direction.proj.ili = ""
+relations.involved_direction.proj.pwn = ""
+relations.involved_direction.proj.querywn = ""
 relations.involved_direction.proj.eurown = "involved_direction"
 relations.involved_direction.proj.plwordnet = ""
 relations.involved_direction.proj.pointer = ""
@@ -332,6 +384,9 @@ relations.involved_target_direction.fa.sense_sense = False
 relations.involved_target_direction.fa.inOMW = True
 relations.involved_target_direction.fa.reverse = "target_direction"
 
+relations.involved_target_direction.proj.ili = ""
+relations.involved_target_direction.proj.pwn = ""
+relations.involved_target_direction.proj.querywn = ""
 relations.involved_target_direction.proj.eurown = "involved_target_direction"
 relations.involved_target_direction.proj.plwordnet = ""
 relations.involved_target_direction.proj.pointer = ""
@@ -346,6 +401,9 @@ relations.involved_source_direction.fa.sense_sense = False
 relations.involved_source_direction.fa.inOMW = True
 relations.involved_source_direction.fa.reverse = "source_direction"
 
+relations.involved_source_direction.proj.ili = ""
+relations.involved_source_direction.proj.pwn = ""
+relations.involved_source_direction.proj.querywn = ""
 relations.involved_source_direction.proj.eurown = "involved_source_direction"
 relations.involved_source_direction.proj.plwordnet = ""
 relations.involved_source_direction.proj.pointer = ""
@@ -631,7 +689,7 @@ relations.meronym.proj.ili = "i69575"
 relations.meronym.proj.pwn = "meronym"
 relations.meronym.proj.querywn = "mero"
 relations.meronym.proj.eurown = "has_meronym"
-relations.meronym.proj.plwordnet = "meronimia"
+relations.meronym.proj.plwordnet = "meronim"
 relations.meronym.proj.pointer = "%"
 
 
@@ -647,7 +705,7 @@ relations.holonym.fa.reverse = "meronym"
 relations.holonym.proj.ili = "i69567"
 relations.holonym.proj.querywn = "holo"
 relations.holonym.proj.eurown = "has_holonym"
-relations.holonym.proj.plwordnet = "holonimia"
+relations.holonym.proj.plwordnet = "holonim"
 relations.holonym.proj.pointer = "#"
 
 
@@ -817,7 +875,7 @@ relations.eq_synonym.fa.reverse = "eq_synonym"
 
 relations.eq_synonym.proj.ili = "i69607"
 relations.eq_synonym.proj.eurown = "eq_synonym"
-relations.eq_synonym.proj.plwordnet = ""
+relations.eq_synonym.proj.plwordnet = "synonim"
 
 
 ### Relation: instance_hypernym
@@ -830,7 +888,7 @@ relations.instance_hypernym.fa.inOMW = True
 relations.instance_hypernym.fa.reverse = "instance_hyponym"
 
 relations.instance_hypernym.proj.pwn = "Instance Hypernym"
-relations.instance_hypernym.proj.querywn = "inst"
+relations.instance_hypernym.proj.querywn = "hypes"
 relations.instance_hypernym.proj.eurown = "has_instance"
 relations.instance_hypernym.proj.plwordnet = "type"
 relations.instance_hypernym.proj.pointer = "@i"
@@ -846,10 +904,10 @@ relations.instance_hyponym.fa.inOMW = True
 relations.instance_hyponym.fa.reverse = "instance_hypernym"
 
 relations.instance_hyponym.proj.ili = "i75102"
-relations.instance_hyponym.proj.pwn = "Instance Hypernym"
+relations.instance_hyponym.proj.pwn = "Instance Hyponym"
 relations.instance_hyponym.proj.querywn = "hasi"
-relations.instance_hyponym.proj.eurown = "BELONGS_To_CLASS"
-relations.instance_hyponym.proj.plwordnet = "instance"
+relations.instance_hyponym.proj.eurown = "instance_hyponym"
+relations.instance_hyponym.proj.plwordnet = "typ"
 relations.instance_hyponym.proj.pointer = "~i"
 
 
@@ -862,11 +920,12 @@ relations.exemplifies.fa.sense_sense = True
 relations.exemplifies.fa.inOMW = True
 relations.exemplifies.fa.reverse = "is_exemplified_by"
 
-relations.exemplifies.proj.ili = "i26682"
-relations.exemplifies.proj.pwn = "Domain of synset - USAGE"
-relations.exemplifies.proj.querywn = "dmnu"
+relations.exemplifies.proj.ili = "i108797"
+relations.exemplifies.proj.pwn = "Member of this domain - USAGE"
+relations.exemplifies.proj.querywn = "dmtu"
+relations.exemplifies.proj.eurown = ""
 relations.exemplifies.proj.plwordnet = ""
-relations.exemplifies.proj.pointer = ";u"
+relations.exemplifies.proj.pointer = "-u"
 
 
 ### Relation: is_exemplified_by
@@ -878,10 +937,12 @@ relations.is_exemplified_by.fa.sense_sense = True
 relations.is_exemplified_by.fa.inOMW = True
 relations.is_exemplified_by.fa.reverse = "exemplifies"
 
-relations.is_exemplified_by.proj.pwn = "domain term usage"
-relations.is_exemplified_by.proj.querywn = "dmtu"
+relations.is_exemplified_by.proj.ili = ""
+relations.is_exemplified_by.proj.pwn = "Domain of synset - USAGE"
+relations.is_exemplified_by.proj.querywn = "dmnu"
+relations.is_exemplified_by.proj.eurown = ""
 relations.is_exemplified_by.proj.plwordnet = ""
-relations.is_exemplified_by.proj.pointer = "-u"
+relations.is_exemplified_by.proj.pointer = ";u"
 
 
 ### Relation: domain_topic
@@ -893,8 +954,10 @@ relations.domain_topic.fa.sense_sense = True
 relations.domain_topic.fa.inOMW = True
 relations.domain_topic.fa.reverse = "has_domain_topic"
 
-relations.domain_topic.proj.pwn = "domain category"
-relations.domain_topic.proj.querywn = "Domain of synset - TOPIC"
+relations.domain_topic.proj.ili = ""
+relations.domain_topic.proj.pwn = "Domain of synset - TOPIC"
+relations.domain_topic.proj.querywn = "dmnc"
+relations.domain_topic.proj.eurown = ""
 relations.domain_topic.proj.plwordnet = ""
 relations.domain_topic.proj.pointer = ";c"
 
@@ -908,7 +971,10 @@ relations.has_domain_topic.fa.sense_sense = True
 relations.has_domain_topic.fa.inOMW = True
 relations.has_domain_topic.fa.reverse = "domain_topic"
 
+relations.has_domain_topic.proj.ili = ""
+relations.has_domain_topic.proj.pwn = "Member of this domain - TOPIC"
 relations.has_domain_topic.proj.querywn = "dmtc"
+relations.has_domain_topic.proj.eurown = ""
 relations.has_domain_topic.proj.plwordnet = ""
 relations.has_domain_topic.proj.pointer = "-c"
 
@@ -922,8 +988,10 @@ relations.domain_region.fa.sense_sense = True
 relations.domain_region.fa.inOMW = True
 relations.domain_region.fa.reverse = "has_domain_region"
 
+relations.domain_region.proj.ili = ""
 relations.domain_region.proj.pwn = "Domain of synset - REGION"
 relations.domain_region.proj.querywn = "dmnr"
+relations.domain_region.proj.eurown = ""
 relations.domain_region.proj.plwordnet = ""
 relations.domain_region.proj.pointer = ";r"
 
@@ -937,7 +1005,10 @@ relations.has_domain_region.fa.sense_sense = True
 relations.has_domain_region.fa.inOMW = True
 relations.has_domain_region.fa.reverse = "domain_region"
 
+relations.has_domain_region.proj.ili = ""
+relations.has_domain_region.proj.pwn = "Member of this domain - REGION"
 relations.has_domain_region.proj.querywn = "dmtr"
+relations.has_domain_region.proj.eurown = ""
 relations.has_domain_region.proj.plwordnet = ""
 relations.has_domain_region.proj.pointer = "-r"
 
@@ -1043,10 +1114,10 @@ relations.antonym.fa.inOMW = True
 relations.antonym.fa.reverse = 'antonym'
 
 relations.antonym.proj.ili = "i69547"
-relations.antonym.proj.pwn = ""
+relations.antonym.proj.pwn = "antonym"
 relations.antonym.proj.querywn = "antonym"
-relations.antonym.proj.eurown = ""
-relations.antonym.proj.plwordnet = "complementary, proper and converse antonymy"
+relations.antonym.proj.eurown = "antonym"
+relations.antonym.proj.plwordnet = "antonim"
 relations.antonym.proj.pointer = "!"
 
 
