@@ -1112,7 +1112,7 @@ relations.eq_synonym.exe.en = """
 * (02068946-a) EQUALS  一模一样 (70100056-a)
 * `people <ILIURL/79059>`_ has equal-synonym `folks <ILIURL/79084>`_
 * `cop <ILIURL/88724>`_ has equal-synonym `policeman <ILIURL/92109>`_
-* `fiddle <ILIURL/30406>`_ has equal-synonym `voilin <ILIURL/60869>`_
+* `fiddle <ILIURL/30406>`_ has equal-synonym `violin <ILIURL/60869>`_
 * `begin <ILIURL/23466>`_ has equal-synonym `start <ILIURL/23481>`_
 
 """
@@ -1205,7 +1205,7 @@ relations.instance_hyponym.com.en = """
 Hyponymy is a relation between classes of entities. Individual entities can also be said to belong to some class. 
 Although we do not find many instances in a lexical database, the relation is useful for users 
 that want to add particular instances and do not want to consult a separate database. 
-To distinguish it from hyponymy the relation is dubbed has_instance and its inverse belongs_to_class:
+To distinguish it from class hyponymy the relation is dubbed has_instance.
 """
 
 
