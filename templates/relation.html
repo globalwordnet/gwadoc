@@ -62,6 +62,7 @@
     <table>
       <tbody>
         {% for proj in gwadoc.PROJECTS if rel.proj[proj] -%}
+	{% set PRJ =   gwadoc.PROJECTS[proj] %}
         <tr>
           <th><a href='{{ PRJ.url }}' title= '{{ PRJ.exp }}'>{{ PRJ.nam }}</a> </th>
           <td>
