@@ -925,7 +925,7 @@ geographical inclusiveness relations.
 ### Relation: holo_part EDP27
 
 relations.holo_part.name.en = "Part Holonym"
-relations.holo_part.df.en = "Concept B is the whole parts of Concept A"
+relations.holo_part.df.en = "Concept B is the whole where Concept A is a part"
 relations.holo_part.dfn.en = """
 A relation between two concepts where concept B is the whole of the different component of
 concept A. Meronym and Holonym Part is a paired relation that denotes
