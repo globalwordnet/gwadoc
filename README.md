@@ -117,6 +117,9 @@ After installing the requirements, you can build the HTML documentation:
 Note: if you installed the requirements in a virtual environment make
 sure you activate it before building the documentation.
 
+On github, the documentation is automatically made when there is a commit to the master branch and pushed to the gh-pages branch.
+
+
 # Contributing
 
 Please add to the documentation using restructured text in the files in
