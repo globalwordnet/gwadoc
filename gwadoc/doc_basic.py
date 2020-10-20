@@ -48,7 +48,7 @@ relations.hypernym.fa.reverse = "hyponym"
 relations.hypernym.proj.ili = """i69569"""
 relations.hypernym.proj.querywn = "hype"
 relations.hypernym.proj.eurown = "has_hyperonym"
-relations.hypernym.proj.plwordnet = "hyperonymy"
+relations.hypernym.proj.plwordnet = "hiperonimia"
 relations.hypernym.proj.pointer = "@"
 
 
@@ -68,7 +68,7 @@ relations.hyponym.proj.ili = "i69570"
 relations.hyponym.proj.pwn = "hyponym"
 relations.hyponym.proj.querywn = "hypo"
 relations.hyponym.proj.eurown = "has_hyponym"
-relations.hyponym.proj.plwordnet = "hyponymy"
+relations.hyponym.proj.plwordnet = "hiponimia"
 relations.hyponym.proj.pointer = "~"
 
 
@@ -631,7 +631,7 @@ relations.meronym.proj.ili = "i69575"
 relations.meronym.proj.pwn = "meronym"
 relations.meronym.proj.querywn = "enta"
 relations.meronym.proj.eurown = "has_meronym"
-relations.meronym.proj.plwordnet = "meronym"
+relations.meronym.proj.plwordnet = "meronimia"
 relations.meronym.proj.pointer = "%"
 
 
@@ -647,7 +647,7 @@ relations.holonym.fa.reverse = "meronym"
 relations.holonym.proj.ili = "i69567"
 relations.holonym.proj.querywn = "enta"
 relations.holonym.proj.eurown = "has_holonym"
-relations.holonym.proj.plwordnet = "holonym"
+relations.holonym.proj.plwordnet = "holonimia"
 relations.holonym.proj.pointer = "#"
 
 
@@ -663,7 +663,7 @@ relations.mero_part.fa.reverse = "holo_part"
 relations.mero_part.proj.pwn = "part meronym"
 relations.mero_part.proj.querywn = "mprt"
 relations.mero_part.proj.eurown = "has_mero_part"
-relations.mero_part.proj.plwordnet = "meronymy_part"
+relations.mero_part.proj.plwordnet = "część"
 relations.mero_part.proj.pointer = "%p"
 
 
@@ -679,7 +679,7 @@ relations.holo_part.fa.reverse = "mero_part"
 relations.holo_part.proj.pwn = "part holonym"
 relations.holo_part.proj.querywn = "hprt"
 relations.holo_part.proj.eurown = "has_holo_part"
-relations.holo_part.proj.plwordnet = "holonymy_part"
+relations.holo_part.proj.plwordnet = "część"
 relations.holo_part.proj.pointer = "#p"
 
 
@@ -695,7 +695,7 @@ relations.mero_member.fa.reverse = "holo_member"
 relations.mero_member.proj.pwn = "member meronym"
 relations.mero_member.proj.querywn = "mmem"
 relations.mero_member.proj.eurown = "has_mero_member"
-relations.mero_member.proj.plwordnet = "meronymy_member"
+relations.mero_member.proj.plwordnet = "element kolekcji"
 relations.mero_member.proj.pointer = "%m"
 
 
@@ -711,7 +711,7 @@ relations.holo_member.fa.reverse = "mero_member"
 relations.holo_member.proj.pwn = "member holonym"
 relations.holo_member.proj.querywn = "hmem"
 relations.holo_member.proj.eurown = "has_holo_member"
-relations.holo_member.proj.plwordnet = "holonymy_member"
+relations.holo_member.proj.plwordnet = "element kolekcji"
 relations.holo_member.proj.pointer = "#m"
 
 
@@ -727,7 +727,7 @@ relations.mero_substance.fa.reverse = "holo_substance"
 relations.mero_substance.proj.pwn = "substance meronym"
 relations.mero_substance.proj.querywn = "msub"
 relations.mero_substance.proj.eurown = "has_mero_madeof"
-relations.mero_substance.proj.plwordnet = "meronymy_substance"
+relations.mero_substance.proj.plwordnet = "materiał"
 relations.mero_substance.proj.pointer = "%s"
 
 
@@ -743,7 +743,7 @@ relations.holo_substance.fa.reverse = "mero_substance"
 relations.holo_substance.proj.pwn = "substance holonym"
 relations.holo_substance.proj.querywn = "hsub"
 relations.holo_substance.proj.eurown = "has_holo_madeof"
-relations.holo_substance.proj.plwordnet = "holonymy_substance"
+relations.holo_substance.proj.plwordnet = "materiał"
 relations.holo_substance.proj.pointer = "#s"
 
 
@@ -758,7 +758,7 @@ relations.mero_location.fa.reverse = "holo_location"
 
 relations.mero_location.proj.querywn = "hsub"
 relations.mero_location.proj.eurown = "has_mero_location"
-relations.mero_location.proj.plwordnet = "meronymy_location"
+relations.mero_location.proj.plwordnet = "miejsce"
 
 
 ### Relation: holo_location EDP28
@@ -772,7 +772,7 @@ relations.holo_location.fa.reverse = "mero_location"
 
 relations.holo_location.proj.querywn = "hsub"
 relations.holo_location.proj.eurown = "has_holo_location"
-relations.holo_location.proj.plwordnet = "holonymy_location"
+relations.holo_location.proj.plwordnet = "miejsce"
 
 
 ### Relation: mero_portion EDP27
@@ -787,7 +787,7 @@ relations.mero_portion.fa.reverse = "holo_portion"
 relations.mero_portion.proj.pwn = "portion meronym"
 relations.mero_portion.proj.querywn = "hsub"
 relations.mero_portion.proj.eurown = "has_mero_portion"
-relations.mero_portion.proj.plwordnet = "meronymy_portion"
+relations.mero_portion.proj.plwordnet = "porcja"
 relations.mero_portion.proj.pointer = ""
 
 
@@ -802,7 +802,7 @@ relations.holo_portion.fa.reverse = "mero_portion"
 
 relations.holo_portion.proj.querywn = "hsub"
 relations.holo_portion.proj.eurown = "has_holo_portion"
-relations.holo_portion.proj.plwordnet = "holonymy_portion"
+relations.holo_portion.proj.plwordnet = "porcja"
 relations.holo_portion.proj.pointer = ""
 
 
@@ -817,7 +817,6 @@ relations.eq_synonym.fa.reverse = "eq_synonym"
 
 relations.eq_synonym.proj.ili = "i69607"
 relations.eq_synonym.proj.eurown = "eq_synonym"
-relations.eq_synonym.proj.plwordnet = ""
 
 
 ### Relation: instance_hypernym
@@ -832,7 +831,7 @@ relations.instance_hypernym.fa.reverse = "instance_hyponym"
 relations.instance_hypernym.proj.pwn = "Instance Hypernym"
 relations.instance_hypernym.proj.querywn = "inst"
 relations.instance_hypernym.proj.eurown = "has_instance"
-relations.instance_hypernym.proj.plwordnet = "type"
+relations.instance_hypernym.proj.plwordnet = "typ"
 relations.instance_hypernym.proj.pointer = "@i"
 
 
@@ -849,7 +848,7 @@ relations.instance_hyponym.proj.ili = "i75102"
 relations.instance_hyponym.proj.pwn = "Instance Hypernym"
 relations.instance_hyponym.proj.querywn = "hasi"
 relations.instance_hyponym.proj.eurown = "BELONGS_To_CLASS"
-relations.instance_hyponym.proj.plwordnet = "instance"
+relations.instance_hyponym.proj.plwordnet = "egzemplarz"
 relations.instance_hyponym.proj.pointer = "~i"
 
 
@@ -1046,7 +1045,7 @@ relations.antonym.proj.ili = "i69547"
 relations.antonym.proj.pwn = ""
 relations.antonym.proj.querywn = "antonym"
 relations.antonym.proj.eurown = ""
-relations.antonym.proj.plwordnet = "complementary, proper and converse antonymy"
+relations.antonym.proj.plwordnet = "antonimia komplementarna, antonimia właściwa, konwersja"
 relations.antonym.proj.pointer = "!"
 
 
