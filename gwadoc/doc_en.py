@@ -1386,6 +1386,8 @@ relations.antonym.com.en = """
 It is primarily a relation between senses, but sense level antonymy
 implies a looser synset level relation, which we automatically add to
 make it avaiable for wordnets that do not yet have sense level links.
+
+plWordnet distinguishes between 'conversion' which is the same relationship form different points of vie, like *wife* and *husband* and normal antonymy, (plwordnet p27), proper and complementary antonymy.
 """
 
 
