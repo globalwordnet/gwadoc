@@ -154,11 +154,11 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.
 relations.similar.name.en = "Similar"
 relations.similar.df.en = "(of words) expressing closely related meanings"
 relations.similar.dfn.en = """
-A relation between two concepts where concept X and concept Y are
+A relation between two concepts where concept A and concept B are
 closely related in meaning but are not in the same synset. Similarity
 is a self-reciprocal link (the two directions of this relation share
-the same meaning) — Concept-X is similar to Concept-Y, and Concept-Y
-is similar to Concept-X.
+the same meaning) — Concept-A is similar to Concept-B, and Concept-B
+is similar to Concept-A.
 
 This link was originally used to relate adjectives, but we have
 unconstrained this use, and we're making use of this link to relate
@@ -169,9 +169,25 @@ synonymy that all lemmas in a concept must share.  As adjectives are
 not structured hierarchically (hyponymy/hypernymy) like verbs or
 nouns, the similarity link helps showing relations between them.
 """
-relations.similar.ex.en = ""
+relations.similar.ex.en = "tools near_synonym instrument"
 relations.similar.exe.en = """
+ * `instrument <ILIURL/i33440>`_ has near_synonym `tools <ILIURL/36325>`_
 """
+
+relations.similar.test.en = """
+Similar-relation between nouns (EWN 3)
+
+===     =   ======================================================
+yes     a   *if it is a/an A then it is also a kind of B but you usually do not call Cn Bs*
+.       b   *if it is a/an B then it is also a kind of A but you usually do not call Cm As*
+
+===     =   ======================================================
+
+Conditions:
+ - Cn are hyponyms of A, Cm are hypnyms of B.
+
+"""
+
 relations.similar.com.en = """
 This relation coerces PWN Similar to relation for adjectives, Verb
 Group relation for verbs and EWN NEAR_SYNONYM for nouns and verbs. In
@@ -1106,12 +1122,12 @@ two words that can be interchanged in a context are said to be
 synonymous relative to that context
 """
 relations.eq_synonym.dfn.en = """
-A relation between two concepts where X and Y are equivalent concepts
+A relation between two concepts where A and B are equivalent concepts
 but their nature requires that they remain separate.
 
 Equality is a self-reciprocal link (the two directions of this
-relation share the same meaning) — Concept-X is equal to Concept-Y,
-and Concept-Y is equal to Concept-X.
+relation share the same meaning) — Concept-A is equal to Concept-B,
+and Concept-B is equal to Concept-A.
 
 It denotes a special kind full synonimity that allows separation of
 synonym lemmas in two different synsets. It can occur with any type of
@@ -1120,12 +1136,45 @@ part-of-speech.
 At the moment, we're currently making use of this in order to isolate
 chengyu (成语), a traditional four-character Chinese idiom.
 """
-relations.eq_synonym.ex.en = ""
+relations.eq_synonym.ex.en = "people has equal synonyms folks"
 relations.eq_synonym.exe.en = """
 * 一模一样 (70100056-a) EQUALS identical (02068946-a)  identical
 * (02068946-a) EQUALS  一模一样 (70100056-a)
+* `people <ILIURL/79059>`_ has equal-synonym `folks <ILIURL/79084>`_
+* `cop <ILIURL/88724>`_ has equal-synonym `policeman <ILIURL/92109>`_
+* `fiddle <ILIURL/30406>`_ has equal-synonym `violin <ILIURL/60869>`_
+* `begin <ILIURL/23466>`_ has equal-synonym `start <ILIURL/23481>`_
+
+"""
+relations.eq_synonym.test.en = """
+Equal Synonym-relation between nouns (EWN 1)
+
+===     =   ======================================================
+yes     a   *if it is (a/an) A then it is also (a/an) B*
+.       b   *if it is (a/an) B then it is also (a/an) A*
+
+===     =   ======================================================
+
+Conditions:
+ - A and B are singular or plural nouns
+ 
+Equal Synonym-relation between verbs (EWN 2)
+
+===     =   ======================================================
+yes     a   *If something/someone/it As then something/someone/it Bs*
+.       b   *If something/someone/it Bs then something/someone/it As*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the third person singular form
+ - B is a verb in the third person singular form
+ - there are no specifying PPs that apply to the A-phrase or the B-phrase
+
 """
 relations.eq_synonym.com.en = """
+In principle all semantically equivalent words should belong to the same synsets 
+(where they can be differentiated by labels on the appropriate usage). 
 """
 
 
@@ -1134,22 +1183,24 @@ relations.eq_synonym.com.en = """
 relations.instance_hypernym.name.en = "Instance Hypernym"
 relations.instance_hypernym.df.en = "the type of an instance"
 relations.instance_hypernym.dfn.en = """
-A relation between two concepts where concept X (``instance_hyponym``)
-is a type of concept Y (``instance_hypernym``), and where X is an
-individual entity.  X will be a terminal node in the hierarchy.
+A relation between two concepts where concept A (``instance_hyponym``)
+is a type of concept B (``instance_hypernym``), and where A is an
+individual entity.  A will be a terminal node in the hierarchy.
 Instances are expressed by proper nouns.
 
 An ``instance hypernym`` can also be referred to as a ``type``
 """
-relations.instance_hypernym.ex.en = "*city/Manchester*"
-relations.instance_hypernym.exe.en = """"""
+relations.instance_hypernym.ex.en = "*manchester belongs_to_class city*"
+relations.instance_hypernym.exe.en = """
+ * `manchester <ILIURL/83395>`_ has instance_hypernym `city <ILIURL/81847>`_
+"""
 relations.instance_hypernym.test.en = """
 === ==================
-Yes X is one of the Ys
-No  Y is one of the Xs
+Yes A is one of the Bs
+No  B is one of the As
 === ==================
 
-Condition: X is a proper noun (or named entity), Y is a common noun.
+Condition: A is a proper noun (or named entity), B is a common noun.
 """
 relations.instance_hypernym.com.en = """
 Sometimes modelled as hyponomy/hypernymy relations.
@@ -1161,26 +1212,30 @@ Sometimes modelled as hyponomy/hypernymy relations.
 relations.instance_hyponym.name.en = "Instance Hyponym"
 relations.instance_hyponym.df.en = "an occurrence of something"
 relations.instance_hyponym.dfn.en = """
-A relation between two concepts where concept X (``instance_hyponym``)
-is a type of concept Y (``instance_hypernym``), and where X is an
-individual entity.  X will be a terminal node in the hierarchy.
+A relation between two concepts where concept A (``instance_hyponym``)
+is a type of concept B (``instance_hypernym``), and where A is an
+individual entity.  A will be a terminal node in the hierarchy.
 Instances are expressed by proper nouns.
 
-An ``instance hypernym`` can also be referred to as a ``type``
+An ``instance hyponym`` can also be referred to as a ``type``
 """
-relations.instance_hyponym.ex.en = ""
-relations.instance_hypernym.exe.en = """"""
-relations.instance_hypernym.test.en = """
+relations.instance_hyponym.ex.en = "city HAS_INSTANCE Manchester"
+relations.instance_hyponym.exe.en = """
+ * `city <ILIURL/81847>`_ has instance_hyponym `manchester <ILIURL/83395>`_
+"""
+relations.instance_hyponym.test.en = """
 === ==================
-Yes X is one of the Ys
-No  Y is one of the Xs
+Yes A is one of the Bs
+No  B is one of the As
 === ==================
 
-Condition: X is a proper noun (or named entity), Y is a common noun.
-"""
-relations.instance_hyponym.exe.en = """
+Condition: A is a proper noun (or named entity), B is a common noun.
 """
 relations.instance_hyponym.com.en = """
+Hyponymy is a relation between classes of entities. Individual entities can also be said to belong to some class. 
+Although we do not find many instances in a lexical database, the relation is useful for users 
+that want to add particular instances and do not want to consult a separate database. 
+To distinguish it from class hyponymy the relation is dubbed has_instance.
 """
 
 
@@ -1452,9 +1507,62 @@ with the same part-of-speech.
 
 An opposite and inherently incompatible word.
 """
-relations.antonym.ex.en = ""
+relations.antonym.ex.en = "Smart has antonym Stupid"
 relations.antonym.exe.en = """
+ * `man <ILIURL/48657>`_ has antonym `woman <ILIURL/94168>`_
+ * `superior <ILIURL/93443>`_ has antonym `inferior <ILIURL/90690>`_
+ * `buy <ILIURL/32788>`_ has antonym `sell <ILIURL/41243>`_
+ * `northen <ILIURL/8760>`_ has antonym `southern <ILIURL/8772>`_
+ * `homosexual <ILIURL/90552>`_ has antonym `heterosexual <ILIURL/6566>`_
+ * `sister <ILIURL/93015>`_ has antonym `brother <ILIURL/88710>`_
+
 """
+
+relations.antonym.test.en = """
+Antonym-relation between nouns (EWN 16)
+
+===     =   ======================================================
+yes     a   *A and B are both a kind of C but A is the opposite of B*
+.       b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A and B are singular or plural nouns
+ - C is a hyperonym of both A and C and within a reasonable, competitive denotational range.
+ 
+ Antonym-relation between verb (EWN 17)
+
+===     =   ======================================================
+yes     a   *If something/someone/it As then something/someone/it does not B*
+.       b   *If something/someone/it Bs then something/someone/it does not A)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a synset variant in the third person singular form
+ - B is a synset variant in the third person singular form
+ - A and B are members of co-hyponym synsets
+ - there is a hyperonym of A which is opposite to a hyperonym of B
+ - the situation referred to by A has an addressee and the addressee is the
+   protagonist of the situation referred to by B
+   
+ Antonym-relation between verbs and adjectives (or adverbs) EWN 20
+
+===     =   ======================================================
+yes     a   *If something/someone/it As then something/someone/it is not B*
+.       b   *If something/someone/it is B then something/someone/it does not A*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the third person singular form
+ - B is an adjective
+ - A and Y are (XPOS) co-hyponyms
+ 
+ """
+
+
 relations.antonym.com.en = """
 It is primarily a relation between senses, but sense level antonymy
 implies a looser synset level relation, which we automatically add to
