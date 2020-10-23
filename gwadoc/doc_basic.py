@@ -595,7 +595,7 @@ relations.causes.proj.ili = "i35561"
 relations.causes.proj.pwn = "cause"
 relations.causes.proj.querywn = "caus"
 relations.causes.proj.eurown = "causes"
-relations.causes.proj.plwordnet = "causation"
+relations.causes.proj.plwordnet = "cause"
 relations.causes.proj.pointer = ">"
 
 

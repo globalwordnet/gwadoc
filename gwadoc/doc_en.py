@@ -1018,23 +1018,54 @@ In plWordNet it is a relation between lexical units.
 
 relations.causes.name.en = "Causes"
 relations.causes.df.en = """
-any entity that produces an effect or is responsible for events or
-results
+Concept A is an entity that produces an effect or is responsible for events or
+results of Concept B.
 """
 relations.causes.dfn.en = """
-A relation between two concepts where concept Y comes into existence
-as a result of concept X. Entailment is a relation that links two
-verbs, and it is currently unilateral — Verb-X causes Verb-Y, without
+A relation between two concepts where concept B comes into existence
+as a result of concept A. Entailment is a relation that links two
+verbs, and it is currently unilateral — Verb-A causes Verb-B, without
 a reciprocal or tracing link. Causation presupposes/requires that some
-Verb-Y will, inevitably, take place during or after Verb-X (e.g. if
-Verb-X occurs, then Verb-Y will also occur).
+Verb-B will, inevitably, take place during or after Verb-A (e.g. if
+Verb-A occurs, then Verb-B will also occur).
 
 While not exclusive to these types of verbs, many verbs that have both
 a transitive and an intransitive form will frequently be submitted to
 this relation.
 """
-relations.causes.ex.en = "kill/die"
+relations.causes.ex.en = "kill causes die"
 relations.causes.exe.en = """
+ * `kill <ILIURL/28306>`_ causes `die <ILIURL/23529>`_
+"""
+relations.causes.test.en = """
+Causes - relation  (EWN 36)
+
+===     =   ======================================================
+yes     a   *(To/A/an) A causes (to/a/an) B to take place*
+.       .   *(To/A/an) A has (to/a/an) B as a consequence*
+.       .   *(To/A/an) A leads to (to/a/an) B*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the infinitive form or A is a noun in the singular 
+ - B is a verb in the infinitive form or B is a noun in the singular
+ 
+Causes - relation between verbs and adjectives (or adverbs)  (EWN 37)
+
+===     =   ======================================================
+yes     a   *A causes to be B*
+.       .   *A has being B as a consequence*
+.       .   *A leads to be(ing) B*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+- A is a verb in the infinitive form
+- B is and adjective
+
 """
 relations.causes.com.en = """
 EUWN's definition of CAUSES is broader than that of PWN. It
@@ -1045,13 +1076,46 @@ seems possible to just absorb PWN's links.
 ### Relation: is_caused_by EDP34
 
 relations.is_caused_by.name.en = "Is Caused By"
-relations.is_caused_by.df.en = ""
+relations.is_caused_by.df.en = "Concept A comes about because of concept B"
 relations.is_caused_by.dfn.en = """
-A relation between two concepts where concept X comes into existence
-as a result of concept Y.
+A relation between two concepts where concept A comes into existence
+as a result of concept B.
 """
-relations.is_caused_by.ex.en = "die/kill"
+relations.is_caused_by.ex.en = "die is_caused_by kill"
 relations.is_caused_by.exe.en = """
+ * `die <ILIURL/23529>`_ is caused by `kill <ILIURL/28306>`_
+
+"""
+relations.is_caused_by.test.en = """
+Is Caused By - relation  (EWN 36)
+
+===     =   ======================================================
+yes     a   *(To/A/an) B takes place because of A*
+.       .   *(To/A/an) B is the consequence A*
+.       .   *(To/A/an) B is the result of A*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the infinitive form or A is a noun in the singular 
+ - B is a verb in the infinitive form or B is a noun in the singular
+
+Is Caused By - relation between verbs and adjectives (or adverbs)  (EWN 37)
+
+===     =   ======================================================
+yes     a   *B is caused by A*
+.       .   *B is the consequence of A*
+.       .   *B is the result of A*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the infinitive form
+- B is and adjective
+
 """
 relations.is_caused_by.com.en = """
 The 'is caused by' relation was missing from PWN before."""
