@@ -564,8 +564,8 @@ relations.state_of.fa.reverse = "be_in_state"
 relations.state_of.proj.ili = "i35578"
 relations.state_of.proj.pwn = "attribute"
 relations.state_of.proj.eurown = "state_of"
-relations.state_of.proj.plwordnet = "state"
-relations.state_of.proj.pointer = ""
+relations.state_of.proj.plwordnet = "stan|cecha"
+relations.state_of.proj.pointer = "="
 
 
 ### Relation: be_in_state EDP37
@@ -578,7 +578,7 @@ relations.be_in_state.fa.inOMW = True
 relations.be_in_state.fa.reverse = "state_of"
 
 relations.be_in_state.proj.eurown = "be_in_state"
-relations.be_in_state.proj.plwordnet = "bearer of state"
+relations.be_in_state.proj.plwordnet = "nosiciel_stanu|cechy"
 relations.be_in_state.proj.pointer = ""
 
 

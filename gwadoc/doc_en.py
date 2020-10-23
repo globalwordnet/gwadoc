@@ -952,11 +952,27 @@ relations.state_of.df.en = """
 the way something is with respect to its main attributes
 """
 relations.state_of.dfn.en = """
-A relation between two concepts where concept Y is qualified by
-concept X.
+A relation between two concepts where concept B is qualified by
+concept A.
 """
-relations.state_of.ex.en = "poor/poor (a poor person)"
+relations.state_of.ex.en = "poor state_of poor (a poor person)"
 relations.state_of.exe.en = """
+ * `poor <ILIURL/11083>`_ state_of `have-not <ILIURL/92132>`_
+ * `rich <ILIURL/11080>`_ state_of `rich person <ILIURL/92571>`_
+
+"""
+relations.state_of.test.en = """
+State Of - relation between noun (EWN 44)
+
+===     =   ======================================================
+yes     a   *B is the state that applies to A*
+
+===     =   ======================================================
+
+Conditions:
+ - B is an adjective/adverb.
+ - A is a noun.
+
 """
 relations.state_of.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -967,16 +983,32 @@ FCB: isn't this the same as attribute (but split into two directions)
 ### Relation: be_in_state EDP37
 
 relations.be_in_state.name.en = "Be In State"
-relations.be_in_state.df.en = ""
+relations.be_in_state.df.en = "Concept A is qualified by B"
 relations.be_in_state.dfn.en = """
-A relation between two concepts where concept X is qualified by
-concept Y.
+A relation between two concepts where concept A is qualified by
+concept B.
 
-X is qualified by Y.
+A is qualified by B.
 """
-relations.be_in_state.ex.en = "poor (a poor person)/poor"
+relations.be_in_state.ex.en = "poor (a poor person) be_in_State poor"
 relations.be_in_state.exe.en = """
+ * `have-not <ILIURL/92132>`_ be in state `poor <ILIURL/11083>`_
+ * `rich person <ILIURL/92571>`_ be in state `rich <ILIURL/11080>`_
 """
+relations.be_in_state.test.en = """
+Be In State - relation between adjective/adverb (EWN 44)
+
+===     =   ======================================================
+yes     a   *a/an/the A is the one/that to whom/which the state B applies*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a noun.
+ - B is an adjective/adverb.
+
+"""
+
 relations.be_in_state.com.en = """
 In plWordNet it is a relation between lexical units.
 """
