@@ -775,171 +775,196 @@ relations.involved_source_direction.com.en = """
 ### Relation: co_role EDP31
 
 relations.co_role.name.en = "Co Role"
-relations.co_role.df.en = """
-a pair of linked role relations without an explicit event
-"""
+relations.co_role.df.en = "A concept undergoes an action in which a given concept is involved."
 relations.co_role.dfn.en = """
-A relation between two concepts where concept X undergoes an action in
-which concept Y is involved (bidirectional).
+Co Role is an underspecified relation between two concepts where Concept A undergoes an action in
+which Concept B is involved (bidirectional).
 """
 relations.co_role.ex.en = ""
 relations.co_role.exe.en = """
 """
+relations.co_role.test.en = """
+"""
 relations.co_role.com.en = """
+This is an underspecified relation that covers Co Agent Patient, Co Patient Agent, 
+Co Agent Instrument, Co Instrument Agent, Co Agent Result, Co Result Agent, 
+Co Patient Instrument, Co Instrument Patient, Co Result Instrument, and Co Instrument Result. 
+As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
+employ it as a general relation covering all its subtypes. 
 """
 
 
 ### Relation: co_agent_patient EDP32
 
 relations.co_agent_patient.name.en = "Co Agent Patient"
-relations.co_agent_patient.df.en = "X is the patient undergoing Y"
+relations.co_agent_patient.df.en = "A concept which is the patient undergoing an action carried out by a given concept."
 relations.co_agent_patient.dfn.en = """
-A relation between two concepts where concept Y is the patient
-undergoing an action carried out by concept X.
-
-Y is the patient undergoing an action carried out by X.
+Co Agent Patient is a relation between two concepts where Concept B is the patient
+undergoing an action carried out by Concept A.
 """
-relations.co_agent_patient.ex.en = "novel writer/poet"
+relations.co_agent_patient.ex.en = "`victim <ILIURL/93927>`_ is the co agent patient of `criminal <ILIURL/89309>`_"
 relations.co_agent_patient.exe.en = """
+* `victim <ILIURL/93927>`_ is the co agent patient of `criminal <ILIURL/89309>`_
 """
 relations.co_agent_patient.com.en = """
-"""
-
-
-### Relation: co_agent_instrument EDP32
-
-relations.co_agent_instrument.name.en = "Co Agent Instrument"
-relations.co_agent_instrument.df.en = "guitar player/guitar"
-relations.co_agent_instrument.dfn.en = """
-A relation between two concepts where concept Y is the instrument used
-by concept X in a certain action.
-
-Y is the instrument used by X in a certain action
-"""
-relations.co_agent_instrument.ex.en = ""
-relations.co_agent_instrument.exe.en = """
-"""
-relations.co_agent_instrument.com.en = """
-"""
-
-
-### Relation: co_agent_result EDP32
-
-relations.co_agent_result.name.en = "Co Agent Result"
-relations.co_agent_result.df.en = "X is the result of action Y"
-relations.co_agent_result.dfn.en = """
-A relation between two concepts where concept Y is the result of an
-action carried out by concept X.
-
-Y is the result of an action carried out by X.
-"""
-relations.co_agent_result.ex.en = "pastry dough/bread dough"
-relations.co_agent_result.exe.en = """
-"""
-relations.co_agent_result.com.en = """
 """
 
 
 ### Relation: co_patient_agent EDP32
 
 relations.co_patient_agent.name.en = "Co Patient Agent"
-relations.co_patient_agent.df.en = ""
+relations.co_patient_agent.df.en = "A concept which carries out an action a given concept undergoing."
 relations.co_patient_agent.dfn.en = """
-A relation between two concepts where concept Y undergoes an action
-carried out by concept X.
+Co Patient Agent is a relation between two concepts where Concept A carries out an action 
+Concept B undergoing.
 """
-relations.co_patient_agent.ex.en = "poet/novel writer"
+relations.co_patient_agent.ex.en = "`criminal <ILIURL/89309>`_ is the co patient agent of `victim <ILIURL/93927>`_ "
 relations.co_patient_agent.exe.en = """
+* `criminal <ILIURL/89309>`_ is the co patient agent of `victim <ILIURL/93927>`_ 
+"""
+relations.co_patient_agent.test.en = """
 """
 relations.co_patient_agent.com.en = """
 """
 
 
-### Relation: co_patient_instrument EDP32
+### Relation: co_agent_instrument EDP32
 
-relations.co_patient_instrument.name.en = "Co Patient Instrument"
-relations.co_patient_instrument.df.en = ""
-relations.co_patient_instrument.dfn.en = """
-A relation between two concepts where concept Y undergoes an action
-for which the instrument expressed by concept X is used.
+relations.co_agent_instrument.name.en = "Co Agent Instrument"
+relations.co_agent_instrument.df.en = "A concept which is the instrument used by a given concept in an action."
+relations.co_agent_instrument.dfn.en = """
+Co Agent Instrument is a relation between two concepts where Concept B is the instrument used
+by Concept A in a certain action.
 """
-relations.co_patient_instrument.ex.en = "ice/ice saw"
-relations.co_patient_instrument.exe.en = """
+relations.co_agent_instrument.ex.en = "`guitar <ILIURL/54496>`_ is the co agent instrument of guitar player"
+relations.co_agent_instrument.exe.en = """
+* `guitar <ILIURL/54496>`_ is the co agent instrument of guitar player
 """
-relations.co_patient_instrument.com.en = """
+relations.co_agent_instrument.test.en = """
 """
-
-
-### Relation: co_result_agent EDP32
-
-relations.co_result_agent.name.en = "Co Result Agent"
-relations.co_result_agent.df.en = ""
-relations.co_result_agent.dfn.en = """
-A relation between two concepts where concept X is the result of an
-action carried out by concept Y.
-"""
-relations.co_result_agent.ex.en = "bread dough/pastry dough"
-relations.co_result_agent.exe.en = """
-"""
-relations.co_result_agent.com.en = """
-"""
-
-
-### Relation: co_result_instrument EDP32
-
-relations.co_result_instrument.name.en = "Co Result Instrument"
-relations.co_result_instrument.df.en = ""
-relations.co_result_instrument.dfn.en = """
-A relation between two concepts where concept X is the result of an
-action for which the instrument expressed by concept Y is used.
-"""
-relations.co_result_instrument.ex.en = "photograph/camera"
-relations.co_result_instrument.exe.en = """
-"""
-relations.co_result_instrument.com.en = """
+relations.co_agent_instrument.com.en = """
 """
 
 
 ### Relation: co_instrument_agent EDP32
 
 relations.co_instrument_agent.name.en = "Co Instrument Agent"
-relations.co_instrument_agent.df.en = ""
+relations.co_instrument_agent.df.en = "A concept which carries out an action by using a given concept as an instrument."
 relations.co_instrument_agent.dfn.en = """
-A relation between two concepts where concept X is the instrument used
-by concept Y for a certain action.
+Co Instrument Agent is a relation between two concepts where Concept A carries out an action 
+by using Concept B as an instrument.
 """
-relations.co_instrument_agent.ex.en = "guitar/guitar player"
+relations.co_instrument_agent.ex.en = "guitar player is the co instrument agent of `guitar <ILIURL/54496>`_ "
 relations.co_instrument_agent.exe.en = """
+* guitar player is the co instrument agent of `guitar <ILIURL/54496>`_  
+"""
+relations.co_instrument_agent.test.en = """
 """
 relations.co_instrument_agent.com.en = """
+"""
+
+
+### Relation: co_agent_result EDP32
+
+relations.co_agent_result.name.en = "Co Agent Result"
+relations.co_agent_result.df.en = "A concept which is the result of an action taken by a given concept."
+relations.co_agent_result.dfn.en = """
+Co Agent Result is a relation between two concepts where Concept B is the result of an
+action carried out by Concept A.
+"""
+relations.co_agent_result.ex.en = "`novel <ILIURL/69939>`_ is the co agent result of novel writer"
+relations.co_agent_result.exe.en = """
+* `novel <ILIURL/69939>`_ is the co agent result of novel writer
+"""
+relations.co_agent_result.com.en = """
+"""
+
+
+### Relation: co_result_agent EDP32
+
+relations.co_result_agent.name.en = "Co Result Agent"
+relations.co_result_agent.df.en = "A concept which takes an action resulting in a given concept."
+relations.co_result_agent.dfn.en = """
+Co Result Agent is a relation between two concepts where Concept A takes an action resulting 
+in Concept B.
+"""
+relations.co_result_agent.ex.en = "novel writer is the co result agent of `novel <ILIURL/69939>`_ "
+relations.co_result_agent.exe.en = """
+* novel writer is the co result agent of `novel <ILIURL/69939>`_ 
+"""
+relations.co_result_agent.test.en = """
+"""
+relations.co_result_agent.com.en = """
+"""
+
+
+### Relation: co_patient_instrument EDP32
+
+relations.co_patient_instrument.name.en = "Co Patient Instrument"
+relations.co_patient_instrument.df.en = "A concept which is used as an instrument in an action a given concept undergoes."
+relations.co_patient_instrument.dfn.en = """
+Co Patient Instrument is a relation between two concepts where Concept B is the instrument 
+used in an action which Concept A undergoes.
+"""
+relations.co_patient_instrument.ex.en = "ice saw is the co patient instrument of `ice <ILIURL/85552>`_ "
+relations.co_patient_instrument.exe.en = """
+* ice saw is the co patient instrument of `ice <ILIURL/85552>`_ 
+"""
+relations.co_patient_instrument.test.en = """
+"""
+relations.co_patient_instrument.com.en = """
 """
 
 
 ### Relation: co_instrument_patient EDP32
 
 relations.co_instrument_patient.name.en = "Co Instrument Patient"
-relations.co_instrument_patient.df.en = ""
+relations.co_instrument_patient.df.en = "A concept which undergoes an action with the use of a given concept as an instrument."
 relations.co_instrument_patient.dfn.en = """
-A relation between two concepts where concept Y undergoes an action
-for which the instrument expressed by concept X is used.
+Co Instrument Patient is a relation between two concepts where Concept A undergoes an action
+for which the instrument expressed by Concept B is used.
 """
-relations.co_instrument_patient.ex.en = "ice saw/ice"
+relations.co_instrument_patient.ex.en = "`ice <ILIURL/85552>`_ is the co instrument patient of ice saw"
 relations.co_instrument_patient.exe.en = """
+* `ice <ILIURL/85552>`_ is the co instrument patient of ice saw
+"""
+relations.co_instrument_patient.test.en = """
 """
 relations.co_instrument_patient.com.en = """
+"""
+
+
+### Relation: co_result_instrument EDP32
+
+relations.co_result_instrument.name.en = "Co Result Instrument"
+relations.co_result_instrument.df.en = "A concept which is used as an instrument in an action resulting in a given concept."
+relations.co_result_instrument.dfn.en = """
+Co Result Instrument is a relation between two concepts where Concept B is an instrument used 
+in an action resulting in Concept A.
+"""
+relations.co_result_instrument.ex.en = "photograpic camera is the co result instrument of `photo <ILIURL/57211>`_"
+relations.co_result_instrument.exe.en = """
+* photograpic camera is the co result instrument of `photo <ILIURL/57211>`_
+"""
+relations.co_result_instrument.test.en = """
+"""
+relations.co_result_instrument.com.en = """
 """
 
 
 ### Relation: co_instrument_result ice saw/ice
 
 relations.co_instrument_result.name.en = "Co Instrument Result"
-relations.co_instrument_result.df.en = ""
+relations.co_instrument_result.df.en = "A concept which is the result of an action using an instrument of a given concept."
 relations.co_instrument_result.dfn.en = """
-A relation between two concepts where concept Y is the result of an
-action carried out by the instrument expressed by concept X.
+Co Instrument Result is a relation between two concepts where Concept A is the result of an
+action carried out by the instrument expressed by Concept B.
 """
-relations.co_instrument_result.ex.en = "camera/photograph"
+relations.co_instrument_result.ex.en = "`photo <ILIURL/57211>`_ is the co instrument result of photograpic camera"
 relations.co_instrument_result.exe.en = """
+* `photo <ILIURL/57211>`_ is the co instrument result of photograpic camera
+"""
+relations.co_instrument_result.test.en = """
 """
 relations.co_instrument_result.com.en = """
 """
@@ -1867,45 +1892,69 @@ Because we don't know what it means, we cannot give it a reverse relation.
 ### Relation: participle
 
 relations.participle.name.en = "Participle"
-relations.participle.df.en = "links from a participial adjective to a verb"
-relations.participle.dfn.en = """A relation where X is a participial adjective and Y is the verb it is derived from"""
-relations.participle.ex.en = "*interesting* is the participial adjective from *interest*"
-relations.participle.exe.en = ""
-relations.participle.com.en = "These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can see, anywhere FCB)"
+relations.participle.df.en = "A concept which is a participial adjective derived from a verb expressed by a given concept."
+relations.participle.dfn.en = """
+Participle is a relation between two concepts where Concept A is a participial adjective 
+which is drived from Concept B in the form of verb.
+"""
+relations.participle.ex.en = "`interesting <ILIURL/7324>`_ is the participial of `interest <ILIURL/30833>`_"
+relations.participle.exe.en = """
+* `interesting <ILIURL/7324>`_ is the participial of `interest <ILIURL/30833>`_
+* `amazing <ILIURL/6996>`_ is the participial of `amaze <ILIURL/25324>`_
+"""
+relations.participle.test.en = """
+"""
+relations.participle.com.en = """
+These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can 
+see, anywhere FCB)
+"""
 
 ### Relation: pertainym
 
 relations.pertainym.name.en = "Pertainym"
-relations.pertainym.df.en = "X is of or pertaining to Y"
-relations.pertainym.dfn.en = "links a relational adjective X  to the noun Y it is about, or an adverb X to the adjective it is about Y"
-relations.pertainym.ex.en = "*naval* has pertainym *navy*; *slowly* has pertainym *slow*"
-relations.pertainym.exe.en = """
-* `lunar <ILIURL/15548>`_ has pertainym `moon <ILIURL/85806>`_
-* `naval <ILIURL/15629>`_ has pertainym `navy <ILIURL/80195>`_
-* `slowly <ILIURL/19235>`_ has pertainym `slow <ILIURL/5362>`_
-* `English <ILIURL/17163>`_ has pertainym `England <ILIURL/83374>`_
-* `subclinical <ILIURL/16413>`_ has pertainym `clinical <ILIURL/16412>`_
-* `clinical <ILIURL/16412>`_ has pertainym `clinic <ILIURL/79534>`_
+relations.pertainym.df.en = "A concept which is of or pertaining to a given concept."
+relations.pertainym.dfn.en = """
+Pertainym is a relation between two concepts where Concept A is the adjective to the noun 
+expressed by Concept B it is about, or Concept A is the adverb to the adjective expressed 
+by Concept B it is about.
 """
-relations.pertainym.com.en = ""
+relations.pertainym.ex.en = "`slowly <ILIURL/19235>`_ is the pertainym of `slow <ILIURL/5362>`_"
+relations.pertainym.exe.en = """
+* `lunar <ILIURL/15548>`_ is the pertainym of `moon <ILIURL/85806>`_
+* `naval <ILIURL/15629>`_ is the pertainym of `navy <ILIURL/80195>`_
+* `slowly <ILIURL/19235>`_ is the pertainym of `slow <ILIURL/5362>`_
+* `English <ILIURL/17163>`_ is the pertainym of `England <ILIURL/83374>`_
+* `subclinical <ILIURL/16413>`_ is the pertainym of `clinical <ILIURL/16412>`_
+* `clinical <ILIURL/16412>`_ is the pertainym of `clinic <ILIURL/79534>`_
+"""
+relations.pertainym.test.en = """
+"""
+relations.pertainym.com.en = """
+"""
 
 
 ### Relation: derivation
 
 relations.derivation.name.en = "Derivation"
-relations.derivation.df.en = "X is a derivationally related form of Y"
-relations.derivation.dfn.en = """X is a derivationally related form of Y, this may be specialized
- further.  It includes zero derivations.  Gnerally it is used for different
- syntactic categories that have the same root form and are
- semantically related.  Wordnet does not say which is the baseform,
- the relationship is fully reversible.  """
-relations.derivation.ex.en = "*yearly* is derivationally related to *year*"
-relations.derivation.exe.en = """*yearly* is derivationally related to *year*
-*want n* is derivationally related to *want v*
-*wanter n* is derivationally related to *want v*
-*provision n* is derivationally related to *provide v*
+relations.derivation.df.en = "A concept which is a derivationally related form of a given concept."
+relations.derivation.dfn.en = """
+Derivation is a relation between two concept where Concept A is the derivationally related 
+form of Concept B. 
+ """
+relations.derivation.ex.en = "`yearly <ILIURL/10786>`_ is the derivation of `year <ILIURL/117116>`_"
+relations.derivation.exe.en = """
+* `yearly <ILIURL/10786>`_ is the derivation of `year <ILIURL/117116>`_
+* `want(n) <ILIURL/113167>`_ is the derivation of `want(v) <ILIURL/30852>`_
+* `provision <ILIURL/40949>`_ is the derivation of `provide <ILIURL/33372>`_
 """
-relations.derivation.com.en = ""
+relations.pertainym.test.en = """
+"""
+relations.pertainym.com.en = """
+This may be specialized further. It includes zero derivations. Gnerally 
+it is used for different syntactic categories that have the same root form and are 
+semantically related. Wordnet does not say which is the baseform, the relationship 
+is fully reversible. 
+"""
 
 
 ### New short definitions based on http://globalwordnet.github.io/schemas/
@@ -1915,17 +1964,17 @@ relations.antonym.df.en = "An opposite and inherently incompatible word"
 relations.be_in_state.df.en = "X is qualified by Y"
 relations.classified_by.df.en = "A relation between Y and a classifier X"
 relations.classifies.df.en = "A relation between a classifier X and Y"
-relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
-relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
-relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
-relations.co_instrument_agent.df.en = "X is the instrument used by Y for a certain action"
-relations.co_instrument_patient.df.en = "Y undergoes an action for which the instrument expressed by X is used"
-relations.co_instrument_result.df.en = "Y is the result of an action carried out by the instrument expressed by X"
-relations.co_patient_agent.df.en = "Y undergoes an action carried out by X"
-relations.co_patient_instrument.df.en = "X undergoes an action for which the instrument expressed by X is used"
-relations.co_result_agent.df.en = "X is the result of an action carried out by Y"
-relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
-relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
+#relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
+#relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
+#relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
+#relations.co_instrument_agent.df.en = "X is the instrument used by Y for a certain action"
+#relations.co_instrument_patient.df.en = "Y undergoes an action for which the instrument expressed by X is used"
+#relations.co_instrument_result.df.en = "Y is the result of an action carried out by the instrument expressed by X"
+#relations.co_patient_agent.df.en = "Y undergoes an action carried out by X"
+#relations.co_patient_instrument.df.en = "X undergoes an action for which the instrument expressed by X is used"
+#relations.co_result_agent.df.en = "X is the result of an action carried out by Y"
+#relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
+#relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
 #relations.direction.df.en = "X is typically the direction or location of the action or event expressed by Y"
 relations.eq_synonym.df.en = "X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
 relations.holo_location.df.en = "Y is a place located in X"
