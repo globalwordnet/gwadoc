@@ -1025,7 +1025,7 @@ relations.attribute.fa.reverse = "attribute"
 relations.attribute.proj.ili = "i35577"
 relations.attribute.proj.pwn = "attribute"
 relations.attribute.proj.querywn = "attr"
-relations.attribute.proj.plwordnet = "value_of_the_attribute"
+relations.attribute.proj.plwordnet = "Attribute"
 relations.attribute.proj.pointer = "="
 
 

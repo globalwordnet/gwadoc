@@ -1794,20 +1794,37 @@ relations.attribute.df.en = """
 an abstraction belonging to or characteristic of an entity
 """
 relations.attribute.dfn.en = """
-A relation between nominal and adjectival concepts where the concept X
-is an attribute of concept Y. ‘Attributes’ is a self-reciprocal link
+A relation between nominal and adjectival concepts where the concept A
+is an attribute of concept B. ‘Attributes’ is a self-reciprocal link
 (the two directions of this relation share the same meaning) —
-Concept-X attributes to Concept-Y, and Concept-Y attributes to
-Concept-X.
+Concept-A attributes to Concept-B, and Concept-B attributes to
+Concept-A.
 
 It denotes a relation between a noun and its adjectival attributes,
 and vice-versa — for this reason it should only link adjectives to
 nouns and vice-versa.
 """
-relations.attribute.ex.en = ""
+relations.attribute.ex.en = "fertile attribute fecundity"
 relations.attribute.exe.en = """
-* fertile (01001689-a) ATTRIBUTES:  fertility (14051494-n)
-* fertility (14051494-n) ATTRIBUTES: fertile (01001689-a)
+* `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
+* `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
+"""
+relations.attribute.test.en = """
+Attribute-relation between nouns and adjectives (EWN 14)
+
+===     =   ======================================================
+yes     a   *A is an attribute of B*
+.       .   *B is an attribute of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
+Conditions:
+- A is a noun in the singular
+- B is an adjective
+- there is at least one specifying adverb, NP or PP that applies to the A- phrase or the B-phrase
+- preferably there is a no morphological link between the noun and the adjective
+
 """
 relations.attribute.com.en = """
 In plWN Value_of_the_attribute is a unilateral relation from
