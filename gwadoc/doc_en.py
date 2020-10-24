@@ -1124,23 +1124,51 @@ The 'is caused by' relation was missing from PWN before."""
 ### Relation: subevent EDP35
 
 relations.subevent.name.en = "Subevent"
-relations.subevent.df.en = ""
+relations.subevent.df.en = "Concept B takes place during or as part of concept A, and whenever concept B takes place, concept A takes place"
 relations.subevent.dfn.en = """
-A relation between two concepts where concept Y takes place
-during or as part of concept X, and whenever concept Y takes
-place, concept X takes place.
+A relation between two concepts where concept B takes place
+during or as part of concept A, and whenever concept B takes
+place, concept A takes place.
 
 """
-relations.subevent.ex.en = "sleep/snore"
+relations.subevent.ex.en = "sleep subevent snore"
 relations.subevent.exe.en = """
+ * `sleep <ILIURL/21840>`_ has subevent `snore <ILIURL/21852>`_
+
+"""
+relations.subevent.test.en = """
+Subevent - relation between verbs/nouns (a)  (EWN 41)
+
+===     =   ======================================================
+yes     a   *B takes place during or as a part of A, and whenever B takes place, A takes place*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+ - A is a verb in the gerundive form
+ - B is a verb in the gerundive form
+
+Subevent - relation between verbs/nouns (b)  (EWN 42)
+
+===     =   ======================================================
+yes     a   *A consists of B and other events or processes*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- B is a verb in the gerundive form
+- A is a verb in the gerundive form buying consists of paying and other events or processes
+
 """
 relations.subevent.com.en = """
-The EUWN CAUSES relation is broader than the PWN in such a
-way that it actually includes links that were linked as
-ENTAILMENT by the PWN (e.g. to suceed IS_CAUSED_BY to try;
-to try CAUSES succeed [non-factive, intention]). This means
-that HAS_SUBVENT and IS_SUBVENT_OF should not include every
-relation marked as ENTAILMENT by the PWN.
+The SUBEVENT relation is very useful for many closely related verbs and appeals more directly to human-intuitions
+(parallel to part-whole relation of concrete entities).
 
 """
 
@@ -1148,15 +1176,48 @@ relation marked as ENTAILMENT by the PWN.
 ### Relation: is_subevent_of EDP35
 
 relations.is_subevent_of.name.en = "Is Subevent Of"
-relations.is_subevent_of.df.en = ""
+relations.is_subevent_of.df.en = "Concept A takes place during or as part of concept B, and whenever concept A takes place, concept B takes place"
 relations.is_subevent_of.dfn.en = """
-A relation between two concepts where concept X takes place
-during or as part of concept Y, and whenever concept X takes
-place, concept Y takes place.
+A relation between two concepts where concept A takes place
+during or as part of concept B, and whenever concept A takes
+place, concept B takes place.
 
 """
-relations.is_subevent_of.ex.en = "snore/sleep"
+relations.is_subevent_of.ex.en = "snore is_subevent_of sleep"
 relations.is_subevent_of.exe.en = """
+ * `snore <ILIURL/21852>`_ is subevent of `sleep <ILIURL/21840>`_
+ * `pay <ILIURL/i32996>`_ is subevent of `buy <ILIURL/33154>`_
+ 
+"""
+relations.is_subevent_of.test.en = """
+Is Subevent Of - relation between verbs/nouns (a)  (EWN 41)
+
+===     =   ======================================================
+yes     a   *A takes place during or as a part of B, and whenever A takes place, B takes place*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+ - A is a verb in the gerundive form
+ - B is a verb in the gerundive form
+
+Is Subevent Of - relation between verbs/nouns (b)  (EWN 42)
+
+===     =   ======================================================
+yes     a   *A consists of B and other events or processes*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- B is a verb in the gerundive form
+- A is a verb in the gerundive form buying consists of paying and other events or processes
+
 """
 relations.is_subevent_of.com.en = """
 """
