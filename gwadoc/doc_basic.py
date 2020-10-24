@@ -624,7 +624,7 @@ relations.subevent.fa.sense_sense = False
 relations.subevent.fa.inOMW = True
 relations.subevent.fa.reverse = "is_subevent_of"
 
-relations.subevent.proj.querywn = "holo"
+relations.subevent.proj.querywn = "enta"
 relations.subevent.proj.eurown = "has_subevent"
 relations.subevent.proj.plwordnet = "holonimia sytuacji towarzyszącej"
 relations.subevent.proj.pointer = "\*"
@@ -639,10 +639,10 @@ relations.is_subevent_of.fa.sense_sense = False
 relations.is_subevent_of.fa.inOMW = True
 relations.is_subevent_of.fa.reverse = "subevent"
 
-relations.is_subevent_of.proj.querywn = "mero"
+relations.is_subevent_of.proj.querywn = "enta"
 relations.is_subevent_of.proj.eurown = "is_subevent_of"
 relations.is_subevent_of.proj.plwordnet = "meronimia sytuacji towarzyszącej"
-relations.is_subevent_of.proj.pointer = ""
+relations.is_subevent_of.proj.pointer = "*"
 
 
 ### Relation: in_manner EDP36
@@ -672,7 +672,7 @@ relations.manner_of.fa.reverse = "in_manner"
 relations.manner_of.proj.ili = "i62791"
 relations.manner_of.proj.querywn = "enta"
 relations.manner_of.proj.eurown = "manner_of"
-relations.manner_of.proj.plwordnet = ""
+relations.manner_of.proj.plwordnet = "sposób"
 relations.manner_of.proj.pointer = ""
 
 

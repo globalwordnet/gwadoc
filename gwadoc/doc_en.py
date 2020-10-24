@@ -1131,7 +1131,7 @@ during or as part of concept A, and whenever concept B takes
 place, concept A takes place.
 
 """
-relations.subevent.ex.en = "sleep subevent snore"
+relations.subevent.ex.en = "sleep has subevent snore"
 relations.subevent.exe.en = """
  * `sleep <ILIURL/21840>`_ has subevent `snore <ILIURL/21852>`_
 
@@ -1148,8 +1148,8 @@ no      b   *the converse of (a)*
 
 Conditions:
 
- - A is a verb in the gerundive form
- - B is a verb in the gerundive form
+- A is a verb in the gerundive form
+- B is a verb in the gerundive form
 
 Subevent - relation between verbs/nouns (b)  (EWN 42)
 
@@ -1201,8 +1201,8 @@ no      b   *the converse of (a)*
 
 Conditions:
 
- - A is a verb in the gerundive form
- - B is a verb in the gerundive form
+- A is a verb in the gerundive form
+- B is a verb in the gerundive form
 
 Is Subevent Of - relation between verbs/nouns (b)  (EWN 42)
 
@@ -1226,17 +1226,35 @@ relations.is_subevent_of.com.en = """
 ### Relation: in_manner EDP36
 
 relations.in_manner.name.en = "In Manner"
-relations.in_manner.df.en = ""
+relations.in_manner.df.en = "B qualifies the manner in which an action or event expressed by A takes place"
 relations.in_manner.dfn.en = """
-A relation between two concepts where concept Y qualifies
+A relation between two concepts where concept B qualifies
 the manner in which an action or event expressed by concept
-X takes place.
+A takes place.
 
 """
-relations.in_manner.ex.en = "slurp/noisely"
+relations.in_manner.ex.en = "slurp in manner noisely"
 relations.in_manner.exe.en = """
+ * `slurp <ILIURL/27462>`_ in manner `noisily <ILIURL/19718>`_
+"""
+relations.in_manner.test.en = """
+In Manner - relation between verbs/adverb (EWN 43)
+
+===     =   ======================================================
+yes     a   *to A is to B in a C manner/way.*
+
+===     =   ======================================================
+
+Conditions:
+
+- A and B are verbs
+- B is the hyperonym of A
+- C is an adjective/adverb
+
 """
 relations.in_manner.com.en = """
+In EuroWordNet, we decided not to differentiate between troponymy and hyponymy but to use the IN_MANNER and MANNER_OF
+relation in addition to normal hyponymy to make the manner component explicit (if it is significant in the meaning of the verb):
 """
 
 
@@ -1245,13 +1263,29 @@ relations.in_manner.com.en = """
 relations.manner_of.name.en = "Manner Of"
 relations.manner_of.df.en = "a way of acting or behaving"
 relations.manner_of.dfn.en = """
-A relation between two concepts where concept X qualifies
+A relation between two concepts where concept A qualifies
 the manner in which an action or event expressed by concept
-Y takes place.
+B takes place.
 
 """
-relations.manner_of.ex.en = "noisely/slurp"
+relations.manner_of.ex.en = "noisely manner of slurp"
 relations.manner_of.exe.en = """
+ * `noisily <ILIURL/19718>`_  manner of `slurp <ILIURL/27462>`_
+"""
+relations.manner_of.test.en = """
+Manner Of - relation between verbs/adverb (EWN 43)
+
+===     =   ======================================================
+yes     a   *a manner of B which qualifies A*
+
+===     =   ======================================================
+
+Conditions:
+
+- A and B are verbs
+- B is the hyperonym of A
+- C is an adjective/adverb
+
 """
 relations.manner_of.com.en = """
 """
