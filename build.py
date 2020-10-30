@@ -3,6 +3,7 @@
 # thanks: http://flask.pocoo.org/snippets/55/
 
 import sys
+
 from pathlib import Path
 import io
 import argparse
@@ -12,7 +13,6 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 
 import docutils.core
 import jinja2
-
 import gwadoc
 #gwadoc.set_preferred_language('en')
 
@@ -42,7 +42,6 @@ def rst_renderer(fmt):
 
 def build(args):
     gwadoc.set_preferred_language(args.lang)
-
     loader =  jinja2.FileSystemLoader(DIR / 'templates')
 
     if args.format == 'html':
