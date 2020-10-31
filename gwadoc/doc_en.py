@@ -836,9 +836,9 @@ relations.co_agent_instrument.dfn.en = """
 Co Agent Instrument is a relation between two concepts where Concept B is the instrument used
 by Concept A in a certain action.
 """
-relations.co_agent_instrument.ex.en = "`guitar <ILIURL/54496>`_ is the co agent instrument of guitar player"
+relations.co_agent_instrument.ex.en = "`guitar <ILIURL/54496>`_ is the co agent instrument of `guitar player <ILIURL/90355>`_"
 relations.co_agent_instrument.exe.en = """
-* `guitar <ILIURL/54496>`_ is the co agent instrument of guitar player
+* `guitar <ILIURL/54496>`_ is the co agent instrument of `guitar player <ILIURL/90355>`_
 """
 relations.co_agent_instrument.test.en = """
 """
@@ -854,9 +854,9 @@ relations.co_instrument_agent.dfn.en = """
 Co Instrument Agent is a relation between two concepts where Concept A carries out an action 
 by using Concept B as an instrument.
 """
-relations.co_instrument_agent.ex.en = "guitar player is the co instrument agent of `guitar <ILIURL/54496>`_ "
+relations.co_instrument_agent.ex.en = "`guitar player <ILIURL/90355>`_ is the co instrument agent of `guitar <ILIURL/54496>`_ "
 relations.co_instrument_agent.exe.en = """
-* guitar player is the co instrument agent of `guitar <ILIURL/54496>`_  
+* `guitar player <ILIURL/90355>`_ is the co instrument agent of `guitar <ILIURL/54496>`_  
 """
 relations.co_instrument_agent.test.en = """
 """
@@ -872,9 +872,9 @@ relations.co_agent_result.dfn.en = """
 Co Agent Result is a relation between two concepts where Concept B is the result of an
 action carried out by Concept A.
 """
-relations.co_agent_result.ex.en = "`novel <ILIURL/69939>`_ is the co agent result of novel writer"
+relations.co_agent_result.ex.en = "`pastry <ILIURL/76902>`_ is the co agent result of `pastry cook <ILIURL/91893>`_"
 relations.co_agent_result.exe.en = """
-* `novel <ILIURL/69939>`_ is the co agent result of novel writer
+* `pastry <ILIURL/76902>`_ is the co agent result of `pastry cook <ILIURL/91893>`_
 """
 relations.co_agent_result.com.en = """
 """
@@ -888,9 +888,9 @@ relations.co_result_agent.dfn.en = """
 Co Result Agent is a relation between two concepts where Concept A takes an action resulting 
 in Concept B.
 """
-relations.co_result_agent.ex.en = "novel writer is the co result agent of `novel <ILIURL/69939>`_ "
+relations.co_result_agent.ex.en = "`pastry cook <ILIURL/91893>`_ is the co result agent of `pastry <ILIURL/76902>`_"
 relations.co_result_agent.exe.en = """
-* novel writer is the co result agent of `novel <ILIURL/69939>`_ 
+* `pastry cook <ILIURL/91893>`_ is the co result agent of `pastry <ILIURL/76902>`_  
 """
 relations.co_result_agent.test.en = """
 """
@@ -906,9 +906,9 @@ relations.co_patient_instrument.dfn.en = """
 Co Patient Instrument is a relation between two concepts where Concept B is the instrument 
 used in an action which Concept A undergoes.
 """
-relations.co_patient_instrument.ex.en = "ice saw is the co patient instrument of `ice <ILIURL/85552>`_ "
+relations.co_patient_instrument.ex.en = "`bread knife <ILIURL/51098>`_ is the co patient instrument of `bread <ILIURL/77313>`_ "
 relations.co_patient_instrument.exe.en = """
-* ice saw is the co patient instrument of `ice <ILIURL/85552>`_ 
+* `bread knife <ILIURL/51098>`_ is the co patient instrument of `bread <ILIURL/77313>`_ 
 """
 relations.co_patient_instrument.test.en = """
 """
@@ -924,9 +924,9 @@ relations.co_instrument_patient.dfn.en = """
 Co Instrument Patient is a relation between two concepts where Concept A undergoes an action
 for which the instrument expressed by Concept B is used.
 """
-relations.co_instrument_patient.ex.en = "`ice <ILIURL/85552>`_ is the co instrument patient of ice saw"
+relations.co_instrument_patient.ex.en = "`bread <ILIURL/77313>`_ is the co instrument patient of `bread knife <ILIURL/51098>`_"
 relations.co_instrument_patient.exe.en = """
-* `ice <ILIURL/85552>`_ is the co instrument patient of ice saw
+* `bread <ILIURL/77313>`_ is the co instrument patient of `bread knife <ILIURL/51098>`_
 """
 relations.co_instrument_patient.test.en = """
 """
@@ -942,9 +942,9 @@ relations.co_result_instrument.dfn.en = """
 Co Result Instrument is a relation between two concepts where Concept B is an instrument used 
 in an action resulting in Concept A.
 """
-relations.co_result_instrument.ex.en = "photograpic camera is the co result instrument of `photo <ILIURL/57211>`_"
+relations.co_result_instrument.ex.en = "`photograpic camera <ILIURL/51401>`_ is the co result instrument of `photo <ILIURL/57211>`_"
 relations.co_result_instrument.exe.en = """
-* photograpic camera is the co result instrument of `photo <ILIURL/57211>`_
+* `photograpic camera <ILIURL/51401>`_ is the co result instrument of `photo <ILIURL/57211>`_
 """
 relations.co_result_instrument.test.en = """
 """
@@ -960,9 +960,9 @@ relations.co_instrument_result.dfn.en = """
 Co Instrument Result is a relation between two concepts where Concept A is the result of an
 action carried out by the instrument expressed by Concept B.
 """
-relations.co_instrument_result.ex.en = "`photo <ILIURL/57211>`_ is the co instrument result of photograpic camera"
+relations.co_instrument_result.ex.en = "`photo <ILIURL/57211>`_ is the co instrument result of `photograpic camera <ILIURL/51401>`_"
 relations.co_instrument_result.exe.en = """
-* `photo <ILIURL/57211>`_ is the co instrument result of photograpic camera
+* `photo <ILIURL/57211>`_ is the co instrument result of `photograpic camera <ILIURL/51401>`_
 """
 relations.co_instrument_result.test.en = """
 """
