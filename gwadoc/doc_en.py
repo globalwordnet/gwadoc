@@ -2010,3 +2010,85 @@ relations.restricts.df.en = "A relation between an adjectival X (quantifier/dete
 relations.state_of.df.en = "Y is qualified by X"
 relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
 #relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
+
+### Relation Simple Aspect
+
+relations.simple_aspect.name.en = "Simple Aspect"
+relations.simple_aspect.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
+relations.simple_aspect.ex.en = ""
+
+
+### Relation Secondary Aspect
+
+relations.secondary_aspect.name.en = "Secondary Aspect"
+relations.secondary_aspect.df.en = "A concept which is linked to another through a change in aspect"
+relations.secondary_aspect.ex.en = ""
+
+
+### Relation: Feminine form
+
+relations.feminine_form_of.name.en = "Feminine form"
+relations.feminine_form_of.df.en= "A concept used to refer to female members of a class"
+relations.feminine_form_of.ex.en= "*sow* is a female *pig*"
+
+
+### Relation: Masculine Form
+
+relations.masculine_form_of.name.en = "Masculine Form"
+relations.masculine_form_of.df.en= "A concept used to refer to male members of a class"
+relations.masculine_form_of.ex.en= "*boar* is a male *pig*"
+
+
+### Relation: Young Form
+
+relations.young_form_of.name.en = "Young Form"
+relations.young_form_of.df.en = "A concept used to refer to young members of a class"
+relations.young_form_of.ex.en = "*piglet* is a young *pig*"
+
+
+### Relation: Diminuative
+
+relations.diminutive_of.name.en = "Diminutive Form"
+relations.diminutive_of.df.en = "A concept used to refer to generally smaller members of a class"
+relations.diminutive_of.ex.en = "*piggy* is a diminutive *pig*"
+
+
+### Relation: Augmentative
+
+relations.augmentative_of.name.en = "Augmentative Form"
+relations.augmentative_of.df.en = "A concept used to refer to generally larger members of a class"
+relations.augmentative_of.ex.en = "*great house* is a larger *house*"
+
+
+### Relation: Gradable Antonym
+
+relations.anto_gradable.name.en = "Gradable Antonym"
+relations.anto_gradable.df.en = "word pairs whose meanings are opposite and which lie on a continuous spectrum"
+relations.anto_gradable.ex.en = "*hot* is a gradable antonym of *cold*"
+relations.anto_gradable.com.en = "Also known as *polar antonyms*."
+
+### Relation: Simple Antonym
+
+relations.anto_simple.name.en = "Simple Antonym"
+relations.anto_simple.df.en = "word pairs whose meanings are opposite but whose meanings do not lie on a continuous spectrum"
+relations.anto_simple.ex.en = "*alive* is a simple antonym of *dead*"
+relations.anto_gradable.com.en = "Also known as *complementary antonyms*."
+
+### Relation: Converse Antonym
+
+relations.anto_converse.name.en = "Converse Antonym"
+relations.anto_converse.df.en = "word pairs that name or describe a single relationship from opposite perspectives"
+relations.anto_converse.ex.en = "*parent* is a converse antonym of *child*"
+relations.anto_gradable.com.en = "Also known as just *converse* or *relational antonym*."
+
+### Relation: Inter-register Synonym
+
+relations.ir_synonym.name.en = "Inter-register Synonym"
+relations.ir_synonym.df.en= "A concept that means the same except for the style or connotation"
+relations.ir_synonym.ex.en= "*loot* is an inter-register synonym of *money*"
+
+
+
+
+
+

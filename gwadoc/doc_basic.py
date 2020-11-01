@@ -909,7 +909,7 @@ relations.holo_portion.proj.pointer = ""
 
 
 ### Relation: eq_synonym
-
+relations.eq_synonym.name.symbol = '≡'
 relations.eq_synonym.fa.parent = 'constitutive'
 relations.eq_synonym.fa.synset_synset = True
 relations.eq_synonym.fa.sense_synset = False
@@ -1259,3 +1259,102 @@ relations.derivation.proj.querywn = "deri"
 relations.derivation.proj.eurown = ""
 relations.derivation.proj.plwordnet = "derywacyjność"
 relations.derivation.proj.pointer = "+"
+
+### Relation Simple Aspect
+
+#relations.simple_aspect.name.symbol = ''
+relations.simple_aspect.fa.parent = 'derivation'
+relations.simple_aspect.fa.synset_synset = True
+relations.simple_aspect.fa.sense_sense = True
+#relations.simple_aspect.fa.reverse = ''
+#relations.simple_aspect.proj.ili = ''
+
+### Relation Secondary Aspect
+
+#relations.secondary_aspect.name.symbol = ''
+relations.secondary_aspect.fa.parent = 'derivation'
+relations.secondary_aspect.fa.synset_synset = True
+relations.secondary_aspect.fa.sense_sense = True
+#relations.secondary_aspect.fa.reverse = ''
+#relations.secondary_aspect.proj.ili = ''
+
+### Relation: Feminine form
+
+relations.feminine_form_of.name.symbol = '♀'
+relations.feminine_form_of.fa.parent = 'hyponym'
+relations.feminine_form_of.fa.synset_synset = True
+relations.feminine_form_of.fa.sense_sense = True
+#relations.feminine_form_of.fa.reverse = ''
+#relations.feminine_form_of.proj.ili = ''
+
+### Relation: Masculine Form
+
+relations.masculine_form_of.name.symbol = '♂'
+relations.masculine_form_of.fa.parent = 'hyponym'
+relations.masculine_form_of.fa.synset_synset = True
+relations.masculine_form_of.fa.sense_sense = True
+#relations.masculine_form_of.fa.reverse = ''
+#relations.masculine_form_of.proj.ili = ''
+
+### Relation: Young Form
+
+#relations.young_form_of.name.symbol = ''
+relations.young_form_of.fa.parent = 'hyponym'
+relations.young_form_of.fa.synset_synset = True
+relations.young_form_of.fa.sense_sense = True
+#relations.young_form_of.fa.reverse = ''
+#relations.young_form_of.proj.ili = ''
+
+### Relation: Diminuative
+
+#relations.diminutive_of.name.symbol = ''
+relations.diminutive_of.fa.parent = 'hyponym'
+relations.diminutive_of.fa.synset_synset = True
+relations.diminutive_of.fa.sense_sense = True
+#relations.diminutive_of.fa.reverse = ''
+#relations.diminutive_of.proj.ili = ''
+
+### Relation: Augmentative
+
+#relations.augmentative_of.name.symbol = ''
+relations.augmentative_of.fa.parent = 'hyponym'
+relations.augmentative_of.fa.synset_synset = True
+relations.augmentative_of.fa.sense_sense = True
+#relations.augmentative_of.fa.reverse = ''
+#relations.augmentative_of.proj.ili = ''
+
+### Relation: Gradable Antonym
+
+#relations.anto_gradable.name.symbol = ''
+relations.anto_gradable.fa.parent = 'antonym'
+relations.anto_gradable.fa.synset_synset = True
+relations.anto_gradable.fa.sense_sense = True
+relations.anto_gradable.fa.reverse = 'anto_gradable'
+#relations.anto_gradable.proj.ili = ''
+
+### Relation: Simple Antonym
+
+#relations.anto_simple.name.symbol = ''
+relations.anto_simple.fa.parent = 'antonym'
+relations.anto_simple.fa.synset_synset = True
+relations.anto_simple.fa.sense_sense = True
+relations.anto_simple.fa.reverse = 'anto_simple'
+#relations.anto_simple.proj.ili = ''
+
+### Relation: Converse Antonym
+
+#relations.anto_converse.name.symbol = ''
+relations.anto_converse.fa.parent = 'antonym'
+relations.anto_converse.fa.synset_synset = True
+relations.anto_converse.fa.sense_sense = True
+relations.anto_converse.fa.reverse = 'anto_converse'
+#relations.anto_converse.proj.ili = ''
+
+### Relation: Inter-register Synonym
+
+relations.ir_synonym.name.symbol = '≅'
+relations.ir_synonym.fa.parent = 'eq_synonym'
+relations.ir_synonym.fa.synset_synset = True
+relations.ir_synonym.fa.sense_sense = True
+relations.ir_synonym.fa.reverse = 'ir_synonym'
+#relations.ir_synonym.proj.ili = ''

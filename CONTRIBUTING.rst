@@ -148,4 +148,17 @@ The relations may have different names in different projects, and this is a summ
 .. _PERL WordNet-QueryData Module: https://metacpan.org/pod/WordNet::QueryData
 .. _Interlingual Index Node: https://lr.soh.ntu.edu.sg/omw/ili
 
+
+How to add a new relation
+=========================
+
+Documentation for a new relation should be done after discussing the
+relation with generally.
+
+ * add an issue suggesting that they should be added
+ * add the relations to RELATIONS in ``inventories.py``
+ * add basic information about the relations to ``doc_basic.py``
+ * add documentation to (at least) ``doc_en.py``  
+
+
 Happy Contributing ! ❤️

@@ -124,6 +124,18 @@ RELATIONS = (
     'participle',
     'pertainym',
     'derivation',
+    ### new in 2021
+    'simple_aspect',  
+    'secondary_aspect',
+    'feminine_form_of' , # sow    ->  pig 
+    'masculine_form_of', # boar   ->  pig 
+    'young_form_of',     # piglet ->  pig  
+    'diminutive_of',     # piggy  ->  pig                       
+    'augmentative_of',
+    'anto_gradable',
+    'anto_simple',
+    'anto_converse',
+    'ir_synonym'
 )
 
 PARTS = {
