@@ -1086,7 +1086,7 @@ relations.classified_by.proj.pointer = ""
 
 ### Relation: also (no ili)
 
-relations.also.name.symbol = 	'☞'
+relations.also.name.symbol = '☞'
 
 relations.also.fa.parent = 'other'
 relations.also.fa.synset_synset = True
@@ -1095,11 +1095,13 @@ relations.also.fa.sense_sense = True
 relations.also.fa.inOMW = True
 relations.also.fa.reverse = 'also'
 
-relations.also.proj.pwn = "also see"
+relations.also.proj.ili = "i18418"
+relations.also.proj.pwn = "Also see"
 relations.also.proj.querywn = "also"
-relations.also.proj.eurown = ""
-relations.also.proj.plwordnet = "inchoativity, iterativity, distributivity, anteriority"
+relations.also.proj.eurown = "see also"
+relations.also.proj.plwordnet = "dystrybutywność"
 relations.also.proj.pointer = "^"
+
 
 
 ### Relation: antonym
@@ -1132,9 +1134,9 @@ relations.entails.fa.reverse = 'is_entailed_by'
 
 relations.entails.proj.ili = "i34846"
 relations.entails.proj.pwn = "entailment"
-relations.entails.proj.querywn = "participle"
+relations.entails.proj.querywn = "enta"
 relations.entails.proj.eurown = ""
-relations.entails.proj.plwordnet = ""
+relations.entails.proj.plwordnet = "holonimia podsytuacji"
 relations.entails.proj.pointer = ""
 
 
@@ -1148,9 +1150,9 @@ relations.is_entailed_by.fa.inOMW = True
 relations.is_entailed_by.fa.reverse = 'entails'
 
 relations.is_entailed_by.proj.pwn = ""
-relations.is_entailed_by.proj.querywn = "participle"
+relations.is_entailed_by.proj.querywn = "enta"
 relations.is_entailed_by.proj.eurown = ""
-relations.is_entailed_by.proj.plwordnet = ""
+relations.is_entailed_by.proj.plwordnet = "meronimia podsytuacji"
 relations.is_entailed_by.proj.pointer = ""
 
 
@@ -1161,8 +1163,13 @@ relations.other.fa.synset_synset = True
 relations.other.fa.sense_synset = False
 relations.other.fa.sense_sense = True
 relations.other.fa.inOMW = True
+relations.is_entailed_by.fa.reverse = 'also'
+
 
 relations.other.proj.ili = "i11342"
+relations.other.proj.pwn = "fuzzynym"
+relations.other.proj.eurown = "fuzzynym"
+relations.other.proj.plwordnet = "fuzzynimia"
 
 
 ### Relation: participle

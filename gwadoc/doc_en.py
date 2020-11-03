@@ -1878,11 +1878,15 @@ relations.classifies.df.en = """
 assign to a class or kind
 """
 relations.classifies.dfn.en = """
-A relation between a classifier concept X and concept Y. A relation
-between a classifier X and Y
+A relation between a classifier concept A and concept B. A relation
+between a classifier A and B
 """
-relations.classifies.ex.en = ""
+relations.classifies.ex.en = "hammer classifies broom"
 relations.classifies.exe.en = """
+ * `hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_
+ * `knife <ILIURL/55422>`_ classifies `sword <ILIURL/59896>`_
+ * `thread <ILIURL/60206>`_ classifies `rope <ILIURL/58271>`_
+
 """
 relations.classifies.com.en = """
 currently we only have links for nominal concepts, but we
@@ -1897,11 +1901,15 @@ relations.classified_by.df.en = """
 arrange or order by classes or categories
 """
 relations.classified_by.dfn.en = """
-A relation between concept Y and a classifier concept X. A relation
-between Y and a classifier X
+A relation between concept B and a classifier concept A. A relation
+between B and a classifier A.
 """
 relations.classified_by.ex.en = ""
 relations.classified_by.exe.en = """
+ * `broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_
+ * `dagger <ILIURL/52683>`_ classified by `weapon with a blade <ILIURL/50826>`_
+ * `wire <ILIURL/61210>`_ classified by `filiform <ILIURL/13360>`_
+
 """
 relations.classified_by.com.en = """
 """
@@ -1925,8 +1933,23 @@ This link was originally used to relate adjectives, but we have
 unconstrained this use, and we're making use of this link to relate
 all parts-of-speech.
 """
-relations.also.ex.en = ""
+relations.also.ex.en = "time see also moment"
 relations.also.exe.en = """
+ * `farmer <ILIURL/89889>`_ see also `farmland <ILIURL/82016>`_
+ * `learn <ILIURL/24750>`_ see also `school <ILIURL/58518>`_
+ * `picture <ILIURL/56911>`_ see also `sculpture <ILIURL/40330>`_
+ * `plant <ILIURL/35564>`_ see also `flower <ILIURL/98673>`_
+ * `walk <ILIURL/36884>`_ see also `park <ILIURL/82259>`_
+ 
+"""
+
+relations.also.test.en = """
+===     =   ======================================================
+yes     a   *A has some strong relation to B*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.also.com.en = """
 Also known as fuzzynym
@@ -2028,25 +2051,48 @@ impose, involve, or imply as a necessary accompaniment or result
 """
 relations.entails.dfn.en = """
 Entailment is a relation that links two verbs, and it is currently
-unilateral — Verb-X entails Verb-Y, without a reciprocal or tracing
+unilateral — Verb-A entails Verb-B, without a reciprocal or tracing
 link.  This relation presupposes/requires a semantic restriction in
-which Verb-Y has to take place before or during Verb-X.
+which Verb-B has to take place before or during Verb-A.
 """
-relations.entails.ex.en = ""
+relations.entails.ex.en = "snore entails sleep"
 relations.entails.exe.en = """
+ * `snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_
+ 
+"""
+
+relations.entails.test.en = """
+===     =   ======================================================
+yes     a   *A cannot be done unless B is or has been done*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.entails.com.en = """
+A verb A entails B if A cannot be done unless B is, or has been, done.
 """
 
 
 ### Relation: is_entailed_by
 
 relations.is_entailed_by.name.en = "Is Entailed By"
-relations.is_entailed_by.df.en = ""
+relations.is_entailed_by.df.en = "Concept B is dome/happens because of concept A"
 relations.is_entailed_by.dfn.en = """
 """
-relations.is_entailed_by.ex.en = ""
+relations.is_entailed_by.ex.en = "sleep is entailed by snore"
 relations.is_entailed_by.exe.en = """
+ * `sleep <ILIURL/21840>`_ entails `snore <ILIURL/21852>`_
+
+"""
+
+relations.is_entailed_by.test.en = """
+===     =   ======================================================
+yes     a   *B is the result/happens because of the occurrence of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.is_entailed_by.com.en = """
 """
@@ -2055,7 +2101,7 @@ relations.is_entailed_by.com.en = """
 ### Relation: other
 
 relations.other.name.en = "Other"
-relations.other.df.en = "any other semantic relation"
+relations.other.df.en = "not the same one or ones already mentioned or implied"
 relations.other.dfn.en = """
 This is used for semantic relation types not currently supported by
 the OMW DTD.  The exact relation type can be given with ``dc:type``:
@@ -2065,11 +2111,27 @@ the OMW DTD.  The exact relation type can be given with ``dc:type``:
     <SynsetRelation relType="other" dc:type="emotion" target="example-en-1234-n"/>
 
 """
-relations.other.ex.en = ""
+relations.other.ex.en = "Physician other Hospital"
 relations.other.exe.en = """
+ * `curator <ILIURL/89345>`_ other `museum <ILIURL/56456>`_
+ * `priest <ILIURL/92229>`_ other `church <ILIURL/40809>`_
+ * `mailman <ILIURL/91159>`_ other `post office <ILIURL/79962>`_
+ * `mayor <ILIURL/91277>`_ other `town hall <ILIURL/60420>`_
+ * `judge <ILIURL/90808>`_ other `court <ILIURL/52438>`_
+ * `ambassador <ILIURL/88178>`_ other `embassy <ILIURL/53393>`_
+ * `gardener <ILIURL/90153>`_ other `garden <ILIURL/54178>`_
+ 
+"""
+relations.other.test.en = """
+===     =   ======================================================
+yes     a   *A has some strong relation to B*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.other.com.en = """
-Because we don't know what it means, we cannot give it a reverse relation.
+A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
 """
 
 ### Relation: participle
