@@ -92,3 +92,4 @@ if __name__ == '__main__':
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
+

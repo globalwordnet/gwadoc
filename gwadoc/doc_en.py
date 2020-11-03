@@ -775,171 +775,196 @@ relations.involved_source_direction.com.en = """
 ### Relation: co_role EDP31
 
 relations.co_role.name.en = "Co Role"
-relations.co_role.df.en = """
-a pair of linked role relations without an explicit event
-"""
+relations.co_role.df.en = "A concept undergoes an action in which a given concept is involved."
 relations.co_role.dfn.en = """
-A relation between two concepts where concept X undergoes an action in
-which concept Y is involved (bidirectional).
+Co Role is an underspecified relation between two concepts where Concept A undergoes an action in
+which Concept B is involved (bidirectional).
 """
 relations.co_role.ex.en = ""
 relations.co_role.exe.en = """
 """
+relations.co_role.test.en = """
+"""
 relations.co_role.com.en = """
+This is an underspecified relation that covers Co Agent Patient, Co Patient Agent, 
+Co Agent Instrument, Co Instrument Agent, Co Agent Result, Co Result Agent, 
+Co Patient Instrument, Co Instrument Patient, Co Result Instrument, and Co Instrument Result. 
+As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
+employ it as a general relation covering all its subtypes. 
 """
 
 
 ### Relation: co_agent_patient EDP32
 
 relations.co_agent_patient.name.en = "Co Agent Patient"
-relations.co_agent_patient.df.en = "X is the patient undergoing Y"
+relations.co_agent_patient.df.en = "A concept which is the patient undergoing an action carried out by a given concept."
 relations.co_agent_patient.dfn.en = """
-A relation between two concepts where concept Y is the patient
-undergoing an action carried out by concept X.
-
-Y is the patient undergoing an action carried out by X.
+Co Agent Patient is a relation between two concepts where Concept B is the patient
+undergoing an action carried out by Concept A.
 """
-relations.co_agent_patient.ex.en = "novel writer/poet"
+relations.co_agent_patient.ex.en = "`victim <ILIURL/93927>`_ is the co agent patient of `criminal <ILIURL/89309>`_"
 relations.co_agent_patient.exe.en = """
+* `victim <ILIURL/93927>`_ is the co agent patient of `criminal <ILIURL/89309>`_
 """
 relations.co_agent_patient.com.en = """
-"""
-
-
-### Relation: co_agent_instrument EDP32
-
-relations.co_agent_instrument.name.en = "Co Agent Instrument"
-relations.co_agent_instrument.df.en = "guitar player/guitar"
-relations.co_agent_instrument.dfn.en = """
-A relation between two concepts where concept Y is the instrument used
-by concept X in a certain action.
-
-Y is the instrument used by X in a certain action
-"""
-relations.co_agent_instrument.ex.en = ""
-relations.co_agent_instrument.exe.en = """
-"""
-relations.co_agent_instrument.com.en = """
-"""
-
-
-### Relation: co_agent_result EDP32
-
-relations.co_agent_result.name.en = "Co Agent Result"
-relations.co_agent_result.df.en = "X is the result of action Y"
-relations.co_agent_result.dfn.en = """
-A relation between two concepts where concept Y is the result of an
-action carried out by concept X.
-
-Y is the result of an action carried out by X.
-"""
-relations.co_agent_result.ex.en = "pastry dough/bread dough"
-relations.co_agent_result.exe.en = """
-"""
-relations.co_agent_result.com.en = """
 """
 
 
 ### Relation: co_patient_agent EDP32
 
 relations.co_patient_agent.name.en = "Co Patient Agent"
-relations.co_patient_agent.df.en = ""
+relations.co_patient_agent.df.en = "A concept which carries out an action a given concept undergoing."
 relations.co_patient_agent.dfn.en = """
-A relation between two concepts where concept Y undergoes an action
-carried out by concept X.
+Co Patient Agent is a relation between two concepts where Concept A carries out an action 
+Concept B undergoing.
 """
-relations.co_patient_agent.ex.en = "poet/novel writer"
+relations.co_patient_agent.ex.en = "`criminal <ILIURL/89309>`_ is the co patient agent of `victim <ILIURL/93927>`_ "
 relations.co_patient_agent.exe.en = """
+* `criminal <ILIURL/89309>`_ is the co patient agent of `victim <ILIURL/93927>`_ 
+"""
+relations.co_patient_agent.test.en = """
 """
 relations.co_patient_agent.com.en = """
 """
 
 
-### Relation: co_patient_instrument EDP32
+### Relation: co_agent_instrument EDP32
 
-relations.co_patient_instrument.name.en = "Co Patient Instrument"
-relations.co_patient_instrument.df.en = ""
-relations.co_patient_instrument.dfn.en = """
-A relation between two concepts where concept Y undergoes an action
-for which the instrument expressed by concept X is used.
+relations.co_agent_instrument.name.en = "Co Agent Instrument"
+relations.co_agent_instrument.df.en = "A concept which is the instrument used by a given concept in an action."
+relations.co_agent_instrument.dfn.en = """
+Co Agent Instrument is a relation between two concepts where Concept B is the instrument used
+by Concept A in a certain action.
 """
-relations.co_patient_instrument.ex.en = "ice/ice saw"
-relations.co_patient_instrument.exe.en = """
+relations.co_agent_instrument.ex.en = "`guitar <ILIURL/54496>`_ is the co agent instrument of `guitar player <ILIURL/90355>`_"
+relations.co_agent_instrument.exe.en = """
+* `guitar <ILIURL/54496>`_ is the co agent instrument of `guitar player <ILIURL/90355>`_
 """
-relations.co_patient_instrument.com.en = """
+relations.co_agent_instrument.test.en = """
 """
-
-
-### Relation: co_result_agent EDP32
-
-relations.co_result_agent.name.en = "Co Result Agent"
-relations.co_result_agent.df.en = ""
-relations.co_result_agent.dfn.en = """
-A relation between two concepts where concept X is the result of an
-action carried out by concept Y.
-"""
-relations.co_result_agent.ex.en = "bread dough/pastry dough"
-relations.co_result_agent.exe.en = """
-"""
-relations.co_result_agent.com.en = """
-"""
-
-
-### Relation: co_result_instrument EDP32
-
-relations.co_result_instrument.name.en = "Co Result Instrument"
-relations.co_result_instrument.df.en = ""
-relations.co_result_instrument.dfn.en = """
-A relation between two concepts where concept X is the result of an
-action for which the instrument expressed by concept Y is used.
-"""
-relations.co_result_instrument.ex.en = "photograph/camera"
-relations.co_result_instrument.exe.en = """
-"""
-relations.co_result_instrument.com.en = """
+relations.co_agent_instrument.com.en = """
 """
 
 
 ### Relation: co_instrument_agent EDP32
 
 relations.co_instrument_agent.name.en = "Co Instrument Agent"
-relations.co_instrument_agent.df.en = ""
+relations.co_instrument_agent.df.en = "A concept which carries out an action by using a given concept as an instrument."
 relations.co_instrument_agent.dfn.en = """
-A relation between two concepts where concept X is the instrument used
-by concept Y for a certain action.
+Co Instrument Agent is a relation between two concepts where Concept A carries out an action 
+by using Concept B as an instrument.
 """
-relations.co_instrument_agent.ex.en = "guitar/guitar player"
+relations.co_instrument_agent.ex.en = "`guitar player <ILIURL/90355>`_ is the co instrument agent of `guitar <ILIURL/54496>`_ "
 relations.co_instrument_agent.exe.en = """
+* `guitar player <ILIURL/90355>`_ is the co instrument agent of `guitar <ILIURL/54496>`_  
+"""
+relations.co_instrument_agent.test.en = """
 """
 relations.co_instrument_agent.com.en = """
+"""
+
+
+### Relation: co_agent_result EDP32
+
+relations.co_agent_result.name.en = "Co Agent Result"
+relations.co_agent_result.df.en = "A concept which is the result of an action taken by a given concept."
+relations.co_agent_result.dfn.en = """
+Co Agent Result is a relation between two concepts where Concept B is the result of an
+action carried out by Concept A.
+"""
+relations.co_agent_result.ex.en = "`pastry <ILIURL/76902>`_ is the co agent result of `pastry cook <ILIURL/91893>`_"
+relations.co_agent_result.exe.en = """
+* `pastry <ILIURL/76902>`_ is the co agent result of `pastry cook <ILIURL/91893>`_
+"""
+relations.co_agent_result.com.en = """
+"""
+
+
+### Relation: co_result_agent EDP32
+
+relations.co_result_agent.name.en = "Co Result Agent"
+relations.co_result_agent.df.en = "A concept which takes an action resulting in a given concept."
+relations.co_result_agent.dfn.en = """
+Co Result Agent is a relation between two concepts where Concept A takes an action resulting 
+in Concept B.
+"""
+relations.co_result_agent.ex.en = "`pastry cook <ILIURL/91893>`_ is the co result agent of `pastry <ILIURL/76902>`_"
+relations.co_result_agent.exe.en = """
+* `pastry cook <ILIURL/91893>`_ is the co result agent of `pastry <ILIURL/76902>`_  
+"""
+relations.co_result_agent.test.en = """
+"""
+relations.co_result_agent.com.en = """
+"""
+
+
+### Relation: co_patient_instrument EDP32
+
+relations.co_patient_instrument.name.en = "Co Patient Instrument"
+relations.co_patient_instrument.df.en = "A concept which is used as an instrument in an action a given concept undergoes."
+relations.co_patient_instrument.dfn.en = """
+Co Patient Instrument is a relation between two concepts where Concept B is the instrument 
+used in an action which Concept A undergoes.
+"""
+relations.co_patient_instrument.ex.en = "`bread knife <ILIURL/51098>`_ is the co patient instrument of `bread <ILIURL/77313>`_ "
+relations.co_patient_instrument.exe.en = """
+* `bread knife <ILIURL/51098>`_ is the co patient instrument of `bread <ILIURL/77313>`_ 
+"""
+relations.co_patient_instrument.test.en = """
+"""
+relations.co_patient_instrument.com.en = """
 """
 
 
 ### Relation: co_instrument_patient EDP32
 
 relations.co_instrument_patient.name.en = "Co Instrument Patient"
-relations.co_instrument_patient.df.en = ""
+relations.co_instrument_patient.df.en = "A concept which undergoes an action with the use of a given concept as an instrument."
 relations.co_instrument_patient.dfn.en = """
-A relation between two concepts where concept Y undergoes an action
-for which the instrument expressed by concept X is used.
+Co Instrument Patient is a relation between two concepts where Concept A undergoes an action
+for which the instrument expressed by Concept B is used.
 """
-relations.co_instrument_patient.ex.en = "ice saw/ice"
+relations.co_instrument_patient.ex.en = "`bread <ILIURL/77313>`_ is the co instrument patient of `bread knife <ILIURL/51098>`_"
 relations.co_instrument_patient.exe.en = """
+* `bread <ILIURL/77313>`_ is the co instrument patient of `bread knife <ILIURL/51098>`_
+"""
+relations.co_instrument_patient.test.en = """
 """
 relations.co_instrument_patient.com.en = """
+"""
+
+
+### Relation: co_result_instrument EDP32
+
+relations.co_result_instrument.name.en = "Co Result Instrument"
+relations.co_result_instrument.df.en = "A concept which is used as an instrument in an action resulting in a given concept."
+relations.co_result_instrument.dfn.en = """
+Co Result Instrument is a relation between two concepts where Concept B is an instrument used 
+in an action resulting in Concept A.
+"""
+relations.co_result_instrument.ex.en = "`photograpic camera <ILIURL/51401>`_ is the co result instrument of `photo <ILIURL/57211>`_"
+relations.co_result_instrument.exe.en = """
+* `photograpic camera <ILIURL/51401>`_ is the co result instrument of `photo <ILIURL/57211>`_
+"""
+relations.co_result_instrument.test.en = """
+"""
+relations.co_result_instrument.com.en = """
 """
 
 
 ### Relation: co_instrument_result ice saw/ice
 
 relations.co_instrument_result.name.en = "Co Instrument Result"
-relations.co_instrument_result.df.en = ""
+relations.co_instrument_result.df.en = "A concept which is the result of an action using an instrument of a given concept."
 relations.co_instrument_result.dfn.en = """
-A relation between two concepts where concept Y is the result of an
-action carried out by the instrument expressed by concept X.
+Co Instrument Result is a relation between two concepts where Concept A is the result of an
+action carried out by the instrument expressed by Concept B.
 """
-relations.co_instrument_result.ex.en = "camera/photograph"
+relations.co_instrument_result.ex.en = "`photo <ILIURL/57211>`_ is the co instrument result of `photograpic camera <ILIURL/51401>`_"
 relations.co_instrument_result.exe.en = """
+* `photo <ILIURL/57211>`_ is the co instrument result of `photograpic camera <ILIURL/51401>`_
+"""
+relations.co_instrument_result.test.en = """
 """
 relations.co_instrument_result.com.en = """
 """
@@ -952,11 +977,27 @@ relations.state_of.df.en = """
 the way something is with respect to its main attributes
 """
 relations.state_of.dfn.en = """
-A relation between two concepts where concept Y is qualified by
-concept X.
+A relation between two concepts where concept B is qualified by
+concept A.
 """
-relations.state_of.ex.en = "poor/poor (a poor person)"
+relations.state_of.ex.en = "poor state_of poor (a poor person)"
 relations.state_of.exe.en = """
+ * `poor <ILIURL/11083>`_ state_of `have-not <ILIURL/92132>`_
+ * `rich <ILIURL/11080>`_ state_of `rich person <ILIURL/92571>`_
+
+"""
+relations.state_of.test.en = """
+State Of - relation between noun (EWN 44)
+
+===     =   ======================================================
+yes     a   *B is the state that applies to A*
+
+===     =   ======================================================
+
+Conditions:
+ - B is an adjective/adverb.
+ - A is a noun.
+
 """
 relations.state_of.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -967,16 +1008,32 @@ FCB: isn't this the same as attribute (but split into two directions)
 ### Relation: be_in_state EDP37
 
 relations.be_in_state.name.en = "Be In State"
-relations.be_in_state.df.en = ""
+relations.be_in_state.df.en = "Concept A is qualified by B"
 relations.be_in_state.dfn.en = """
-A relation between two concepts where concept X is qualified by
-concept Y.
+A relation between two concepts where concept A is qualified by
+concept B.
 
-X is qualified by Y.
+A is qualified by B.
 """
-relations.be_in_state.ex.en = "poor (a poor person)/poor"
+relations.be_in_state.ex.en = "poor (a poor person) be_in_State poor"
 relations.be_in_state.exe.en = """
+ * `have-not <ILIURL/92132>`_ be in state `poor <ILIURL/11083>`_
+ * `rich person <ILIURL/92571>`_ be in state `rich <ILIURL/11080>`_
 """
+relations.be_in_state.test.en = """
+Be In State - relation between adjective/adverb (EWN 44)
+
+===     =   ======================================================
+yes     a   *a/an/the A is the one/that to whom/which the state B applies*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a noun.
+ - B is an adjective/adverb.
+
+"""
+
 relations.be_in_state.com.en = """
 In plWordNet it is a relation between lexical units.
 """
@@ -986,23 +1043,54 @@ In plWordNet it is a relation between lexical units.
 
 relations.causes.name.en = "Causes"
 relations.causes.df.en = """
-any entity that produces an effect or is responsible for events or
-results
+Concept A is an entity that produces an effect or is responsible for events or
+results of Concept B.
 """
 relations.causes.dfn.en = """
-A relation between two concepts where concept Y comes into existence
-as a result of concept X. Entailment is a relation that links two
-verbs, and it is currently unilateral — Verb-X causes Verb-Y, without
+A relation between two concepts where concept B comes into existence
+as a result of concept A. Entailment is a relation that links two
+verbs, and it is currently unilateral — Verb-A causes Verb-B, without
 a reciprocal or tracing link. Causation presupposes/requires that some
-Verb-Y will, inevitably, take place during or after Verb-X (e.g. if
-Verb-X occurs, then Verb-Y will also occur).
+Verb-B will, inevitably, take place during or after Verb-A (e.g. if
+Verb-A occurs, then Verb-B will also occur).
 
 While not exclusive to these types of verbs, many verbs that have both
 a transitive and an intransitive form will frequently be submitted to
 this relation.
 """
-relations.causes.ex.en = "kill/die"
+relations.causes.ex.en = "kill causes die"
 relations.causes.exe.en = """
+ * `kill <ILIURL/28306>`_ causes `die <ILIURL/23529>`_
+"""
+relations.causes.test.en = """
+Causes - relation  (EWN 36)
+
+===     =   ======================================================
+yes     a   *(To/A/an) A causes (to/a/an) B to take place*
+.       .   *(To/A/an) A has (to/a/an) B as a consequence*
+.       .   *(To/A/an) A leads to (to/a/an) B*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the infinitive form or A is a noun in the singular 
+ - B is a verb in the infinitive form or B is a noun in the singular
+ 
+Causes - relation between verbs and adjectives (or adverbs)  (EWN 37)
+
+===     =   ======================================================
+yes     a   *A causes to be B*
+.       .   *A has being B as a consequence*
+.       .   *A leads to be(ing) B*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+- A is a verb in the infinitive form
+- B is and adjective
+
 """
 relations.causes.com.en = """
 EUWN's definition of CAUSES is broader than that of PWN. It
@@ -1013,13 +1101,46 @@ seems possible to just absorb PWN's links.
 ### Relation: is_caused_by EDP34
 
 relations.is_caused_by.name.en = "Is Caused By"
-relations.is_caused_by.df.en = ""
+relations.is_caused_by.df.en = "Concept A comes about because of concept B"
 relations.is_caused_by.dfn.en = """
-A relation between two concepts where concept X comes into existence
-as a result of concept Y.
+A relation between two concepts where concept A comes into existence
+as a result of concept B.
 """
-relations.is_caused_by.ex.en = "die/kill"
+relations.is_caused_by.ex.en = "die is_caused_by kill"
 relations.is_caused_by.exe.en = """
+ * `die <ILIURL/23529>`_ is caused by `kill <ILIURL/28306>`_
+
+"""
+relations.is_caused_by.test.en = """
+Is Caused By - relation  (EWN 36)
+
+===     =   ======================================================
+yes     a   *(To/A/an) B takes place because of A*
+.       .   *(To/A/an) B is the consequence A*
+.       .   *(To/A/an) B is the result of A*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the infinitive form or A is a noun in the singular 
+ - B is a verb in the infinitive form or B is a noun in the singular
+
+Is Caused By - relation between verbs and adjectives (or adverbs)  (EWN 37)
+
+===     =   ======================================================
+yes     a   *B is caused by A*
+.       .   *B is the consequence of A*
+.       .   *B is the result of A*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the infinitive form
+- B is and adjective
+
 """
 relations.is_caused_by.com.en = """
 The 'is caused by' relation was missing from PWN before."""
@@ -1028,23 +1149,51 @@ The 'is caused by' relation was missing from PWN before."""
 ### Relation: subevent EDP35
 
 relations.subevent.name.en = "Subevent"
-relations.subevent.df.en = ""
+relations.subevent.df.en = "Concept B takes place during or as part of concept A, and whenever concept B takes place, concept A takes place"
 relations.subevent.dfn.en = """
-A relation between two concepts where concept Y takes place
-during or as part of concept X, and whenever concept Y takes
-place, concept X takes place.
+A relation between two concepts where concept B takes place
+during or as part of concept A, and whenever concept B takes
+place, concept A takes place.
 
 """
-relations.subevent.ex.en = "sleep/snore"
+relations.subevent.ex.en = "sleep has subevent snore"
 relations.subevent.exe.en = """
+ * `sleep <ILIURL/21840>`_ has subevent `snore <ILIURL/21852>`_
+
+"""
+relations.subevent.test.en = """
+Subevent - relation between verbs/nouns (a)  (EWN 41)
+
+===     =   ======================================================
+yes     a   *B takes place during or as a part of A, and whenever B takes place, A takes place*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the gerundive form
+- B is a verb in the gerundive form
+
+Subevent - relation between verbs/nouns (b)  (EWN 42)
+
+===     =   ======================================================
+yes     a   *A consists of B and other events or processes*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- B is a verb in the gerundive form
+- A is a verb in the gerundive form buying consists of paying and other events or processes
+
 """
 relations.subevent.com.en = """
-The EUWN CAUSES relation is broader than the PWN in such a
-way that it actually includes links that were linked as
-ENTAILMENT by the PWN (e.g. to suceed IS_CAUSED_BY to try;
-to try CAUSES succeed [non-factive, intention]). This means
-that HAS_SUBVENT and IS_SUBVENT_OF should not include every
-relation marked as ENTAILMENT by the PWN.
+The SUBEVENT relation is very useful for many closely related verbs and appeals more directly to human-intuitions
+(parallel to part-whole relation of concrete entities).
 
 """
 
@@ -1052,15 +1201,48 @@ relation marked as ENTAILMENT by the PWN.
 ### Relation: is_subevent_of EDP35
 
 relations.is_subevent_of.name.en = "Is Subevent Of"
-relations.is_subevent_of.df.en = ""
+relations.is_subevent_of.df.en = "Concept A takes place during or as part of concept B, and whenever concept A takes place, concept B takes place"
 relations.is_subevent_of.dfn.en = """
-A relation between two concepts where concept X takes place
-during or as part of concept Y, and whenever concept X takes
-place, concept Y takes place.
+A relation between two concepts where concept A takes place
+during or as part of concept B, and whenever concept A takes
+place, concept B takes place.
 
 """
-relations.is_subevent_of.ex.en = "snore/sleep"
+relations.is_subevent_of.ex.en = "snore is_subevent_of sleep"
 relations.is_subevent_of.exe.en = """
+ * `snore <ILIURL/21852>`_ is subevent of `sleep <ILIURL/21840>`_
+ * `pay <ILIURL/i32996>`_ is subevent of `buy <ILIURL/33154>`_
+ 
+"""
+relations.is_subevent_of.test.en = """
+Is Subevent Of - relation between verbs/nouns (a)  (EWN 41)
+
+===     =   ======================================================
+yes     a   *A takes place during or as a part of B, and whenever A takes place, B takes place*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the gerundive form
+- B is a verb in the gerundive form
+
+Is Subevent Of - relation between verbs/nouns (b)  (EWN 42)
+
+===     =   ======================================================
+yes     a   *A consists of B and other events or processes*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- B is a verb in the gerundive form
+- A is a verb in the gerundive form buying consists of paying and other events or processes
+
 """
 relations.is_subevent_of.com.en = """
 """
@@ -1069,17 +1251,35 @@ relations.is_subevent_of.com.en = """
 ### Relation: in_manner EDP36
 
 relations.in_manner.name.en = "In Manner"
-relations.in_manner.df.en = ""
+relations.in_manner.df.en = "B qualifies the manner in which an action or event expressed by A takes place"
 relations.in_manner.dfn.en = """
-A relation between two concepts where concept Y qualifies
+A relation between two concepts where concept B qualifies
 the manner in which an action or event expressed by concept
-X takes place.
+A takes place.
 
 """
-relations.in_manner.ex.en = "slurp/noisely"
+relations.in_manner.ex.en = "slurp in manner noisely"
 relations.in_manner.exe.en = """
+ * `slurp <ILIURL/27462>`_ in manner `noisily <ILIURL/19718>`_
+"""
+relations.in_manner.test.en = """
+In Manner - relation between verbs/adverb (EWN 43)
+
+===     =   ======================================================
+yes     a   *to A is to B in a C manner/way.*
+
+===     =   ======================================================
+
+Conditions:
+
+- A and B are verbs
+- B is the hyperonym of A
+- C is an adjective/adverb
+
 """
 relations.in_manner.com.en = """
+In EuroWordNet, we decided not to differentiate between troponymy and hyponymy but to use the IN_MANNER and MANNER_OF
+relation in addition to normal hyponymy to make the manner component explicit (if it is significant in the meaning of the verb):
 """
 
 
@@ -1088,13 +1288,29 @@ relations.in_manner.com.en = """
 relations.manner_of.name.en = "Manner Of"
 relations.manner_of.df.en = "a way of acting or behaving"
 relations.manner_of.dfn.en = """
-A relation between two concepts where concept X qualifies
+A relation between two concepts where concept A qualifies
 the manner in which an action or event expressed by concept
-Y takes place.
+B takes place.
 
 """
-relations.manner_of.ex.en = "noisely/slurp"
+relations.manner_of.ex.en = "noisely manner of slurp"
 relations.manner_of.exe.en = """
+ * `noisily <ILIURL/19718>`_  manner of `slurp <ILIURL/27462>`_
+"""
+relations.manner_of.test.en = """
+Manner Of - relation between verbs/adverb (EWN 43)
+
+===     =   ======================================================
+yes     a   *a manner of B which qualifies A*
+
+===     =   ======================================================
+
+Conditions:
+
+- A and B are verbs
+- B is the hyperonym of A
+- C is an adjective/adverb
+
 """
 relations.manner_of.com.en = """
 """
@@ -1173,20 +1389,34 @@ shouldn't be a special relation.
 ### Relation: mero_part EDP27
 
 relations.mero_part.name.en = "Part Meronym"
-relations.mero_part.df.en = ""
+relations.mero_part.df.en = "concept A is a component of concept B"
 relations.mero_part.dfn.en = """
-A relation between two concepts where concept Y is a component of
-concept X. Meronym and Holonym Part is a paired relation that denotes
+A relation between two concepts where concept A is a component of
+concept B. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
-relation even if the physical link is broken — Concept-X can be
-separated into Concept-Y”; and Concept-Y is a part of some Concept-X.
+relation even if the physical link is broken — Concept-A can be
+separated into Concept-B”; and Concept-B is a part of some Concept-A.
 
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.mero_part.ex.en = "car/wheel"
+relations.mero_part.ex.en = "car mero-part wheel"
 relations.mero_part.exe.en = """
-hand > finger
+ * `glove <ILIURL/54319>`_ has part-meronym `finger <ILIURL/53712>`_
+"""
+
+relations.mero_part.test.en = """
+Meronymy-relation between nouns (EWN test 24)
+
+===     =   ======================================================
+yes     a   *a/an A is a component of a/an B*
+.       b   *a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A*
+
+===     =   ======================================================
+
+Condition: 
+
+- A and B are concrete nouns denoting objects, there must be several As
 
 """
 relations.mero_part.com.en = """
@@ -1199,39 +1429,69 @@ geographical inclusiveness relations.
 ### Relation: holo_part EDP27
 
 relations.holo_part.name.en = "Part Holonym"
-relations.holo_part.df.en = ""
+relations.holo_part.df.en = "Concept B is the whole where Concept A is a part"
 relations.holo_part.dfn.en = """
-A relation between two concepts where concept X is a component of
-concept Y. Meronym and Holonym Part is a paired relation that denotes
+A relation between two concepts where concept B is the whole of the different component of
+concept A. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
-relation even if the physical link is broken — Concept-X can be
-separated into Concept-Y”; and Concept-Y is a part of some Concept-X.
+relation even if the physical link is broken — Concept-A can be
+separated into Concept-B”; and Concept-B is a part of some Concept-A.
 
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.holo_part.ex.en = "wheel/car"
+relations.holo_part.ex.en = "wheel holo-part car"
 relations.holo_part.exe.en = """
+ * `thumb <ILIURL/60231>`_ has part-holonym `glove <ILIURL/54319>`_
+"""
+relations.holo_part.test.en = """
+Holonymy-relation between nouns (EWN test 24)
+
+===     =   ======================================================
+yes     a   *a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A*
+.       b   *a/an A is a component of a/an B*
+
+===     =   ======================================================
+
+Condition:
+
+- B and A are concrete nouns denoting objects, B typically includes a larger entity
+
 """
 relations.holo_part.com.en = """
+The has_holo-part relation typically relates components to their wholes, namely: something which is either topologically or temporally included in a larger entity and which as well bears some kind of autonomy (non-arbitrary boundaries) and a definite function with respect to the whole.
 """
 
 
 ### Relation: mero_member EPD27
 
 relations.mero_member.name.en = "Member Meronym"
-relations.mero_member.df.en = ""
+relations.mero_member.df.en = "Concept A is a member of Concept B"
 relations.mero_member.dfn.en = """
-A relation between two concepts where concept Y is a member/ element
-of concept X. Meronym and Holonym Membership is a paired relation that
+A relation between two concepts where concept A is a member/ element
+of concept B. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
-it does not relates a subkind of a concept. It links groups to members
-— Concept-Y is composed of many members of Concept-X; and many
-instances of Concept-X form Concept-Y.
+it does not relates a sub-kind of a concept. It links groups to members
+— Many instances of Concept-A form Concept-B; and Concept-B is composed of many members of Concept-A. 
 """
-relations.mero_member.ex.en = "player/team"
+relations.mero_member.ex.en = "player has mero-member team"
 relations.mero_member.exe.en = """
-fleet > ship
+ * `fleet <ILIURL/80725>`_ has member-meronym `ship <ILIURL/58798>`_
+"""
+relations.mero_member.test.en = """
+Member meronymy -relation between nouns (EWN test 22)
+
+===     =   ======================================================
+yes     a   *a/an A is a member/element of (a/an/the) B*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- A is a single object-denoting noun
+- B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
+- preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
 
 """
 relations.mero_member.com.en = """
@@ -1241,17 +1501,34 @@ relations.mero_member.com.en = """
 ### Relation: holo_member EDP27
 
 relations.holo_member.name.en = "Member Holonym"
-relations.holo_member.df.en = ""
+relations.holo_member.df.en = "Concept B is a member of Concept A"
 relations.holo_member.dfn.en = """
-A relation between two concepts where concept X is a member/ element
-of concept Y. Meronym and Holonym Membership is a paired relation that
+A relation between two concepts where concept B is a member/ element
+of concept A. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
-it does not relates a subkind of a concept. It links groups to members
-— Concept-Y is composed of many members of Concept-X; and many
-instances of Concept-X form Concept-Y.
+it does not relates a sub-kind of a concept. It links groups to members
+— Concept-B is composed of many members of Concept-A; and many
+instances of Concept-A form Concept-B.
 """
-relations.holo_member.ex.en = "team/player"
+relations.holo_member.ex.en = "team has holo-member player"
 relations.holo_member.exe.en = """
+ * `ship <ILIURL/58798>`_ has member-holonym `fleet <ILIURL/80725>`_
+"""
+relations.holo_member.test.en = """
+Member holonymy -relation between nouns (EWN test 22)
+
+===     =   ======================================================
+yes     a   *a/an B is a member/element of (a/an/the) A*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)
+- A is a single object-denoting noun
+- preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.
+
 """
 relations.holo_member.com.en = """
 """
@@ -1260,51 +1537,104 @@ relations.holo_member.com.en = """
 ### Relation: mero_substance EDP28
 
 relations.mero_substance.name.en = "Substance Meronym"
-relations.mero_substance.df.en = ""
+relations.mero_substance.df.en = "Concept A is made of concept B."
 relations.mero_substance.dfn.en = """
-A relation between two concepts where concept X is made of concept
-Y. Meronym and Holonym Substance is a paired relation that denotes a
+A relation between two concepts where concept A is made of concept
+B. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-X is made of Concept-Y; and
-Concept-Y is a substance of Concept-X”.
+part, will change the whole — Concept-A is made of Concept-B; and
+Concept-B is a substance of Concept-A”.
 """
-relations.mero_substance.ex.en = "stick/wood"
+relations.mero_substance.ex.en = "stick has mero-substance wood"
 relations.mero_substance.exe.en = """
-book > paper
+ * `paper <ILIURL/115832>`_ has substance-meronym `cellulose <ILIURL/114776>`_
+ * `wood <ILIURL/116549>`_ has substance-meronym `lignin <ILIURL/115606>`_
+"""
+relations.mero_substance.test.en = """
+Substance meronymy -relation between nouns (EWN test 25)
+
+===     =   ======================================================
+yes     a   *a/an A is made of B*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- A is a concrete object
+- B is a concrete substance
+
 """
 relations.mero_substance.com.en = """
+There are two basic ways of viewing entities in the world, 
+namely either as an individuated thing or as the stuff from 
+which they are made of. This way, for instance a book can
+be alternatively named “a book” or “paper”.
+The relation between things and the stuff which compose them is called MADE_OF.
 """
 
 
 ### Relation: holo_substance EDP28
 
 relations.holo_substance.name.en = "Substance Holonym"
-relations.holo_substance.df.en = ""
+relations.holo_substance.df.en = "Concept-B is a substance of Concept-A"
 relations.holo_substance.dfn.en = """
-A relation between two concepts where concept Y is made of concept
-X. Meronym and Holonym Substance is a paired relation that denotes a
+A relation between two concepts where concept B is made of concept
+A. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-X is made of Concept-Y; and
-Concept-Y is a substance of Concept-X”.
+part, will change the whole — Concept-A is made of Concept-Y; and
+Concept-B is a substance of Concept-A”.
 """
 relations.holo_substance.ex.en = "wood/stick"
 relations.holo_substance.exe.en = """
+ * `wood <ILIURL/116549>`_ has substance-holonym `beam <ILIURL/50617>`_
+"""
+relations.holo_substance.test.en = """
+Substance holonymy -relation between nouns (EWN test 25)
+
+===     =   ======================================================
+yes     a   *a/an B is substance of A*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- B is a concrete substance
+- A is a concrete object
+
 """
 relations.holo_substance.com.en = """
+Complex holonyms can also contain substances but in that case the MADE_OF relation is used.
 """
 
 
 ### Relation: mero_location EDP28
 
 relations.mero_location.name.en = "Location Meronym"
-relations.mero_location.df.en = ""
+relations.mero_location.df.en = "A is a place located in B"
 relations.mero_location.dfn.en = """
-A relation between two concepts where concept X is a place
-located in concept Y.
+A relation between two concepts where concept A is a place
+located in concept B.
 """
-relations.mero_location.ex.en = "city/centre"
+relations.mero_location.ex.en = "city has mero-location centre"
 relations.mero_location.exe.en = """
-desert > oasis
+ * `desert <ILIURL/81751>`_ has part-meronym `oasis <ILIURL/81753>`_
+"""
+relations.mero_location.test.en = """
+Location meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   *a/an/the A is a place located in a/an/the B*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- A is a concrete noun
+- B is a concrete noun
+
 """
 relations.mero_location.com.en = """
 """
@@ -1313,13 +1643,29 @@ relations.mero_location.com.en = """
 ### Relation: holo_location EDP28
 
 relations.holo_location.name.en = "Location Holonym"
-relations.holo_location.df.en = ""
+relations.holo_location.df.en = "B is a place located in A"
 relations.holo_location.dfn.en = """
-A relation between two concepts where concept Y is a place
-located in concept X.
+A relation between two concepts where concept B is a place
+located in concept A.
 """
-relations.holo_location.ex.en = "centre/city"
+relations.holo_location.ex.en = "centre has holo-location city"
 relations.holo_location.exe.en = """
+ * `space <ILIURL/81724>`_ has part-holonym `aerospace <ILIURL/81733>`_
+"""
+relations.holo_location.test.en = """
+Location meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   *a/an/the B is a place located in a/an/the A*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- B is a concrete noun
+- A is a concrete noun
+
 """
 relations.holo_location.com.en = """
 """
@@ -1328,31 +1674,66 @@ relations.holo_location.com.en = """
 ### Relation: mero_portion EDP27
 
 relations.mero_portion.name.en = "Portion Meronym"
-relations.mero_portion.df.en = ""
+relations.mero_portion.df.en = "Concept A is an amount of Concept B"
 relations.mero_portion.dfn.en = """
-A relation between two concepts where concept X is an
-amount/piece/portion of concept Y.
+A relation between two concepts where concept A is an
+amount/piece/portion of concept B.
 """
-relations.mero_portion.ex.en = "drop/liquid"
+relations.mero_portion.ex.en = "drop has mero-portion liquid"
 relations.mero_portion.exe.en = """
-bread > slice
+ * `Nigeria <ILIURL/83853>`_ has part-meronym `Abuja <ILIURL/83854>`_
+"""
+relations.mero_portion.test.en = """
+Portion meronymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   *(a/an) A is an (amount/piece/portion) of B*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- A and B are substance denoting nouns
+
 """
 relations.mero_portion.com.en = """
+usually portions (as concepts) do not receive a separate lexical item but are realized by sense
+extension (for instance, there is no lexical item equivalent to “portion of cake”);
 """
 
 
 ### Relation: holo_portion EDP27
 
 relations.holo_portion.name.en = "Portion Holonym"
-relations.holo_portion.df.en = ""
+relations.holo_portion.df.en = "Concept B is the whole amount/piece of A"
 relations.holo_portion.dfn.en = """
-A relation between two concepts where concept Y is an
-amount/piece/portion of concept X
+A relation between two concepts where concept B is an
+amount/piece/portion of concept A
 """
-relations.holo_portion.ex.en = "liquid/drop"
+relations.holo_portion.ex.en = "liquid  has holo-portion drop"
 relations.holo_portion.exe.en = """
+ * `Africa <ILIURL/84937>`_ has part-holonym `Eastern Hemisphere <ILIURL/81982>`_
+
+"""
+relations.holo_portion.test.en = """
+Portion holonymy -relation between nouns (EWN test 26)
+
+===     =   ======================================================
+yes     a   *(a/an) B is the whole amount/piece of A*
+
+no      b   the converse of (a).
+===     =   ======================================================
+
+Conditions:
+
+- B and A are substance denoting nouns
+
 """
 relations.holo_portion.com.en = """
+The whole always pre-exist the portion.Sometimes portions are sufficiently 
+common in a particular language to become lexicalized.
+These lexical items will be linked to their wholes by means of a has_holo_portion
 """
 
 
@@ -1603,20 +1984,37 @@ relations.attribute.df.en = """
 an abstraction belonging to or characteristic of an entity
 """
 relations.attribute.dfn.en = """
-A relation between nominal and adjectival concepts where the concept X
-is an attribute of concept Y. ‘Attributes’ is a self-reciprocal link
+A relation between nominal and adjectival concepts where the concept A
+is an attribute of concept B. ‘Attributes’ is a self-reciprocal link
 (the two directions of this relation share the same meaning) —
-Concept-X attributes to Concept-Y, and Concept-Y attributes to
-Concept-X.
+Concept-A attributes to Concept-B, and Concept-B attributes to
+Concept-A.
 
 It denotes a relation between a noun and its adjectival attributes,
 and vice-versa — for this reason it should only link adjectives to
 nouns and vice-versa.
 """
-relations.attribute.ex.en = ""
+relations.attribute.ex.en = "fertile attribute fecundity"
 relations.attribute.exe.en = """
-* fertile (01001689-a) ATTRIBUTES:  fertility (14051494-n)
-* fertility (14051494-n) ATTRIBUTES: fertile (01001689-a)
+* `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
+* `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
+"""
+relations.attribute.test.en = """
+Attribute-relation between nouns and adjectives (EWN 14)
+
+===     =   ======================================================
+yes     a   *A is an attribute of B*
+.       .   *B is an attribute of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
+Conditions:
+- A is a noun in the singular
+- B is an adjective
+- there is at least one specifying adverb, NP or PP that applies to the A- phrase or the B-phrase
+- preferably there is a no morphological link between the noun and the adjective
+
 """
 relations.attribute.com.en = """
 In plWN Value_of_the_attribute is a unilateral relation from
@@ -1670,11 +2068,15 @@ relations.classifies.df.en = """
 assign to a class or kind
 """
 relations.classifies.dfn.en = """
-A relation between a classifier concept X and concept Y. A relation
-between a classifier X and Y
+A relation between a classifier concept A and concept B. A relation
+between a classifier A and B
 """
-relations.classifies.ex.en = ""
+relations.classifies.ex.en = "hammer classifies broom"
 relations.classifies.exe.en = """
+ * `hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_
+ * `knife <ILIURL/55422>`_ classifies `sword <ILIURL/59896>`_
+ * `thread <ILIURL/60206>`_ classifies `rope <ILIURL/58271>`_
+
 """
 relations.classifies.com.en = """
 currently we only have links for nominal concepts, but we
@@ -1689,11 +2091,15 @@ relations.classified_by.df.en = """
 arrange or order by classes or categories
 """
 relations.classified_by.dfn.en = """
-A relation between concept Y and a classifier concept X. A relation
-between Y and a classifier X
+A relation between concept B and a classifier concept A. A relation
+between B and a classifier A.
 """
 relations.classified_by.ex.en = ""
 relations.classified_by.exe.en = """
+ * `broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_
+ * `dagger <ILIURL/52683>`_ classified by `weapon with a blade <ILIURL/50826>`_
+ * `wire <ILIURL/61210>`_ classified by `filiform <ILIURL/13360>`_
+
 """
 relations.classified_by.com.en = """
 """
@@ -1717,8 +2123,23 @@ This link was originally used to relate adjectives, but we have
 unconstrained this use, and we're making use of this link to relate
 all parts-of-speech.
 """
-relations.also.ex.en = ""
+relations.also.ex.en = "time see also moment"
 relations.also.exe.en = """
+ * `farmer <ILIURL/89889>`_ see also `farmland <ILIURL/82016>`_
+ * `learn <ILIURL/24750>`_ see also `school <ILIURL/58518>`_
+ * `picture <ILIURL/56911>`_ see also `sculpture <ILIURL/40330>`_
+ * `plant <ILIURL/35564>`_ see also `flower <ILIURL/98673>`_
+ * `walk <ILIURL/36884>`_ see also `park <ILIURL/82259>`_
+ 
+"""
+
+relations.also.test.en = """
+===     =   ======================================================
+yes     a   *A has some strong relation to B*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.also.com.en = """
 Also known as fuzzynym
@@ -1820,25 +2241,48 @@ impose, involve, or imply as a necessary accompaniment or result
 """
 relations.entails.dfn.en = """
 Entailment is a relation that links two verbs, and it is currently
-unilateral — Verb-X entails Verb-Y, without a reciprocal or tracing
+unilateral — Verb-A entails Verb-B, without a reciprocal or tracing
 link.  This relation presupposes/requires a semantic restriction in
-which Verb-Y has to take place before or during Verb-X.
+which Verb-B has to take place before or during Verb-A.
 """
-relations.entails.ex.en = ""
+relations.entails.ex.en = "snore entails sleep"
 relations.entails.exe.en = """
+ * `snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_
+ 
+"""
+
+relations.entails.test.en = """
+===     =   ======================================================
+yes     a   *A cannot be done unless B is or has been done*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.entails.com.en = """
+A verb A entails B if A cannot be done unless B is, or has been, done.
 """
 
 
 ### Relation: is_entailed_by
 
 relations.is_entailed_by.name.en = "Is Entailed By"
-relations.is_entailed_by.df.en = ""
+relations.is_entailed_by.df.en = "Concept B is dome/happens because of concept A"
 relations.is_entailed_by.dfn.en = """
 """
-relations.is_entailed_by.ex.en = ""
+relations.is_entailed_by.ex.en = "sleep is entailed by snore"
 relations.is_entailed_by.exe.en = """
+ * `sleep <ILIURL/21840>`_ entails `snore <ILIURL/21852>`_
+
+"""
+
+relations.is_entailed_by.test.en = """
+===     =   ======================================================
+yes     a   *B is the result/happens because of the occurrence of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.is_entailed_by.com.en = """
 """
@@ -1847,7 +2291,7 @@ relations.is_entailed_by.com.en = """
 ### Relation: other
 
 relations.other.name.en = "Other"
-relations.other.df.en = "any other semantic relation"
+relations.other.df.en = "not the same one or ones already mentioned or implied"
 relations.other.dfn.en = """
 This is used for semantic relation types not currently supported by
 the OMW DTD.  The exact relation type can be given with ``dc:type``:
@@ -1857,55 +2301,95 @@ the OMW DTD.  The exact relation type can be given with ``dc:type``:
     <SynsetRelation relType="other" dc:type="emotion" target="example-en-1234-n"/>
 
 """
-relations.other.ex.en = ""
+relations.other.ex.en = "Physician other Hospital"
 relations.other.exe.en = """
+ * `curator <ILIURL/89345>`_ other `museum <ILIURL/56456>`_
+ * `priest <ILIURL/92229>`_ other `church <ILIURL/40809>`_
+ * `mailman <ILIURL/91159>`_ other `post office <ILIURL/79962>`_
+ * `mayor <ILIURL/91277>`_ other `town hall <ILIURL/60420>`_
+ * `judge <ILIURL/90808>`_ other `court <ILIURL/52438>`_
+ * `ambassador <ILIURL/88178>`_ other `embassy <ILIURL/53393>`_
+ * `gardener <ILIURL/90153>`_ other `garden <ILIURL/54178>`_
+ 
+"""
+relations.other.test.en = """
+===     =   ======================================================
+yes     a   *A has some strong relation to B*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.other.com.en = """
-Because we don't know what it means, we cannot give it a reverse relation.
+A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
 """
 
 ### Relation: participle
 
 relations.participle.name.en = "Participle"
-relations.participle.df.en = "links from a participial adjective to a verb"
-relations.participle.dfn.en = """A relation where X is a participial adjective and Y is the verb it is derived from"""
-relations.participle.ex.en = "*interesting* is the participial adjective from *interest*"
-relations.participle.exe.en = ""
-relations.participle.com.en = "These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can see, anywhere FCB)"
+relations.participle.df.en = "A concept which is a participial adjective derived from a verb expressed by a given concept."
+relations.participle.dfn.en = """
+Participle is a relation between two concepts where Concept A is a participial adjective 
+which is drived from Concept B in the form of verb.
+"""
+relations.participle.ex.en = "`interesting <ILIURL/7324>`_ is the participial of `interest <ILIURL/30833>`_"
+relations.participle.exe.en = """
+* `interesting <ILIURL/7324>`_ is the participial of `interest <ILIURL/30833>`_
+* `amazing <ILIURL/6996>`_ is the participial of `amaze <ILIURL/25324>`_
+"""
+relations.participle.test.en = """
+"""
+relations.participle.com.en = """
+These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can 
+see, anywhere FCB)
+"""
 
 ### Relation: pertainym
 
 relations.pertainym.name.en = "Pertainym"
-relations.pertainym.df.en = "X is of or pertaining to Y"
-relations.pertainym.dfn.en = "links a relational adjective X  to the noun Y it is about, or an adverb X to the adjective it is about Y"
-relations.pertainym.ex.en = "*naval* has pertainym *navy*; *slowly* has pertainym *slow*"
-relations.pertainym.exe.en = """
-* `lunar <ILIURL/15548>`_ has pertainym `moon <ILIURL/85806>`_
-* `naval <ILIURL/15629>`_ has pertainym `navy <ILIURL/80195>`_
-* `slowly <ILIURL/19235>`_ has pertainym `slow <ILIURL/5362>`_
-* `English <ILIURL/17163>`_ has pertainym `England <ILIURL/83374>`_
-* `subclinical <ILIURL/16413>`_ has pertainym `clinical <ILIURL/16412>`_
-* `clinical <ILIURL/16412>`_ has pertainym `clinic <ILIURL/79534>`_
+relations.pertainym.df.en = "A concept which is of or pertaining to a given concept."
+relations.pertainym.dfn.en = """
+Pertainym is a relation between two concepts where Concept A is the adjective to the noun 
+expressed by Concept B it is about, or Concept A is the adverb to the adjective expressed 
+by Concept B it is about.
 """
-relations.pertainym.com.en = ""
+relations.pertainym.ex.en = "`slowly <ILIURL/19235>`_ is the pertainym of `slow <ILIURL/5362>`_"
+relations.pertainym.exe.en = """
+* `lunar <ILIURL/15548>`_ is the pertainym of `moon <ILIURL/85806>`_
+* `naval <ILIURL/15629>`_ is the pertainym of `navy <ILIURL/80195>`_
+* `slowly <ILIURL/19235>`_ is the pertainym of `slow <ILIURL/5362>`_
+* `English <ILIURL/17163>`_ is the pertainym of `England <ILIURL/83374>`_
+* `subclinical <ILIURL/16413>`_ is the pertainym of `clinical <ILIURL/16412>`_
+* `clinical <ILIURL/16412>`_ is the pertainym of `clinic <ILIURL/79534>`_
+"""
+relations.pertainym.test.en = """
+"""
+relations.pertainym.com.en = """
+"""
 
 
 ### Relation: derivation
 
 relations.derivation.name.en = "Derivation"
-relations.derivation.df.en = "X is a derivationally related form of Y"
-relations.derivation.dfn.en = """X is a derivationally related form of Y, this may be specialized
- further.  It includes zero derivations.  Gnerally it is used for different
- syntactic categories that have the same root form and are
- semantically related.  Wordnet does not say which is the baseform,
- the relationship is fully reversible.  """
-relations.derivation.ex.en = "*yearly* is derivationally related to *year*"
-relations.derivation.exe.en = """*yearly* is derivationally related to *year*
-*want n* is derivationally related to *want v*
-*wanter n* is derivationally related to *want v*
-*provision n* is derivationally related to *provide v*
+relations.derivation.df.en = "A concept which is a derivationally related form of a given concept."
+relations.derivation.dfn.en = """
+Derivation is a relation between two concept where Concept A is the derivationally related 
+form of Concept B. 
+ """
+relations.derivation.ex.en = "`yearly <ILIURL/10786>`_ is the derivation of `year <ILIURL/117116>`_"
+relations.derivation.exe.en = """
+* `yearly <ILIURL/10786>`_ is the derivation of `year <ILIURL/117116>`_
+* `want(n) <ILIURL/113167>`_ is the derivation of `want(v) <ILIURL/30852>`_
+* `provision <ILIURL/40949>`_ is the derivation of `provide <ILIURL/33372>`_
 """
-relations.derivation.com.en = ""
+relations.pertainym.test.en = """
+"""
+relations.pertainym.com.en = """
+This may be specialized further. It includes zero derivations. Gnerally 
+it is used for different syntactic categories that have the same root form and are 
+semantically related. Wordnet does not say which is the baseform, the relationship 
+is fully reversible. 
+"""
 
 
 ### New short definitions based on http://globalwordnet.github.io/schemas/
@@ -1915,17 +2399,17 @@ relations.antonym.df.en = "An opposite and inherently incompatible word"
 relations.be_in_state.df.en = "X is qualified by Y"
 relations.classified_by.df.en = "A relation between Y and a classifier X"
 relations.classifies.df.en = "A relation between a classifier X and Y"
-relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
-relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
-relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
-relations.co_instrument_agent.df.en = "X is the instrument used by Y for a certain action"
-relations.co_instrument_patient.df.en = "Y undergoes an action for which the instrument expressed by X is used"
-relations.co_instrument_result.df.en = "Y is the result of an action carried out by the instrument expressed by X"
-relations.co_patient_agent.df.en = "Y undergoes an action carried out by X"
-relations.co_patient_instrument.df.en = "X undergoes an action for which the instrument expressed by X is used"
-relations.co_result_agent.df.en = "X is the result of an action carried out by Y"
-relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
-relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
+#relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
+#relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
+#relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
+#relations.co_instrument_agent.df.en = "X is the instrument used by Y for a certain action"
+#relations.co_instrument_patient.df.en = "Y undergoes an action for which the instrument expressed by X is used"
+#relations.co_instrument_result.df.en = "Y is the result of an action carried out by the instrument expressed by X"
+#relations.co_patient_agent.df.en = "Y undergoes an action carried out by X"
+#relations.co_patient_instrument.df.en = "X undergoes an action for which the instrument expressed by X is used"
+#relations.co_result_agent.df.en = "X is the result of an action carried out by Y"
+#relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
+#relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
 #relations.direction.df.en = "X is typically the direction or location of the action or event expressed by Y"
 relations.eq_synonym.df.en = "X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
 relations.holo_location.df.en = "Y is a place located in X"
@@ -1961,3 +2445,85 @@ relations.restricts.df.en = "A relation between an adjectival X (quantifier/dete
 relations.state_of.df.en = "Y is qualified by X"
 relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
 #relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
+
+### Relation Simple Aspect
+
+relations.simple_aspect.name.en = "Simple Aspect"
+relations.simple_aspect.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
+relations.simple_aspect.ex.en = ""
+
+
+### Relation Secondary Aspect
+
+relations.secondary_aspect.name.en = "Secondary Aspect"
+relations.secondary_aspect.df.en = "A concept which is linked to another through a change in aspect"
+relations.secondary_aspect.ex.en = ""
+
+
+### Relation: Feminine form
+
+relations.feminine_form_of.name.en = "Feminine form"
+relations.feminine_form_of.df.en= "A concept used to refer to female members of a class"
+relations.feminine_form_of.ex.en= "*sow* is a female *pig*"
+
+
+### Relation: Masculine Form
+
+relations.masculine_form_of.name.en = "Masculine Form"
+relations.masculine_form_of.df.en= "A concept used to refer to male members of a class"
+relations.masculine_form_of.ex.en= "*boar* is a male *pig*"
+
+
+### Relation: Young Form
+
+relations.young_form_of.name.en = "Young Form"
+relations.young_form_of.df.en = "A concept used to refer to young members of a class"
+relations.young_form_of.ex.en = "*piglet* is a young *pig*"
+
+
+### Relation: Diminuative
+
+relations.diminutive_of.name.en = "Diminutive Form"
+relations.diminutive_of.df.en = "A concept used to refer to generally smaller members of a class"
+relations.diminutive_of.ex.en = "*piggy* is a diminutive *pig*"
+
+
+### Relation: Augmentative
+
+relations.augmentative_of.name.en = "Augmentative Form"
+relations.augmentative_of.df.en = "A concept used to refer to generally larger members of a class"
+relations.augmentative_of.ex.en = "*great house* is a larger *house*"
+
+
+### Relation: Gradable Antonym
+
+relations.anto_gradable.name.en = "Gradable Antonym"
+relations.anto_gradable.df.en = "word pairs whose meanings are opposite and which lie on a continuous spectrum"
+relations.anto_gradable.ex.en = "*hot* is a gradable antonym of *cold*"
+relations.anto_gradable.com.en = "Also known as *polar antonyms*."
+
+### Relation: Simple Antonym
+
+relations.anto_simple.name.en = "Simple Antonym"
+relations.anto_simple.df.en = "word pairs whose meanings are opposite but whose meanings do not lie on a continuous spectrum"
+relations.anto_simple.ex.en = "*alive* is a simple antonym of *dead*"
+relations.anto_gradable.com.en = "Also known as *complementary antonyms*."
+
+### Relation: Converse Antonym
+
+relations.anto_converse.name.en = "Converse Antonym"
+relations.anto_converse.df.en = "word pairs that name or describe a single relationship from opposite perspectives"
+relations.anto_converse.ex.en = "*parent* is a converse antonym of *child*"
+relations.anto_gradable.com.en = "Also known as just *converse* or *relational antonym*."
+
+### Relation: Inter-register Synonym
+
+relations.ir_synonym.name.en = "Inter-register Synonym"
+relations.ir_synonym.df.en= "A concept that means the same except for the style or connotation"
+relations.ir_synonym.ex.en= "*loot* is an inter-register synonym of *money*"
+
+
+
+
+
+
