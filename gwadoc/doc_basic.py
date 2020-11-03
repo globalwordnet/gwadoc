@@ -765,8 +765,8 @@ relations.mero_part.fa.reverse = "holo_part"
 relations.mero_part.proj.pwn = "part meronym"
 relations.mero_part.proj.querywn = "mprt"
 relations.mero_part.proj.eurown = "has_mero_part"
-relations.mero_part.proj.plwordnet = "meronymy_part"
-relations.mero_part.proj.pointer = "%p"
+relations.mero_part.proj.plwordnet = "część"
+relations.mero_part.proj.pointer = "#p"
 
 
 ### Relation: holo_part EDP27
@@ -781,8 +781,8 @@ relations.holo_part.fa.reverse = "mero_part"
 relations.holo_part.proj.pwn = "part holonym"
 relations.holo_part.proj.querywn = "hprt"
 relations.holo_part.proj.eurown = "has_holo_part"
-relations.holo_part.proj.plwordnet = "holonymy_part"
-relations.holo_part.proj.pointer = "#p"
+relations.holo_part.proj.plwordnet = "część"
+relations.holo_part.proj.pointer = "%p"
 
 
 ### Relation: mero_member EPD27
@@ -797,8 +797,8 @@ relations.mero_member.fa.reverse = "holo_member"
 relations.mero_member.proj.pwn = "member meronym"
 relations.mero_member.proj.querywn = "mmem"
 relations.mero_member.proj.eurown = "has_mero_member"
-relations.mero_member.proj.plwordnet = "meronymy_member"
-relations.mero_member.proj.pointer = "%m"
+relations.mero_member.proj.plwordnet = "element kolekcji"
+relations.mero_member.proj.pointer = "#m"
 
 
 ### Relation: holo_member EDP27
@@ -813,8 +813,8 @@ relations.holo_member.fa.reverse = "mero_member"
 relations.holo_member.proj.pwn = "member holonym"
 relations.holo_member.proj.querywn = "hmem"
 relations.holo_member.proj.eurown = "has_holo_member"
-relations.holo_member.proj.plwordnet = "holonymy_member"
-relations.holo_member.proj.pointer = "#m"
+relations.holo_member.proj.plwordnet = "element kolekcji"
+relations.holo_member.proj.pointer = "%m"
 
 
 ### Relation: mero_substance EDP28
@@ -829,8 +829,8 @@ relations.mero_substance.fa.reverse = "holo_substance"
 relations.mero_substance.proj.pwn = "substance meronym"
 relations.mero_substance.proj.querywn = "msub"
 relations.mero_substance.proj.eurown = "has_mero_madeof"
-relations.mero_substance.proj.plwordnet = "meronymy_substance"
-relations.mero_substance.proj.pointer = "%s"
+relations.mero_substance.proj.plwordnet = "materiał"
+relations.mero_substance.proj.pointer = "#s"
 
 
 ### Relation: holo_substance EDP28
@@ -845,8 +845,8 @@ relations.holo_substance.fa.reverse = "mero_substance"
 relations.holo_substance.proj.pwn = "substance holonym"
 relations.holo_substance.proj.querywn = "hsub"
 relations.holo_substance.proj.eurown = "has_holo_madeof"
-relations.holo_substance.proj.plwordnet = "holonymy_substance"
-relations.holo_substance.proj.pointer = "#s"
+relations.holo_substance.proj.plwordnet = "materiał"
+relations.holo_substance.proj.pointer = "%s"
 
 
 ### Relation: mero_location EDP28
@@ -858,9 +858,11 @@ relations.mero_location.fa.sense_sense = False
 relations.mero_location.fa.inOMW = True
 relations.mero_location.fa.reverse = "holo_location"
 
-relations.mero_location.proj.querywn = "hsub"
+relations.mero_location.proj.querywn = "mero"
 relations.mero_location.proj.eurown = "has_mero_location"
-relations.mero_location.proj.plwordnet = "meronymy_location"
+relations.mero_location.proj.plwordnet = "miejsce"
+relations.mero_location.proj.pointer = "%"
+
 
 
 ### Relation: holo_location EDP28
@@ -872,9 +874,11 @@ relations.holo_location.fa.sense_sense = False
 relations.holo_location.fa.inOMW = True
 relations.holo_location.fa.reverse = "mero_location"
 
-relations.holo_location.proj.querywn = "hsub"
+relations.holo_location.proj.querywn = "holo"
 relations.holo_location.proj.eurown = "has_holo_location"
-relations.holo_location.proj.plwordnet = "holonymy_location"
+relations.holo_location.proj.plwordnet = "miejsce"
+relations.holo_location.proj.pointer = "#"
+
 
 
 ### Relation: mero_portion EDP27
@@ -887,10 +891,10 @@ relations.mero_portion.fa.inOMW = True
 relations.mero_portion.fa.reverse = "holo_portion"
 
 relations.mero_portion.proj.pwn = "portion meronym"
-relations.mero_portion.proj.querywn = "hsub"
+relations.mero_portion.proj.querywn = "mprt"
 relations.mero_portion.proj.eurown = "has_mero_portion"
-relations.mero_portion.proj.plwordnet = "meronymy_portion"
-relations.mero_portion.proj.pointer = ""
+relations.mero_portion.proj.plwordnet = "porcja"
+relations.mero_portion.proj.pointer = "#p"
 
 
 ### Relation: holo_portion EDP27
@@ -902,10 +906,10 @@ relations.holo_portion.fa.sense_sense = False
 relations.holo_portion.fa.inOMW = True
 relations.holo_portion.fa.reverse = "mero_portion"
 
-relations.holo_portion.proj.querywn = "hsub"
+relations.holo_portion.proj.querywn = "hprt"
 relations.holo_portion.proj.eurown = "has_holo_portion"
-relations.holo_portion.proj.plwordnet = "holonymy_portion"
-relations.holo_portion.proj.pointer = ""
+relations.holo_portion.proj.plwordnet = "porcja"
+relations.holo_portion.proj.pointer = "%p"
 
 
 ### Relation: eq_synonym

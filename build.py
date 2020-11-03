@@ -1,4 +1,3 @@
-
 # thanks: http://eosrei.net/articles/2015/11/latex-templates-python-and-jinja2-generate-pdfs
 # thanks: http://flask.pocoo.org/snippets/55/
 
@@ -93,3 +92,4 @@ if __name__ == '__main__':
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
+
