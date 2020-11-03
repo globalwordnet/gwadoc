@@ -1206,7 +1206,7 @@ relations.is_entailed_by.proj.pointer = ""
 
 relations.other.fa.parent = None
 relations.other.fa.synset_synset = True
-relations.other.fa.sense_synset = False
+relations.other.fa.sense_synset = True
 relations.other.fa.sense_sense = True
 relations.other.fa.inOMW = True
 
