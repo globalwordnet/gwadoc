@@ -418,8 +418,12 @@ relations.co_role.fa.sense_sense = False
 relations.co_role.fa.inOMW = True
 relations.co_role.fa.reverse = "co_role"
 
+relations.co_role.proj.ili = ""
+relations.co_role.proj.pwn = ""
+relations.co_role.proj.querywn = ""
 relations.co_role.proj.eurown = "co_role"
 relations.co_role.proj.plwordnet = ""
+relations.co_role.proj.pointer = ""
 
 
 ### Relation: co_agent_patient EDP32
@@ -431,8 +435,12 @@ relations.co_agent_patient.fa.sense_sense = False
 relations.co_agent_patient.fa.inOMW = True
 relations.co_agent_patient.fa.reverse = "co_patient_agent"
 
+relations.co_agent_patient.proj.ili = ""
+relations.co_agent_patient.proj.pwn = ""
+relations.co_agent_patient.proj.querywn = ""
 relations.co_agent_patient.proj.eurown = "co_agent_patient"
 relations.co_agent_patient.proj.plwordnet = ""
+relations.co_agent_patient.proj.pointer = ""
 
 
 ### Relation: co_agent_instrument EDP32
@@ -444,8 +452,12 @@ relations.co_agent_instrument.fa.sense_sense = False
 relations.co_agent_instrument.fa.inOMW = True
 relations.co_agent_instrument.fa.reverse = "co_instrument_agent"
 
+relations.co_agent_instrument.proj.ili = ""
+relations.co_agent_instrument.proj.pwn = ""
+relations.co_agent_instrument.proj.querywn = ""
 relations.co_agent_instrument.proj.eurown = "co_agent_instrument"
 relations.co_agent_instrument.proj.plwordnet = ""
+relations.co_agent_instrument.proj.pointer = ""
 
 
 ### Relation: co_agent_result EDP32
@@ -457,8 +469,12 @@ relations.co_agent_result.fa.sense_sense = False
 relations.co_agent_result.fa.inOMW = True
 relations.co_agent_result.fa.reverse = "co_result_agent"
 
+relations.co_agent_result.proj.ili = ""
+relations.co_agent_result.proj.pwn = ""
+relations.co_agent_result.proj.querywn = ""
 relations.co_agent_result.proj.eurown = "co_agent_result"
 relations.co_agent_result.proj.plwordnet = ""
+relations.co_agent_result.proj.pointer = ""
 
 
 ### Relation: co_patient_agent EDP32
@@ -470,8 +486,12 @@ relations.co_patient_agent.fa.sense_sense = False
 relations.co_patient_agent.fa.inOMW = True
 relations.co_patient_agent.fa.reverse = "co_agent_patient"
 
+relations.co_patient_agent.proj.ili = ""
+relations.co_patient_agent.proj.pwn = ""
+relations.co_patient_agent.proj.querywn = ""
 relations.co_patient_agent.proj.eurown = "co_patient_agent"
 relations.co_patient_agent.proj.plwordnet = ""
+relations.co_patient_agent.proj.pointer = ""
 
 
 ### Relation: co_patient_instrument EDP32
@@ -483,8 +503,12 @@ relations.co_patient_instrument.fa.sense_sense = False
 relations.co_patient_instrument.fa.inOMW = True
 relations.co_patient_instrument.fa.reverse = "co_instrument_patient"
 
+relations.co_patient_instrument.proj.ili = ""
+relations.co_patient_instrument.proj.pwn = ""
+relations.co_patient_instrument.proj.querywn = ""
 relations.co_patient_instrument.proj.eurown = "co_patient_instrument"
 relations.co_patient_instrument.proj.plwordnet = ""
+relations.co_patient_instrument.proj.pointer = ""
 
 
 ### Relation: co_result_agent EDP32
@@ -496,8 +520,12 @@ relations.co_result_agent.fa.sense_sense = False
 relations.co_result_agent.fa.inOMW = True
 relations.co_result_agent.fa.reverse = "co_agent_result"
 
+relations.co_result_agent.proj.ili = ""
+relations.co_result_agent.proj.pwn = ""
+relations.co_result_agent.proj.querywn = ""
 relations.co_result_agent.proj.eurown = "co_result_agent"
 relations.co_result_agent.proj.plwordnet = ""
+relations.co_result_agent.proj.pointer = ""
 
 
 ### Relation: co_result_instrument EDP32
@@ -509,8 +537,12 @@ relations.co_result_instrument.fa.sense_sense = False
 relations.co_result_instrument.fa.inOMW = True
 relations.co_result_instrument.fa.reverse = "co_instrument_result"
 
+relations.co_result_instrument.proj.ili = ""
+relations.co_result_instrument.proj.pwn = ""
+relations.co_result_instrument.proj.querywn = ""
 relations.co_result_instrument.proj.eurown = "co_result_instrument"
 relations.co_result_instrument.proj.plwordnet = ""
+relations.co_result_instrument.proj.pointer = ""
 
 
 ### Relation: co_instrument_agent EDP32
@@ -522,8 +554,12 @@ relations.co_instrument_agent.fa.sense_sense = False
 relations.co_instrument_agent.fa.inOMW = True
 relations.co_instrument_agent.fa.reverse = "co_agent_instrument"
 
+relations.co_instrument_agent.proj.ili = ""
+relations.co_instrument_agent.proj.pwn = ""
+relations.co_instrument_agent.proj.querywn = ""
 relations.co_instrument_agent.proj.eurown = "co_instrument_agent"
 relations.co_instrument_agent.proj.plwordnet = ""
+relations.co_instrument_agent.proj.pointer = ""
 
 
 ### Relation: co_instrument_patient EDP32
@@ -535,8 +571,12 @@ relations.co_instrument_patient.fa.sense_sense = False
 relations.co_instrument_patient.fa.inOMW = True
 relations.co_instrument_patient.fa.reverse = "co_patient_instrument"
 
+relations.co_instrument_patient.proj.ili = ""
+relations.co_instrument_patient.proj.pwn = ""
+relations.co_instrument_patient.proj.querywn = ""
 relations.co_instrument_patient.proj.eurown = "co_instrument_patient"
 relations.co_instrument_patient.proj.plwordnet = ""
+relations.co_instrument_patient.proj.pointer = ""
 
 
 ### Relation: co_instrument_result ice saw/ice
@@ -548,8 +588,12 @@ relations.co_instrument_result.fa.sense_sense = False
 relations.co_instrument_result.fa.inOMW = True
 relations.co_instrument_result.fa.reverse = "co_result_instrument"
 
+relations.co_instrument_result.proj.ili = ""
+relations.co_instrument_result.proj.pwn = ""
+relations.co_instrument_result.proj.querywn = ""
 relations.co_instrument_result.proj.eurown = "co_instrument_result"
 relations.co_instrument_result.proj.plwordnet = ""
+relations.co_instrument_result.proj.pointer = ""
 
 
 ### Relation: state_of EDP37
@@ -1171,6 +1215,14 @@ relations.participle.fa.parent = None
 relations.participle.fa.synset_synset = False
 relations.participle.fa.sense_synset = False
 relations.participle.fa.sense_sense = True
+relations.pertainym.fa.reverse = 'participle'
+
+relations.participle.proj.ili = ""
+relations.participle.proj.pwn = ""
+relations.participle.proj.querywn = "part"
+relations.participle.proj.eurown = ""
+relations.participle.proj.plwordnet = ""
+relations.participle.proj.pointer = ""
 
 
 ### Relation: pertainym
@@ -1181,6 +1233,14 @@ relations.pertainym.fa.parent = None
 relations.pertainym.fa.synset_synset = False
 relations.pertainym.fa.sense_synset = False
 relations.pertainym.fa.sense_sense = True
+relations.pertainym.fa.reverse = 'pertainym'
+
+relations.pertainym.proj.ili = ""
+relations.pertainym.proj.pwn = ""
+relations.pertainym.proj.querywn = "pert"
+relations.pertainym.proj.eurown = ""
+relations.pertainym.proj.plwordnet = ""
+relations.pertainym.proj.pointer = ""
 
 
 ### Relation: derivation
@@ -1193,6 +1253,13 @@ relations.derivation.fa.sense_synset = False
 relations.derivation.fa.sense_sense = True
 relations.derivation.fa.reverse = 'derivation'
 relations.derivation.proj.ili = 'i71936'
+
+relations.derivation.proj.ili = ""
+relations.derivation.proj.pwn = ""
+relations.derivation.proj.querywn = "deri"
+relations.derivation.proj.eurown = ""
+relations.derivation.proj.plwordnet = "derywacyjność"
+relations.derivation.proj.pointer = "+"
 
 ### Relation Simple Aspect
 
@@ -1292,5 +1359,3 @@ relations.ir_synonym.fa.synset_synset = True
 relations.ir_synonym.fa.sense_sense = True
 relations.ir_synonym.fa.reverse = 'ir_synonym'
 #relations.ir_synonym.proj.ili = ''
-
-
