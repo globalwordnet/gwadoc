@@ -977,11 +977,27 @@ relations.state_of.df.en = """
 the way something is with respect to its main attributes
 """
 relations.state_of.dfn.en = """
-A relation between two concepts where concept Y is qualified by
-concept X.
+A relation between two concepts where concept B is qualified by
+concept A.
 """
-relations.state_of.ex.en = "poor/poor (a poor person)"
+relations.state_of.ex.en = "poor state_of poor (a poor person)"
 relations.state_of.exe.en = """
+ * `poor <ILIURL/11083>`_ state_of `have-not <ILIURL/92132>`_
+ * `rich <ILIURL/11080>`_ state_of `rich person <ILIURL/92571>`_
+
+"""
+relations.state_of.test.en = """
+State Of - relation between noun (EWN 44)
+
+===     =   ======================================================
+yes     a   *B is the state that applies to A*
+
+===     =   ======================================================
+
+Conditions:
+ - B is an adjective/adverb.
+ - A is a noun.
+
 """
 relations.state_of.com.en = """
 In plWordNet it is a relation between lexical units.
@@ -992,16 +1008,32 @@ FCB: isn't this the same as attribute (but split into two directions)
 ### Relation: be_in_state EDP37
 
 relations.be_in_state.name.en = "Be In State"
-relations.be_in_state.df.en = ""
+relations.be_in_state.df.en = "Concept A is qualified by B"
 relations.be_in_state.dfn.en = """
-A relation between two concepts where concept X is qualified by
-concept Y.
+A relation between two concepts where concept A is qualified by
+concept B.
 
-X is qualified by Y.
+A is qualified by B.
 """
-relations.be_in_state.ex.en = "poor (a poor person)/poor"
+relations.be_in_state.ex.en = "poor (a poor person) be_in_State poor"
 relations.be_in_state.exe.en = """
+ * `have-not <ILIURL/92132>`_ be in state `poor <ILIURL/11083>`_
+ * `rich person <ILIURL/92571>`_ be in state `rich <ILIURL/11080>`_
 """
+relations.be_in_state.test.en = """
+Be In State - relation between adjective/adverb (EWN 44)
+
+===     =   ======================================================
+yes     a   *a/an/the A is the one/that to whom/which the state B applies*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a noun.
+ - B is an adjective/adverb.
+
+"""
+
 relations.be_in_state.com.en = """
 In plWordNet it is a relation between lexical units.
 """
@@ -1011,23 +1043,54 @@ In plWordNet it is a relation between lexical units.
 
 relations.causes.name.en = "Causes"
 relations.causes.df.en = """
-any entity that produces an effect or is responsible for events or
-results
+Concept A is an entity that produces an effect or is responsible for events or
+results of Concept B.
 """
 relations.causes.dfn.en = """
-A relation between two concepts where concept Y comes into existence
-as a result of concept X. Entailment is a relation that links two
-verbs, and it is currently unilateral — Verb-X causes Verb-Y, without
+A relation between two concepts where concept B comes into existence
+as a result of concept A. Entailment is a relation that links two
+verbs, and it is currently unilateral — Verb-A causes Verb-B, without
 a reciprocal or tracing link. Causation presupposes/requires that some
-Verb-Y will, inevitably, take place during or after Verb-X (e.g. if
-Verb-X occurs, then Verb-Y will also occur).
+Verb-B will, inevitably, take place during or after Verb-A (e.g. if
+Verb-A occurs, then Verb-B will also occur).
 
 While not exclusive to these types of verbs, many verbs that have both
 a transitive and an intransitive form will frequently be submitted to
 this relation.
 """
-relations.causes.ex.en = "kill/die"
+relations.causes.ex.en = "kill causes die"
 relations.causes.exe.en = """
+ * `kill <ILIURL/28306>`_ causes `die <ILIURL/23529>`_
+"""
+relations.causes.test.en = """
+Causes - relation  (EWN 36)
+
+===     =   ======================================================
+yes     a   *(To/A/an) A causes (to/a/an) B to take place*
+.       .   *(To/A/an) A has (to/a/an) B as a consequence*
+.       .   *(To/A/an) A leads to (to/a/an) B*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the infinitive form or A is a noun in the singular 
+ - B is a verb in the infinitive form or B is a noun in the singular
+ 
+Causes - relation between verbs and adjectives (or adverbs)  (EWN 37)
+
+===     =   ======================================================
+yes     a   *A causes to be B*
+.       .   *A has being B as a consequence*
+.       .   *A leads to be(ing) B*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+- A is a verb in the infinitive form
+- B is and adjective
+
 """
 relations.causes.com.en = """
 EUWN's definition of CAUSES is broader than that of PWN. It
@@ -1038,13 +1101,46 @@ seems possible to just absorb PWN's links.
 ### Relation: is_caused_by EDP34
 
 relations.is_caused_by.name.en = "Is Caused By"
-relations.is_caused_by.df.en = ""
+relations.is_caused_by.df.en = "Concept A comes about because of concept B"
 relations.is_caused_by.dfn.en = """
-A relation between two concepts where concept X comes into existence
-as a result of concept Y.
+A relation between two concepts where concept A comes into existence
+as a result of concept B.
 """
-relations.is_caused_by.ex.en = "die/kill"
+relations.is_caused_by.ex.en = "die is_caused_by kill"
 relations.is_caused_by.exe.en = """
+ * `die <ILIURL/23529>`_ is caused by `kill <ILIURL/28306>`_
+
+"""
+relations.is_caused_by.test.en = """
+Is Caused By - relation  (EWN 36)
+
+===     =   ======================================================
+yes     a   *(To/A/an) B takes place because of A*
+.       .   *(To/A/an) B is the consequence A*
+.       .   *(To/A/an) B is the result of A*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+ - A is a verb in the infinitive form or A is a noun in the singular 
+ - B is a verb in the infinitive form or B is a noun in the singular
+
+Is Caused By - relation between verbs and adjectives (or adverbs)  (EWN 37)
+
+===     =   ======================================================
+yes     a   *B is caused by A*
+.       .   *B is the consequence of A*
+.       .   *B is the result of A*
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the infinitive form
+- B is and adjective
+
 """
 relations.is_caused_by.com.en = """
 The 'is caused by' relation was missing from PWN before."""
@@ -1053,23 +1149,51 @@ The 'is caused by' relation was missing from PWN before."""
 ### Relation: subevent EDP35
 
 relations.subevent.name.en = "Subevent"
-relations.subevent.df.en = ""
+relations.subevent.df.en = "Concept B takes place during or as part of concept A, and whenever concept B takes place, concept A takes place"
 relations.subevent.dfn.en = """
-A relation between two concepts where concept Y takes place
-during or as part of concept X, and whenever concept Y takes
-place, concept X takes place.
+A relation between two concepts where concept B takes place
+during or as part of concept A, and whenever concept B takes
+place, concept A takes place.
 
 """
-relations.subevent.ex.en = "sleep/snore"
+relations.subevent.ex.en = "sleep has subevent snore"
 relations.subevent.exe.en = """
+ * `sleep <ILIURL/21840>`_ has subevent `snore <ILIURL/21852>`_
+
+"""
+relations.subevent.test.en = """
+Subevent - relation between verbs/nouns (a)  (EWN 41)
+
+===     =   ======================================================
+yes     a   *B takes place during or as a part of A, and whenever B takes place, A takes place*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the gerundive form
+- B is a verb in the gerundive form
+
+Subevent - relation between verbs/nouns (b)  (EWN 42)
+
+===     =   ======================================================
+yes     a   *A consists of B and other events or processes*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- B is a verb in the gerundive form
+- A is a verb in the gerundive form buying consists of paying and other events or processes
+
 """
 relations.subevent.com.en = """
-The EUWN CAUSES relation is broader than the PWN in such a
-way that it actually includes links that were linked as
-ENTAILMENT by the PWN (e.g. to suceed IS_CAUSED_BY to try;
-to try CAUSES succeed [non-factive, intention]). This means
-that HAS_SUBVENT and IS_SUBVENT_OF should not include every
-relation marked as ENTAILMENT by the PWN.
+The SUBEVENT relation is very useful for many closely related verbs and appeals more directly to human-intuitions
+(parallel to part-whole relation of concrete entities).
 
 """
 
@@ -1077,15 +1201,48 @@ relation marked as ENTAILMENT by the PWN.
 ### Relation: is_subevent_of EDP35
 
 relations.is_subevent_of.name.en = "Is Subevent Of"
-relations.is_subevent_of.df.en = ""
+relations.is_subevent_of.df.en = "Concept A takes place during or as part of concept B, and whenever concept A takes place, concept B takes place"
 relations.is_subevent_of.dfn.en = """
-A relation between two concepts where concept X takes place
-during or as part of concept Y, and whenever concept X takes
-place, concept Y takes place.
+A relation between two concepts where concept A takes place
+during or as part of concept B, and whenever concept A takes
+place, concept B takes place.
 
 """
-relations.is_subevent_of.ex.en = "snore/sleep"
+relations.is_subevent_of.ex.en = "snore is_subevent_of sleep"
 relations.is_subevent_of.exe.en = """
+ * `snore <ILIURL/21852>`_ is subevent of `sleep <ILIURL/21840>`_
+ * `pay <ILIURL/i32996>`_ is subevent of `buy <ILIURL/33154>`_
+ 
+"""
+relations.is_subevent_of.test.en = """
+Is Subevent Of - relation between verbs/nouns (a)  (EWN 41)
+
+===     =   ======================================================
+yes     a   *A takes place during or as a part of B, and whenever A takes place, B takes place*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- A is a verb in the gerundive form
+- B is a verb in the gerundive form
+
+Is Subevent Of - relation between verbs/nouns (b)  (EWN 42)
+
+===     =   ======================================================
+yes     a   *A consists of B and other events or processes*
+
+no      b   *the converse of (a)*
+
+===     =   ======================================================
+
+Conditions:
+
+- B is a verb in the gerundive form
+- A is a verb in the gerundive form buying consists of paying and other events or processes
+
 """
 relations.is_subevent_of.com.en = """
 """
@@ -1094,17 +1251,35 @@ relations.is_subevent_of.com.en = """
 ### Relation: in_manner EDP36
 
 relations.in_manner.name.en = "In Manner"
-relations.in_manner.df.en = ""
+relations.in_manner.df.en = "B qualifies the manner in which an action or event expressed by A takes place"
 relations.in_manner.dfn.en = """
-A relation between two concepts where concept Y qualifies
+A relation between two concepts where concept B qualifies
 the manner in which an action or event expressed by concept
-X takes place.
+A takes place.
 
 """
-relations.in_manner.ex.en = "slurp/noisely"
+relations.in_manner.ex.en = "slurp in manner noisely"
 relations.in_manner.exe.en = """
+ * `slurp <ILIURL/27462>`_ in manner `noisily <ILIURL/19718>`_
+"""
+relations.in_manner.test.en = """
+In Manner - relation between verbs/adverb (EWN 43)
+
+===     =   ======================================================
+yes     a   *to A is to B in a C manner/way.*
+
+===     =   ======================================================
+
+Conditions:
+
+- A and B are verbs
+- B is the hyperonym of A
+- C is an adjective/adverb
+
 """
 relations.in_manner.com.en = """
+In EuroWordNet, we decided not to differentiate between troponymy and hyponymy but to use the IN_MANNER and MANNER_OF
+relation in addition to normal hyponymy to make the manner component explicit (if it is significant in the meaning of the verb):
 """
 
 
@@ -1113,13 +1288,29 @@ relations.in_manner.com.en = """
 relations.manner_of.name.en = "Manner Of"
 relations.manner_of.df.en = "a way of acting or behaving"
 relations.manner_of.dfn.en = """
-A relation between two concepts where concept X qualifies
+A relation between two concepts where concept A qualifies
 the manner in which an action or event expressed by concept
-Y takes place.
+B takes place.
 
 """
-relations.manner_of.ex.en = "noisely/slurp"
+relations.manner_of.ex.en = "noisely manner of slurp"
 relations.manner_of.exe.en = """
+ * `noisily <ILIURL/19718>`_  manner of `slurp <ILIURL/27462>`_
+"""
+relations.manner_of.test.en = """
+Manner Of - relation between verbs/adverb (EWN 43)
+
+===     =   ======================================================
+yes     a   *a manner of B which qualifies A*
+
+===     =   ======================================================
+
+Conditions:
+
+- A and B are verbs
+- B is the hyperonym of A
+- C is an adjective/adverb
+
 """
 relations.manner_of.com.en = """
 """
@@ -1793,20 +1984,37 @@ relations.attribute.df.en = """
 an abstraction belonging to or characteristic of an entity
 """
 relations.attribute.dfn.en = """
-A relation between nominal and adjectival concepts where the concept X
-is an attribute of concept Y. ‘Attributes’ is a self-reciprocal link
+A relation between nominal and adjectival concepts where the concept A
+is an attribute of concept B. ‘Attributes’ is a self-reciprocal link
 (the two directions of this relation share the same meaning) —
-Concept-X attributes to Concept-Y, and Concept-Y attributes to
-Concept-X.
+Concept-A attributes to Concept-B, and Concept-B attributes to
+Concept-A.
 
 It denotes a relation between a noun and its adjectival attributes,
 and vice-versa — for this reason it should only link adjectives to
 nouns and vice-versa.
 """
-relations.attribute.ex.en = ""
+relations.attribute.ex.en = "fertile attribute fecundity"
 relations.attribute.exe.en = """
-* fertile (01001689-a) ATTRIBUTES:  fertility (14051494-n)
-* fertility (14051494-n) ATTRIBUTES: fertile (01001689-a)
+* `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
+* `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
+"""
+relations.attribute.test.en = """
+Attribute-relation between nouns and adjectives (EWN 14)
+
+===     =   ======================================================
+yes     a   *A is an attribute of B*
+.       .   *B is an attribute of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
+Conditions:
+- A is a noun in the singular
+- B is an adjective
+- there is at least one specifying adverb, NP or PP that applies to the A- phrase or the B-phrase
+- preferably there is a no morphological link between the noun and the adjective
+
 """
 relations.attribute.com.en = """
 In plWN Value_of_the_attribute is a unilateral relation from
@@ -1860,11 +2068,15 @@ relations.classifies.df.en = """
 assign to a class or kind
 """
 relations.classifies.dfn.en = """
-A relation between a classifier concept X and concept Y. A relation
-between a classifier X and Y
+A relation between a classifier concept A and concept B. A relation
+between a classifier A and B
 """
-relations.classifies.ex.en = ""
+relations.classifies.ex.en = "hammer classifies broom"
 relations.classifies.exe.en = """
+ * `hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_
+ * `knife <ILIURL/55422>`_ classifies `sword <ILIURL/59896>`_
+ * `thread <ILIURL/60206>`_ classifies `rope <ILIURL/58271>`_
+
 """
 relations.classifies.com.en = """
 currently we only have links for nominal concepts, but we
@@ -1879,11 +2091,15 @@ relations.classified_by.df.en = """
 arrange or order by classes or categories
 """
 relations.classified_by.dfn.en = """
-A relation between concept Y and a classifier concept X. A relation
-between Y and a classifier X
+A relation between concept B and a classifier concept A. A relation
+between B and a classifier A.
 """
 relations.classified_by.ex.en = ""
 relations.classified_by.exe.en = """
+ * `broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_
+ * `dagger <ILIURL/52683>`_ classified by `weapon with a blade <ILIURL/50826>`_
+ * `wire <ILIURL/61210>`_ classified by `filiform <ILIURL/13360>`_
+
 """
 relations.classified_by.com.en = """
 """
@@ -1907,8 +2123,23 @@ This link was originally used to relate adjectives, but we have
 unconstrained this use, and we're making use of this link to relate
 all parts-of-speech.
 """
-relations.also.ex.en = ""
+relations.also.ex.en = "time see also moment"
 relations.also.exe.en = """
+ * `farmer <ILIURL/89889>`_ see also `farmland <ILIURL/82016>`_
+ * `learn <ILIURL/24750>`_ see also `school <ILIURL/58518>`_
+ * `picture <ILIURL/56911>`_ see also `sculpture <ILIURL/40330>`_
+ * `plant <ILIURL/35564>`_ see also `flower <ILIURL/98673>`_
+ * `walk <ILIURL/36884>`_ see also `park <ILIURL/82259>`_
+ 
+"""
+
+relations.also.test.en = """
+===     =   ======================================================
+yes     a   *A has some strong relation to B*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.also.com.en = """
 Also known as fuzzynym
@@ -2010,25 +2241,48 @@ impose, involve, or imply as a necessary accompaniment or result
 """
 relations.entails.dfn.en = """
 Entailment is a relation that links two verbs, and it is currently
-unilateral — Verb-X entails Verb-Y, without a reciprocal or tracing
+unilateral — Verb-A entails Verb-B, without a reciprocal or tracing
 link.  This relation presupposes/requires a semantic restriction in
-which Verb-Y has to take place before or during Verb-X.
+which Verb-B has to take place before or during Verb-A.
 """
-relations.entails.ex.en = ""
+relations.entails.ex.en = "snore entails sleep"
 relations.entails.exe.en = """
+ * `snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_
+ 
+"""
+
+relations.entails.test.en = """
+===     =   ======================================================
+yes     a   *A cannot be done unless B is or has been done*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.entails.com.en = """
+A verb A entails B if A cannot be done unless B is, or has been, done.
 """
 
 
 ### Relation: is_entailed_by
 
 relations.is_entailed_by.name.en = "Is Entailed By"
-relations.is_entailed_by.df.en = ""
+relations.is_entailed_by.df.en = "Concept B is dome/happens because of concept A"
 relations.is_entailed_by.dfn.en = """
 """
-relations.is_entailed_by.ex.en = ""
+relations.is_entailed_by.ex.en = "sleep is entailed by snore"
 relations.is_entailed_by.exe.en = """
+ * `sleep <ILIURL/21840>`_ entails `snore <ILIURL/21852>`_
+
+"""
+
+relations.is_entailed_by.test.en = """
+===     =   ======================================================
+yes     a   *B is the result/happens because of the occurrence of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.is_entailed_by.com.en = """
 """
@@ -2037,7 +2291,7 @@ relations.is_entailed_by.com.en = """
 ### Relation: other
 
 relations.other.name.en = "Other"
-relations.other.df.en = "any other semantic relation"
+relations.other.df.en = "not the same one or ones already mentioned or implied"
 relations.other.dfn.en = """
 This is used for semantic relation types not currently supported by
 the OMW DTD.  The exact relation type can be given with ``dc:type``:
@@ -2047,11 +2301,27 @@ the OMW DTD.  The exact relation type can be given with ``dc:type``:
     <SynsetRelation relType="other" dc:type="emotion" target="example-en-1234-n"/>
 
 """
-relations.other.ex.en = ""
+relations.other.ex.en = "Physician other Hospital"
 relations.other.exe.en = """
+ * `curator <ILIURL/89345>`_ other `museum <ILIURL/56456>`_
+ * `priest <ILIURL/92229>`_ other `church <ILIURL/40809>`_
+ * `mailman <ILIURL/91159>`_ other `post office <ILIURL/79962>`_
+ * `mayor <ILIURL/91277>`_ other `town hall <ILIURL/60420>`_
+ * `judge <ILIURL/90808>`_ other `court <ILIURL/52438>`_
+ * `ambassador <ILIURL/88178>`_ other `embassy <ILIURL/53393>`_
+ * `gardener <ILIURL/90153>`_ other `garden <ILIURL/54178>`_
+ 
+"""
+relations.other.test.en = """
+===     =   ======================================================
+yes     a   *A has some strong relation to B*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
+
 """
 relations.other.com.en = """
-Because we don't know what it means, we cannot give it a reverse relation.
+A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
 """
 
 ### Relation: participle
