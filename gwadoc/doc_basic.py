@@ -1192,6 +1192,7 @@ relations.derivation.fa.synset_synset = False
 relations.derivation.fa.sense_synset = False
 relations.derivation.fa.sense_sense = True
 relations.derivation.fa.reverse = 'derivation'
+relations.derivation.proj.ili = 'i71936'
 
 ### Relation Simple Aspect
 
