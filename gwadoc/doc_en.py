@@ -2521,5 +2521,3 @@ relations.anto_gradable.com.en = "Also known as just *converse* or *relational a
 relations.ir_synonym.name.en = "Inter-register Synonym"
 relations.ir_synonym.df.en = "A concept that means the same except for the style or connotation"
 relations.ir_synonym.ex.en = "`loot <ILIURL/106350>`_ is an inter-register synonym of `money <ILIURL/107057>`_"
-
-
