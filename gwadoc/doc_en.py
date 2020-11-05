@@ -15,7 +15,7 @@ relations.domain.dfn.en = """
 Domain is an underspecified relation between two concepts where Concept B is a Topic (scientific category), 
 Region or Usage pointer of Concept A.
 """
-relations.domain.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.domain.ex.en = ""
 relations.domain.exe.en = ""
 relations.domain.test.en = ""
 relations.domain.com.en = """
