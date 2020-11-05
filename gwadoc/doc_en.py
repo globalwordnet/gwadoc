@@ -15,9 +15,9 @@ relations.domain.dfn.en = """
 Domain is an underspecified relation between two concepts where Concept B is a Topic (scientific category), 
 Region or Usage pointer of Concept A.
 """
-relations.domain.ex.en = ""
-relations.domain.exe.en = ""
-relations.domain.test.en = ""
+relations.domain.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.domain.exe.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.domain.test.en = "`Contribute test <https://github.com/globalwordnet/gwadoc/>`_"
 relations.domain.com.en = """
 This is an underspecified relation that covers Domain Topic, Domain Region, and Is Exemplified By. 
 As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
@@ -35,9 +35,9 @@ relations.has_domain.dfn.en = """
 In Domain is an underspecified relation between two concepts where Concept A is a Topic (scientific category, 
 Region or Usage term of Concept B.
 """
-relations.has_domain.ex.en = ""
-relations.has_domain.exe.en = ""
-relations.has_domain.test.en = ""
+relations.has_domain.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.has_domain.exe.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.has_domain.test.en = "`Contribute test <https://github.com/globalwordnet/gwadoc/>`_"
 relations.has_domain.com.en = """
 This is an underspecified relation that covers Has Domain Topic, Has Domain Region, and Exemplifies. 
 As such, it is not specified as a relation directly by wordnets, but a wordnet application may 
@@ -204,8 +204,8 @@ relations.role.dfn.en = """
 Role is an underspecified relation between two concepts where concept A is typically involved 
 in the action or event expressed by concept B.
 """
-relations.role.ex.en = ""
-relations.role.exe.en = ""
+relations.role.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.role.exe.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
 relations.role.test.en = """
 Role / Involved as general relation (EWN test 29)
 
@@ -492,8 +492,8 @@ relations.involved.dfn.en = """
 Involved is an underspecified relation between two concepts where concept B is the action 
 or event concept A typically involved in. 
 """
-relations.involved.ex.en = ""
-relations.involved.exe.en = ""
+relations.involved.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.involved.exe.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
 relations.involved.test.en = """
 Role / Involved as general relation (EWN test 29)
 
@@ -780,10 +780,12 @@ relations.co_role.dfn.en = """
 Co Role is an underspecified relation between two concepts where Concept A undergoes an action in
 which Concept B is involved (bidirectional).
 """
-relations.co_role.ex.en = ""
+relations.co_role.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
 relations.co_role.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_role.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_role.com.en = """
 This is an underspecified relation that covers Co Agent Patient, Co Patient Agent, 
@@ -823,6 +825,7 @@ relations.co_patient_agent.exe.en = """
 * `criminal <ILIURL/89309>`_ is the co patient agent of `victim <ILIURL/93927>`_ 
 """
 relations.co_patient_agent.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_patient_agent.com.en = """
 """
@@ -841,6 +844,7 @@ relations.co_agent_instrument.exe.en = """
 * `guitar <ILIURL/54496>`_ is the co agent instrument of `guitar player <ILIURL/90355>`_
 """
 relations.co_agent_instrument.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_agent_instrument.com.en = """
 """
@@ -859,6 +863,7 @@ relations.co_instrument_agent.exe.en = """
 * `guitar player <ILIURL/90355>`_ is the co instrument agent of `guitar <ILIURL/54496>`_  
 """
 relations.co_instrument_agent.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_instrument_agent.com.en = """
 """
@@ -875,6 +880,9 @@ action carried out by Concept A.
 relations.co_agent_result.ex.en = "`pastry <ILIURL/76902>`_ is the co agent result of `pastry cook <ILIURL/91893>`_"
 relations.co_agent_result.exe.en = """
 * `pastry <ILIURL/76902>`_ is the co agent result of `pastry cook <ILIURL/91893>`_
+"""
+relations.co_agent_result.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_agent_result.com.en = """
 """
@@ -893,6 +901,7 @@ relations.co_result_agent.exe.en = """
 * `pastry cook <ILIURL/91893>`_ is the co result agent of `pastry <ILIURL/76902>`_  
 """
 relations.co_result_agent.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_result_agent.com.en = """
 """
@@ -911,6 +920,7 @@ relations.co_patient_instrument.exe.en = """
 * `bread knife <ILIURL/51098>`_ is the co patient instrument of `bread <ILIURL/77313>`_ 
 """
 relations.co_patient_instrument.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.co_patient_instrument.com.en = """
 """
@@ -929,6 +939,8 @@ relations.co_instrument_patient.exe.en = """
 * `bread <ILIURL/77313>`_ is the co instrument patient of `bread knife <ILIURL/51098>`_
 """
 relations.co_instrument_patient.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
 """
 relations.co_instrument_patient.com.en = """
 """
@@ -947,6 +959,8 @@ relations.co_result_instrument.exe.en = """
 * `photograpic camera <ILIURL/51401>`_ is the co result instrument of `photo <ILIURL/57211>`_
 """
 relations.co_result_instrument.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
 """
 relations.co_result_instrument.com.en = """
 """
@@ -965,6 +979,8 @@ relations.co_instrument_result.exe.en = """
 * `photo <ILIURL/57211>`_ is the co instrument result of `photograpic camera <ILIURL/51401>`_
 """
 relations.co_instrument_result.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
 """
 relations.co_instrument_result.com.en = """
 """
@@ -1874,6 +1890,10 @@ relations.exemplifies.exe.en = """
 * `wings <ILIURL/36358>`_ exemplifies `plural form <ILIURL/69585>`_ 
 * `Band Aid <ILIURL/50429>`_ exemplifies `trademark <ILIURL/72497>`_ 
 """
+relations.exemplifies.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
+"""
 relations.exemplifies.com.en = """
 The name was changed from "Member of this domain - USAGE" as we found it
 too different from the standard meaning of domain.
@@ -1892,6 +1912,11 @@ relations.is_exemplified_by.ex.en = "`trademark <ILIURL/72497>`_ is exemplified 
 relations.is_exemplified_by.exe.en = """
 * `trademark <ILIURL/72497>`_ is exemplified by `Band Aid <ILIURL/50429>`_ 
 * `plural form <ILIURL/69585>`_ is exemplified by `wings <ILIURL/36358>`_ 
+"""
+
+relations.is_exemplified_by.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
 """
 relations.is_exemplified_by.com.en = """
 We agreed to change the name for these with Christiane! We
@@ -1913,6 +1938,9 @@ relations.domain_topic.exe.en = """
 * `plant <ILIURL/35564>`_ is a domain topic of `evergreen <ILIURL/5001>`_ 
 * `ocean <ILIURL/85897>`_ is a domain topic of `water <ILIURL/85104>`_ 
 """
+relations.domain_topic.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.domain_topic.com.en = """
 """
 
@@ -1931,6 +1959,9 @@ relations.has_domain_topic.exe.en = """
 * `evergreen <ILIURL/5001>`_ has domain topic of `plant <ILIURL/35564>`_ 
 * `water <ILIURL/85104>`_ has domain topic of `ocean <ILIURL/85897>`_ 
 """
+relations.has_domain_topic.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.has_domain_topic.com.en = """
 """
 
@@ -1948,6 +1979,9 @@ relations.domain_region.exe.en = """
 * `Japan <ILIURL/83607>`_ is a domain region of `sushi <ILIURL/78639>`_ 
 * `England <ILIURL/83374>`_ is a domain region of `War of the Roses <ILIURL/42242>`_ 
 * `Pacific <ILIURL/85934>`_ is a domain region of `Philippine Sea <ILIURL/42156>`_ 
+"""
+relations.domain_region.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.domain_region.com.en = """
 We also agreed to change the name for these (to include both
@@ -1969,6 +2003,9 @@ relations.has_domain_region.exe.en = """
 * `sushi <ILIURL/78639>`_ has domain region of `Japan <ILIURL/83607>`_ 
 * `War of the Roses <ILIURL/42242>`_ has domain region of `England <ILIURL/83374>`_ 
 * `Philippine Sea <ILIURL/42156>`_ has domain region of `Pacific <ILIURL/85934>`_ 
+"""
+relations.has_domain_region.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.has_domain_region.com.en = """
 We have discussed changing the name for these (as they include both
@@ -2032,8 +2069,13 @@ relations.restricts.dfn.en = """
 A relation between an adjectival concept X (quantifier/determiner) and
 a nominal (pronominal) concept Y.
 """
-relations.restricts.ex.en = ""
+relations.restricts.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
 relations.restricts.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+
+"""
+relations.restricts.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.restricts.com.en = """
 This would work for features like 'medial' or 'proximal' in
@@ -2047,15 +2089,18 @@ now marked as domain usage. (to be corrected soon'ish)
 ### Relation: restricted_by
 
 relations.restricted_by.name.en = "Restricted By"
-relations.restricted_by.df.en = ""
+relations.restricted_by.df.en = "`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_"
 relations.restricted_by.dfn.en = """
 A relation between nominal (pronominal) concept Y and an
 adjectival concept X (quantifier/determiner).
 """
-relations.restricted_by.ex.en = ""
+relations.restricted_by.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
 relations.restricted_by.exe.en = """
 * this-a (77000061-a) QUANTIFIES [qant] this-n (77000061-n)
 * this-n (77000061-n) QUANTIFIER: [hasq] this-a (77000061-a)
+"""
+relations.restricted_by.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.restricted_by.com.en = """
 """
@@ -2077,6 +2122,9 @@ relations.classifies.exe.en = """
  * `knife <ILIURL/55422>`_ classifies `sword <ILIURL/59896>`_
  * `thread <ILIURL/60206>`_ classifies `rope <ILIURL/58271>`_
 
+"""
+relations.classifies.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.classifies.com.en = """
 currently we only have links for nominal concepts, but we
@@ -2100,6 +2148,9 @@ relations.classified_by.exe.en = """
  * `dagger <ILIURL/52683>`_ classified by `weapon with a blade <ILIURL/50826>`_
  * `wire <ILIURL/61210>`_ classified by `filiform <ILIURL/13360>`_
 
+"""
+relations.classified_by.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.classified_by.com.en = """
 """
@@ -2338,6 +2389,7 @@ relations.participle.exe.en = """
 * `amazing <ILIURL/6996>`_ is the participial of `amaze <ILIURL/25324>`_
 """
 relations.participle.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
 """
 relations.participle.com.en = """
 These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can 
@@ -2363,6 +2415,8 @@ relations.pertainym.exe.en = """
 * `clinical <ILIURL/16412>`_ is the pertainym of `clinic <ILIURL/79534>`_
 """
 relations.pertainym.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
 """
 relations.pertainym.com.en = """
 """
@@ -2382,9 +2436,11 @@ relations.derivation.exe.en = """
 * `want(n) <ILIURL/113167>`_ is the derivation of `want(v) <ILIURL/30852>`_
 * `provision <ILIURL/40949>`_ is the derivation of `provide <ILIURL/33372>`_
 """
-relations.pertainym.test.en = """
+relations.derivation.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+
 """
-relations.pertainym.com.en = """
+relations.derivation.com.en = """
 This may be specialized further. It includes zero derivations. Gnerally 
 it is used for different syntactic categories that have the same root form and are 
 semantically related. Wordnet does not say which is the baseform, the relationship 
@@ -2396,9 +2452,9 @@ is fully reversible.
 
 #relations.agent.df.en = "X is typically the agent of the action expressed by Y"
 relations.antonym.df.en = "An opposite and inherently incompatible word"
-relations.be_in_state.df.en = "X is qualified by Y"
-relations.classified_by.df.en = "A relation between Y and a classifier X"
-relations.classifies.df.en = "A relation between a classifier X and Y"
+relations.be_in_state.df.en = "A is qualified by B"
+relations.classified_by.df.en = "A relation between B and a classifier A"
+relations.classifies.df.en = "A relation between a classifier A and B"
 #relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
 #relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
 #relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
@@ -2411,11 +2467,11 @@ relations.classifies.df.en = "A relation between a classifier X and Y"
 #relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
 #relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
 #relations.direction.df.en = "X is typically the direction or location of the action or event expressed by Y"
-relations.eq_synonym.df.en = "X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
-relations.holo_location.df.en = "Y is a place located in X"
-relations.holo_portion.df.en = "Y is an amount/piece/portion of X"
-relations.holonym.df.en = "X makes up a part of Y"
-relations.in_manner.df.en = "Y qualifies the manner in which an action or event expressed by X takes place"
+relations.eq_synonym.df.en = "A and B are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
+relations.holo_location.df.en = "B is a place located in A"
+relations.holo_portion.df.en = "B is an amount/piece/portion of A"
+relations.holonym.df.en = "A makes up a part of B"
+relations.in_manner.df.en = "B qualifies the manner in which an action or event expressed by A takes place"
 #relations.instrument.df.en = "X is the instrument necessary for the action or event expressed by Y"
 #relations.involved_agent.df.en = "Y is typically the agent of the action expressed by X"
 #relations.involved_direction.df.en = "Y is typically the direction or location of the action or event expressed by X"
@@ -2426,23 +2482,23 @@ relations.in_manner.df.en = "Y qualifies the manner in which an action or event 
 #relations.involved_source_direction.df.en = "Y is the place from where the action or event expressed by X begins/starts/happens"
 #relations.involved_target_direction.df.en = "Y is the place where the action or event expressed by X leads to"
 #relations.involved.df.en = "Y is typically involved in the action or event expressed by X"
-relations.is_caused_by.df.en = "X comes about because of Y"
+relations.is_caused_by.df.en = "A comes about because of B"
 relations.is_entailed_by.df.en = "Opposite of entails"
-relations.is_subevent_of.df.en = "X takes place during or as part of Y, and whenever X takes place, Y takes place"
+relations.is_subevent_of.df.en = "A takes place during or as part of B, and whenever A takes place, B takes place"
 #relations.location.df.en = "X is the location where the action or event expressed by Y takes place"
-relations.manner_of.df.en = "X qualifies the manner in which an action or event expressed by Y takes place"
-relations.mero_location.df.en = "X is a place located in Y"
-relations.mero_portion.df.en = "X is an amount/piece/portion of Y"
-relations.meronym.df.en = "Y makes up a part of X"
+relations.manner_of.df.en = "A qualifies the manner in which an action or event expressed by B takes place"
+relations.mero_location.df.en = "A is a place located in B"
+relations.mero_portion.df.en = "A is an amount/piece/portion of B"
+relations.meronym.df.en = "B makes up a part of A"
 relations.other.df.en = "Any relation not otherwise specified"
 #relations.patient.df.en = "X is the patient undergoing an action or event expressed by Y"
 #rels.pertainym.df.en =  "X is of or pertaining to Y"
-relations.restricted_by.df.en = "A relation between nominal (pronominal) Y and an adjectival X (quantifier/determiner)"
-relations.restricts.df.en = "A relation between an adjectival X (quantifier/determiner) and a nominal (pronominal) Y"
+relations.restricted_by.df.en = "A relation between nominal (pronominal) B and an adjectival A (quantifier/determiner)"
+relations.restricts.df.en = "A relation between an adjectival A (quantifier/determiner) and a nominal (pronominal) B"
 #relations.result.df.en = "X comes into existence as a result of Y"
 #relations.role.df.en = "X is typically involved in the action or event expressed by Y"
 #relations.source_direction.df.en = "X is the place from where the event expressed by Y begins"
-relations.state_of.df.en = "Y is qualified by X"
+relations.state_of.df.en = "B is qualified by A"
 relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
 #relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
 
@@ -2450,77 +2506,186 @@ relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y
 
 relations.simple_aspect.name.en = "Simple Aspect"
 relations.simple_aspect.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
-relations.simple_aspect.ex.en = ""
-
+relations.simple_aspect.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.simple_aspect.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.simple_aspect.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.simple_aspect.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.simple_aspect.com.en = """
+"""
 
 ### Relation Secondary Aspect
 
 relations.secondary_aspect.name.en = "Secondary Aspect"
 relations.secondary_aspect.df.en = "A concept which is linked to another through a change in aspect"
-relations.secondary_aspect.ex.en = ""
-
+relations.secondary_aspect.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.secondary_aspect.ex.en = "`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_"
+relations.secondary_aspect.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.secondary_aspect.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.secondary_aspect.com.en = """
+"""
 
 ### Relation: Feminine form
 
 relations.feminine_form_of.name.en = "Feminine form"
-relations.feminine_form_of.df.en= "A concept used to refer to female members of a class"
-relations.feminine_form_of.ex.en= "*sow* is a female *pig*"
-
+relations.feminine_form_of.df.en = "A concept used to refer to female members of a class"
+relations.feminine_form_of.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.feminine_form_of.ex.en = "*sow* is a female *pig*"
+relations.feminine_form_of.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.feminine_form_of.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.feminine_form_of.com.en = """
+"""
 
 ### Relation: Masculine Form
 
 relations.masculine_form_of.name.en = "Masculine Form"
 relations.masculine_form_of.df.en= "A concept used to refer to male members of a class"
-relations.masculine_form_of.ex.en= "*boar* is a male *pig*"
+relations.masculine_form_of.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.masculine_form_of.ex.en = "*boar* is a male *pig*"
+relations.masculine_form_of.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.masculine_form_of.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.masculine_form_of.com.en = """
+"""
 
 
 ### Relation: Young Form
 
 relations.young_form_of.name.en = "Young Form"
 relations.young_form_of.df.en = "A concept used to refer to young members of a class"
+relations.young_form_of.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.young_form_of.ex.en = "*piglet* is a young *pig*"
+relations.young_form_of.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.young_form_of.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.young_form_of.com.en = """
+"""
 
 
 ### Relation: Diminuative
 
 relations.diminutive_of.name.en = "Diminutive Form"
 relations.diminutive_of.df.en = "A concept used to refer to generally smaller members of a class"
+relations.diminutive_of.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.diminutive_of.ex.en = "*piggy* is a diminutive *pig*"
+relations.diminutive_of.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.diminutive_of.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.diminutive_of.com.en = """
+"""
 
 
 ### Relation: Augmentative
 
 relations.augmentative_of.name.en = "Augmentative Form"
 relations.augmentative_of.df.en = "A concept used to refer to generally larger members of a class"
+relations.augmentative_of.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.augmentative_of.ex.en = "*great house* is a larger *house*"
-
+relations.augmentative_of.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.augmentative_of.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.augmentative_of.com.en = """
+"""
 
 ### Relation: Gradable Antonym
 
 relations.anto_gradable.name.en = "Gradable Antonym"
 relations.anto_gradable.df.en = "word pairs whose meanings are opposite and which lie on a continuous spectrum"
+relations.anto_gradable.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.anto_gradable.ex.en = "*hot* is a gradable antonym of *cold*"
+relations.anto_gradable.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.anto_gradable.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.anto_gradable.com.en = "Also known as *polar antonyms*."
 
 ### Relation: Simple Antonym
 
 relations.anto_simple.name.en = "Simple Antonym"
 relations.anto_simple.df.en = "word pairs whose meanings are opposite but whose meanings do not lie on a continuous spectrum"
+relations.anto_simple.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.anto_simple.ex.en = "*alive* is a simple antonym of *dead*"
-relations.anto_gradable.com.en = "Also known as *complementary antonyms*."
+relations.anto_simple.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.anto_simple.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.anto_simple.com.en = "Also known as *complementary antonyms*."
 
 ### Relation: Converse Antonym
 
 relations.anto_converse.name.en = "Converse Antonym"
 relations.anto_converse.df.en = "word pairs that name or describe a single relationship from opposite perspectives"
+relations.anto_converse.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.anto_converse.ex.en = "*parent* is a converse antonym of *child*"
+relations.anto_converse.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.anto_converse.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
 relations.anto_gradable.com.en = "Also known as just *converse* or *relational antonym*."
 
 ### Relation: Inter-register Synonym
 
 relations.ir_synonym.name.en = "Inter-register Synonym"
-relations.ir_synonym.df.en= "A concept that means the same except for the style or connotation"
-relations.ir_synonym.ex.en= "*loot* is an inter-register synonym of *money*"
+relations.ir_synonym.df.en = "A concept that means the same except for the style or connotation"
+relations.ir_synonym.dfn.en = """
+`Contribute definition <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.ir_synonym.exe.en = """
+`Contribute an example <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.ir_synonym.test.en = """
+`Contribute test <https://github.com/globalwordnet/gwadoc/>`_
+"""
+relations.ir_synonym.ex.en = "*loot* is an inter-register synonym of *money*"
 
 
 
