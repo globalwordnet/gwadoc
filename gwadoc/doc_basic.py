@@ -608,8 +608,8 @@ relations.state_of.fa.reverse = "be_in_state"
 relations.state_of.proj.ili = "i35578"
 relations.state_of.proj.pwn = "attribute"
 relations.state_of.proj.eurown = "state_of"
-relations.state_of.proj.plwordnet = "state"
-relations.state_of.proj.pointer = ""
+relations.state_of.proj.plwordnet = "stan|cecha"
+relations.state_of.proj.pointer = "="
 
 
 ### Relation: be_in_state EDP37
@@ -622,7 +622,7 @@ relations.be_in_state.fa.inOMW = True
 relations.be_in_state.fa.reverse = "state_of"
 
 relations.be_in_state.proj.eurown = "be_in_state"
-relations.be_in_state.proj.plwordnet = "bearer of state"
+relations.be_in_state.proj.plwordnet = "nosiciel_stanu|cechy"
 relations.be_in_state.proj.pointer = ""
 
 
@@ -639,7 +639,7 @@ relations.causes.proj.ili = "i35561"
 relations.causes.proj.pwn = "cause"
 relations.causes.proj.querywn = "caus"
 relations.causes.proj.eurown = "causes"
-relations.causes.proj.plwordnet = "causation"
+relations.causes.proj.plwordnet = "cause"
 relations.causes.proj.pointer = ">"
 
 
@@ -670,7 +670,7 @@ relations.subevent.fa.reverse = "is_subevent_of"
 
 relations.subevent.proj.querywn = "enta"
 relations.subevent.proj.eurown = "has_subevent"
-relations.subevent.proj.plwordnet = "verbal_holonymy"
+relations.subevent.proj.plwordnet = "holonimia sytuacji towarzyszącej"
 relations.subevent.proj.pointer = "\*"
 
 
@@ -685,8 +685,8 @@ relations.is_subevent_of.fa.reverse = "subevent"
 
 relations.is_subevent_of.proj.querywn = "enta"
 relations.is_subevent_of.proj.eurown = "is_subevent_of"
-relations.is_subevent_of.proj.plwordnet = "verbal_meronymy"
-relations.is_subevent_of.proj.pointer = ""
+relations.is_subevent_of.proj.plwordnet = "meronimia sytuacji towarzyszącej"
+relations.is_subevent_of.proj.pointer = "*"
 
 
 ### Relation: in_manner EDP36
@@ -716,7 +716,7 @@ relations.manner_of.fa.reverse = "in_manner"
 relations.manner_of.proj.ili = "i62791"
 relations.manner_of.proj.querywn = "enta"
 relations.manner_of.proj.eurown = "manner_of"
-relations.manner_of.proj.plwordnet = ""
+relations.manner_of.proj.plwordnet = "sposób"
 relations.manner_of.proj.pointer = ""
 
 
@@ -1073,7 +1073,7 @@ relations.attribute.fa.reverse = "attribute"
 relations.attribute.proj.ili = "i35577"
 relations.attribute.proj.pwn = "attribute"
 relations.attribute.proj.querywn = "attr"
-relations.attribute.proj.plwordnet = "value_of_the_attribute"
+relations.attribute.proj.plwordnet = "Attribute"
 relations.attribute.proj.pointer = "="
 
 
@@ -1134,7 +1134,7 @@ relations.classified_by.proj.pointer = ""
 
 ### Relation: also (no ili)
 
-relations.also.name.symbol = 	'☞'
+relations.also.name.symbol = '☞'
 
 relations.also.fa.parent = 'other'
 relations.also.fa.synset_synset = True
@@ -1143,11 +1143,13 @@ relations.also.fa.sense_sense = True
 relations.also.fa.inOMW = True
 relations.also.fa.reverse = 'also'
 
-relations.also.proj.pwn = "also see"
+relations.also.proj.ili = "i18418"
+relations.also.proj.pwn = "Also see"
 relations.also.proj.querywn = "also"
-relations.also.proj.eurown = ""
-relations.also.proj.plwordnet = "inchoativity, iterativity, distributivity, anteriority"
+relations.also.proj.eurown = "see also"
+relations.also.proj.plwordnet = "dystrybutywność"
 relations.also.proj.pointer = "^"
+
 
 
 ### Relation: antonym
@@ -1180,9 +1182,9 @@ relations.entails.fa.reverse = 'is_entailed_by'
 
 relations.entails.proj.ili = "i34846"
 relations.entails.proj.pwn = "entailment"
-relations.entails.proj.querywn = "participle"
+relations.entails.proj.querywn = "enta"
 relations.entails.proj.eurown = ""
-relations.entails.proj.plwordnet = ""
+relations.entails.proj.plwordnet = "holonimia podsytuacji"
 relations.entails.proj.pointer = ""
 
 
@@ -1196,9 +1198,9 @@ relations.is_entailed_by.fa.inOMW = True
 relations.is_entailed_by.fa.reverse = 'entails'
 
 relations.is_entailed_by.proj.pwn = ""
-relations.is_entailed_by.proj.querywn = "participle"
+relations.is_entailed_by.proj.querywn = "enta"
 relations.is_entailed_by.proj.eurown = ""
-relations.is_entailed_by.proj.plwordnet = ""
+relations.is_entailed_by.proj.plwordnet = "meronimia podsytuacji"
 relations.is_entailed_by.proj.pointer = ""
 
 
@@ -1209,8 +1211,13 @@ relations.other.fa.synset_synset = True
 relations.other.fa.sense_synset = True
 relations.other.fa.sense_sense = True
 relations.other.fa.inOMW = True
+relations.is_entailed_by.fa.reverse = 'also'
+
 
 relations.other.proj.ili = "i11342"
+relations.other.proj.pwn = "fuzzynym"
+relations.other.proj.eurown = "fuzzynym"
+relations.other.proj.plwordnet = "fuzzynimia"
 
 
 ### Relation: participle
