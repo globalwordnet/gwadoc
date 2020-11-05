@@ -42,7 +42,7 @@ Documentation for a new relation should be done after discussing the relation wi
 - Add the relations to RELATIONS in ``inventories.py``
 - Add basic information about the relations to ``doc_basic.py``
 - Add documentation to (at least) ``doc_en.py``
-- Check the project doc folder to have access to useful content in the European Wordnet General document and Piasecki_Wordnet pdf documents.
+- Check the project doc folder to have access to useful content in the `Euro Wordnet General Documentation <https://globalwordnet.github.io/gwadoc/pdf/EWN_general.pdf>`_ and `Piasecki_Wordnet <https://globalwordnet.github.io/gwadoc/pdf/ Piasecki_Wordnet.pdf>`_  pdf documents.
 
 
 Relation Style Guide
