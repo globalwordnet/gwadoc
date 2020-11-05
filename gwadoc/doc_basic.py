@@ -1075,7 +1075,7 @@ relations.attribute.proj.pwn = "attribute"
 relations.attribute.proj.querywn = "attr"
 relations.attribute.proj.plwordnet = "Attribute"
 relations.attribute.proj.pointer = "="
-
+relations.attribute.proj.eurown= "XPOS_Hyponymy"
 
 ### Relation: restricts
 
