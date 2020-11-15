@@ -24,8 +24,10 @@ jobs:
     - name: Build Documentation
       if: success()
       run: |
-        python build.py html > docs/index.html
-        python build.py html --lang=ja > docs/index.ja.html
+        python build.py html --lang=en > docs/index.en.html
+	python build.py html --lang=ja > docs/index.ja.html	
+	python build.py html --lang=pl > docs/index.pl.html
+	ln -s docs/index.en.html docs/index.html
 
     - name: Deploy
       if: success()

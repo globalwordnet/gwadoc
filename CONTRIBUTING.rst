@@ -149,16 +149,30 @@ The relations may have different names in different projects, and this is a summ
 .. _Interlingual Index Node: https://lr.soh.ntu.edu.sg/omw/ili
 
 
-How to add a new relation
-=========================
+How to add documentation for a new relation
+===========================================
 
 Documentation for a new relation should be done after discussing the
-relation with generally.
+relation with the documentation group.
 
  * add an issue suggesting that they should be added
  * add the relations to RELATIONS in ``inventories.py``
  * add basic information about the relations to ``doc_basic.py``
  * add documentation to (at least) ``doc_en.py``  
 
+   
+ How to add documentation for a new language
+============================================
+
+Documentation for a new language can be done by:
+
+ * add the language to LANGUAGES in ``inventories.py``
+ * create a new language file with ``scripts\addlang.py``
+   * currently you have to add the language and wordnet into the script by hand
+ * add translated information to the file  ``doc_{lang}.py``
+   * start off with relation names, short examples and short
+     definitions for the constitutive relations
+ * when the core information is added, add the language to the build
+   script ``.github/workflows/build.py``
 
 Happy Contributing ! ❤️
