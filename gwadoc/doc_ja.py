@@ -6,14 +6,11 @@ from gwadoc import relations
 ### Relations Definitions
 
 
-### Relation: domain
-
-
-### Relation: has_domain
 
 
 ### Relation: constitutive
 
+relations.constitutive.name.ja="構成的"
 
 ### Relation: Hypernym
 ### X ⊃ Y,  X is a hypernym of Y
@@ -37,7 +34,7 @@ relations.similar.df.ja="""当該synsetは表す意味が相手synsetと近似�
 relations.similar.ex.ja=""""white"(00393105-a)は意味が"albescent"(00393422-a)と近似している"""
 
 ### Relation: role
-
+relations.role.name.ja="役割"
 
 ### Relation: agent
 
@@ -65,6 +62,7 @@ relations.similar.ex.ja=""""white"(00393105-a)は意味が"albescent"(00393422-a
 
 ### Relation: involved
 
+relations.involved.name.ja="参加"
 
 ### Relation: involved_agent (EuroWordNet - page 29/30)
 
@@ -223,6 +221,15 @@ relations.instance_hyponym.name.ja="事例"
 relations.instance_hyponym.df.ja="""当該synsetは相手synsetの事例である"""
 relations.instance_hyponym.ex.ja=""""seiji ozawa"(11219502-n)は"director"(09952539-n)の事例である"""
 
+
+### Relation: domain
+
+relations.domain.name.ja="被包含領域"
+
+### Relation: has_domain
+
+relations.has_domain.name.ja="包含領域"
+
 ### Relation: exemplifies
 relations.exemplifies.name.ja="被包含領域(語法)"
 relations.exemplifies.df.ja="""当該synsetの用法が相手synsetの領域に限られる"""
@@ -307,3 +314,11 @@ relations.other.name.ja="その他"
 ### Relation: derivation
 relations.derivation.name.ja="派生語"
 relations.derivation.ex.ja="「楽しみ」は「楽しい」の派生語"
+
+## Relation: participle
+
+relations.participle.name.ja="分詞"
+
+## Relation: pertainym
+
+relations.pertainym.name.ja="対応"
