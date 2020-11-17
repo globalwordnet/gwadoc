@@ -36,13 +36,12 @@ When writing please consider your readers, we would like the documentation reade
 How to add a new relation
 =========================
 
-Documentation for a new relation should be done after discussing the relation with generally.
+Documentation for a new relation should be done after discussing the relation with the group.
 
 - Add an issue suggesting what should be added
 - Add the relations to RELATIONS in ``inventories.py``
 - Add basic information about the relations to ``doc_basic.py``
 - Add documentation to (at least) ``doc_en.py``
-- Check the project doc folder to have access to useful content in the `Euro Wordnet General Documentation <https://globalwordnet.github.io/gwadoc/pdf/EWN_general.pdf>`_ and `Piasecki_Wordnet <https://globalwordnet.github.io/gwadoc/pdf/ Piasecki_Wordnet.pdf>`_  pdf documents.
 
 
 Relation Style Guide
@@ -50,13 +49,13 @@ Relation Style Guide
 
 - **Relation Name** :  The name of the relation
 
-- **Short Definition** : The short definition only shows up when the user’s mouse hover over the relation name, it is a brief introduction of the relation.
+- **Short Definition** : The short definition is a brief introduction of the relation, usually a single sentence.
 
 1. Use concept A / concept B (A / B) for reference, DO NOT use concept X / concept Y (X /y).
 
 2. Use “A is … of B” as the sentence pattern if possible.
 
-- **Short Example** : The short example only shows up when the user’s mouse hover over the relation name, it just shows the examples without links to lexicon. At least 2 examples. If there is no example in the docs, go to related resources or wiki to find more.
+- **Short Example** : The short example just shows the examples links to lexicon. At least 2 examples. If there is no example in the docs, go to the `docs/pdf <https://github.com/globalwordnet/gwadoc/tree/master/docs/pdf>`_ folder for related resources or `wiki <https://en.wikipedia.org/wiki/Holonymy>`_ to find more.
 
 - **Apply to** : Apply to describes the type this relation links to, it has 3 values:
     - synset_synset
