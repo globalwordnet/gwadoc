@@ -48,14 +48,12 @@ How to add documentation for a new language
 
 Documentation for a new language can be done by:
 
- * Add the language to LANGUAGES in ``inventories.py``
- * Create a new language file with ``scripts\addlang.py``
-   * Currently you have to add the language and wordnet into the script by hand
- * Add translated information to the file  ``doc_{lang}.py``
-   * Start off with relation names, short examples and short
-     definitions for the constitutive relations
- * When the core information is added, add the language to the build
-   script ``.github/workflows/build.py``
+- Add the language to LANGUAGES in ``inventories.py``
+- Create a new language file with ``scripts\addlang.py``
+- Currently you have to add the language and wordnet into the script by hand
+- Add translated information to the file  ``doc_{lang}.py``
+- Start off with relation names, short examples and short definitions for the constitutive relations
+- When the core information is added, add the language to the build script ``.github/workflows/build.py``
 
 
 Relation Style Guide
