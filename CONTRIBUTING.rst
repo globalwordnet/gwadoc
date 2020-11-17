@@ -36,12 +36,26 @@ When writing please consider your readers, we would like the documentation reade
 How to add a new relation
 =========================
 
-Documentation for a new relation should be done after discussing the relation with the group.
+Documentation for a new relation should be done after discussing the relation with the documentation group.
 
 - Add an issue suggesting what should be added
 - Add the relations to RELATIONS in ``inventories.py``
 - Add basic information about the relations to ``doc_basic.py``
 - Add documentation to (at least) ``doc_en.py``
+
+How to add documentation for a new language
+============================================
+
+Documentation for a new language can be done by:
+
+ * Add the language to LANGUAGES in ``inventories.py``
+ * Create a new language file with ``scripts\addlang.py``
+   * Currently you have to add the language and wordnet into the script by hand
+ * Add translated information to the file  ``doc_{lang}.py``
+   * Start off with relation names, short examples and short
+     definitions for the constitutive relations
+ * When the core information is added, add the language to the build
+   script ``.github/workflows/build.py``
 
 
 Relation Style Guide
