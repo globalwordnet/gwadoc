@@ -1075,7 +1075,7 @@ relations.attribute.proj.pwn = "attribute"
 relations.attribute.proj.querywn = "attr"
 relations.attribute.proj.plwordnet = "Attribute"
 relations.attribute.proj.pointer = "="
-
+relations.attribute.proj.eurown= "XPOS_Hyponymy"
 
 ### Relation: restricts
 
@@ -1208,7 +1208,7 @@ relations.is_entailed_by.proj.pointer = ""
 
 relations.other.fa.parent = None
 relations.other.fa.synset_synset = True
-relations.other.fa.sense_synset = False
+relations.other.fa.sense_synset = True
 relations.other.fa.sense_sense = True
 relations.other.fa.inOMW = True
 relations.is_entailed_by.fa.reverse = 'also'
