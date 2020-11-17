@@ -83,7 +83,8 @@ def build(args):
     else:
         raise ValueError('invalid format: {}'.format(args.format))
 
-    print(template.render(gwadoc=gwadoc))
+    print(template.render(gwadoc=gwadoc,
+                          lang=args.lang))
 
 
 if __name__ == '__main__':
