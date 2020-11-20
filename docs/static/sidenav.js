@@ -19,10 +19,8 @@ $(document).ready(function () {
 			$(this).removeClass('fa-minus-circle').addClass('fa fa-plus-circle').parent('li').removeClass('open');
 		}
 	})
-	
-	
-	
-	
+
+
 	$("#dp-btn1").click(function () {
 		$("#dropList1").toggle();
 		if(btn1Status==0){

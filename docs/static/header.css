@@ -1,0 +1,46 @@
+header{
+ background-color : #3C3C3C;
+ position: fixed;
+ height : 150px;
+ width : 100%;
+ border-bottom : 5px solid #EC7D33;
+}
+.title{
+color : white;
+font-style : bold;
+}
+
+.name{
+color: #BEC2C7;
+padding: 5px 30px;
+font-size : 12px;
+}
+.top-header{
+height: 30px;
+background-color: #2D2D2D;
+}
+
+.search-button{
+background-color : #EC7D33;
+color : white;
+}
+
+.title-search{
+display: flex;
+flex-direction : row;
+justify-content: space-between;
+margin-top : 50px;
+margin-left : 30px;
+margin-right : 30px;
+}
+
+.search-input{
+margin-right : 0;
+width: 200px;
+}
+ .app-container {
+    display: flex;
+    }
+   .overview{
+   margin-top : 170px;
+   }

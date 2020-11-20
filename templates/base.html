@@ -13,14 +13,17 @@
 	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	  crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="static/gwadoc.css" />
     <link rel="stylesheet" href="static/pygment.css" />
 	<link rel="stylesheet" href="static/sidenav.css" />
+  <link rel="stylesheet" href="static/header.css"/>
+  <link rel="stylesheet" href="static/footer.css"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-	<!-- fa icon CSS -->
+
+  <!-- fa icon CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -30,44 +33,30 @@
   {%- endblock %}
 </head>
 
-<body clas="d-flex flex-column">
- {% include "sidenav.html" %} 
-<div id="container" class="container">
-  <header style="margin-left:290px">
-    {% block header -%}
-    <h1>Open Wordnet Documentation</h1>
-    {%- endblock %}
+
+<body>
+<header>
+    {% include "header.html" %}
   </header>
-    
+<div class="app-container">
+    {% include "sidenav.html" %}
+  <div id="container" class="container">
   <main>
-    {% include "overview.html" %} 
+    {% include "overview.html" %}
     {% block content %}{% endblock %}
   </main>
-  <footer>
-    {% block footer -%}
-    <p>
-      If you notice any errors or omissions, please
-      <a href="https://github.com/globalwordnet/gwadoc/issues/new">submit an issue</a>
-      at <a href="https://github.com/globalwordnet/gwadoc">the project page</a>
-      (preferred, but a GitHub account is required)
-      or <a href="mailto:bond@ieee.org">email us</a>.
-    </p>
-    <p>&copy; Copyright 2019
-    <a href="group.html">GWA Documentation Working Group</a>
-    </p>
-    <p>
-    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
-<span xmlns:dct="http://purl.org/dc/terms/"
-      href="http://purl.org/dc/dcmitype/Dataset" property="dct:title"
-      rel="dct:type">Open Wordnet Documentation</span>
-by the <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">GWA Documentation Working Group</span>
-is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-    </p>
-    {%- endblock %}
+      <footer>
+   {% include "footer.html" %}
   </footer>
-</div>
-  
+    </div>
+
+
+  </div>
+
+
+
+
+
 </body>
 
 </html>

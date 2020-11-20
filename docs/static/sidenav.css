@@ -1,11 +1,16 @@
-.sidenav{height: 100%;width: 290px;position: fixed;z-index: 1;top: 0;left: 0;background-color: #F5F5F5;overflow-x: hidden;padding-top: 20px; }
+.sidenav{width: 300px;position: fixed; z-index: 1;top:150px !important; bottom: 0; left: 0;background-color: #F5F5F5;overflow-x: hidden;padding-top: 20px; }
 .container {margin-left: 290px;}
-.sidenav a {padding: 4px 4px 4px 10px;text-decoration: none;font-size: 12px;color: #010101;background: none;width:100%;text-align: left;cursor: pointer;outline: none;}
-.sidenav a:hover, .dropdown-btn:hover {color: #0000FF;}
+.sidenav a {text-decoration: none; font-size: 18px; background: none;width:100%;text-align: left;cursor: pointer;outline: none; color:#4D4D4D; font-size: 18px;}
+.sidenav a:hover, .dropdown-btn:hover {color: #0000FF; }
 .dropdown-container {background-color: #F5F5F5;display: none;}
-.sidenav>ul{padding-left: 5px;margin-left: 5px;}
-.sidenav>ul>li{padding-left: 5px;margin-left: 5px;height: 28px;overflow: hidden;}
+.sidenav>ul>li{padding: 20px; margin: 5px; height: 50px;overflow: hidden; font-size: 18px; border: 1px solid #4D4D4D;}
 .sidenav>ul>li.open{height: auto;}
-.pack-up{float: right;margin: 5px 10px 0 0;cursor: pointer;}
+.pack-up{float: right; cursor: pointer;}
+  .side-li:hover{
+background-color : #F3D5C4;
+}
 
-
+.side-ul ul{
+margin: 8px;
+padding: 0;
+}

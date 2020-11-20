@@ -1,0 +1,13 @@
+footer{
+ min-height : 200px;
+ background-color : #3C3C3C;
+ width : auto;
+}
+
+.footnotes{
+ margin : 20px;
+ color: #eeeeee;
+ text-align : left;
+ padding: 10px;
+}
+

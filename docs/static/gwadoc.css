@@ -5,7 +5,7 @@ body {
 a:link { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-a.toplink { float: right; font-size: medium; }
+a.toplink { float: right; font-size: medium; color: #EC7D33;}
 
 .rel-id {
     font-family: monospace;
@@ -54,6 +54,9 @@ div.description > ul li { padding: 5px 0px; }
 
 div.highlight { background-color: #F4F4F4 }
 
+.relation-name{
+color : #EC7D33;
+}
 @media screen and (max-width: 799px) {
     body { font-size: small; }
     h2, h3, h4 { margin: 10px 0px; }
