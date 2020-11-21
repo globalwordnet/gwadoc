@@ -31,7 +31,8 @@
 </head>
 
 <body clas="d-flex flex-column">
- {% include "sidenav.html" %} 
+  {% block sidenav -%} {%- endblock %}
+
 <div id="container" class="container">
   <header style="margin-left:290px">
     {% block header -%}
@@ -40,7 +41,6 @@
   </header>
     
   <main>
-    {% include "overview.html" %} 
     {% block content %}{% endblock %}
   </main>
   <footer>
