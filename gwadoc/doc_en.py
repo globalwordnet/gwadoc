@@ -1804,18 +1804,16 @@ In principle all semantically equivalent words should belong to the same synsets
 ### Relation: instance_hypernym
 
 relations.instance_hypernym.name.en = "Instance Hypernym"
-relations.instance_hypernym.df.en = "the type of an instance"
-relations.instance_hypernym.dfn.en = """
-A relation between two concepts where concept A (``instance_hyponym``)
-is a type of concept B (``instance_hypernym``), and where A is an
-individual entity.  A will be a terminal node in the hierarchy.
-Instances are expressed by proper nouns.
+relations.instance_hypernym.df.en = "A concept that contains an entity"
+relations.instance_hypernym.dfn.en = """ A relation between a concept A (``instance_hypernym``) and an
+entity B (``instance_hyponym``) that is a member the set of things
+defined by A.  A will be a terminal node in the hierarchy. 
 
 An ``instance hypernym`` can also be referred to as a ``type``
 """
-relations.instance_hypernym.ex.en = "*manchester belongs_to_class city*"
+relations.instance_hypernym.ex.en = "city is the instance_hypernym of manchester"
 relations.instance_hypernym.exe.en = """
- * `manchester <ILIURL/83395>`_ has instance_hypernym `city <ILIURL/81847>`_
+ * `city <ILIURL/81847>`_ is the instance hypernym of `manchester <ILIURL/83395>`_ 
 """
 relations.instance_hypernym.test.en = """
 === ==================
@@ -1833,18 +1831,17 @@ Sometimes modelled as hyponomy/hypernymy relations.
 ### Relation: instance_hyponym
 
 relations.instance_hyponym.name.en = "Instance Hyponym"
-relations.instance_hyponym.df.en = "an occurrence of something"
-relations.instance_hyponym.dfn.en = """
-A relation between two concepts where concept A (``instance_hyponym``)
-is a type of concept B (``instance_hypernym``), and where A is an
-individual entity.  A will be a terminal node in the hierarchy.
-Instances are expressed by proper nouns.
+relations.instance_hyponym.df.en = "An entity contained in a concept"
+relations.instance_hyponym.dfn.en = """A relation between an entity A (``instance_hyponym``) which is
+a member of the set of things defined by concept B (``instance_hypernym``).  
+A will be a terminal node in the hierarchy.
+Instances are expressed by proper names.
 
-An ``instance hyponym`` can also be referred to as a ``type``
+An ``instance hyponym`` can also be referred to as just an ``instance``
 """
-relations.instance_hyponym.ex.en = "city HAS_INSTANCE Manchester"
+relations.instance_hyponym.ex.en = "Manchester is the instance_hypnonym of city"
 relations.instance_hyponym.exe.en = """
- * `city <ILIURL/81847>`_ has instance_hyponym `manchester <ILIURL/83395>`_
+ *  `manchester <ILIURL/83395>`_ is the instance_hyponym of `city <ILIURL/81847>`_
 """
 relations.instance_hyponym.test.en = """
 === ==================
@@ -1858,7 +1855,7 @@ relations.instance_hyponym.com.en = """
 Hyponymy is a relation between classes of entities. Individual entities can also be said to belong to some class. 
 Although we do not find many instances in a lexical database, the relation is useful for users 
 that want to add particular instances and do not want to consult a separate database. 
-To distinguish it from class hyponymy the relation is dubbed has_instance.
+To distinguish it from class hyponymy the relation is dubbed instance_hyponym.
 """
 
 
