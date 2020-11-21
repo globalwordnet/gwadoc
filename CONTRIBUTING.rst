@@ -29,86 +29,91 @@ Documentation Convention
 
 Our documentation project setup can be found in the `README. <https://github.com/globalwordnet/gwadoc/blob/master/README.md>`_
 
-Start reading our documentation and you’ll get the hang of it. We optimize for readability.
-We indent using two spaces.
+Most of our contributions happen in the ``doc_en.py`` file and we generate the html files from this automatically.
 
-Most of our contributions happen in the ``doc_en.py`` file and we
-generate the html files from this automatically.
+When writing please consider your readers, we would like the documentation reader friendly for beginners as well as useful for experts.
 
-When writing please consider your readers, we would like the
-documentation reader friendly for beginners as well as useful for
-experts.
+How to add a new relation
+=========================
+
+Documentation for a new relation should be done after discussing the relation with the documentation group.
+
+- Add an issue suggesting what should be added
+- Add the relations to RELATIONS in ``inventories.py``
+- Add basic information about the relations to ``doc_basic.py``
+- Add documentation to (at least) ``doc_en.py``
+
+How to add documentation for a new language
+============================================
+
+Documentation for a new language can be done by:
+
+- Add the language to LANGUAGES in ``inventories.py``
+- Create a new language file with ``scripts\addlang.py``
+- Currently you have to add the language and wordnet into the script by hand
+- Add translated information to the file  ``doc_{lang}.py``
+- Start off with relation names, short examples and short definitions for the constitutive relations
+- When the core information is added, add the language to the build script ``.github/workflows/build.py``
 
 
 Relation Style Guide
 =====================
 
-+-----------+-----------------------------------------------------------+
-| Name      | Description                                               |
-+===========+===========================================================+
-| Relation  | Name of the relation                                      |
-| name      |                                                           |
-+-----------+-----------------------------------------------------------+
-| Short     | The short definition is used when the user mouse hovers   |
-| Definition| over the relation name, it is a brief introduction        |
-|           | of the relation. 1. Use concept A / concept B (A / B) for |
-|           | reference, DO NOT use concept X / concept Y (X / y). 2.   |
-|           | Use “A is … of B” as the sentence pattern if possible.    |
-+-----------+-----------------------------------------------------------+
-| Short     | The short example only shows up when the user’s mouse     |
-| Example   | hover over the relation name, it just shows the examples  |
-|           | without links to lexicon. At least 2 examples. If there   |
-|           | is no example in the docs, go to related resources or     |
-|           | wiki to find more.                                        |
-+-----------+-----------------------------------------------------------+
-| Apply to  | Apply to describes the type this relation links to, it    |
-|           | has 3 values: - synset_synse - sense_synset - sense_sense |
-+-----------+-----------------------------------------------------------+
-| Symbol    | It describes what symbol the user can use to represent    |
-|           | this relation, e.g. in a diagram.                                            |
-+-----------+-----------------------------------------------------------+
-| Reverse   | Some relations have one counterpart as a mutually         |
-| relation  | reversed relation, if this relation do not have one, this |
-|           | field will be “no reverse relation defined”.              |
-|           | Some relation are their own reverse (e.g. antonymy)       |
-+-----------+-----------------------------------------------------------+
-| Definition| relation. 1. Use concept A / concept B (A / B) for        |
-|           | reference, DO NOT use concept X / concept Y (X / y). 2.   |
-|           | Use “A relation between two concepts where…” as the       |
-|           | sentence pattern if possible.                             |
-+-----------+-----------------------------------------------------------+
-| Example   | Example shows how words are linked in this relation, and  |
-|           | each word will also be linked to the lexicon so the user  |
-|           | can check the details of that word directly. 1. At least  |
-|           | 2 examples. If there is no example in the docs, go to     |
-|           | related resources or wiki to find more. 2. Link the       |
-|           | examples to entries in the OMW. Go to below two websites  |
-|           | to search for the right sense of an example word: -       |
-|           | http://compling.hss.ntu.edu.sg/omw/cgi-bin/wn-gridx.cgi - |
-|           | https://lr.soh.ntu.edu.sg/omw/omw                         |
-|           | relations.hypernym.exe.en = """ \* \* <sense:             |
-|           | pwn-3.0:07649854-n:meat> \* ``hypernym`` \* <sense:       |
-|           | pwn-3.0:07663592-n:beef> \* \* *edible fruit*             |
-|           | ``hypernym`` *pear* \* *wordbook* ``hypernym``            |
-|           | *dictionary* """ `Meat`_ `Beef`_                          |
-+-----------+-----------------------------------------------------------+
-| Test      | The Test provide a method to justify whether the          |
-|           | linguistic data concords with this relation type or not.  |
-|           | If there is no test in the docs, go to EuroWordnet        |
-|           | general document to see whether there are any EWN tests   |
-|           | there.                                                    |
-+-----------+-----------------------------------------------------------+
-| XML       | XML sample provides the sample code of relations.         |
-| Sample    |                                                           |
-+-----------+-----------------------------------------------------------+
-| Comment   | Note provides some additional info the user may need to   |
-+-----------+-----------------------------------------------------------+
+- **Relation Name** :  The name of the relation
 
-.. _Meat: https://lr.soh.ntu.edu.sg/omw/ili/concepts/77100
-.. _Beef: https://lr.soh.ntu.edu.sg/omw/ili/concepts/77197
+- **Short Definition** : The short definition is a brief introduction of the relation, usually a single sentence.
+
+1. Use concept A / concept B (A / B) for reference, DO NOT use concept X / concept Y (X /y).
+
+2. Use “A is … of B” as the sentence pattern if possible.
+
+- **Short Example** : The short example just shows the examples links to lexicon. At least 2 examples. If there is no example in the docs, go to the `docs/pdf <https://github.com/globalwordnet/gwadoc/tree/master/docs/pdf>`_ folder for related resources or `wiki <https://en.wikipedia.org/wiki/Holonymy>`_ to find more.
+
+- **Apply to** : Apply to describes the type this relation links to, it has 3 values:
+    - synset_synset
+    - sense_synset
+    - sense_sense
+
+- **Symbol** : It describes what symbol the user can use to represent this relation.
+
+- **Reverse Relation** : Some relations have one counterpart as a mutually reversed relation, if this relation do not have one, this field will be “no reverse relation defined”.
+
+- **Definition** : Definition describe the full introduction of the relation.
+
+1. Use concept A / concept B (A / B) for reference, DO NOT use concept X / concept Y (X / y).
+
+2. Use “A relation between two concepts where...” as the sentence pattern if possible.
+
+- **Example** : Example shows how words are linked in this relation, and each word will also be linked to the lexicon so the user can check the details of that word directly.
+
+1. At least 2 examples. If there is no example in the docs, go to related resources or wiki to find more.
+
+2. Link the examples to entries in the OMW. Go to below two websites to search for the right sense of an example word:
+
+- http://compling.hss.ntu.edu.sg/omw/cgi-bin/wn-gridx.cgi
+
+- https://lr.soh.ntu.edu.sg/omw/omw
+
+relations.holonym.exe.en = """
+ * `eye <ILIURL/64868>`_ has part-holonym `face <ILIURL/87210>`_
+ * `planet <ILIURL/85986>`_ has member-holonym `solar system <ILIURL/86215>`_
+ * `kibibyte <ILIURL/108305>`_ has part-holonym `mebibyte <ILIURL/108309>`_
+
+"""
+
+Meat: https://lr.soh.ntu.edu.sg/omw/ili/concepts/77100
+
+Beef: https://lr.soh.ntu.edu.sg/omw/ili/concepts/77197
+
+- **Test** : The Test provide a method to justify whether the linguistic data concords with this relation type or not. If there is no test in the docs, go to EuroWordnet general document to see whether there are any EWN tests there.
+
+- **XML Sample** :  XML sample provides the sample code of relations.
+
+- **Comment** : Comment provides some additional info the user may need to know when using Wordnet.
 
 
-**Other name in specific Project**
+Other name in specific Project
+==============================
 
 The relations may have different names in different projects, and this is a summary of the names referring to the particular relation, we need to review all the names in different projects to ensure the current name is documented.
 
@@ -148,31 +153,5 @@ The relations may have different names in different projects, and this is a summ
 .. _PERL WordNet-QueryData Module: https://metacpan.org/pod/WordNet::QueryData
 .. _Interlingual Index Node: https://lr.soh.ntu.edu.sg/omw/ili
 
-
-How to add documentation for a new relation
-===========================================
-
-Documentation for a new relation should be done after discussing the
-relation with the documentation group.
-
- * add an issue suggesting that they should be added
- * add the relations to RELATIONS in ``inventories.py``
- * add basic information about the relations to ``doc_basic.py``
- * add documentation to (at least) ``doc_en.py``  
-
-   
- How to add documentation for a new language
-============================================
-
-Documentation for a new language can be done by:
-
- * add the language to LANGUAGES in ``inventories.py``
- * create a new language file with ``scripts\addlang.py``
-   * currently you have to add the language and wordnet into the script by hand
- * add translated information to the file  ``doc_{lang}.py``
-   * start off with relation names, short examples and short
-     definitions for the constitutive relations
- * when the core information is added, add the language to the build
-   script ``.github/workflows/build.py``
 
 Happy Contributing ! ❤️
