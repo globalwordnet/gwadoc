@@ -1,20 +1,20 @@
-<div style="clear:both;"></div>
+<nav>
 <div id="relnav" class="sidenav">
 	<ul class="side-ul">
-		<li class="side-li"><a href="#overview">Overview</a></li>
+		<li class="side-li overview"><a href="#overview">Overview</a></li>
 		<li class="side-li side" ><a href="#contents">Contents</a></li>
 		<li class="side-li"><a href="#relations">Relations</a></li>
 		{%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
 		{%- for id, rev, children in agenda recursive %}
-		<li class="side-li"><a href="#{{ id }}">{{ gwadoc.relations[id].name }}</a>
+		<li class="side-li" ><a href="#{{ id }}">{{ gwadoc.relations[id].name }}</a>
 			{%- if rev is not none and rev != id -%}
 			<span class="revchar">⇔</span>
 			<a href="#{{ rev }}">{{ gwadoc.relations[rev].name }}</a>
 			{%- endif -%}
 			{%- if children %}
 				{%- if loop.depth == 1 %}
-					<i class="pack-up fa fa-plus-circle"></i>
-				{%- endif %} 
+                <i class="pack-up fa fa-plus-circle"></i>
+				{%- endif %}
 			<ul>{{ loop(children) }}</ul>
 			{%- endif %}
 		</li>
@@ -22,4 +22,4 @@
 		<li class="side-li"><a href="#footer">Start Contributing</a></li>
 	</ul>
 </div>
-<div style="clear:both;"></div>
+</nav>

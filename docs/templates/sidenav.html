@@ -1,28 +1,21 @@
 <div style="clear:both;"></div>
-<!-- Relations -->
 <div id="relnav" class="sidenav">
-  <ul>
-    {%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
-    {%- for id, rev, children in agenda recursive %}
-    <li><a href="#{{ id }}">{{ gwadoc.relations[id].name }}</a>
-      {%- if rev is not none and rev != id -%}
-      <span class="revchar">⇔</span>
-      <a href="#{{ rev }}">{{ gwadoc.relations[rev].name }}</a>
-      {%- endif -%}
-      {%- if children %}
-      {%- if loop.depth == 1 %}
-      <i class="pack-up fa fa-plus-circle"></i>
-      {%- endif %} 
-      <ul>{{ loop(children) }}</ul>
-      {%- endif %}
-    </li>
-    {% endfor %}
-  </ul>
+	<ul>
+		{%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
+		{%- for id, rev, children in agenda recursive %}
+		<li><a href="#{{ id }}">{{ gwadoc.relations[id].name }}</a>
+			{%- if rev is not none and rev != id -%}
+			<span class="revchar">⇔</span>
+			<a href="#{{ rev }}">{{ gwadoc.relations[rev].name }}</a>
+			{%- endif -%}
+			{%- if children %}
+				{%- if loop.depth == 1 %}
+					<i class="pack-up fa fa-plus-circle"></i>
+				{%- endif %}
+			<ul>{{ loop(children) }}</ul>
+			{%- endif %}
+		</li>
+		{% endfor %}
+	</ul>
 </div>
-Other Languages
-<div id="relnav" class="sidenav">
-  <ul>
-    {%  for 
-    {% endfor %}
-  </ul>   
 <div style="clear:both;"></div>

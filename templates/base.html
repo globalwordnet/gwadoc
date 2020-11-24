@@ -33,22 +33,24 @@
   {%- endblock %}
 </head>
 
+
+
 <body>
-<header>
-    {% include "header.html" %}
-  </header>
-<div class="app-container">
-    {% include "sidenav.html" %}
-  <div id="container" class="container">
-  <main>
+<div class="page">
+  <div class="header">    {% include "header.html" %}</div>
+      <div class="section">
+          <div class="nav">{% include "sidenav.html" %}</div>
+  <div class="content">
+      <main>
     {% include "overview.html" %}
     {% block content %}{% endblock %}
   </main>
-      <footer>
-   {% include "footer.html" %}
-  </footer>
   </div>
+      </div>
+
+    <div class="footer"> {% include "footer.html" %}</div>
   </div>
 </body>
+
 
 </html>

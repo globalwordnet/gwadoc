@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 var btn2Status=0;
 $(document).ready(function () {
-	
+
 	$("#dp-btn2").click(function () {
 		$("#dropList2").toggle();
 		if(btn2Status==0){
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
 var btn3Status=0;
 $(document).ready(function () {
-	
+
 	$("#dp-btn3").click(function () {
 		$("#dropList3").toggle();
 		if(btn3Status==0){
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
 var btn4Status=0;
 $(document).ready(function () {
-	
+
 	$("#dp-btn4").click(function () {
 		$("#dropList4").toggle();
 		if(btn4Status==0){

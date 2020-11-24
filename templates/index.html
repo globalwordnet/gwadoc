@@ -3,9 +3,9 @@
 {% block title %}Open Wordnet Documentation ({{lang}}){% endblock %}
 
 {%- block content -%}
-<h2 id="contents">Contents</h2>
+<h2 class="heading" id="contents">Contents</h2>
 {% include "toc.html" %}
-<h2 id="relations">Relations</h2>
+<h2 class="heading" id="relations">Relations</h2>
 {% for id in gwadoc.RELATIONS -%}
 {% set rel = gwadoc.relations[id] -%}
 {% include "relation.html" %}
