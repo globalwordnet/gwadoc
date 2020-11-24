@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "macros.html" import rel_id, ili, to_top %}
+{% block title %}Open Wordnet Documentation ({{lang}}){% endblock %}
+
+{%- block content -%}
+<h2>Summary of Relations</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Definition</th>
+    <th>Example</th>
+  </tr>
+  {% for id in gwadoc.RELATIONS -%}
+  {% set rel = gwadoc.relations[id] -%}
+  <tr>
+    <td style="vertical-align:top">{{ rel.name }}<br><code>{{ id }}</code> </td>
+    <td style="vertical-align:top">{{ rel.df }}</td>
+    <td style="vertical-align:top">{{ rel.ex | render_rst or "—" }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+<!-- <dl> -->
+<!--   {% for id in gwadoc.RELATIONS -%} -->
+<!--   {% set rel = gwadoc.relations[id] -%} -->
+<!--   <dt>{{ rel.name }} (<code>{{ id }}</code>): {{ rel.ex | render_rst or "—" }}</dt>  -->
+<!--     <dd>{{ rel.df }}</dtd> -->
+<!--   {% endfor %} -->
+<!-- </dl> -->
+
+
+
+{% endblock %}

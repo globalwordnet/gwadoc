@@ -48,7 +48,7 @@ def build(args):
             loader=loader,
             autoescape=jinja2.select_autoescape(['html', 'xml']))
         env.filters['render_rst'] = rst_renderer('html')
-        template = env.get_template('index.html')
+        template = env.get_template(f'{args.object}.{args.format}')
 
     elif args.format == 'latex':
         LATEX_SUBS = (
@@ -83,12 +83,14 @@ def build(args):
     else:
         raise ValueError('invalid format: {}'.format(args.format))
 
-    print(template.render(gwadoc=gwadoc))
+    print(template.render(gwadoc=gwadoc,
+                          lang=args.lang))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('format', choices=('html', 'latex'), default='html')
+    parser.add_argument('--object', choices=('index', 'summary'), default='index')
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)

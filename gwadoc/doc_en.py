@@ -1996,24 +1996,27 @@ nouns and vice-versa.
 """
 relations.attribute.ex.en = "fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ "
 relations.attribute.exe.en = """
-* `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
-* `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
+* `fertile <ILIURL/5483>`_ has attribute `fecundity <ILIURL/110773>`_ 
+* `fecundity <ILIURL/110773>`_ has attribute `fertile <ILIURL/5483>`_ 
 """
 relations.attribute.test.en = """
-Attribute-relation between nouns and adjectives (EWN 14)
+Attribute-relation between nouns and adjectives (`EWN <pdf/EWN_general.pdf#page=24>`_ Test 14)
 
-===     =   ======================================================
-yes     a   *A is an attribute of B*
-.       .   *B is an attribute of A*
-
-no      b   the converse of any of the (a) sentences.
-===     =   ======================================================
+=======     =   =========================================================================
+yes/no      a   if there is a state of *A* then something/someone is *B* in a certain way
+\           b   if  something/someone is *B* then a state of *A* applies                  
+example     a   if something is in a state of  *fecundity* it is *very fertile*    
+\           b   if something is *fertile* it is in a state of  *fecundity*           
+=======     =   =========================================================================
 
 Conditions:
-- A is a noun in the singular
-- B is an adjective
-- there is at least one specifying adverb, NP or PP that applies to the A- phrase or the B-phrase
-- preferably there is a no morphological link between the noun and the adjective
+ - A is a noun in the singular
+ - B is an adjective
+ - there is at least one specifying adverb, NP or PP that applies to the A-phrase or the B-phrase
+ - preferably there is a no morphological link between the noun and the adjective
+
+
+
 
 """
 relations.attribute.com.en = """
@@ -2142,7 +2145,7 @@ no      b   the converse of any of the (a) sentences.
 
 """
 relations.also.com.en = """
-Also known as fuzzynym
+Also known as fuzzynym: A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
 """
 
 
@@ -2237,38 +2240,43 @@ make it avaiable for wordnets that do not yet have sense level links.
 
 relations.entails.name.en = "Entails"
 relations.entails.df.en = """
-impose, involve, or imply as a necessary accompaniment or result
+verb A entails B if A cannot be done unless B is, or has been, done
 """
+
 relations.entails.dfn.en = """
-Entailment is a relation that links two verbs, and it is currently
-unilateral — Verb-A entails Verb-B, without a reciprocal or tracing
+Entailment is a relation that links two verbs, and it is
+theoretically unilateral — Verb-A entails Verb-B, without a reciprocal
 link.  This relation presupposes/requires a semantic restriction in
-which Verb-B has to take place before or during Verb-A.
+which Verb-B has to take place before or during Verb-A.  
+
+In this document, we define a reverse relation **is_entailed_by** to
+allow users of the dictionary to easily find the reverse link.
 """
 relations.entails.ex.en = "`snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_"
 relations.entails.exe.en = """
  * `snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_
- 
 """
 
 relations.entails.test.en = """
 ===     =   ======================================================
-yes     a   *A cannot be done unless B is or has been done*
+yes     a   *A* cannot be done unless *B* is or has been done
 
 no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 
 """
 relations.entails.com.en = """
-A verb A entails B if A cannot be done unless B is, or has been, done.
 """
 
 
 ### Relation: is_entailed_by
 
-relations.is_entailed_by.name.en = "Is Entailed By"
-relations.is_entailed_by.df.en = "Concept B is dome/happens because of concept A"
+relations.is_entailed_by.name.en = "Can be entailed by"
+relations.is_entailed_by.df.en = "Concept A can be entailed by concept B"
 relations.is_entailed_by.dfn.en = """
+This is a tracing relation, that allows us to find what *can* entail something.  
+
+If concept *A* can be entailed by concept *B*, then concept *A* makes it possible for concept *B* to take place.
 """
 relations.is_entailed_by.ex.en = "`sleep <ILIURL/21840>`_ is entailed by `snore <ILIURL/21852>`_"
 relations.is_entailed_by.exe.en = """
@@ -2278,14 +2286,11 @@ relations.is_entailed_by.exe.en = """
 
 relations.is_entailed_by.test.en = """
 ===     =   ======================================================
-yes     a   *B is the result/happens because of the occurrence of A*
-
-no      b   the converse of any of the (a) sentences.
+yes     a   *A* makes it possible for *B* to occur
 ===     =   ======================================================
 
 """
-relations.is_entailed_by.com.en = """
-"""
+relations.is_entailed_by.com.en = """Princeton Wordnet does not have this reverse relation"""
 
 
 ### Relation: other
@@ -2320,8 +2325,7 @@ no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 
 """
-relations.other.com.en = """
-A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
+relations.other.com.en = """FCB: Maybe this should be merged with ``also``? 
 """
 
 ### Relation: participle
@@ -2341,7 +2345,7 @@ relations.participle.test.en = """
 """
 relations.participle.com.en = """
 These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can 
-see, anywhere FCB)
+see, anywhere FCB).
 """
 
 ### Relation: pertainym
@@ -2365,6 +2369,13 @@ relations.pertainym.exe.en = """
 relations.pertainym.test.en = """
 """
 relations.pertainym.com.en = """
+This relation was created by the Princeton Wordnet project.  It was
+made for adjectives that do not have antonyms; the synset for a
+pertainym most often contains only one word or collocation and points
+to the noun that the adjective is "pertaining to".  It is also used
+for adverbs to point to the adjective it pertains to
+`wngloss(7WN) <https://wordnet.princeton.edu/documentation/wngloss7wn>`_.
+
 """
 
 
@@ -2382,9 +2393,9 @@ relations.derivation.exe.en = """
 * `want(n) <ILIURL/113167>`_ is the derivation of `want(v) <ILIURL/30852>`_
 * `provision <ILIURL/40949>`_ is the derivation of `provide <ILIURL/33372>`_
 """
-relations.pertainym.test.en = """
+relations.derivation.test.en = """
 """
-relations.pertainym.com.en = """
+relations.derivation.com.en = """
 This may be specialized further. It includes zero derivations. Gnerally 
 it is used for different syntactic categories that have the same root form and are 
 semantically related. Wordnet does not say which is the baseform, the relationship 
