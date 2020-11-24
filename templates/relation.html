@@ -6,9 +6,7 @@
     {%- endif %}
     <table class="fieldlist">
       <tr><th>symbol</th><td>
-          {%- if rel.name.symbol -%} {{rel.name.symbol | render_rst}} {%- else -%}
-        <a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute symbol</a>
-        {%- endif -%}
+          {%- if rel.name.symbol -%} {{rel.name.symbol | render_rst}} {%- endif -%}
       </td></tr>
       <tr><th>applicability</th><td>
 	  {%- if rel.fa.synset_synset or rel.fa.sense_synset or rel.fa.sense_sense -%}
@@ -24,27 +22,25 @@
       <tr><th>reverse</th><td>
 	  {%- if rel.fa.reverse -%}
 	  <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>
-	  {%- else -%}
-          <a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute reverse relation</a>
 	  {%- endif -%}
       </td></tr>
         <tr><th>example</th><td>
             {% if rel.ex %} {{rel.ex | render_rst}} {% else %}
-        <a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute an example</a>
+        <a href="https://github.com/globalwordnet/gwadoc">Contribute an example</a>
         {% endif %}
         </td></tr>
     </table>
     <h4>Definition</h4>
       <p>{% if rel.dfn %} {{rel.dfn | render_rst }} {% else %}
-        <a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute a definition</a>
+        <a href="https://github.com/globalwordnet/gwadoc">Contribute a definition</a>
         {% endif %}</p>
     <h4>Examples</h4>
        <p>{% if rel.exe %} {{rel.exe | render_rst}} {% else %}
-        <a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute more examples</a>
+        <a href="https://github.com/globalwordnet/gwadoc">Contribute more examples</a>
         {% endif %}</p>
     <h4>Tests</h4>
       <p>{%- if rel.test -%} <p>{{rel.test | render_rst}}</p> {%- else -%}
-        <a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute test</a>
+        <a href="https://github.com/globalwordnet/gwadoc">Contribute test</a>
         {%- endif -%}</p>
     <h4>{% if rel.com %} Comments </h4><p>{{rel.com | render_rst}}</p> {% endif %}
     {%- if rel.fa.synset_synset or rel.fa.sense_sense -%}
@@ -91,7 +87,6 @@
       </tbody>
     </table>
     {% else %}
-    <p><a href="https://github.com/globalwordnet/gwadoc/blob/d66c482bf7f9356121c064d8f95b69c58a38ab92/templates/relation.html#L27">Contribute project specific names</a></p>
     {% endif %}
   </div>
 </article>
