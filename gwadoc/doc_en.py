@@ -1994,7 +1994,7 @@ It denotes a relation between a noun and its adjectival attributes,
 and vice-versa — for this reason it should only link adjectives to
 nouns and vice-versa.
 """
-relations.attribute.ex.en = "fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ "
+relations.attribute.ex.en = "`fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ "
 relations.attribute.exe.en = """
 * `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
 * `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
@@ -2301,7 +2301,7 @@ the OMW DTD.  The exact relation type can be given with ``dc:type``:
     <SynsetRelation relType="other" dc:type="emotion" target="example-en-1234-n"/>
 
 """
-relations.other.ex.en = "doctor <ILIURL/89560>`_ other `hospital <ILIURL/79536>`_"
+relations.other.ex.en = "`doctor <ILIURL/89560>`_ other `hospital <ILIURL/79536>`_"
 relations.other.exe.en = """
  * `curator <ILIURL/89345>`_ other `museum <ILIURL/56456>`_
  * `priest <ILIURL/92229>`_ other `church <ILIURL/40809>`_
@@ -2478,14 +2478,14 @@ relations.masculine_form_of.ex.en = "`boar <ILIURL/48203>`_ is a male `pig <ILIU
 
 relations.young_form_of.name.en = "Young Form"
 relations.young_form_of.df.en = "A concept used to refer to young members of a class"
-relations.young_form_of.ex.en = "`shoat <ILIURL/48200>`_ is a young `pig <ILIURL/48199>`_"
+relations.young_form_of.ex.en = "`piglet <ILIURL/48200>`_ is a young `pig <ILIURL/48199>`_"
 
 
 ### Relation: Diminuative
 
 relations.diminutive_of.name.en = "Diminutive Form"
 relations.diminutive_of.df.en = "A concept used to refer to generally smaller members of a class"
-relations.diminutive_of.ex.en = "`shoat <ILIURL/48200>`_ is a diminutive `pig <ILIURL/48199>`_"
+relations.diminutive_of.ex.en = "`piglet <ILIURL/48200>`_ is a diminutive `pig <ILIURL/48199>`_"
 
 
 ### Relation: Augmentative
