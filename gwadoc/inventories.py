@@ -164,5 +164,6 @@ FORMAL_ATTRIBUTES = {
     'sense_synset': 'Applicability to sense -> synset links',
     'sense_sense': 'Applicability to sense -> sense links',
     'reverse': 'Reverse Relation',
-    'inOMW':   'Relation used in OMW'
+    'inOMW':   'Relation used in OMW',
+    'schema_version': 'Which version first used this'
 }

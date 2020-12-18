@@ -1275,6 +1275,7 @@ relations.derivation.proj.pointer = "+"
 ### Relation Simple Aspect IP
 
 #relations.simple_aspect.name.symbol = ''
+relations.simple_aspect_ip.fa.schema_version = '1.1'
 relations.simple_aspect_ip.fa.parent = 'derivation'
 relations.simple_aspect_ip.fa.synset_synset = True
 relations.simple_aspect_ip.fa.sense_sense = True
@@ -1284,6 +1285,7 @@ relations.simple_aspect_ip.fa.reverse = 'simple_aspect_pi'
 ### Relation Secondary Aspect PI
 
 #relations.secondary_aspect.name.symbol = ''
+relations.secondary_aspect_ip.fa.schema_version = '1.1'
 relations.secondary_aspect_ip.fa.parent = 'derivation'
 relations.secondary_aspect_ip.fa.synset_synset = True
 relations.secondary_aspect_ip.fa.sense_sense = True
@@ -1293,6 +1295,7 @@ relations.secondary_aspect_ip.fa.reverse = 'secondary_aspect_pi'
 ### Relation: Feminine form
 
 relations.feminine_form_of.name.symbol = '♀'
+relations.feminine_form_of.fa.schema_version= '1.1'
 relations.feminine_form_of.fa.parent = 'hyponym'
 relations.feminine_form_of.fa.synset_synset = True
 relations.feminine_form_of.fa.sense_sense = True
@@ -1302,6 +1305,7 @@ relations.feminine_form_of.fa.sense_sense = True
 ### Relation: Masculine Form
 
 relations.masculine_form_of.name.symbol = '♂'
+relations.masculine_form_of.fa.schema_version= '1.1'
 relations.masculine_form_of.fa.parent = 'hyponym'
 relations.masculine_form_of.fa.synset_synset = True
 relations.masculine_form_of.fa.sense_sense = True
@@ -1311,6 +1315,7 @@ relations.masculine_form_of.fa.sense_sense = True
 ### Relation: Young Form
 
 #relations.young_form_of.name.symbol = ''
+relations.young_form_of.fa.schema_version = '1.1'
 relations.young_form_of.fa.parent = 'hyponym'
 relations.young_form_of.fa.synset_synset = True
 relations.young_form_of.fa.sense_sense = True
@@ -1320,6 +1325,7 @@ relations.young_form_of.fa.sense_sense = True
 ### Relation: Diminuative
 
 #relations.diminutive_of.name.symbol = ''
+relations.diminutive_of.fa.schema_version = '1.1'
 relations.diminutive_of.fa.parent = 'hyponym'
 relations.diminutive_of.fa.synset_synset = True
 relations.diminutive_of.fa.sense_sense = True
@@ -1329,6 +1335,7 @@ relations.diminutive_of.fa.sense_sense = True
 ### Relation: Augmentative
 
 #relations.augmentative_of.name.symbol = ''
+relations.augmentative_of.fa.schema_version = '1.1'
 relations.augmentative_of.fa.parent = 'hyponym'
 relations.augmentative_of.fa.synset_synset = True
 relations.augmentative_of.fa.sense_sense = True
@@ -1338,6 +1345,7 @@ relations.augmentative_of.fa.sense_sense = True
 ### Relation: Gradable Antonym
 
 #relations.anto_gradable.name.symbol = ''
+relations.anto_gradable.fa.schema_version = '1.1'
 relations.anto_gradable.fa.parent = 'antonym'
 relations.anto_gradable.fa.synset_synset = True
 relations.anto_gradable.fa.sense_sense = True
@@ -1347,6 +1355,7 @@ relations.anto_gradable.fa.reverse = 'anto_gradable'
 ### Relation: Simple Antonym
 
 #relations.anto_simple.name.symbol = ''
+relations.anto_simple.fa.schema_version = '1.1'
 relations.anto_simple.fa.parent = 'antonym'
 relations.anto_simple.fa.synset_synset = True
 relations.anto_simple.fa.sense_sense = True
@@ -1356,6 +1365,7 @@ relations.anto_simple.fa.reverse = 'anto_simple'
 ### Relation: Converse Antonym
 
 #relations.anto_converse.name.symbol = ''
+relations.anto_converse.fa.schema_version = '1.1'
 relations.anto_converse.fa.parent = 'antonym'
 relations.anto_converse.fa.synset_synset = True
 relations.anto_converse.fa.sense_sense = True
@@ -1365,6 +1375,7 @@ relations.anto_converse.fa.reverse = 'anto_converse'
 ### Relation: Inter-register Synonym
 
 relations.ir_synonym.name.symbol = '≅'
+relations.ir_synonym.fa.schema_version = '1.1'
 relations.ir_synonym.fa.parent = 'eq_synonym'
 relations.ir_synonym.fa.synset_synset = True
 relations.ir_synonym.fa.sense_sense = True
