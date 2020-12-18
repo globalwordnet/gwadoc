@@ -1272,22 +1272,22 @@ relations.derivation.proj.eurown = ""
 relations.derivation.proj.plwordnet = "derywacyjność"
 relations.derivation.proj.pointer = "+"
 
-### Relation Simple Aspect
+### Relation Simple Aspect IP
 
 #relations.simple_aspect.name.symbol = ''
-relations.simple_aspect.fa.parent = 'derivation'
-relations.simple_aspect.fa.synset_synset = True
-relations.simple_aspect.fa.sense_sense = True
-#relations.simple_aspect.fa.reverse = ''
+relations.simple_aspect_ip.fa.parent = 'derivation'
+relations.simple_aspect_ip.fa.synset_synset = True
+relations.simple_aspect_ip.fa.sense_sense = True
+relations.simple_aspect_ip.fa.reverse = 'simple_aspect_pi'
 #relations.simple_aspect.proj.ili = ''
 
-### Relation Secondary Aspect
+### Relation Secondary Aspect PI
 
 #relations.secondary_aspect.name.symbol = ''
-relations.secondary_aspect.fa.parent = 'derivation'
-relations.secondary_aspect.fa.synset_synset = True
-relations.secondary_aspect.fa.sense_sense = True
-#relations.secondary_aspect.fa.reverse = ''
+relations.secondary_aspect_ip.fa.parent = 'derivation'
+relations.secondary_aspect_ip.fa.synset_synset = True
+relations.secondary_aspect_ip.fa.sense_sense = True
+relations.secondary_aspect_ip.fa.reverse = 'secondary_aspect_pi'
 #relations.secondary_aspect.proj.ili = ''
 
 ### Relation: Feminine form

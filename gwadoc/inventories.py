@@ -125,13 +125,20 @@ RELATIONS = (
     'pertainym',
     'derivation',
     ### new in 2021
-    'simple_aspect',  
-    'secondary_aspect',
-    'feminine_form_of' , # sow    ->  pig 
+    'simple_aspect_ip',  
+    'simple_aspect_pi',  
+    'secondary_aspect_ip',
+    'secondary_aspect_pi',
+    'feminine_form_of' , # sow    ->  pig
+    'has_feminine_form' , # pig    ->  sow 
     'masculine_form_of', # boar   ->  pig 
+    'has_masculine_form', # pig   ->  boar 
     'young_form_of',     # piglet ->  pig  
+    'has_young_form',     # pig ->  piglet  
     'diminutive_of',     # piggy  ->  pig                       
+    'has_diminutive',     # pig  ->  piggy                       
     'augmentative_of',
+    'has_augmentative',
     'anto_gradable',
     'anto_simple',
     'anto_converse',
