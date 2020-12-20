@@ -42,6 +42,7 @@ LANGUAGES = od([
     ('en',     'English'),
     ('pl',     'Polish'),
     ('ja',     'Japanese'),
+    ('zh',     'Chinese(Simplified)'),
     ('symbol', 'Symbol'),
 ])
 
