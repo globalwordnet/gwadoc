@@ -2455,12 +2455,24 @@ relations.simple_aspect_ip.name.en = "Simple Aspect (imp to per)"
 relations.simple_aspect_ip.df.en = "A concept which is linked to another through a change from imperfective to perfective aspect"
 relations.simple_aspect_ip.ex.en = ""
 
+### Relation Simple Aspect PI
 
-### Relation Secondary Aspect
+relations.simple_aspect_pi.name.en = "Simple Aspect (per to imp)"
+relations.simple_aspect_pi.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
+relations.simple_aspect_pi.ex.en = ""
+
+
+### Relation Secondary Aspect IP
 
 relations.secondary_aspect_ip.name.en = "Secondary Aspect (ip)"
 relations.secondary_aspect_ip.df.en = "A concept which is linked to another through a change in aspect (ip)"
 relations.secondary_aspect_ip.ex.en = ""
+
+### Relation Secondary Aspect PI
+
+relations.secondary_aspect_pi.name.en = "Secondary Aspect (pi)"
+relations.secondary_aspect_pi.df.en = "A concept which is linked to another through a change in aspect (pi)"
+relations.secondary_aspect_pi.ex.en = ""
 
 
 ### Relation: Feminine form
@@ -2469,6 +2481,12 @@ relations.feminine_form_of.name.en = "Feminine form"
 relations.feminine_form_of.df.en= "A concept used to refer to female members of a class"
 relations.feminine_form_of.ex.en = "`sow <ILIURL/48204>`_ is a female `pig <ILIURL/48199>`_"
 
+### Relation: Feminine form
+
+relations.has_feminine_form.name.en = "Has Feminine form"
+relations.has_feminine_form.df.en= "A concept which has a special concept for female members of its class"
+relations.has_feminine_form.ex.en = "`pig <ILIURL/48199>`_ has female `sow <ILIURL/48204>`_"
+
 
 ### Relation: Masculine Form
 
@@ -2476,19 +2494,37 @@ relations.masculine_form_of.name.en = "Masculine Form"
 relations.masculine_form_of.df.en= "A concept used to refer to male members of a class"
 relations.masculine_form_of.ex.en = "`boar <ILIURL/48203>`_ is a male `pig <ILIURL/48199>`_"
 
+### Relation: Masculine Form
+
+relations.has_masculine_form.name.en = "Has Masculine Form"
+relations.has_masculine_form.df.en= "A concept which has a special concept for male members of its class"
+relations.has_masculine_form.ex.en = "pig <ILIURL/48199>`_ has male `boar <ILIURL/48203>`_ "
+
 
 ### Relation: Young Form
 
 relations.young_form_of.name.en = "Young Form"
 relations.young_form_of.df.en = "A concept used to refer to young members of a class"
-relations.young_form_of.ex.en = "`shoat <ILIURL/48200>`_ is a young `pig <ILIURL/48199>`_"
+relations.young_form_of.ex.en = "`piglet <ILIURL/48200>`_ is a young `pig <ILIURL/48199>`_"
+
+### Relation: Young Form
+
+relations.has_young_form.name.en = "Has Young Form"
+relations.has_young_form.df.en = """A concept which has a special concept for young members of its class"""
+relations.has_young_form.ex.en = "`pig <ILIURL/48199>`_ has young `piglet <ILIURL/48200>`_"
 
 
 ### Relation: Diminuative
 
 relations.diminutive_of.name.en = "Diminutive Form"
 relations.diminutive_of.df.en = "A concept used to refer to generally smaller members of a class"
-relations.diminutive_of.ex.en = "`shoat <ILIURL/48200>`_ is a diminutive `pig <ILIURL/48199>`_"
+relations.diminutive_of.ex.en = "`kitchenette  <ILIURL/55399>`_ is a diminutive `kitchen <ILIURL/55397>`_"
+
+### Relation: Diminuative
+
+relations.has_diminutive.name.en = "Has Diminutive Form"
+relations.has_diminutive.df.en = "A concept which has a special concept for generally smaller members of its class"
+relations.has_diminutive.ex.en = "`kitchen <ILIURL/55397>`_ has  diminutive `kitchenette  <ILIURL/55399>`_ "
 
 
 ### Relation: Augmentative
@@ -2496,6 +2532,12 @@ relations.diminutive_of.ex.en = "`shoat <ILIURL/48200>`_ is a diminutive `pig <I
 relations.augmentative_of.name.en = "Augmentative Form"
 relations.augmentative_of.df.en = "A concept used to refer to generally larger members of a class"
 relations.augmentative_of.ex.en = "`great house <ILIURL/7550>`_ is a larger `house <ILIURL/54960>`_"
+
+### Relation: Augmentative
+
+relations.has_augmentative.name.en = "Has Augmentative Form"
+relations.has_augmentative.df.en = "A concept which has a special concept for generally larger members of its class"
+relations.has_augmentative.ex.en = "`house <ILIURL/54960>`_ has larger `great house <ILIURL/7550>`_ "
 
 
 ### Relation: Gradable Antonym
