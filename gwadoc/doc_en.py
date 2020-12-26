@@ -112,9 +112,9 @@ A relation between two concepts where concept B is a type of
 concept A."""
 relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ has hyponym `animal <ILIURL/35563>`_"
 relations.hyponym.exe.en = """
- * `beef <ILIURL/48244>`_ has hyponym `meat <ILIURL/77100>`_
- * `pear <ILIURL/77892>`_ has hyponym `edible fruit <ILIURL/77500>`_
- * `dictionary <ILIURL/70226>`_ has hyponym `wordbook <ILIURL/70225>`_
+ * `beef <ILIURL/48244>`_ is a hyponym `meat <ILIURL/77100>`_
+ * `pear <ILIURL/77892>`_ is a hyponym `edible fruit <ILIURL/77500>`_
+ * `dictionary <ILIURL/70226>`_ is a hyponym `wordbook <ILIURL/70225>`_
 """
 relations.hyponym.test.en = """
 Hyponymy-relation between nouns (EWN test 9)
@@ -1326,7 +1326,7 @@ relations.meronym.dfn.en = """
 A relation between two concepts where concept A makes up a part of
 concept B.
 """
-relations.meronym.ex.en = "`hand <ILIURL/48471>`_ has part-meronym `finger <ILIURL/53712>`_"
+relations.meronym.ex.en = "`hand <ILIURL/48471>`_ has part-meronym `finger <ILIURL/66162>`_"
 relations.meronym.exe.en = """
  * `hat <ILIURL/54674>`_ has part-meronym `crown <ILIURL/52548>`_
  * `people <ILIURL/79059>`_ has member-meronym `person <ILIURL/35562>`_
@@ -1363,7 +1363,7 @@ relations.holonym.dfn.en = """
 A relation between two concepts where concept A makes up a
 part of concept B.
 """
-relations.holonym.ex.en = "`finger <ILIURL/53712>`_ has part-holonym `hand <ILIURL/48471>`_"
+relations.holonym.ex.en = "`finger <ILIURL/66162>`_ has part-holonym `hand <ILIURL/48471>`_"
 relations.holonym.exe.en = """
  * `eye <ILIURL/64868>`_ has part-holonym `face <ILIURL/87210>`_
  * `planet <ILIURL/85986>`_ has member-holonym `solar system <ILIURL/86215>`_
@@ -2175,9 +2175,9 @@ An opposite and inherently incompatible word.
 """
 relations.antonym.ex.en = "`smart <ILIURL/2474>`_ has antonym `stupid <ILIURL/2478>`_"
 relations.antonym.exe.en = """
- * `man <ILIURL/48657>`_ has antonym `woman <ILIURL/94168>`_
+ * `man <ILIURL/91182>`_ has antonym `woman <ILIURL/94168>`_
  * `superior <ILIURL/93443>`_ has antonym `inferior <ILIURL/90690>`_
- * `buy <ILIURL/32788>`_ has antonym `sell <ILIURL/41243>`_
+ * `buy <ILIURL/32788>`_ has antonym `sell <ILIURL/32953>`_
  * `northen <ILIURL/8760>`_ has antonym `southern <ILIURL/8772>`_
  * `homosexual <ILIURL/90552>`_ has antonym `heterosexual <ILIURL/6566>`_
  * `sister <ILIURL/93015>`_ has antonym `brother <ILIURL/88710>`_
