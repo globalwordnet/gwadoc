@@ -34,35 +34,40 @@
                     {%- endif -%}
                 </td>
             </tr>
+            {%- if rel.fa.reverse -%}
             <tr>
-                <th>reverse</th>
+              <th>reverse</th>
                 <td>
-                    {%- if rel.fa.reverse -%}
                     <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>
-                    {%- endif -%}
                 </td>
             </tr>
+	    {%- endif -%}
             <tr>
-                <th>example</th>
-                <td>
-                    {% if rel.ex %} {{rel.ex | render_rst}} {% else %}
-                    <a href="https://github.com/globalwordnet/gwadoc">Contribute an example</a>
-                    {% endif %}
-                </td>
+	      <th>example</th>
+              <td>
+		{% if rel.ex %} 
+                {{rel.ex | render_rst}}
+		{% else %}
+                <a href="https://github.com/globalwordnet/gwadoc">Contribute an example</a>
+                {% endif %}
+              </td>
             </tr>
         </table>
+	{% if rel.dfn %}
         <h4>Definition</h4>
-        <p>{% if rel.dfn %} {{rel.dfn | render_rst }} {% else %}
-            <a href="https://github.com/globalwordnet/gwadoc">Contribute a definition</a>
-            {% endif %}</p>
+        <p> {{rel.dfn | render_rst }} {% else %}
+        <p><a href="https://github.com/globalwordnet/gwadoc">Contribute a definition</a>
+          {% endif %}</p>
+	{% if rel.exe %} 
         <h4>Examples</h4>
-        <p>{% if rel.exe %} {{rel.exe | render_rst}} {% else %}
-            <a href="https://github.com/globalwordnet/gwadoc">Contribute more examples</a>
-            {% endif %}</p>
-        <h4>Tests</h4>
-        <p>{%- if rel.test -%}
+        <p>{{rel.exe | render_rst}}
+	  {% else %}
+        <p><a href="https://github.com/globalwordnet/gwadoc">Contribute more examples</a>
+          {% endif %}</p>
+        {%- if rel.test -%}
+	<h4>Tests</h4>
         <p>{{rel.test | render_rst}}</p> {%- else -%}
-        <a href="https://github.com/globalwordnet/gwadoc">Contribute test</a>
+        <p><a href="https://github.com/globalwordnet/gwadoc">Contribute test</a>
         {%- endif -%}</p>
         <h4>{% if rel.com %} Comments </h4>
         <p>{{rel.com | render_rst}}</p> {% endif %}
@@ -77,7 +82,6 @@
 <span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-A&quot;</span> <span
                 class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span
                 class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
-         
   <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;{{id}}&quot;</span>
 		  <span class="na">target=</span><span class="s">&quot;wn-synset-B&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/Synset&gt;</span>
@@ -95,8 +99,8 @@
         </div>
         {%- endif -%}
 
-        <h4>Project-specific Names</h4>
         {% if rel.proj -%}
+        <h4>Project-specific Names</h4>
         <table>
             <tbody>
             {% for proj in gwadoc.PROJECTS if rel.proj[proj] -%}
@@ -118,4 +122,5 @@
         {% else %}
         {% endif %}
     </div>
+    <hr>
 </article>
