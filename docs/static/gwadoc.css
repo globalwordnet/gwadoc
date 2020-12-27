@@ -36,6 +36,9 @@ article table {
     border-collapse: separate;
     border: none;
 }
+article{
+  border-bottom: 2px solid #671D5B;
+}
 article table tr, article table th, article table td { border: none; }
 article table th {
     font-weight: bold;
@@ -77,6 +80,11 @@ grid-template-row: 10% 80% 10%;
     grid-template-columns : 25% 70%;
     grid-gap: 30px;
  }
+ .toc-items{
+ display: none;
+ }
+ .outline-toggle{margin: 16px 0 16px 0; background-color: #2557A6; color: white;}
+
 @media screen and (max-width: 799px) {
     body { font-size: small; }
     h2, h3, h4 { margin: 10px 0px; }
@@ -85,4 +93,5 @@ grid-template-row: 10% 80% 10%;
     article table { margin: 2px 0px 2px 0px; }
     article table td { padding: 1px 0px 1px 5px; }
     .section{display:grid; grid-template-columns: 100%;}
-}
+    nav{width: 100%; margin: 24px;}
+    }

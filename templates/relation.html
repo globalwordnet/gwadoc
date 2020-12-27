@@ -30,6 +30,18 @@
 	  {%- else -%}
 	  (not directly applicable)
 	  {%- endif -%}</td></tr>
+            <tr><th>reverse</th><td>
+	  {%- if rel.fa.reverse -%}
+	  <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>
+	  {%- else -%}
+	  (no reverse relation defined)
+	  {%- endif -%}
+	  {%- if rel.fa.schema_version -%}
+	  <tr><th>introduced in</th><td>
+	      <a href='https://globalwordnet.github.io/schemas/'>schema</a> {{ rel.fa.schema_version }}
+	  {%- endif -%}
+
+      </td></tr>
       <tr><th>example</th><td>{{ rel.ex | render_rst or "(no example given)" }}</td></tr>
     </table>
     <h4>Definition</h4>
@@ -88,3 +100,4 @@
     {% endif %}
   </div>
 </article>
+

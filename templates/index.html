@@ -9,6 +9,7 @@
 {% for id in gwadoc.RELATIONS -%}
 {% set rel = gwadoc.relations[id] -%}
 {% include "relation.html" %}
-
 {% endfor %}
+{% include "references.html" %}
+
 {% endblock %}
