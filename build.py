@@ -1,8 +1,8 @@
-
 # thanks: http://eosrei.net/articles/2015/11/latex-templates-python-and-jinja2-generate-pdfs
 # thanks: http://flask.pocoo.org/snippets/55/
 
 import sys
+
 from pathlib import Path
 import io
 import argparse
@@ -12,7 +12,6 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 
 import docutils.core
 import jinja2
-
 import gwadoc
 #gwadoc.set_preferred_language('en')
 
@@ -42,7 +41,6 @@ def rst_renderer(fmt):
 
 def build(args):
     gwadoc.set_preferred_language(args.lang)
-
     loader =  jinja2.FileSystemLoader(DIR / 'templates')
 
     if args.format == 'html':
@@ -50,7 +48,7 @@ def build(args):
             loader=loader,
             autoescape=jinja2.select_autoescape(['html', 'xml']))
         env.filters['render_rst'] = rst_renderer('html')
-        template = env.get_template('index.html')
+        template = env.get_template(f'{args.object}.{args.format}')
 
     elif args.format == 'latex':
         LATEX_SUBS = (
@@ -85,12 +83,15 @@ def build(args):
     else:
         raise ValueError('invalid format: {}'.format(args.format))
 
-    print(template.render(gwadoc=gwadoc))
+    print(template.render(gwadoc=gwadoc,
+                          lang=args.lang))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('format', choices=('html', 'latex'), default='html')
+    parser.add_argument('--object', choices=('index', 'summary'), default='index')
     parser.add_argument("--lang", help="language to make the docs in", default="en")
     args = parser.parse_args()
     build(args)
+

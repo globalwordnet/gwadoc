@@ -111,7 +111,10 @@ specified by calling the `gwadoc.set_preferred_language()` function:
 After installing the requirements, you can build the HTML documentation:
 
 ``` bash
+# main documentation
 ~/gwadoc$ python docs/build.py html > docs/index.html
+# summary
+~/gwadoc$ python docs/build.py --object summary html > docs/summary.html
 ```
 
 Note: if you installed the requirements in a virtual environment make
@@ -122,9 +125,7 @@ On github, the documentation is automatically made when there is a commit to the
 
 # Contributing
 
-Please add to the documentation using restructured text in the files in
-the gwadoc directory.  `doc-en.py` is the most complete at the
-moment, use the entries for `hypernym/hyponym` as good examples.
+Contributions are most welcome.  Please see the [contributing guide](CONTRIBUTING.rst).
 
 
 # License

@@ -1,84 +1,126 @@
 <article class="relation">
-  <h3 id="{{ id }}"><a href="#{{ id }}">{{ rel.name }}</a> ({{ rel_id(id) }}){{ to_top() }}</h3>
-  <div class="description">
-    {% if rel.df -%}
-    <span class="short definition">"{{ rel.df }}"</span>
-    {%- endif %}
-    <table class="fieldlist">
-      <tr><th>symbol</th><td>{{ rel.name.symbol or "(no symbol defined)" }}</td></tr>
-      <tr><th>applicability</th><td>
-	  {%- if rel.fa.synset_synset or rel.fa.sense_synset or rel.fa.sense_sense -%}
-	  {%- set dash="&ndash;" -%}
-	  <ul>
-	    {% if rel.fa.synset_synset %}<li>synset{{ dash|safe }}synset</li>{% endif %}
-	    {% if rel.fa.sense_synset %}<li>sense{{ dash|safe }}synset</li>{% endif %}
-	    {% if rel.fa.sense_sense %}<li>sense{{ dash|safe }}sense</li>{% endif %}
-	  </ul>
-	  {%- else -%}
-	  (not directly applicable)
-	  {%- endif -%}</td></tr>
-      <tr><th>reverse</th><td>
-	  {%- if rel.fa.reverse -%}
-	  <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>
-	  {%- else -%}
-	  (no reverse relation defined)
-	  {%- endif -%}
-      </td></tr>
-      <tr><th>example</th><td>{{ rel.ex | render_rst or "(no example given)" }}</td></tr>
-    </table>
-    <h4>Definition</h4>
-    <p>{{ rel.dfn | render_rst or "(no definition)" }}</p>
-    <h4>Examples</h4>
-    <p>{{ rel.exe | render_rst or "(no more examples)" }}</p>
-    <h4>Tests</h4>
-    <p>{{ rel.test | render_rst or "(no tests defined)" }}</p>
-    <h4>Comments</h4>
-    <p>{{ rel.com | render_rst or "(no comments)" }}</p>
-    {%- if rel.fa.synset_synset or rel.fa.sense_sense -%}
-    <h4>XML</h4>
-    <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
-	format for Wordnet LMF</a> the relation should be shown like
-      this:
-      {%- endif -%}
-      {%- if rel.fa.synset_synset -%}
-<div class="highlight"><pre>
-<span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-X&quot;</span> <span class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;{{id}}&quot;</span>
-		  <span class="na">target=</span><span class="s">&quot;wn-synset-Y&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Synset&gt;</span>
-</pre></div>
-    {%- endif -%}
-    {%- if rel.fa.sense_sense -%}
-<div class="highlight"><pre> 
-<span class="nt">&lt;Sense</span> <span class="na">id=</span><span class="s">&quot;wn-sense-X&quot;</span> <span class="na">synset=</span><span class="s">&quot;wn-synset-X&quot;</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;SenseRelation</span> <span class="na">relType=</span><span class="s">&quot;{{id}}&quot;</span>
-		  <span class="na">target=</span><span class="s">&quot;wn-sense-Y&quot;</span><span class="nt">/&gt;</span>
- <span class="nt">&lt;/Sense&gt;</span>
-</pre></div>
-    {%- endif -%}
-    
-    <h4>Project-specific Names</h4>
-    {% if rel.proj -%}
-    <table>
-      <tbody>
-        {% for proj in gwadoc.PROJECTS if rel.proj[proj] -%}
-	{% set PRJ =   gwadoc.PROJECTS[proj] %}
-        <tr>
-          <th><a href='{{ PRJ.url }}' title= '{{ PRJ.exp }}'>{{ PRJ.nam }}</a> </th>
-          <td>
-            {% set sym = rel.proj[proj] -%}
-            {% if sym and proj == "ili" -%}
-            {{ ili(sym) }}
-            {%- elif sym -%}
-            {{ sym }}
+    <h3 id="{{ id }}"><a href="#{{ id }}">{{ rel.name }}</a> ({{ rel_id(id) }}){{ to_top() }}</h3>
+    <div class="description">
+        {% if rel.df -%}
+        <span class="short definition">"{{ rel.df }}"</span>
+        {%- endif %}
+        <table class="fieldlist">
+            {%- if rel.name.symbol -%}
+            <tr>
+                <th>symbol</th>
+                <td>
+                    {{rel.name.symbol | render_rst}}
+                </td>
+            </tr>
             {%- endif -%}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% else %}
-    <p>(no project names defined)</p>
-    {% endif %}
-  </div>
+            <tr>
+                <th>applicability</th>
+                <td>
+                    {%- if rel.fa.synset_synset or rel.fa.sense_synset or rel.fa.sense_sense -%}
+                    {%- set dash="&ndash;" -%}
+                    <ul>
+                        {% if rel.fa.synset_synset %}
+                        <li>synset{{ dash|safe }}synset</li>
+                        {% endif %}
+                        {% if rel.fa.sense_synset %}
+                        <li>sense{{ dash|safe }}synset</li>
+                        {% endif %}
+                        {% if rel.fa.sense_sense %}
+                        <li>sense{{ dash|safe }}sense</li>
+                        {% endif %}
+                    </ul>
+                    {%- else -%}
+                    (not directly applicable)
+                    {%- endif -%}
+                </td>
+            </tr>
+            {%- if rel.fa.reverse -%}
+            <tr>
+              <th>reverse</th>
+                <td>
+                    <a href="#{{ rel.fa.reverse }}">{{ rel_id(rel.fa.reverse) }}</a>
+                </td>
+            </tr>
+	    {%- endif -%}
+            <tr>
+	      <th>example</th>
+              <td>
+		{% if rel.ex %} 
+                {{rel.ex | render_rst}}
+		{% else %}
+                <a href="https://github.com/globalwordnet/gwadoc">Contribute an example</a>
+                {% endif %}
+              </td>
+            </tr>
+        </table>
+	{% if rel.dfn %}
+        <h4>Definition</h4>
+        <p> {{rel.dfn | render_rst }} {% else %}
+        <p><a href="https://github.com/globalwordnet/gwadoc">Contribute a definition</a>
+          {% endif %}</p>
+	{% if rel.exe %} 
+        <h4>Examples</h4>
+        <p>{{rel.exe | render_rst}}
+	  {% else %}
+        <p><a href="https://github.com/globalwordnet/gwadoc">Contribute more examples</a>
+          {% endif %}</p>
+        {%- if rel.test -%}
+	<h4>Tests</h4>
+        <p>{{rel.test | render_rst}}</p> {%- else -%}
+        <p><a href="https://github.com/globalwordnet/gwadoc">Contribute test</a>
+        {%- endif -%}</p>
+        <h4>{% if rel.com %} Comments </h4>
+        <p>{{rel.com | render_rst}}</p> {% endif %}
+        {%- if rel.fa.synset_synset or rel.fa.sense_sense -%}
+        <h4>XML</h4>
+        <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
+            format for Wordnet LMF</a> the relation should be shown like
+            this:
+            {%- endif -%}
+            {%- if rel.fa.synset_synset -%}
+        <div class="highlight"><pre>
+<span class="nt">&lt;Synset</span> <span class="na">id=</span><span class="s">&quot;wn-synset-A&quot;</span> <span
+                class="na">ili=</span><span class="s">&quot;iXYZ&quot;</span> <span class="na">partOfSpeech=</span><span
+                class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;SynsetRelation</span> <span class="na">relType=</span><span class="s">&quot;{{id}}&quot;</span>
+		  <span class="na">target=</span><span class="s">&quot;wn-synset-B&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Synset&gt;</span>
+</pre>
+        </div>
+        {%- endif -%}
+        {%- if rel.fa.sense_sense -%}
+        <div class="highlight"><pre>
+<span class="nt">&lt;Sense</span> <span class="na">id=</span><span class="s">&quot;wn-sense-A&quot;</span> <span
+                class="na">synset=</span><span class="s">&quot;wn-synset-A&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;SenseRelation</span> <span class="na">relType=</span><span class="s">&quot;{{id}}&quot;</span>
+		  <span class="na">target=</span><span class="s">&quot;wn-sense-B&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;/Sense&gt;</span>
+</pre>
+        </div>
+        {%- endif -%}
+
+        {% if rel.proj -%}
+        <h4>Project-specific Names</h4>
+        <table>
+            <tbody>
+            {% for proj in gwadoc.PROJECTS if rel.proj[proj] -%}
+            {% set PRJ = gwadoc.PROJECTS[proj] %}
+            <tr>
+                <th><a href='{{ PRJ.url }}' title='{{ PRJ.exp }}'>{{ PRJ.nam }}</a></th>
+                <td>
+                    {% set sym = rel.proj[proj] -%}
+                    {% if sym and proj == "ili" -%}
+                    {{ ili(sym) }}
+                    {%- elif sym -%}
+                    {{ sym }}
+                    {%- endif -%}
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        {% endif %}
+    </div>
+    <hr>
 </article>
