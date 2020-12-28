@@ -112,9 +112,9 @@ A relation between two concepts where concept B is a type of
 concept A."""
 relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ has hyponym `animal <ILIURL/35563>`_"
 relations.hyponym.exe.en = """
- * `beef <ILIURL/48244>`_ has hyponym `meat <ILIURL/77100>`_
- * `pear <ILIURL/77892>`_ has hyponym `edible fruit <ILIURL/77500>`_
- * `dictionary <ILIURL/70226>`_ has hyponym `wordbook <ILIURL/70225>`_
+ * `beef <ILIURL/48244>`_ is a hyponym `meat <ILIURL/77100>`_
+ * `pear <ILIURL/77892>`_ is a hyponym `edible fruit <ILIURL/77500>`_
+ * `dictionary <ILIURL/70226>`_ is a hyponym `wordbook <ILIURL/70225>`_
 """
 relations.hyponym.test.en = """
 Hyponymy-relation between nouns (EWN test 9)
@@ -1326,7 +1326,8 @@ relations.meronym.dfn.en = """
 A relation between two concepts where concept A makes up a part of
 concept B.
 """
-relations.meronym.ex.en = "`hand <ILIURL/48471>`_ has part-meronym `finger <ILIURL/53712>`_"
+
+relations.meronym.ex.en = "`hand <ILIURL/66153>`_ has part-meronym `finger <ILIURL/66162>`_"
 relations.meronym.exe.en = """
  * `hat <ILIURL/54674>`_ has part-meronym `crown <ILIURL/52548>`_
  * `people <ILIURL/79059>`_ has member-meronym `person <ILIURL/35562>`_
@@ -1363,7 +1364,8 @@ relations.holonym.dfn.en = """
 A relation between two concepts where concept A makes up a
 part of concept B.
 """
-relations.holonym.ex.en = "`finger <ILIURL/53712>`_ has part-holonym `hand <ILIURL/48471>`_"
+
+relations.holonym.ex.en = "`finger <ILIURL/66162>`_ has part-holonym `hand <ILIURL/66153>`_"
 relations.holonym.exe.en = """
  * `eye <ILIURL/64868>`_ has part-holonym `face <ILIURL/87210>`_
  * `planet <ILIURL/85986>`_ has member-holonym `solar system <ILIURL/86215>`_
@@ -1994,7 +1996,8 @@ It denotes a relation between a noun and its adjectival attributes,
 and vice-versa — for this reason it should only link adjectives to
 nouns and vice-versa.
 """
-relations.attribute.ex.en = "fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ "
+
+relations.attribute.ex.en = "`fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ "
 relations.attribute.exe.en = """
 * `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
 * `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
@@ -2154,7 +2157,6 @@ a word that expresses a meaning opposed to the meaning of another
 word, in which case the two words are antonyms of each other
 """
 relations.antonym.dfn.en = """
-
 Two words are antonyms if their meanings are opposite in some way such as:
  
  a) The two words show binary opposition:  `superior <ILIURL/93443>`_ vs `inferior <ILIURL/90690>`_ (simple)
@@ -2172,14 +2174,12 @@ Antonymy is not transitive: If A is an antonym of B and B an antonym
 of C, then A is not necessarily and antonym of A.  Consider *domestic*
 ⇔ *national* ⇔ *international*: it does not follow that *domestic*
 ⇔  *international*, or  *sister* ⇔  *brother*  ⇔ *sister* does not imply *sister*  ⇔ *sister*. 
-
-
 """
 relations.antonym.ex.en = "`smart <ILIURL/2474>`_ has antonym `stupid <ILIURL/2478>`_"
 relations.antonym.exe.en = """
- * `man <ILIURL/48657>`_ has antonym `woman <ILIURL/94168>`_
+ * `man <ILIURL/91182>`_ has antonym `woman <ILIURL/94168>`_
  * `superior <ILIURL/93443>`_ has antonym `inferior <ILIURL/90690>`_
- * `buy <ILIURL/32788>`_ has antonym `sell <ILIURL/41243>`_
+ * `buy <ILIURL/32788>`_ has antonym `sell <ILIURL/32953>`_
  * `northen <ILIURL/8760>`_ has antonym `southern <ILIURL/8772>`_
  * `homosexual <ILIURL/90552>`_ has antonym `heterosexual <ILIURL/6566>`_
  * `sister <ILIURL/93015>`_ has antonym `brother <ILIURL/88710>`_
@@ -2306,7 +2306,8 @@ the OMW DTD.  The exact relation type can be given with ``dc:type``:
     <SynsetRelation relType="other" dc:type="emotion" target="example-en-1234-n"/>
 
 """
-relations.other.ex.en = "doctor <ILIURL/89560>`_ other `hospital <ILIURL/79536>`_"
+
+relations.other.ex.en = "`doctor <ILIURL/89560>`_ other `hospital <ILIURL/79536>`_"
 relations.other.exe.en = """
  * `curator <ILIURL/89345>`_ other `museum <ILIURL/56456>`_
  * `priest <ILIURL/92229>`_ other `church <ILIURL/40809>`_
@@ -2481,6 +2482,7 @@ relations.feminine_form_of.name.en = "Feminine form"
 relations.feminine_form_of.df.en= "A concept used to refer to female members of a class"
 relations.feminine_form_of.ex.en = "`sow <ILIURL/48204>`_ is a female `pig <ILIURL/48199>`_"
 
+
 ### Relation: Feminine form
 
 relations.has_feminine_form.name.en = "Has Feminine form"
@@ -2501,6 +2503,7 @@ relations.has_masculine_form.df.en= "A concept which has a special concept for m
 relations.has_masculine_form.ex.en = "pig <ILIURL/48199>`_ has male `boar <ILIURL/48203>`_ "
 
 
+
 ### Relation: Young Form
 
 relations.young_form_of.name.en = "Young Form"
@@ -2512,6 +2515,7 @@ relations.young_form_of.ex.en = "`piglet <ILIURL/48200>`_ is a young `pig <ILIUR
 relations.has_young_form.name.en = "Has Young Form"
 relations.has_young_form.df.en = """A concept which has a special concept for young members of its class"""
 relations.has_young_form.ex.en = "`pig <ILIURL/48199>`_ has young `piglet <ILIURL/48200>`_"
+
 
 
 ### Relation: Diminuative
@@ -2527,6 +2531,7 @@ relations.has_diminutive.df.en = "A concept which has a special concept for gene
 relations.has_diminutive.ex.en = "`kitchen <ILIURL/55397>`_ has  diminutive `kitchenette  <ILIURL/55399>`_ "
 
 
+
 ### Relation: Augmentative
 
 relations.augmentative_of.name.en = "Augmentative Form"
@@ -2538,6 +2543,7 @@ relations.augmentative_of.ex.en = "`great house <ILIURL/7550>`_ is a larger `hou
 relations.has_augmentative.name.en = "Has Augmentative Form"
 relations.has_augmentative.df.en = "A concept which has a special concept for generally larger members of its class"
 relations.has_augmentative.ex.en = "`house <ILIURL/54960>`_ has larger `great house <ILIURL/7550>`_ "
+
 
 
 ### Relation: Gradable Antonym
@@ -2566,3 +2572,4 @@ relations.anto_gradable.com.en = "Also known as just *converse* or *relational a
 relations.ir_synonym.name.en = "Inter-register Synonym"
 relations.ir_synonym.df.en = "A concept that means the same except for the style or connotation"
 relations.ir_synonym.ex.en = "`loot <ILIURL/106350>`_ is an inter-register synonym of `money <ILIURL/107057>`_"
+

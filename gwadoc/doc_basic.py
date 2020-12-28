@@ -100,7 +100,7 @@ relations.similar.proj.pwn = "Similar to and Verb Group"
 relations.similar.proj.querywn = "sim"
 relations.similar.proj.eurown = "near_synonym"
 relations.similar.proj.plwordnet = "podobny"
-relations.similar.proj.pointer = "&"
+relations.similar.proj.pointer = "*!"
 
 
 ### Relation: role
