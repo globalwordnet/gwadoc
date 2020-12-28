@@ -1,0 +1,41 @@
+header{
+ position: fixed;
+ top: 0;
+ z-index: 9999;
+ width: 100% !important;
+ background-color : #2656A6;
+ border-bottom : 3px solid #671D5B;
+ display: grid;
+ padding: 8px;
+ grid-template-columns : 80% 20%;
+ justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.title{
+color : white;
+font-style : bold;
+font-size : 24px;
+margin-left : 30px;
+}
+
+.name{
+color: #A4CBE8;
+padding: 5px 30px;
+font-size : 10px;
+}
+
+.search-button{
+background-color : #671D5B;
+color : white;
+margin-right : auto;
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 15px;
+    }
+}
+
+

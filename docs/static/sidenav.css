@@ -1,11 +1,57 @@
-.sidenav{height: 100%;width: 290px;position: fixed;z-index: 1;top: 0;left: 0;background-color: #F5F5F5;overflow-x: hidden;padding-top: 20px; }
-.container {margin-left: 290px;}
-.sidenav a {padding: 4px 4px 4px 10px;text-decoration: none;font-size: 12px;color: #010101;background: none;width:100%;text-align: left;cursor: pointer;outline: none;}
-.sidenav a:hover, .dropdown-btn:hover {color: #0000FF;}
+
+.sidenav a {text-decoration: none; font-size: 18px; background: none;width:100%;text-align: left;cursor: pointer;outline: none; color:#4D4D4D; font-size: 18px;}
+.sidenav a:hover, .dropdown-btn:hover {color: #0000FF; }
 .dropdown-container {background-color: #F5F5F5;display: none;}
-.sidenav>ul{padding-left: 5px;margin-left: 5px;}
-.sidenav>ul>li{padding-left: 5px;margin-left: 5px;height: 28px;overflow: hidden;}
+.sidenav>ul>li{ height: 60px; overflow: hidden; font-size: 18px; padding : 24px; border: 0.5px solid #4D4D4D;
+}
 .sidenav>ul>li.open{height: auto;}
-.pack-up{float: right;margin: 5px 10px 0 0;cursor: pointer;}
+.side-li:hover{background-color : #A4CBE8;}
+ul.side-ul{margin : 0;padding :0px;}
+nav{padding:16px; top: 77px; background-color: #F5F5F5; position: sticky; height: 100vh;width: 337px;}
+.overview{margin-top : 90px; padding: 0 12px;}
+.anchor { padding-top: 90px; }
+:target::before {
+  content: "";
+  display: block;
+  height: 90px; /* fixed header height*/
+  margin: -90px 0 0; /* negative fixed header height */
+}
+.pack-up{
+  cursor: pointer;
+  border: none;
+  font-size: 48px;
+}
+li.side-li.overview{
+margin-top : 10px;
+}
 
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.list-items {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+ @media (max-width: 500px) {
+    nav {
+        z-index: 1;
+        top: 0;
+        position: relative;
+    }
+    .overview{margin-top: 20px;}
+}

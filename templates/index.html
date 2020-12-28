@@ -1,24 +1,16 @@
 {% extends "base.html" %}
 {% from "macros.html" import rel_id, ili, to_top %}
-<h1>Open Wordnet Documentation ({{lang}})</h1>
-
-{% block sidenav -%}
-{% include "sidenav.html" %}
-{%- endblock %}
-
+{% block title %}Open Wordnet Documentation ({{lang}}){% endblock %}
 
 {%- block content -%}
-
-{% include "overview.html" %} 
-
-<h2>Table of Contents</h2>
-{% include "toc.html" %} 
-
-<h2>Relations</h2>
+<h2 class="heading" id="contents">Contents</h2>
+{% include "toc.html" %}
+<h2 class="heading" id="relations">Relations</h2>
 {% for id in gwadoc.RELATIONS -%}
-  {% set rel = gwadoc.relations[id] -%}
-  {% include "relation.html" %}
+{% set rel = gwadoc.relations[id] -%}
+{% include "relation.html" %}
 {% endfor %}
+{% include "references.html" %}
 
 {% include "references.html" %}
 

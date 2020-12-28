@@ -1,4 +1,7 @@
 <section>
+    <button class="outline-toggle" onclick="showToc()">Outline Toggle </button>
+    <div id="toc-content" class="toc-items">
+         <h2 class="heading" id="contents">Contents</h2>
   <div id="toc" style="padding-left:60px">
     <ul>
       {%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
@@ -14,6 +17,7 @@
       </li>
       {% endfor %}
     </ul>
-  </div>  
+  </div>
+    </div>
 </section>
 
