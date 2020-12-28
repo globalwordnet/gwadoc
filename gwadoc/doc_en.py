@@ -110,13 +110,13 @@ relations.hyponym.df.en = "a word that is more specific than a given word"
 relations.hyponym.dfn.en = """
 A relation between two concepts where concept B is a type of
 concept A."""
-relations.hyponym.ex.en = "*dog* is a hyponym of *animal*"
+relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ has hyponym `animal <ILIURL/35563>`_"
 relations.hyponym.exe.en = """
- * *beef* ``hyponym`` *meat*
- * *pear* ``hyponym`` *edible fruit*
- * *dictionary* ``hyponym`` *wordbook*
+ * `beef <ILIURL/48244>`_ has hyponym `meat <ILIURL/77100>`_
+ * `pear <ILIURL/77892>`_ has hyponym `edible fruit <ILIURL/77500>`_
+ * `dictionary <ILIURL/70226>`_ has hyponym `wordbook <ILIURL/70225>`_
 """
-relations.hyponym.test.en="""
+relations.hyponym.test.en = """
 Hyponymy-relation between nouns (EWN test 9)
 
 ===     =   ==========================================
@@ -169,9 +169,9 @@ synonymy that all lemmas in a concept must share.  As adjectives are
 not structured hierarchically (hyponymy/hypernymy) like verbs or
 nouns, the similarity link helps showing relations between them.
 """
-relations.similar.ex.en = "tools near_synonym instrument"
+relations.similar.ex.en = "* `tool <ILIURL/36325>`_ has near_synonym `instrument <ILIURL/33440>`_"
 relations.similar.exe.en = """
- * `instrument <ILIURL/i33440>`_ has near_synonym `tools <ILIURL/36325>`_
+ * `instrument <ILIURL/33440>`_ has near_synonym `tools <ILIURL/36325>`_
 """
 
 relations.similar.test.en = """
@@ -980,7 +980,7 @@ relations.state_of.dfn.en = """
 A relation between two concepts where concept B is qualified by
 concept A.
 """
-relations.state_of.ex.en = "poor state_of poor (a poor person)"
+relations.state_of.ex.en = "`poor <ILIURL/11083>`_ state_of `have-not <ILIURL/92132>`_"
 relations.state_of.exe.en = """
  * `poor <ILIURL/11083>`_ state_of `have-not <ILIURL/92132>`_
  * `rich <ILIURL/11080>`_ state_of `rich person <ILIURL/92571>`_
@@ -1015,7 +1015,7 @@ concept B.
 
 A is qualified by B.
 """
-relations.be_in_state.ex.en = "poor (a poor person) be_in_State poor"
+relations.be_in_state.ex.en = "`have-not <ILIURL/92132>`_ be in state `poor <ILIURL/11083>`_"
 relations.be_in_state.exe.en = """
  * `have-not <ILIURL/92132>`_ be in state `poor <ILIURL/11083>`_
  * `rich person <ILIURL/92571>`_ be in state `rich <ILIURL/11080>`_
@@ -1058,7 +1058,7 @@ While not exclusive to these types of verbs, many verbs that have both
 a transitive and an intransitive form will frequently be submitted to
 this relation.
 """
-relations.causes.ex.en = "kill causes die"
+relations.causes.ex.en = " `kill <ILIURL/28306>`_ causes `die <ILIURL/23529>`_"
 relations.causes.exe.en = """
  * `kill <ILIURL/28306>`_ causes `die <ILIURL/23529>`_
 """
@@ -1106,7 +1106,7 @@ relations.is_caused_by.dfn.en = """
 A relation between two concepts where concept A comes into existence
 as a result of concept B.
 """
-relations.is_caused_by.ex.en = "die is_caused_by kill"
+relations.is_caused_by.ex.en = "`die <ILIURL/23529>`_ is caused by `kill <ILIURL/28306>`_"
 relations.is_caused_by.exe.en = """
  * `die <ILIURL/23529>`_ is caused by `kill <ILIURL/28306>`_
 
@@ -1156,7 +1156,7 @@ during or as part of concept A, and whenever concept B takes
 place, concept A takes place.
 
 """
-relations.subevent.ex.en = "sleep has subevent snore"
+relations.subevent.ex.en = "`sleep <ILIURL/21840>`_ has subevent `snore <ILIURL/21852>`_"
 relations.subevent.exe.en = """
  * `sleep <ILIURL/21840>`_ has subevent `snore <ILIURL/21852>`_
 
@@ -1208,7 +1208,7 @@ during or as part of concept B, and whenever concept A takes
 place, concept B takes place.
 
 """
-relations.is_subevent_of.ex.en = "snore is_subevent_of sleep"
+relations.is_subevent_of.ex.en = "`snore <ILIURL/21852>`_ is subevent of `sleep <ILIURL/21840>`_"
 relations.is_subevent_of.exe.en = """
  * `snore <ILIURL/21852>`_ is subevent of `sleep <ILIURL/21840>`_
  * `pay <ILIURL/i32996>`_ is subevent of `buy <ILIURL/33154>`_
@@ -1258,7 +1258,7 @@ the manner in which an action or event expressed by concept
 A takes place.
 
 """
-relations.in_manner.ex.en = "slurp in manner noisely"
+relations.in_manner.ex.en = "`slurp <ILIURL/27462>`_ in manner `noisily <ILIURL/19718>`_"
 relations.in_manner.exe.en = """
  * `slurp <ILIURL/27462>`_ in manner `noisily <ILIURL/19718>`_
 """
@@ -1293,7 +1293,7 @@ the manner in which an action or event expressed by concept
 B takes place.
 
 """
-relations.manner_of.ex.en = "noisely manner of slurp"
+relations.manner_of.ex.en = "`noisily <ILIURL/19718>`_  manner of `slurp <ILIURL/27462>`_"
 relations.manner_of.exe.en = """
  * `noisily <ILIURL/19718>`_  manner of `slurp <ILIURL/27462>`_
 """
@@ -1326,13 +1326,13 @@ relations.meronym.dfn.en = """
 A relation between two concepts where concept A makes up a part of
 concept B.
 """
-relations.meronym.ex.en = "hand has part-meronym finger"
+relations.meronym.ex.en = "`hand <ILIURL/48471>`_ has part-meronym `finger <ILIURL/53712>`_"
 relations.meronym.exe.en = """
  * `hat <ILIURL/54674>`_ has part-meronym `crown <ILIURL/52548>`_
  * `people <ILIURL/79059>`_ has member-meronym `person <ILIURL/35562>`_
  * `water <ILIURL/115069>`_ has substance-meronym `hydrogen <ILIURL/113946>`_
 """
-relations.meronym.test.en="""
+relations.meronym.test.en = """
 Meronymy-relation between nouns (EWN test 21)
 
 ===     =   ======================================================
@@ -1363,7 +1363,7 @@ relations.holonym.dfn.en = """
 A relation between two concepts where concept A makes up a
 part of concept B.
 """
-relations.holonym.ex.en = "finger has part-holonym hand"
+relations.holonym.ex.en = "`finger <ILIURL/53712>`_ has part-holonym `hand <ILIURL/48471>`_"
 relations.holonym.exe.en = """
  * `eye <ILIURL/64868>`_ has part-holonym `face <ILIURL/87210>`_
  * `planet <ILIURL/85986>`_ has member-holonym `solar system <ILIURL/86215>`_
@@ -1400,7 +1400,7 @@ separated into Concept-B”; and Concept-B is a part of some Concept-A.
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.mero_part.ex.en = "car mero-part wheel"
+relations.mero_part.ex.en = "`car <ILIURL/51496>`_ has part-meronym `wheel <ILIURL/61096>`_"
 relations.mero_part.exe.en = """
  * `glove <ILIURL/54319>`_ has part-meronym `finger <ILIURL/53712>`_
 """
@@ -1440,7 +1440,7 @@ separated into Concept-B”; and Concept-B is a part of some Concept-A.
 This relation is also frequently used to denote geographical
 inclusiveness relations.
 """
-relations.holo_part.ex.en = "wheel holo-part car"
+relations.holo_part.ex.en = "`wheel <ILIURL/61096>`_ has part-holonym `car <ILIURL/51496>`_"
 relations.holo_part.exe.en = """
  * `thumb <ILIURL/60231>`_ has part-holonym `glove <ILIURL/54319>`_
 """
@@ -1474,7 +1474,7 @@ denotes group formation and membership. Is different from hyponym as
 it does not relates a sub-kind of a concept. It links groups to members
 — Many instances of Concept-A form Concept-B; and Concept-B is composed of many members of Concept-A. 
 """
-relations.mero_member.ex.en = "player has mero-member team"
+relations.mero_member.ex.en = "`player <ILIURL/92069>`_ has member-meronym `team <ILIURL/80236>`_"
 relations.mero_member.exe.en = """
  * `fleet <ILIURL/80725>`_ has member-meronym `ship <ILIURL/58798>`_
 """
@@ -1510,7 +1510,7 @@ it does not relates a sub-kind of a concept. It links groups to members
 — Concept-B is composed of many members of Concept-A; and many
 instances of Concept-A form Concept-B.
 """
-relations.holo_member.ex.en = "team has holo-member player"
+relations.holo_member.ex.en = "`team <ILIURL/80236>`_ has member-holonym `player <ILIURL/92069>`_"
 relations.holo_member.exe.en = """
  * `ship <ILIURL/58798>`_ has member-holonym `fleet <ILIURL/80725>`_
 """
@@ -1545,7 +1545,7 @@ higher bound between part and whole. Separating/removing the substance
 part, will change the whole — Concept-A is made of Concept-B; and
 Concept-B is a substance of Concept-A”.
 """
-relations.mero_substance.ex.en = "stick has mero-substance wood"
+relations.mero_substance.ex.en = "`stick <ILIURL/59571>`_ has substance-meronym `wood <ILIURL/116549>`_"
 relations.mero_substance.exe.en = """
  * `paper <ILIURL/115832>`_ has substance-meronym `cellulose <ILIURL/114776>`_
  * `wood <ILIURL/116549>`_ has substance-meronym `lignin <ILIURL/115606>`_
@@ -1585,7 +1585,7 @@ higher bound between part and whole. Separating/removing the substance
 part, will change the whole — Concept-A is made of Concept-Y; and
 Concept-B is a substance of Concept-A”.
 """
-relations.holo_substance.ex.en = "wood/stick"
+relations.holo_substance.ex.en = "`wood <ILIURL/116549>`_ has substance-holonym `stick <ILIURL/59571>`_"
 relations.holo_substance.exe.en = """
  * `wood <ILIURL/116549>`_ has substance-holonym `beam <ILIURL/50617>`_
 """
@@ -1617,7 +1617,7 @@ relations.mero_location.dfn.en = """
 A relation between two concepts where concept A is a place
 located in concept B.
 """
-relations.mero_location.ex.en = "city has mero-location centre"
+relations.mero_location.ex.en = "`city <ILIURL/81847>`_ has mero_location `centre <ILIURL/83693>`_"
 relations.mero_location.exe.en = """
  * `desert <ILIURL/81751>`_ has part-meronym `oasis <ILIURL/81753>`_
 """
@@ -1648,7 +1648,7 @@ relations.holo_location.dfn.en = """
 A relation between two concepts where concept B is a place
 located in concept A.
 """
-relations.holo_location.ex.en = "centre has holo-location city"
+relations.holo_location.ex.en = "`centre <ILIURL/83693>`_ has holo_location `city <ILIURL/81847>`_"
 relations.holo_location.exe.en = """
  * `space <ILIURL/81724>`_ has part-holonym `aerospace <ILIURL/81733>`_
 """
@@ -1679,7 +1679,7 @@ relations.mero_portion.dfn.en = """
 A relation between two concepts where concept A is an
 amount/piece/portion of concept B.
 """
-relations.mero_portion.ex.en = "drop has mero-portion liquid"
+relations.mero_portion.ex.en = "`drop <ILIURL/109995>`_ has mero-portion `liquid <ILIURL/115633>`_"
 relations.mero_portion.exe.en = """
  * `Nigeria <ILIURL/83853>`_ has part-meronym `Abuja <ILIURL/83854>`_
 """
@@ -1711,7 +1711,7 @@ relations.holo_portion.dfn.en = """
 A relation between two concepts where concept B is an
 amount/piece/portion of concept A
 """
-relations.holo_portion.ex.en = "liquid  has holo-portion drop"
+relations.holo_portion.ex.en = "`liquid <ILIURL/115633>`_ has holo-portion `drop <ILIURL/109995>`_"
 relations.holo_portion.exe.en = """
  * `Africa <ILIURL/84937>`_ has part-holonym `Eastern Hemisphere <ILIURL/81982>`_
 
@@ -1759,7 +1759,7 @@ part-of-speech.
 At the moment, we're currently making use of this in order to isolate
 chengyu (成语), a traditional four-character Chinese idiom.
 """
-relations.eq_synonym.ex.en = "people has equal synonyms folks"
+relations.eq_synonym.ex.en = "`people <ILIURL/79059>`_ has equal synonym `folks <ILIURL/79084>`_"
 relations.eq_synonym.exe.en = """
 * 一模一样 (70100056-a) EQUALS identical (02068946-a)  identical
 * (02068946-a) EQUALS  一模一样 (70100056-a)
@@ -1813,7 +1813,7 @@ Instances are expressed by proper nouns.
 
 An ``instance hypernym`` can also be referred to as a ``type``
 """
-relations.instance_hypernym.ex.en = "*manchester belongs_to_class city*"
+relations.instance_hypernym.ex.en = "`manchester <ILIURL/83395>`_ has instance hypernym `city <ILIURL/81847>`_"
 relations.instance_hypernym.exe.en = """
  * `manchester <ILIURL/83395>`_ has instance_hypernym `city <ILIURL/81847>`_
 """
@@ -1842,7 +1842,7 @@ Instances are expressed by proper nouns.
 
 An ``instance hyponym`` can also be referred to as a ``type``
 """
-relations.instance_hyponym.ex.en = "city HAS_INSTANCE Manchester"
+relations.instance_hyponym.ex.en = "`city <ILIURL/81847>`_ has instance hyponym `manchester <ILIURL/83395>`_"
 relations.instance_hyponym.exe.en = """
  * `city <ILIURL/81847>`_ has instance_hyponym `manchester <ILIURL/83395>`_
 """
@@ -1994,29 +1994,26 @@ It denotes a relation between a noun and its adjectival attributes,
 and vice-versa — for this reason it should only link adjectives to
 nouns and vice-versa.
 """
-relations.attribute.ex.en = "fertile attribute fecundity"
+relations.attribute.ex.en = "fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ "
 relations.attribute.exe.en = """
-* `fertile <ILIURL/5483>`_ has attribute `fecundity <ILIURL/110773>`_ 
-* `fecundity <ILIURL/110773>`_ has attribute `fertile <ILIURL/5483>`_ 
+* `fertile <ILIURL/5483>`_ has attributes `fecundity <ILIURL/110773>`_ 
+* `fecundity <ILIURL/110773>`_ has attributes `fertile <ILIURL/5483>`_ 
 """
 relations.attribute.test.en = """
-Attribute-relation between nouns and adjectives (`EWN <pdf/EWN_general.pdf#page=24>`_ Test 14)
+Attribute-relation between nouns and adjectives (EWN 14)
 
-=======     =   =========================================================================
-yes/no      a   if there is a state of *A* then something/someone is *B* in a certain way
-\           b   if  something/someone is *B* then a state of *A* applies                  
-example     a   if something is in a state of  *fecundity* it is *very fertile*    
-\           b   if something is *fertile* it is in a state of  *fecundity*           
-=======     =   =========================================================================
+===     =   ======================================================
+yes     a   *A is an attribute of B*
+.       .   *B is an attribute of A*
+
+no      b   the converse of any of the (a) sentences.
+===     =   ======================================================
 
 Conditions:
- - A is a noun in the singular
- - B is an adjective
- - there is at least one specifying adverb, NP or PP that applies to the A-phrase or the B-phrase
- - preferably there is a no morphological link between the noun and the adjective
-
-
-
+- A is a noun in the singular
+- B is an adjective
+- there is at least one specifying adverb, NP or PP that applies to the A- phrase or the B-phrase
+- preferably there is a no morphological link between the noun and the adjective
 
 """
 relations.attribute.com.en = """
@@ -2074,7 +2071,7 @@ relations.classifies.dfn.en = """
 A relation between a classifier concept A and concept B. A relation
 between a classifier A and B
 """
-relations.classifies.ex.en = "hammer classifies broom"
+relations.classifies.ex.en = "`hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_"
 relations.classifies.exe.en = """
  * `hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_
  * `knife <ILIURL/55422>`_ classifies `sword <ILIURL/59896>`_
@@ -2097,7 +2094,7 @@ relations.classified_by.dfn.en = """
 A relation between concept B and a classifier concept A. A relation
 between B and a classifier A.
 """
-relations.classified_by.ex.en = ""
+relations.classified_by.ex.en = "`broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_"
 relations.classified_by.exe.en = """
  * `broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_
  * `dagger <ILIURL/52683>`_ classified by `weapon with a blade <ILIURL/50826>`_
@@ -2126,7 +2123,7 @@ This link was originally used to relate adjectives, but we have
 unconstrained this use, and we're making use of this link to relate
 all parts-of-speech.
 """
-relations.also.ex.en = "time see also moment"
+relations.also.ex.en = "`time <ILIURL/35582>`_ see also `moment <ILIURL/117356>`_"
 relations.also.exe.en = """
  * `farmer <ILIURL/89889>`_ see also `farmland <ILIURL/82016>`_
  * `learn <ILIURL/24750>`_ see also `school <ILIURL/58518>`_
@@ -2145,7 +2142,7 @@ no      b   the converse of any of the (a) sentences.
 
 """
 relations.also.com.en = """
-Also known as fuzzynym: A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
+Also known as fuzzynym
 """
 
 
@@ -2157,23 +2154,28 @@ a word that expresses a meaning opposed to the meaning of another
 word, in which case the two words are antonyms of each other
 """
 relations.antonym.dfn.en = """
-Antonymy is a self-reciprocal link (the two directions of this
-relation share the same meaning) — Concept-X's antonym is Concept-Y,
-and Concept-Y's antonym is Concept-X.
 
-It denotes any kind of proper antonymy between two concepts. It
-accounts for most types of antonymy, including gradable antonyms
-(e.g. hot vs. cold), complementary antonyms (e.g. superior
-vs. inferior) and converse or relational antonyms (e.g. buy
-vs. sell). Antonymy can link any two members of any part-of-speech —
-verbs (e.g. dress vs. undress), adverbs (e.g. naturally
-vs. unnaturally), adjectives (e.g. superior vs. inferior) and nouns
-(e.g. catalyst vs. anti-catalyst), and should only ever link concepts
-with the same part-of-speech.
+Two words are antonyms if their meanings are opposite in some way such as:
+ 
+ a) The two words show binary opposition:  `superior <ILIURL/93443>`_ vs `inferior <ILIURL/90690>`_ (simple)
+ b) The two words are near the opposite ends of a spectrum: `hot <ILIURL/6824>`_ vs `cold <ILIURL/63356>`_ (gradable)
+ c) The two words express change or movement in opposite directions: `buy <ILIURL/32788>`_ vs `sell <ILIURL/41243>`_ (converse)
 
-An opposite and inherently incompatible word.
+Antonymy can link any two members of any part-of-speech — verbs
+(e.g. dress vs. undress), adverbs (e.g. naturally vs. unnaturally),
+adjectives (e.g. superior vs. inferior) and nouns (e.g. catalyst
+vs. anti-catalyst), but should only ever link concepts with the same
+part-of-speech.
+
+
+Antonymy is not transitive: If A is an antonym of B and B an antonym
+of C, then A is not necessarily and antonym of A.  Consider *domestic*
+⇔ *national* ⇔ *international*: it does not follow that *domestic*
+⇔  *international*, or  *sister* ⇔  *brother*  ⇔ *sister* does not imply *sister*  ⇔ *sister*. 
+
+
 """
-relations.antonym.ex.en = "Smart has antonym Stupid"
+relations.antonym.ex.en = "`smart <ILIURL/2474>`_ has antonym `stupid <ILIURL/2478>`_"
 relations.antonym.exe.en = """
  * `man <ILIURL/48657>`_ has antonym `woman <ILIURL/94168>`_
  * `superior <ILIURL/93443>`_ has antonym `inferior <ILIURL/90690>`_
@@ -2240,58 +2242,55 @@ make it avaiable for wordnets that do not yet have sense level links.
 
 relations.entails.name.en = "Entails"
 relations.entails.df.en = """
-verb A entails B if A cannot be done unless B is, or has been, done
+impose, involve, or imply as a necessary accompaniment or result
 """
-
 relations.entails.dfn.en = """
-Entailment is a relation that links two verbs, and it is
-theoretically unilateral — Verb-A entails Verb-B, without a reciprocal
+Entailment is a relation that links two verbs, and it is currently
+unilateral — Verb-A entails Verb-B, without a reciprocal or tracing
 link.  This relation presupposes/requires a semantic restriction in
-which Verb-B has to take place before or during Verb-A.  
-
-In this document, we define a reverse relation **is_entailed_by** to
-allow users of the dictionary to easily find the reverse link.
+which Verb-B has to take place before or during Verb-A.
 """
-
-relations.entails.ex.en = """snore entails sleep"""
+relations.entails.ex.en = "`snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_"
 relations.entails.exe.en = """
  * `snore <ILIURL/21852>`_ entails `sleep <ILIURL/21840>`_
+ 
 """
 
 relations.entails.test.en = """
 ===     =   ======================================================
-yes     a   *A* cannot be done unless *B* is or has been done
+yes     a   *A cannot be done unless B is or has been done*
 
 no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 
 """
 relations.entails.com.en = """
+A verb A entails B if A cannot be done unless B is, or has been, done.
 """
 
 
 ### Relation: is_entailed_by
 
-relations.is_entailed_by.name.en = "Can be entailed by"
-relations.is_entailed_by.df.en = "Concept A can be entailed by concept B"
+relations.is_entailed_by.name.en = "Is Entailed By"
+relations.is_entailed_by.df.en = "Concept B is dome/happens because of concept A"
 relations.is_entailed_by.dfn.en = """
-This is a tracing relation, that allows us to find what *can* entail something.  
-
-If concept *A* can be entailed by concept *B*, then concept *A* makes it possible for concept *B* to take place.
 """
-relations.is_entailed_by.ex.en = "sleep can be entailed by snore"
+relations.is_entailed_by.ex.en = "`sleep <ILIURL/21840>`_ is entailed by `snore <ILIURL/21852>`_"
 relations.is_entailed_by.exe.en = """
- * `sleep <ILIURL/21840>`_ can be entailed by `snore <ILIURL/21852>`_
+ * `sleep <ILIURL/21840>`_ is entailed by `snore <ILIURL/21852>`_
 
 """
 
 relations.is_entailed_by.test.en = """
 ===     =   ======================================================
-yes     a   *A* makes it possible for *B* to occur
+yes     a   *B is the result/happens because of the occurrence of A*
+
+no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 
 """
-relations.is_entailed_by.com.en = """Princeton Wordnet does not have this reverse relation"""
+relations.is_entailed_by.com.en = """
+"""
 
 
 ### Relation: other
@@ -2307,7 +2306,7 @@ the OMW DTD.  The exact relation type can be given with ``dc:type``:
     <SynsetRelation relType="other" dc:type="emotion" target="example-en-1234-n"/>
 
 """
-relations.other.ex.en = "Physician other Hospital"
+relations.other.ex.en = "doctor <ILIURL/89560>`_ other `hospital <ILIURL/79536>`_"
 relations.other.exe.en = """
  * `curator <ILIURL/89345>`_ other `museum <ILIURL/56456>`_
  * `priest <ILIURL/92229>`_ other `church <ILIURL/40809>`_
@@ -2326,7 +2325,8 @@ no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 
 """
-relations.other.com.en = """FCB: Maybe this should be merged with ``also``? 
+relations.other.com.en = """
+A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
 """
 
 ### Relation: participle
@@ -2346,7 +2346,7 @@ relations.participle.test.en = """
 """
 relations.participle.com.en = """
 These are not linked in the NLTK interface so are not shown in OMW 1.0 (or as far as I can 
-see, anywhere FCB).
+see, anywhere FCB)
 """
 
 ### Relation: pertainym
@@ -2354,9 +2354,7 @@ see, anywhere FCB).
 relations.pertainym.name.en = "Pertainym"
 relations.pertainym.df.en = "A concept which is of or pertaining to a given concept."
 relations.pertainym.dfn.en = """
-Pertainym is a relation between two concepts where Concept A is the adjective to the noun 
-expressed by Concept B it is about, or Concept A is the adverb to the adjective expressed 
-by Concept B it is about.
+Pertainym is a relation between two concepts where Concept A is related or applicable to Concept B.  Typically A will be an adjective and B a noun, or A an adverb and B an adjective.  It is typically used for adjectives that are morphologically related to the noun they are related to, are not gradable and do not have antonyms.   It is also used for nouns that are semantically related but not morphologically related, typically because came from different languages historically, so *lunar* for *moon* or *arborial* for *tree*.
 """
 relations.pertainym.ex.en = "`slowly <ILIURL/19235>`_ is the pertainym of `slow <ILIURL/5362>`_"
 relations.pertainym.exe.en = """
@@ -2370,13 +2368,6 @@ relations.pertainym.exe.en = """
 relations.pertainym.test.en = """
 """
 relations.pertainym.com.en = """
-This relation was created by the Princeton Wordnet project.  It was
-made for adjectives that do not have antonyms; the synset for a
-pertainym most often contains only one word or collocation and points
-to the noun that the adjective is "pertaining to".  It is also used
-for adverbs to point to the adjective it pertains to
-`wngloss(7WN) <https://wordnet.princeton.edu/documentation/wngloss7wn>`_.
-
 """
 
 
@@ -2394,9 +2385,9 @@ relations.derivation.exe.en = """
 * `want(n) <ILIURL/113167>`_ is the derivation of `want(v) <ILIURL/30852>`_
 * `provision <ILIURL/40949>`_ is the derivation of `provide <ILIURL/33372>`_
 """
-relations.derivation.test.en = """
+relations.pertainym.test.en = """
 """
-relations.derivation.com.en = """
+relations.pertainym.com.en = """
 This may be specialized further. It includes zero derivations. Gnerally 
 it is used for different syntactic categories that have the same root form and are 
 semantically related. Wordnet does not say which is the baseform, the relationship 
@@ -2458,84 +2449,120 @@ relations.state_of.df.en = "Y is qualified by X"
 relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
 #relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
 
-### Relation Simple Aspect
+### Relation Simple Aspect IP
 
-relations.simple_aspect.name.en = "Simple Aspect"
-relations.simple_aspect.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
-relations.simple_aspect.ex.en = ""
+relations.simple_aspect_ip.name.en = "Simple Aspect (imp to per)"
+relations.simple_aspect_ip.df.en = "A concept which is linked to another through a change from imperfective to perfective aspect"
+relations.simple_aspect_ip.ex.en = ""
+
+### Relation Simple Aspect PI
+
+relations.simple_aspect_pi.name.en = "Simple Aspect (per to imp)"
+relations.simple_aspect_pi.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
+relations.simple_aspect_pi.ex.en = ""
 
 
-### Relation Secondary Aspect
+### Relation Secondary Aspect IP
 
-relations.secondary_aspect.name.en = "Secondary Aspect"
-relations.secondary_aspect.df.en = "A concept which is linked to another through a change in aspect"
-relations.secondary_aspect.ex.en = ""
+relations.secondary_aspect_ip.name.en = "Secondary Aspect (ip)"
+relations.secondary_aspect_ip.df.en = "A concept which is linked to another through a change in aspect (ip)"
+relations.secondary_aspect_ip.ex.en = ""
+
+### Relation Secondary Aspect PI
+
+relations.secondary_aspect_pi.name.en = "Secondary Aspect (pi)"
+relations.secondary_aspect_pi.df.en = "A concept which is linked to another through a change in aspect (pi)"
+relations.secondary_aspect_pi.ex.en = ""
 
 
 ### Relation: Feminine form
 
 relations.feminine_form_of.name.en = "Feminine form"
 relations.feminine_form_of.df.en= "A concept used to refer to female members of a class"
-relations.feminine_form_of.ex.en= "*sow* is a female *pig*"
+relations.feminine_form_of.ex.en = "`sow <ILIURL/48204>`_ is a female `pig <ILIURL/48199>`_"
+
+### Relation: Feminine form
+
+relations.has_feminine_form.name.en = "Has Feminine form"
+relations.has_feminine_form.df.en= "A concept which has a special concept for female members of its class"
+relations.has_feminine_form.ex.en = "`pig <ILIURL/48199>`_ has female `sow <ILIURL/48204>`_"
 
 
 ### Relation: Masculine Form
 
 relations.masculine_form_of.name.en = "Masculine Form"
 relations.masculine_form_of.df.en= "A concept used to refer to male members of a class"
-relations.masculine_form_of.ex.en= "*boar* is a male *pig*"
+relations.masculine_form_of.ex.en = "`boar <ILIURL/48203>`_ is a male `pig <ILIURL/48199>`_"
+
+### Relation: Masculine Form
+
+relations.has_masculine_form.name.en = "Has Masculine Form"
+relations.has_masculine_form.df.en= "A concept which has a special concept for male members of its class"
+relations.has_masculine_form.ex.en = "pig <ILIURL/48199>`_ has male `boar <ILIURL/48203>`_ "
 
 
 ### Relation: Young Form
 
 relations.young_form_of.name.en = "Young Form"
 relations.young_form_of.df.en = "A concept used to refer to young members of a class"
-relations.young_form_of.ex.en = "*piglet* is a young *pig*"
+relations.young_form_of.ex.en = "`piglet <ILIURL/48200>`_ is a young `pig <ILIURL/48199>`_"
+
+### Relation: Young Form
+
+relations.has_young_form.name.en = "Has Young Form"
+relations.has_young_form.df.en = """A concept which has a special concept for young members of its class"""
+relations.has_young_form.ex.en = "`pig <ILIURL/48199>`_ has young `piglet <ILIURL/48200>`_"
 
 
 ### Relation: Diminuative
 
 relations.diminutive_of.name.en = "Diminutive Form"
 relations.diminutive_of.df.en = "A concept used to refer to generally smaller members of a class"
-relations.diminutive_of.ex.en = "*piggy* is a diminutive *pig*"
+relations.diminutive_of.ex.en = "`kitchenette  <ILIURL/55399>`_ is a diminutive `kitchen <ILIURL/55397>`_"
+
+### Relation: Diminuative
+
+relations.has_diminutive.name.en = "Has Diminutive Form"
+relations.has_diminutive.df.en = "A concept which has a special concept for generally smaller members of its class"
+relations.has_diminutive.ex.en = "`kitchen <ILIURL/55397>`_ has  diminutive `kitchenette  <ILIURL/55399>`_ "
 
 
 ### Relation: Augmentative
 
 relations.augmentative_of.name.en = "Augmentative Form"
 relations.augmentative_of.df.en = "A concept used to refer to generally larger members of a class"
-relations.augmentative_of.ex.en = "*great house* is a larger *house*"
+relations.augmentative_of.ex.en = "`great house <ILIURL/7550>`_ is a larger `house <ILIURL/54960>`_"
+
+### Relation: Augmentative
+
+relations.has_augmentative.name.en = "Has Augmentative Form"
+relations.has_augmentative.df.en = "A concept which has a special concept for generally larger members of its class"
+relations.has_augmentative.ex.en = "`house <ILIURL/54960>`_ has larger `great house <ILIURL/7550>`_ "
 
 
 ### Relation: Gradable Antonym
 
 relations.anto_gradable.name.en = "Gradable Antonym"
 relations.anto_gradable.df.en = "word pairs whose meanings are opposite and which lie on a continuous spectrum"
-relations.anto_gradable.ex.en = "*hot* is a gradable antonym of *cold*"
+relations.anto_gradable.ex.en = "`hot <ILIURL/6824>`_ is a gradable antonym `cold <ILIURL/63356>`_"
 relations.anto_gradable.com.en = "Also known as *polar antonyms*."
 
 ### Relation: Simple Antonym
 
 relations.anto_simple.name.en = "Simple Antonym"
 relations.anto_simple.df.en = "word pairs whose meanings are opposite but whose meanings do not lie on a continuous spectrum"
-relations.anto_simple.ex.en = "*alive* is a simple antonym of *dead*"
+relations.anto_simple.ex.en = "`alive <ILIURL/496>`_ is a simple antonym `dead <ILIURL/527>`_"
 relations.anto_gradable.com.en = "Also known as *complementary antonyms*."
 
 ### Relation: Converse Antonym
 
 relations.anto_converse.name.en = "Converse Antonym"
 relations.anto_converse.df.en = "word pairs that name or describe a single relationship from opposite perspectives"
-relations.anto_converse.ex.en = "*parent* is a converse antonym of *child*"
+relations.anto_converse.ex.en = "`parent <ILIURL/91858>`_ is a converse antonym of `child <ILIURL/88965>`_"
 relations.anto_gradable.com.en = "Also known as just *converse* or *relational antonym*."
 
 ### Relation: Inter-register Synonym
 
 relations.ir_synonym.name.en = "Inter-register Synonym"
-relations.ir_synonym.df.en= "A concept that means the same except for the style or connotation"
-relations.ir_synonym.ex.en= "*loot* is an inter-register synonym of *money*"
-
-
-
-
-
-
+relations.ir_synonym.df.en = "A concept that means the same except for the style or connotation"
+relations.ir_synonym.ex.en = "`loot <ILIURL/106350>`_ is an inter-register synonym of `money <ILIURL/107057>`_"
