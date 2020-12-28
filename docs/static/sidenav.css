@@ -2,13 +2,20 @@
 .sidenav a {text-decoration: none; font-size: 18px; background: none;width:100%;text-align: left;cursor: pointer;outline: none; color:#4D4D4D; font-size: 18px;}
 .sidenav a:hover, .dropdown-btn:hover {color: #0000FF; }
 .dropdown-container {background-color: #F5F5F5;display: none;}
-.sidenav>ul>li{ height: 60px; overflow: hidden; font-size: 18px; padding : 24px; border: 1px solid #4D4D4D;
+.sidenav>ul>li{ height: 60px; overflow: hidden; font-size: 18px; padding : 24px; border: 0.5px solid #4D4D4D;
 }
 .sidenav>ul>li.open{height: auto;}
 .side-li:hover{background-color : #A4CBE8;}
 ul.side-ul{margin : 0;padding :0px;}
-nav{padding:16px; top: 0px; background-color: #F5F5F5; position: sticky; height: 100vh;}
-.overview{margin-top : 30px;}
+nav{padding:16px; top: 77px; background-color: #F5F5F5; position: sticky; height: 100vh;width: 337px;}
+.overview{margin-top : 90px; padding: 0 12px;}
+.anchor { padding-top: 90px; }
+:target::before {
+  content: "";
+  display: block;
+  height: 90px; /* fixed header height*/
+  margin: -90px 0 0; /* negative fixed header height */
+}
 .pack-up{
   cursor: pointer;
   border: none;
@@ -40,4 +47,11 @@ margin-top : 10px;
   overflow: hidden;
   background-color: #f1f1f1;
 }
-
+ @media (max-width: 500px) {
+    nav {
+        z-index: 1;
+        top: 0;
+        position: relative;
+    }
+    .overview{margin-top: 20px;}
+}

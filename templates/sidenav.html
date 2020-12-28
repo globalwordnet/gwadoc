@@ -1,8 +1,8 @@
 <nav>
 <div id="relnav" class="sidenav">
 	<ul class="side-ul">
-		<li class="side-li overview"><a href="#overview">Overview</a></li>
-		<li class="side-li side" ><a href="#contents">Contents</a></li>
+		<li class="side-li overview"><a class="anchor" href="#overview">Overview</a></li>
+		<li class="side-li side" ><a class="anchor" href="#contents">Contents</a></li>
 		<li class="side-li"><a href="#relations">Relations</a></li>
 		{%- set agenda = gwadoc.relations.hierarchy_with_reversals()[2] -%}
 		{%- for id, rev, children in agenda recursive %}

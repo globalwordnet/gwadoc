@@ -1,4 +1,8 @@
 header{
+ position: fixed;
+ top: 0;
+ z-index: 9999;
+ width: 100% !important;
  background-color : #2656A6;
  border-bottom : 3px solid #671D5B;
  display: grid;
@@ -6,15 +10,7 @@ header{
  grid-template-columns : 80% 20%;
  justify-content: space-between;
   align-items: center;
-}
-
-.head{
-display: grid;
-position: sticky ;
-top: 0;
-width: 100%;
-grid-template-columns: 100%;
- min-height: 3.5rem;
+  overflow-x: hidden;
 }
 
 .title{
@@ -34,6 +30,12 @@ font-size : 10px;
 background-color : #671D5B;
 color : white;
 margin-right : auto;
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 15px;
+    }
 }
 
 

@@ -1,5 +1,7 @@
 body {
     font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a:link { text-decoration: none; }
@@ -7,6 +9,9 @@ a:hover { text-decoration: underline; }
 
 a.toplink { float: right; font-size: medium; color: #671D5B;}
 
+h3 .relation-name {
+    padding-left: 12px;
+}
 .rel-id {
     font-family: monospace;
 }
@@ -70,11 +75,6 @@ color : #671D5B;
 margin-top : 8px;
 }
 
-.page{
-display: grid;
-grid-template-row: 10% 80% 10%;
-}
-
 .section {
     display: grid;
     grid-template-columns : 25% 70%;
@@ -84,6 +84,32 @@ grid-template-row: 10% 80% 10%;
  display: none;
  }
  .outline-toggle{margin: 16px 0 16px 0; background-color: #2557A6; color: white;}
+.menu-icon div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 45px;
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2656A6;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 
 @media screen and (max-width: 799px) {
     body { font-size: small; }
@@ -92,6 +118,25 @@ grid-template-row: 10% 80% 10%;
     div.description p, div.description ul { margin-left: 5px; }
     article table { margin: 2px 0px 2px 0px; }
     article table td { padding: 1px 0px 1px 5px; }
-    .section{display:grid; grid-template-columns: 100%;}
-    nav{width: 100%; margin: 24px;}
+    }
+
+    @media (max-width: 500px) {
+        nav {
+            position: relative;
+            margin-top: 100px;
+        }
+        .title-search {
+            display: none;
+        }
+        .top-header .name {
+            padding: 5px 0;
+        }
+        .top-header .title {
+            margin-left: 0;
+        }
+    }
+    @media (min-width: 501px) {
+        .menu-icon {
+            display: none;
+        }
     }
