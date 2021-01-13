@@ -1275,6 +1275,15 @@ relations.simple_aspect_ip.fa.sense_sense = True
 relations.simple_aspect_ip.fa.reverse = 'simple_aspect_pi'
 #relations.simple_aspect.proj.ili = ''
 
+## Relation Simple Aspect PI
+
+#relations.simple_aspect.name.symbol = ''
+relations.simple_aspect_pi.fa.schema_version = '1.1'
+relations.simple_aspect_pi.fa.parent = 'derivation'
+relations.simple_aspect_pi.fa.synset_synset = True
+relations.simple_aspect_pi.fa.sense_sense = True
+relations.simple_aspect_pi.fa.reverse = 'simple_aspect_ip'
+
 ### Relation Secondary Aspect PI
 
 #relations.secondary_aspect.name.symbol = ''
@@ -1283,6 +1292,16 @@ relations.secondary_aspect_ip.fa.parent = 'derivation'
 relations.secondary_aspect_ip.fa.synset_synset = True
 relations.secondary_aspect_ip.fa.sense_sense = True
 relations.secondary_aspect_ip.fa.reverse = 'secondary_aspect_pi'
+#relations.secondary_aspect.proj.ili = ''
+
+### Relation Secondary Aspect IP
+
+#relations.secondary_aspect.name.symbol = ''
+relations.secondary_aspect_pi.fa.schema_version = '1.1'
+relations.secondary_aspect_pi.fa.parent = 'derivation'
+relations.secondary_aspect_pi.fa.synset_synset = True
+relations.secondary_aspect_pi.fa.sense_sense = True
+relations.secondary_aspect_pi.fa.reverse = 'secondary_aspect_ip'
 #relations.secondary_aspect.proj.ili = ''
 
 ### Relation: Feminine form
