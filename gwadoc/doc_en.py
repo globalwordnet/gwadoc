@@ -2067,44 +2067,59 @@ relations.restricted_by.com.en = """
 ### Relation: classifies
 
 relations.classifies.name.en = "Classifies"
-relations.classifies.df.en = """
-assign to a class or kind
-"""
-relations.classifies.dfn.en = """
-A relation between a classifier concept A and concept B. A relation
-between a classifier A and B
-"""
-relations.classifies.ex.en = "`hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_"
-relations.classifies.exe.en = """
- * `hammer <ILIURL/54582>`_ classifies `teapot <ILIURL/60046>`_
- * `knife <ILIURL/55422>`_ classifies `sword <ILIURL/59896>`_
- * `thread <ILIURL/60206>`_ classifies `rope <ILIURL/58271>`_
+relations.classifies.df.en = """A concept A used when counting concept B"""
 
+relations.classifies.dfn.en = """
+A concept A used when counting concept B.
+
+English does not really use this relationship, but it is common in
+many languages, such as Chinese, Japanese or Indonesian.  A classifier
+is a word (or often a bound morpheme) which accompanies a noun in
+certain grammatical contexts, typically individuation, and generally
+reflects some kind of conceptual classification of nouns, based
+principally on features of their referents. Thus a language might have
+one classifier for nouns representing persons, another for nouns
+representing flat objects, another for nouns denoting periods of time,
+and so on. The assignment of classifier to noun may also be to some
+degree unpredictable, with certain nouns taking certain classifiers by
+historically established convention. 
+
+Note that the in a classifier language a classifier does not introduce
+a new referent, so we treat it as as non-referential."""
+
+
+relations.classifies.ex.en = "`head <ILIURL/42274>`_ classifies  `cattle <ILIURL/48233>`_"
+relations.classifies.exe.en = """
+ * `head <ILIURL/42274>`_ classifies  `cattle <ILIURL/48233>`_
+ * rasher classifies bacon
+ * ekor classifiers kucil (Indonesian)
+ * 匹 classifies 猫 (Japanese)
 """
 relations.classifies.com.en = """
-currently we only have links for nominal concepts, but we
-will do it for other POS (e.g. v)
+This relation was introduced in  [DaCosta:Bond:2016]
+
+.. [DaCosta:Bond:2016] Luis Morgado Da Costa, Francis Bond (2016) `Wow! What a Useful Extension! Introducing Non-Referential Concepts to Wordnet <https://www.aclweb.org/anthology/L16-1685.pdf>`_ In *Proceedings of the Tenth International Conference on Language Resources and Evaluation*
 """
 
 
 ### Relation: classified_by
 
 relations.classified_by.name.en = "Classified By"
-relations.classified_by.df.en = """
-arrange or order by classes or categories
-"""
+relations.classified_by.df.en = """Concept B is modified by classifier A when it is counted."""
 relations.classified_by.dfn.en = """
-A relation between concept B and a classifier concept A. A relation
-between B and a classifier A.
+Concept B is modified by classifier A when it is counted.
 """
-relations.classified_by.ex.en = "`broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_"
+relations.classified_by.ex.en ="`cattle <ILIURL/48233>`_ is classified_by `head <ILIURL/42274>`_ "
 relations.classified_by.exe.en = """
- * `broom <ILIURL/51182>`_ classified by `tool with a handle <ILIURL/54612>`_
- * `dagger <ILIURL/52683>`_ classified by `weapon with a blade <ILIURL/50826>`_
- * `wire <ILIURL/61210>`_ classified by `filiform <ILIURL/13360>`_
+ * 'cattle <ILIURL/48233>`_ is classified_by `head <ILIURL/42274>`_ 
+ * bacon is classified_by rasher
+ * kucil is classified_by ekor (Indonesian)
+ * 猫 is classified_by  匹 (Japanese)
 
 """
-relations.classified_by.com.en = """
+relations.classified_by.com.en = """This relation was introduced in  [DaCosta:Bond:2016]
+
+.. [DaCosta:Bond:2016] Luis Morgado Da Costa, Francis Bond (2016) `Wow! What a Useful Extension! Introducing Non-Referential Concepts to Wordnet <https://www.aclweb.org/anthology/L16-1685.pdf>`_ In *Proceedings of the Tenth International Conference on Language Resources and Evaluation*
 """
 
 
@@ -2403,8 +2418,6 @@ is fully reversible.
 #relations.agent.df.en = "X is typically the agent of the action expressed by Y"
 relations.antonym.df.en = "An opposite and inherently incompatible word"
 relations.be_in_state.df.en = "X is qualified by Y"
-relations.classified_by.df.en = "A relation between Y and a classifier X"
-relations.classifies.df.en = "A relation between a classifier X and Y"
 #relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
 #relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
 #relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
