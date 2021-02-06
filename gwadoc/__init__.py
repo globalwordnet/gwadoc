@@ -42,6 +42,7 @@ import gwadoc.doc_basic
 import gwadoc.doc_en
 import gwadoc.doc_pl
 import gwadoc.doc_ja
+import gwadoc.doc_zh
 # add your language module here
 
 
