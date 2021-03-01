@@ -564,39 +564,39 @@ from gwadoc import relations
 # relations.secondary_aspect.ex.zh = ""
 
 
-### feminine_form_of 
+### feminine
 
-# relations.feminine_form_of.name.zh = ""
-# relations.feminine_form_of.df.zh = ""
-# relations.feminine_form_of.ex.zh = ""
-
-
-### masculine_form_of 
-
-# relations.masculine_form_of.name.zh = ""
-# relations.masculine_form_of.df.zh = ""
-# relations.masculine_form_of.ex.zh = ""
+# relations.feminine.name.zh = ""
+# relations.feminine.df.zh = ""
+# relations.feminine.ex.zh = ""
 
 
-### young_form_of 
+### masculine
 
-# relations.young_form_of.name.zh = ""
-# relations.young_form_of.df.zh = ""
-# relations.young_form_of.ex.zh = ""
-
-
-### diminutive_of 
-
-# relations.diminutive_of.name.zh = ""
-# relations.diminutive_of.df.zh = ""
-# relations.diminutive_of.ex.zh = ""
+# relations.masculine.name.zh = ""
+# relations.masculine.df.zh = ""
+# relations.masculine.ex.zh = ""
 
 
-### augmentative_of 
+### young
 
-# relations.augmentative_of.name.zh = ""
-# relations.augmentative_of.df.zh = ""
-# relations.augmentative_of.ex.zh = ""
+# relations.young.name.zh = ""
+# relations.young.df.zh = ""
+# relations.young.ex.zh = ""
+
+
+### diminutive
+
+# relations.diminutive.name.zh = ""
+# relations.diminutive.df.zh = ""
+# relations.diminutive.ex.zh = ""
+
+
+### augmentative
+
+# relations.augmentative.name.zh = ""
+# relations.augmentative.df.zh = ""
+# relations.augmentative.ex.zh = ""
 
 
 ### anto_gradable 
