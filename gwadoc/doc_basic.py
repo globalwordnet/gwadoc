@@ -1306,102 +1306,102 @@ relations.secondary_aspect_pi.fa.reverse = 'secondary_aspect_ip'
 
 ### Relation: Feminine form
 
-relations.feminine_form_of.name.symbol = '♀'
-relations.feminine_form_of.fa.schema_version= '1.1'
-relations.feminine_form_of.fa.parent = 'hyponym'
-relations.feminine_form_of.fa.synset_synset = True
-relations.feminine_form_of.fa.sense_sense = True
-relations.feminine_form_of.fa.reverse = 'has_feminine_form'
-#relations.feminine_form_of.proj.ili = ''
+relations.feminine.name.symbol = '♀'
+relations.feminine.fa.schema_version= '1.1'
+relations.feminine.fa.parent = 'hyponym'
+relations.feminine.fa.synset_synset = True
+relations.feminine.fa.sense_sense = True
+relations.feminine.fa.reverse = 'has_feminine'
+#relations.feminine.proj.ili = ''
 
 ### Relation: Has Feminine form
 
-relations.has_feminine_form.name.symbol = '♀'
-relations.has_feminine_form.fa.schema_version= '1.1'
-relations.has_feminine_form.fa.parent = 'hyponym'
-relations.has_feminine_form.fa.synset_synset = True
-relations.has_feminine_form.fa.sense_sense = True
-relations.has_feminine_form.fa.reverse = 'feminine_form_of'
+relations.has_feminine.name.symbol = '♀'
+relations.has_feminine.fa.schema_version= '1.1'
+relations.has_feminine.fa.parent = 'hyponym'
+relations.has_feminine.fa.synset_synset = True
+relations.has_feminine.fa.sense_sense = True
+relations.has_feminine.fa.reverse = 'feminine'
 
 ### Relation: Masculine Form
 
-relations.masculine_form_of.name.symbol = '♂'
-relations.masculine_form_of.fa.schema_version= '1.1'
-relations.masculine_form_of.fa.parent = 'hyponym'
-relations.masculine_form_of.fa.synset_synset = True
-relations.masculine_form_of.fa.sense_sense = True
-relations.masculine_form_of.fa.reverse = 'has_masculine_form'
-#relations.masculine_form_of.proj.ili = ''
+relations.masculine.name.symbol = '♂'
+relations.masculine.fa.schema_version= '1.1'
+relations.masculine.fa.parent = 'hyponym'
+relations.masculine.fa.synset_synset = True
+relations.masculine.fa.sense_sense = True
+relations.masculine.fa.reverse = 'has_masculine'
+#relations.masculine.proj.ili = ''
 
 ### Relation: Masculine Form
 
-relations.has_masculine_form.name.symbol = '♂'
-relations.has_masculine_form.fa.schema_version= '1.1'
-relations.has_masculine_form.fa.parent = 'hyponym'
-relations.has_masculine_form.fa.synset_synset = True
-relations.has_masculine_form.fa.sense_sense = True
-relations.has_masculine_form.fa.reverse = 'masculine_form_of'
-#relations.masculine_form_of.proj.ili = ''
+relations.has_masculine.name.symbol = '♂'
+relations.has_masculine.fa.schema_version= '1.1'
+relations.has_masculine.fa.parent = 'hyponym'
+relations.has_masculine.fa.synset_synset = True
+relations.has_masculine.fa.sense_sense = True
+relations.has_masculine.fa.reverse = 'masculine'
+#relations.has_masculine.proj.ili = ''
 
 ### Relation: Young Form
 
-#relations.young_form_of.name.symbol = ''
-relations.young_form_of.fa.schema_version = '1.1'
-relations.young_form_of.fa.parent = 'hyponym'
-relations.young_form_of.fa.synset_synset = True
-relations.young_form_of.fa.sense_sense = False
-relations.young_form_of.fa.reverse = 'has_young_form'
-#relations.young_form_of.proj.ili = ''
+#relations.young.name.symbol = ''
+relations.young.fa.schema_version = '1.1'
+relations.young.fa.parent = 'hyponym'
+relations.young.fa.synset_synset = True
+relations.young.fa.sense_sense = False
+relations.young.fa.reverse = 'has_young'
+#relations.young.proj.ili = ''
 
 ### Relation: Young Form
 
-#relations.young_form_of.name.symbol = ''
-relations.has_young_form.fa.schema_version = '1.1'
-relations.has_young_form.fa.parent = 'hyponym'
-relations.has_young_form.fa.synset_synset = True
-relations.has_young_form.fa.sense_sense = False
-relations.has_young_form.fa.reverse = 'young_form_of'
-#relations.young_form_of.proj.ili = ''
+#relations.has_young.name.symbol = ''
+relations.has_young.fa.schema_version = '1.1'
+relations.has_young.fa.parent = 'hyponym'
+relations.has_young.fa.synset_synset = True
+relations.has_young.fa.sense_sense = False
+relations.has_young.fa.reverse = 'young'
+#relations.has_young.proj.ili = ''
 
 ### Relation: Diminuative
 
-#relations.diminutive_of.name.symbol = ''
-relations.diminutive_of.fa.schema_version = '1.1'
-relations.diminutive_of.fa.parent = 'derivation'
-relations.diminutive_of.fa.synset_synset = False
-relations.diminutive_of.fa.sense_sense = True
-relations.diminutive_of.fa.reverse = 'has_diminutive'
-#relations.diminutive_of.proj.ili = ''
+#relations.diminutive.name.symbol = ''
+relations.diminutive.fa.schema_version = '1.1'
+relations.diminutive.fa.parent = 'derivation'
+relations.diminutive.fa.synset_synset = False
+relations.diminutive.fa.sense_sense = True
+relations.diminutive.fa.reverse = 'has_diminutive'
+#relations.diminutive.proj.ili = ''
 
 ### Relation: Diminuative
 
-#relations.diminutive_of.name.symbol = ''
+#relations.has_diminutive.name.symbol = ''
 relations.has_diminutive.fa.schema_version = '1.1'
 relations.has_diminutive.fa.parent = 'derivation'
 relations.has_diminutive.fa.synset_synset = False
 relations.has_diminutive.fa.sense_sense = True
-relations.has_diminutive.fa.reverse = 'diminutive_of'
-#relations.diminutive_of.proj.ili = ''
+relations.has_diminutive.fa.reverse = 'diminutive'
+#relations.has_diminutive.proj.ili = ''
 
 #### Relation: Augmentative
 
-#relations.augmentative_of.name.symbol = ''
-relations.augmentative_of.fa.schema_version = '1.1'
-relations.augmentative_of.fa.parent = 'derivation'
-relations.augmentative_of.fa.synset_synset = False
-relations.augmentative_of.fa.sense_sense = True
-relations.augmentative_of.fa.reverse = 'has_augmentative'
-#relations.augmentative_of.proj.ili = ''
+#relations.augmentative.name.symbol = ''
+relations.augmentative.fa.schema_version = '1.1'
+relations.augmentative.fa.parent = 'derivation'
+relations.augmentative.fa.synset_synset = False
+relations.augmentative.fa.sense_sense = True
+relations.augmentative.fa.reverse = 'has_augmentative'
+#relations.augmentative.proj.ili = ''
 
 #### Relation: Augmentative
 
-#relations.augmentative_of.name.symbol = ''
+#relations.has_augmentative.name.symbol = ''
 relations.has_augmentative.fa.schema_version = '1.1'
 relations.has_augmentative.fa.parent = 'derivation'
 relations.has_augmentative.fa.synset_synset = False
 relations.has_augmentative.fa.sense_sense = True
-relations.has_augmentative.fa.reverse = 'augmentative_of'
-#relations.augmentative_of.proj.ili = ''
+relations.has_augmentative.fa.reverse = 'augmentative'
+#relations.has_augmentative.proj.ili = ''
 
 ### Relation: Gradable Antonym
 
