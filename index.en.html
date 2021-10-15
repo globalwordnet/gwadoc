@@ -2987,7 +2987,7 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
 </tbody>
 </table></p></p>
         <h4> Comments </h4>
-        <p>A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.</p> <h4>XML</h4>
+        <p>This has no reverse, as we cannot be sure what the relation is gong to be.   However, in most cases we would expect there to be a reverse relation.</p> <h4>XML</h4>
         <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
             format for Wordnet LMF</a> the relation should be shown like
             this:<div class="highlight"><pre>
@@ -3042,7 +3042,7 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
 <article class="relation">
     <h3 id="also"><a href="#also">See also</a> (<span class="rel-id">also</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"a word having a loose or fuzzy semantic relation to another word"</span>
+        <span class="short definition">"a word having a loose semantic relation to another word"</span>
         <table class="fieldlist"><tr>
                 <th>symbol</th>
                 <td>
@@ -3080,9 +3080,9 @@ relation share the same meaning) — Concept-X relates to Concept-Y, and
 Concept-Y relates to Concept-X.</p>
 <p>It denotes a relation of related meaning with another concept (going
 beyond synonymy and similarity).</p>
-<p>This link was originally used to relate adjectives, but we have
-unconstrained this use, and we're making use of this link to relate
-all parts-of-speech. </p>
+<p>This link was only used to relate adjectives and verbs in Princeton
+wordnet, but we have unconstrained this use, and we're making use of
+this link to relate all parts-of-speech. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
@@ -3102,7 +3102,7 @@ all parts-of-speech. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>A has some strong relation to B</em></td>
+<td><em>A has some loose relation to B</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -3111,7 +3111,7 @@ all parts-of-speech. </p>
 </tbody>
 </table></p></p>
         <h4> Comments </h4>
-        <p>Also known as fuzzynym</p> <h4>XML</h4>
+        <p>This could perhaps be merged with other</p> <h4>XML</h4>
         <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
             format for Wordnet LMF</a> the relation should be shown like
             this:<div class="highlight"><pre>
@@ -4670,7 +4670,7 @@ which Verb-B has to take place before or during Verb-A. </p>
             </tr><tr>
               <th>reverse</th>
                 <td>
-                    <a href="#also"><span class="rel-id">also</span></a>
+                    <a href="#entails"><span class="rel-id">entails</span></a>
                 </td>
             </tr><tr>
 	      <th>example</th>
