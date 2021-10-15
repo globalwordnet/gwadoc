@@ -2127,7 +2127,7 @@ relations.classified_by.com.en = """This relation was introduced in  [DaCosta:Bo
 
 relations.also.name.en = "See also"
 relations.also.df.en = """
-a word having a loose or fuzzy semantic relation to another word
+a word having a loose semantic relation to another word
 """
 relations.also.dfn.en = """
 ‘See Also’ is a self-reciprocal link (the two directions of this
@@ -2137,10 +2137,10 @@ Concept-Y relates to Concept-X.
 It denotes a relation of related meaning with another concept (going
 beyond synonymy and similarity).
 
-This link was originally used to relate adjectives, but we have
-unconstrained this use, and we're making use of this link to relate
-all parts-of-speech.
-"""
+This link was only used to relate adjectives and verbs in Princeton
+wordnet, but we have unconstrained this use, and we're making use of
+this link to relate all parts-of-speech.  """
+
 relations.also.ex.en = "`time <ILIURL/35582>`_ see also `moment <ILIURL/117356>`_"
 relations.also.exe.en = """
  * `farmer <ILIURL/89889>`_ see also `farmland <ILIURL/82016>`_
@@ -2153,14 +2153,14 @@ relations.also.exe.en = """
 
 relations.also.test.en = """
 ===     =   ======================================================
-yes     a   *A has some strong relation to B*
+yes     a   *A has some loose relation to B*
 
 no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
 
 """
 relations.also.com.en = """
-Also known as fuzzynym
+This could perhaps be merged with other
 """
 
 
@@ -2313,7 +2313,7 @@ relations.is_entailed_by.com.en = """
 ### Relation: other
 
 relations.other.name.en = "Other"
-relations.other.df.en = "not the same one or ones already mentioned or implied"
+relations.other.df.en = "Any relation not otherwise specified"
 relations.other.dfn.en = """
 This is used for semantic relation types not currently supported by
 the OMW DTD.  The exact relation type can be given with ``dc:type``:
@@ -2344,7 +2344,7 @@ no      b   the converse of any of the (a) sentences.
 
 """
 relations.other.com.en = """
-A FUZZYNYM relation holds between words with the same part-of-speech, XPOS_FUZZYNYM holds across part-of-speech.
+This has no reverse, as we cannot be sure what the relation is gong to be.   However, in most cases we would expect there to be a reverse relation.
 """
 
 ### Relation: participle

@@ -1204,7 +1204,6 @@ relations.other.fa.synset_synset = True
 relations.other.fa.sense_synset = True
 relations.other.fa.sense_sense = True
 relations.other.fa.inOMW = True
-relations.is_entailed_by.fa.reverse = 'also'
 
 
 relations.other.proj.ili = "i11342"
