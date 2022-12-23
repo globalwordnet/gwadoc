@@ -12,6 +12,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 
 import docutils.core
 import jinja2
+from markupsafe import Markup
+
 import gwadoc
 #gwadoc.set_preferred_language('en')
 
@@ -22,7 +24,7 @@ DIR = Path(__file__).parent.resolve()
 def rst_renderer(fmt):
     """Create a function to render ReStructuredText to *fmt*."""
 
-    @jinja2.evalcontextfilter
+    @jinja2.pass_eval_context
     def render_rst(eval_ctx, s):
         s = docutils.core.publish_parts(str(s), writer_name=fmt)['body']
         s = s.strip()
@@ -33,7 +35,7 @@ def rst_renderer(fmt):
         s = s.replace('ILIURL', 'https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili')
         # make sure Jinja2 doesn't try to escape the HTML markup
         if eval_ctx.autoescape:
-            s = jinja2.Markup(s)
+            s = Markup(s)
         return s
 
     return render_rst
