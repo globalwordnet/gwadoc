@@ -560,7 +560,7 @@ Language Resources and Evaluation, 47(3), pp 769–79</td></tr>
 <article class="relation">
     <h3 id="hyponym"><a href="#hyponym">Hyponym</a> (<span class="rel-id">hyponym</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"a word that is more specific than a given word"</span>
+        <span class="short definition">"a concept that is more specific than a given concept"</span>
         <table class="fieldlist"><tr>
                 <th>symbol</th>
                 <td>
@@ -591,8 +591,8 @@ Language Resources and Evaluation, 47(3), pp 769–79</td></tr>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept B is a type of
-concept A. </p>
+        <p> A hyponym of something is its subtype:
+if A is a hyponym of B, then all A are B. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
@@ -617,15 +617,15 @@ concept A. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>A/an X is a/an Y with certain properties</em></td>
+<td><em>A/an A is a/an B with certain properties</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>It is a X and therefore also a Y</em></td>
+<td><em>It is a A and therefore also a B</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>If it is a X then it must be a Y</em></td>
+<td><em>If it is a A then it must be a B</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -636,7 +636,7 @@ concept A. </p>
 <dl class="docutils">
 <dt>Conditions:</dt>
 <dd><ul class="first last simple">
-<li>both X and Y are singular nouns or plural nouns.</li>
+<li>both A and B are singular nouns or plural nouns.</li>
 </ul>
 </dd>
 <dt>Test:</dt>
@@ -654,21 +654,21 @@ concept A. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>to X is to Y + AdvP/AdjP/NP/PP</em></td>
+<td><em>to A is to B + AdvP/AdjP/NP/PP</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
-<td><em>to Y is to X + AdvP/AdjP/NP/PP</em></td>
+<td><em>to B is to A + AdvP/AdjP/NP/PP</em></td>
 </tr>
 </tbody>
 </table>
 <dl class="docutils">
 <dt>Conditions:</dt>
 <dd><ul class="first last simple">
-<li>X is a verb in the infinitive form</li>
-<li>Y is a verb in the infinitive form</li>
+<li>A is a verb in the infinitive form</li>
+<li>B is a verb in the infinitive form</li>
 <li>there is at least one specifying AdvP, NP or PP that applies to the
-Y-phrase.</li>
+B-phrase.</li>
 </ul>
 </dd>
 </dl></p></p>
@@ -734,7 +734,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p> <h4>XML</
 <article class="relation">
     <h3 id="hypernym"><a href="#hypernym">Hypernym</a> (<span class="rel-id">hypernym</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"a word that is more general than a given word"</span>
+        <span class="short definition">"a concept that is more general than a given concept"</span>
         <table class="fieldlist"><tr>
                 <th>symbol</th>
                 <td>
@@ -765,14 +765,14 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.</p> <h4>XML</
         </table>
 	
         <h4>Definition</h4>
-        <p> A hypernym of something is its superordinate term:
-if X is a hypernym of Y, then all Y are X. </p>
+        <p> A hypernym of something is its supertype:
+if A is a hypernym of B, then all B are A. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
-<li><em>meat</em> <tt class="docutils literal">hypernym</tt> <em>beef</em></li>
-<li><em>edible fruit</em> <tt class="docutils literal">hypernym</tt> <em>pear</em></li>
-<li><em>wordbook</em> <tt class="docutils literal">hypernym</tt> <em>dictionary</em></li>
+<li><em>meat</em> is a <tt class="docutils literal">hypernym</tt> of <em>beef</em></li>
+<li><em>edible fruit</em> is a <tt class="docutils literal">hypernym</tt> of <em>pear</em></li>
+<li><em>wordbook</em> is a <tt class="docutils literal">hypernym</tt> of <em>dictionary</em></li>
 </ul>
 	  </p><h4>Tests</h4>
         <p><p>Hyperonymy/hyponymy between verb synsets (<a class="citation-reference" href="#ewn" id="citation-reference-1">[EWN]</a> test 11, p23)</p>
@@ -785,21 +785,21 @@ if X is a hypernym of Y, then all Y are X. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>to X is to Y + AdvP/AdjP/NP/PP</em></td>
+<td><em>to A is to B + AdvP/AdjP/NP/PP</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
-<td><em>to Y is to X + AdvP/AdjP/NP/PP</em></td>
+<td><em>to B is to A + AdvP/AdjP/NP/PP</em></td>
 </tr>
 </tbody>
 </table>
 <dl class="docutils">
 <dt>Conditions:</dt>
 <dd><ul class="first last simple">
-<li>X is a verb in the infinitive form</li>
-<li>Y is a verb in the infinitive form</li>
+<li>A is a verb in the infinitive form</li>
+<li>B is a verb in the infinitive form</li>
 <li>there is at least one specifying modifier (AdvP, NP or PP) that
-applies to the Y-phrase</li>
+applies to the B-phrase</li>
 </ul>
 </dd>
 </dl>
@@ -1230,7 +1230,7 @@ protagonist of the situation referred to by B</li>
 <dd><ul class="first last simple">
 <li>A is a verb in the third person singular form</li>
 <li>B is an adjective</li>
-<li>A and Y are (XPOS) co-hyponyms</li>
+<li>A and B are (XPOS) co-hyponyms</li>
 </ul>
 </dd>
 </dl></p></p>
@@ -1305,7 +1305,7 @@ make it avaiable for wordnets that do not yet have sense level links.</p>
 <article class="relation">
     <h3 id="eq_synonym"><a href="#eq_synonym">Equal Synonym</a> (<span class="rel-id">eq_synonym</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"</span>
+        <span class="short definition">"A and B are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"</span>
         <table class="fieldlist"><tr>
                 <th>symbol</th>
                 <td>
@@ -1597,7 +1597,7 @@ relation which is why it is not given in the mappings below.</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="meronym"><a href="#meronym">Meronym</a> (<span class="rel-id">meronym</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Y makes up a part of X"</span>
+        <span class="short definition">"B makes up a part of A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -1647,7 +1647,7 @@ concept B. </p>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>A/an Y has A/an Xs</em></td>
+<td><em>A/an B has A/an As</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
@@ -1718,7 +1718,7 @@ shouldn't be a special relation.</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="holonym"><a href="#holonym">Holonym</a> (<span class="rel-id">holonym</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X makes up a part of Y"</span>
+        <span class="short definition">"A makes up a part of B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -1833,7 +1833,7 @@ shouldn't be a special relation.</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="mero_location"><a href="#mero_location">Location Meronym</a> (<span class="rel-id">mero_location</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X is a place located in Y"</span>
+        <span class="short definition">"A is a place located in B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -1932,7 +1932,7 @@ located in concept B. </p>
 <article class="relation">
     <h3 id="holo_location"><a href="#holo_location">Location Holonym</a> (<span class="rel-id">holo_location</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Y is a place located in X"</span>
+        <span class="short definition">"B is a place located in A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -2495,7 +2495,7 @@ inclusiveness relations. </p>
 <article class="relation">
     <h3 id="mero_portion"><a href="#mero_portion">Portion Meronym</a> (<span class="rel-id">mero_portion</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X is an amount/piece/portion of Y"</span>
+        <span class="short definition">"A is an amount/piece/portion of B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -2601,7 +2601,7 @@ extension (for instance, there is no lexical item equivalent to “portion of ca
 <article class="relation">
     <h3 id="holo_portion"><a href="#holo_portion">Portion Holonym</a> (<span class="rel-id">holo_portion</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Y is an amount/piece/portion of X"</span>
+        <span class="short definition">"B is an amount/piece/portion of A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -2851,7 +2851,7 @@ The relation between things and the stuff which compose them is called MADE_OF.<
         <p> A relation between two concepts where concept B is made of concept
 A. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-A is made of Concept-Y; and
+part, will change the whole — Concept-A is made of Concept-B; and
 Concept-B is a substance of Concept-A”. </p>
 	 
         <h4>Examples</h4>
@@ -3086,8 +3086,8 @@ the OMW DTD.  The exact relation type can be given with <tt class="docutils lite
 	
         <h4>Definition</h4>
         <p> ‘See Also’ is a self-reciprocal link (the two directions of this
-relation share the same meaning) — Concept-X relates to Concept-Y, and
-Concept-Y relates to Concept-X.</p>
+relation share the same meaning) — Concept-A relates to Concept-B, and
+Concept-B relates to Concept-A.</p>
 <p>It denotes a relation of related meaning with another concept (going
 beyond synonymy and similarity).</p>
 <p>This link was only used to relate adjectives and verbs in Princeton
@@ -3188,7 +3188,7 @@ this link to relate all parts-of-speech. </p>
 <article class="relation">
     <h3 id="state_of"><a href="#state_of">State Of</a> (<span class="rel-id">state_of</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Y is qualified by X"</span>
+        <span class="short definition">"B is qualified by A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -3301,7 +3301,7 @@ FCB: isn't this the same as attribute (but split into two directions)</p> <h4>XM
 <article class="relation">
     <h3 id="be_in_state"><a href="#be_in_state">Be In State</a> (<span class="rel-id">be_in_state</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X is qualified by Y"</span>
+        <span class="short definition">"A is qualified by B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -3563,7 +3563,7 @@ seems possible to just absorb PWN's links.</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="is_caused_by"><a href="#is_caused_by">Is Caused By</a> (<span class="rel-id">is_caused_by</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X comes about because of Y"</span>
+        <span class="short definition">"A comes about because of B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -3699,7 +3699,7 @@ as a result of concept B. </p>
 <article class="relation">
     <h3 id="subevent"><a href="#subevent">Subevent</a> (<span class="rel-id">subevent</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Y takes place during or as part of X, and whenever Y takes place, X takes place"</span>
+        <span class="short definition">"B takes place during or as part of A, and whenever B takes place, A takes place"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -3830,7 +3830,7 @@ place, concept A takes place. </p>
 <article class="relation">
     <h3 id="is_subevent_of"><a href="#is_subevent_of">Is Subevent Of</a> (<span class="rel-id">is_subevent_of</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X takes place during or as part of Y, and whenever X takes place, Y takes place"</span>
+        <span class="short definition">"A takes place during or as part of B, and whenever A takes place, B takes place"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -3960,7 +3960,7 @@ place, concept B takes place. </p>
 <article class="relation">
     <h3 id="manner_of"><a href="#manner_of">Manner Of</a> (<span class="rel-id">manner_of</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"X qualifies the manner in which an action or event expressed by Y takes place"</span>
+        <span class="short definition">"A qualifies the manner in which an action or event expressed by B takes place"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -4063,7 +4063,7 @@ B takes place. </p>
 <article class="relation">
     <h3 id="in_manner"><a href="#in_manner">In Manner</a> (<span class="rel-id">in_manner</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Y qualifies the manner in which an action or event expressed by X takes place"</span>
+        <span class="short definition">"B qualifies the manner in which an action or event expressed by A takes place"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -4286,7 +4286,7 @@ adjectives to nouns.</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="restricts"><a href="#restricts">Restricts</a> (<span class="rel-id">restricts</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"A relation between an adjectival X (quantifier/determiner) and a nominal (pronominal) Y"</span>
+        <span class="short definition">"A relation between an adjectival A (quantifier/determiner) and a nominal (pronominal) B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -4312,8 +4312,8 @@ adjectives to nouns.</p> <h4>XML</h4>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between an adjectival concept X (quantifier/determiner) and
-a nominal (pronominal) concept Y. </p>
+        <p> A relation between an adjectival concept A (quantifier/determiner) and
+a nominal (pronominal) concept B. </p>
 	
         <p><a href="https://github.com/globalwordnet/gwadoc">Contribute more examples</a>
           </p><p><a href="https://github.com/globalwordnet/gwadoc">Contribute test</a></p>
@@ -4352,7 +4352,7 @@ now marked as domain usage. (to be corrected soon'ish)</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="restricted_by"><a href="#restricted_by">Restricted By</a> (<span class="rel-id">restricted_by</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"A relation between nominal (pronominal) Y and an adjectival X (quantifier/determiner)"</span>
+        <span class="short definition">"A relation between nominal (pronominal) B and an adjectival A (quantifier/determiner)"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -4378,8 +4378,8 @@ now marked as domain usage. (to be corrected soon'ish)</p> <h4>XML</h4>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between nominal (pronominal) concept Y and an
-adjectival concept X (quantifier/determiner). </p>
+        <p> A relation between nominal (pronominal) concept B and an
+adjectival concept A (quantifier/determiner). </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
@@ -5703,7 +5703,7 @@ animate entity that instigates or causes the happening of Concept B, typically i
 <tr><td>.</td>
 <td>.</td>
 <td><ul class="first last simple">
-<li>Y is a verb in the gerundive form</li>
+<li>B is a verb in the gerundive form</li>
 </ul>
 </td>
 </tr>
@@ -5814,7 +5814,7 @@ done by the agent expressed by concept A. </p>
 <tr><td>.</td>
 <td>.</td>
 <td><ul class="first last simple">
-<li>Y is a verb in the gerundive form</li>
+<li>B is a verb in the gerundive form</li>
 </ul>
 </td>
 </tr>
@@ -6396,7 +6396,7 @@ expressed by Concept B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td>(A/an) A is either i) the instrument that or ii) what is used to Y (with)</td>
+<td>(A/an) A is either i) the instrument that or ii) what is used to B (with)</td>
 </tr>
 <tr><td>Conditions:</td>
 <td>.</td>
@@ -6535,7 +6535,7 @@ typically the action or event with the usage of instrument expressed by concept 
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td>(A/an) A is either i) the instrument that or ii) what is used to Y (with)</td>
+<td>(A/an) A is either i) the instrument that or ii) what is used to B (with)</td>
 </tr>
 <tr><td>Conditions:</td>
 <td>.</td>
@@ -7095,7 +7095,7 @@ end (as of a race or journey) of an action or event expressed by Concept B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td>(a/an/the) A is the place to which Ying happens / one Bs</td>
+<td>(a/an/the) A is the place to which Bing happens / one Bs</td>
 </tr>
 <tr><td>Conditions:</td>
 <td>.</td>
@@ -7206,7 +7206,7 @@ or event leading to a place expressed by concept A. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td>(a/an/the) A is the place to which Ying happens / one Bs</td>
+<td>(a/an/the) A is the place to which Bing happens / one Bs</td>
 </tr>
 <tr><td>Conditions:</td>
 <td>.</td>
