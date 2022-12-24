@@ -112,12 +112,14 @@ A relation between two concepts where concept B is a type of
 concept A."""
 relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ has hyponym `animal <ILIURL/35563>`_"
 relations.hyponym.exe.en = """
- * `beef <ILIURL/48244>`_ is a hyponym `meat <ILIURL/77100>`_
- * `pear <ILIURL/77892>`_ is a hyponym `edible fruit <ILIURL/77500>`_
- * `dictionary <ILIURL/70226>`_ is a hyponym `wordbook <ILIURL/70225>`_
+ * `beef <ILIURL/48244>`_ is a hyponym of `meat <ILIURL/77100>`_
+ * `pear <ILIURL/77892>`_ is a hyponym of `edible fruit <ILIURL/77500>`_
+ * `dictionary <ILIURL/70226>`_ is a hyponym of `wordbook <ILIURL/70225>`_
 """
 relations.hyponym.test.en = """
-Hyponymy-relation between nouns (EWN test 9)
+
+Test:
+ - Hyponymy-relation between nouns (EWN test 9)
 
 ===     =   ==========================================
 yes     a   *A/an X is a/an Y with certain properties*
@@ -129,7 +131,8 @@ no      b   the converse of any of the (a) sentences.
 Conditions:
  - both X and Y are singular nouns or plural nouns.
 
-Hyperonymy/hyponymy between verb synsets (EWN test 11)
+Test:
+ - Hyperonymy/hyponymy between verb synsets (EWN test 11)
 
 ===     =   ===================================
 yes     a   *to X is to Y + AdvP/AdjP/NP/PP*
