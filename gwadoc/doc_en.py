@@ -110,7 +110,7 @@ relations.hyponym.df.en = "a word that is more specific than a given word"
 relations.hyponym.dfn.en = """
 A relation between two concepts where concept B is a type of
 concept A."""
-relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ has hyponym `animal <ILIURL/35563>`_"
+relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ is a hyponym of `animal <ILIURL/35563>`_"
 relations.hyponym.exe.en = """
  * `beef <ILIURL/48244>`_ is a hyponym `meat <ILIURL/77100>`_
  * `pear <ILIURL/77892>`_ is a hyponym `edible fruit <ILIURL/77500>`_
