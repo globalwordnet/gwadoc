@@ -63,33 +63,33 @@ We follow the discussion in [Maziarz:Piasecki:Szpakowicz:2013]_
 
 
 ### Relation: Hypernym
-### X ⊃ Y,  X is a hypernym of Y
+### A ⊃ B,  A is a hypernym of B
 
 relations.hypernym.name.en = 'Hypernym'
-relations.hypernym.df.en = 'a word that is more general than a given word'
+relations.hypernym.df.en = 'a concept that is more general than a given concept'
 relations.hypernym.dfn.en = """
-A hypernym of something is its superordinate term:
-if X is a hypernym of Y, then all Y are X.
+A hypernym of something is its supertype:
+if A is a hypernym of B, then all B are A.
 """
 relations.hypernym.ex.en = "*animal* is a hypernym of *dog*"
 relations.hypernym.exe.en = """
- * *meat* ``hypernym`` *beef*
- * *edible fruit* ``hypernym`` *pear*
- * *wordbook* ``hypernym`` *dictionary*
+ * *meat* is a ``hypernym`` of *beef*
+ * *edible fruit* is a ``hypernym`` of *pear*
+ * *wordbook* is a ``hypernym`` of *dictionary*
 """
 relations.hypernym.test.en = """
 Hyperonymy/hyponymy between verb synsets ([EWN]_ test 11, p23)
 
 ===     =   ===================================
-yes     a   *to X is to Y + AdvP/AdjP/NP/PP*
-no      b   *to Y is to X + AdvP/AdjP/NP/PP*
+yes     a   *to A is to B + AdvP/AdjP/NP/PP*
+no      b   *to B is to A + AdvP/AdjP/NP/PP*
 ===     =   ===================================
 
 Conditions:
- - X is a verb in the infinitive form
- - Y is a verb in the infinitive form
+ - A is a verb in the infinitive form
+ - B is a verb in the infinitive form
  - there is at least one specifying modifier (AdvP, NP or PP) that
-   applies to the Y-phrase
+   applies to the B-phrase
 
 .. [EWN] Piek Vossen (ed.) (1999) `Euro Wordnet General Documentation <https://globalwordnet.github.io/gwadoc/pdf/EWN_general.pdf>`_ University of Amsterdam
 
@@ -103,13 +103,13 @@ extended to adjectives and adverbs.
 
 
 ### Relation: hyponym
-### X ⊂ Y,  X is a hyponym of Y
+### A ⊂ B,  A is a hyponym of B
 
 relations.hyponym.name.en = "Hyponym"
-relations.hyponym.df.en = "a word that is more specific than a given word"
+relations.hyponym.df.en = "a concept that is more specific than a given concept"
 relations.hyponym.dfn.en = """
-A relation between two concepts where concept B is a type of
-concept A."""
+A hyponym of something is its subtype:
+if A is a hyponym of B, then all A are B."""
 relations.hyponym.ex.en = "`dog <ILIURL/46360>`_ is a hyponym of `animal <ILIURL/35563>`_"
 relations.hyponym.exe.en = """
  * `beef <ILIURL/48244>`_ is a hyponym of `meat <ILIURL/77100>`_
@@ -122,28 +122,28 @@ Test:
  - Hyponymy-relation between nouns (EWN test 9)
 
 ===     =   ==========================================
-yes     a   *A/an X is a/an Y with certain properties*
-.       .   *It is a X and therefore also a Y*
-.       .   *If it is a X then it must be a Y*
+yes     a   *A/an A is a/an B with certain properties*
+.       .   *It is a A and therefore also a B*
+.       .   *If it is a A then it must be a B*
 no      b   the converse of any of the (a) sentences.
 ===     =   ==========================================
 
 Conditions:
- - both X and Y are singular nouns or plural nouns.
+ - both A and B are singular nouns or plural nouns.
 
 Test:
  - Hyperonymy/hyponymy between verb synsets (EWN test 11)
 
 ===     =   ===================================
-yes     a   *to X is to Y + AdvP/AdjP/NP/PP*
-no      b   *to Y is to X + AdvP/AdjP/NP/PP*
+yes     a   *to A is to B + AdvP/AdjP/NP/PP*
+no      b   *to B is to A + AdvP/AdjP/NP/PP*
 ===     =   ===================================
 
 Conditions:
- - X is a verb in the infinitive form
- - Y is a verb in the infinitive form
+ - A is a verb in the infinitive form
+ - B is a verb in the infinitive form
  - there is at least one specifying AdvP, NP or PP that applies to the
-   Y-phrase.
+   B-phrase.
 
 """
 relations.hyponym.com.en = """
@@ -250,7 +250,7 @@ Agent Involvement (EWN test 28)
 ===========     =   ======================================================================
 yes             a   (A/an) A is the one/that who/which does the B, typically intentionally
 Conditions:     .   - A is a noun
-.               .   - Y is a verb in the gerundive form
+.               .   - B is a verb in the gerundive form
 Example:        a   A teacher is the one who does the teaching intentionally
 Effect:         .   {\ teacher}\ (A) AGENT {\ to teach}\ (B)
 .               .   {\ to teach}\ (B) INVOLVED AGENT {\ teacher}\ (A) 
@@ -348,7 +348,7 @@ relations.instrument.test.en = """
 Instrument Involvement (EWN test 31)
 
 ============     =   =========================================================================
-yes              a   (A/an) A is either i) the instrument that or ii) what is used to Y (with) 
+yes              a   (A/an) A is either i) the instrument that or ii) what is used to B (with) 
 Conditions:      .   - A is a noun
 .                .   - B is a verb in the infinitive form
 Example (1):     .   An hammer is the instrument that is used to hammer
@@ -444,7 +444,7 @@ relations.target_direction.test.en = """
 Target-Direction Involvement (EWN test 35)
 
 ===========     =   ===============================================================================
-yes             a   (a/an/the) A is the place to which Ying happens / one Bs
+yes             a   (a/an/the) A is the place to which Bing happens / one Bs
 Conditions:     .   - A is a noun
 .               .   - B is a verb
 Example:        a   The ground is the place to which one collapses/falls heavily 
@@ -539,7 +539,7 @@ Agent Involvement (EWN test 28)
 ===========     =   ======================================================================
 yes             a   (A/an) A is the one/that who/which does the B, typically intentionally
 Conditions:     .   - A is a noun
-.               .   - Y is a verb in the gerundive form
+.               .   - B is a verb in the gerundive form
 Example:        a   A teacher is the one who does the teaching intentionally
 Effect:         .   {\ teacher}\ (A) AGENT {\ to teach}\ (B)
 .               .   {\ to teach}\ (B) INVOLVED AGENT {\ teacher}\ (A) 
@@ -636,7 +636,7 @@ relations.involved_instrument.test.en = """
 Instrument Involvement (EWN test 31)
 
 ============     =   =========================================================================
-yes              a   (A/an) A is either i) the instrument that or ii) what is used to Y (with) 
+yes              a   (A/an) A is either i) the instrument that or ii) what is used to B (with) 
 Conditions:      .   - A is a noun
 .                .   - B is a verb in the infinitive form
 Example (1):     .   An hammer is the instrument that is used to hammer
@@ -732,7 +732,7 @@ relations.involved_target_direction.test.en = """
 Target-Direction Involvement (EWN test 35)
 
 ===========     =   ===============================================================================
-yes             a   (a/an/the) A is the place to which Ying happens / one Bs
+yes             a   (a/an/the) A is the place to which Bing happens / one Bs
 Conditions:     .   - A is a noun
 .               .   - B is a verb
 Example:        a   The ground is the place to which one collapses/falls heavily 
@@ -1341,7 +1341,7 @@ Meronymy-relation between nouns (EWN test 21)
 
 ===     =   ======================================================
 yes     a   *A/an A makes up a part of A/an B*
-.       .   *A/an Y has A/an Xs*
+.       .   *A/an B has A/an As*
 .       .   *A is a meronym of "B" if As are parts of B(s)*
 
 no      b   the converse of the (a) relations.
@@ -1587,7 +1587,7 @@ relations.holo_substance.dfn.en = """
 A relation between two concepts where concept B is made of concept
 A. Meronym and Holonym Substance is a paired relation that denotes a
 higher bound between part and whole. Separating/removing the substance
-part, will change the whole — Concept-A is made of Concept-Y; and
+part, will change the whole — Concept-A is made of Concept-B; and
 Concept-B is a substance of Concept-A”.
 """
 relations.holo_substance.ex.en = "`wood <ILIURL/116549>`_ has substance-holonym `stick <ILIURL/59571>`_"
@@ -2035,8 +2035,8 @@ relations.restricts.df.en = """
 place limits on (extent or amount or access)
 """
 relations.restricts.dfn.en = """
-A relation between an adjectival concept X (quantifier/determiner) and
-a nominal (pronominal) concept Y.
+A relation between an adjectival concept A (quantifier/determiner) and
+a nominal (pronominal) concept B.
 """
 relations.restricts.ex.en = ""
 relations.restricts.exe.en = """
@@ -2055,8 +2055,8 @@ now marked as domain usage. (to be corrected soon'ish)
 relations.restricted_by.name.en = "Restricted By"
 relations.restricted_by.df.en = ""
 relations.restricted_by.dfn.en = """
-A relation between nominal (pronominal) concept Y and an
-adjectival concept X (quantifier/determiner).
+A relation between nominal (pronominal) concept B and an
+adjectival concept A (quantifier/determiner).
 """
 relations.restricted_by.ex.en = ""
 relations.restricted_by.exe.en = """
@@ -2134,8 +2134,8 @@ a word having a loose semantic relation to another word
 """
 relations.also.dfn.en = """
 ‘See Also’ is a self-reciprocal link (the two directions of this
-relation share the same meaning) — Concept-X relates to Concept-Y, and
-Concept-Y relates to Concept-X.
+relation share the same meaning) — Concept-A relates to Concept-B, and
+Concept-B relates to Concept-A.
 
 It denotes a relation of related meaning with another concept (going
 beyond synonymy and similarity).
@@ -2244,7 +2244,7 @@ yes     a   *If something/someone/it As then something/someone/it is not B*
 Conditions:
  - A is a verb in the third person singular form
  - B is an adjective
- - A and Y are (XPOS) co-hyponyms
+ - A and B are (XPOS) co-hyponyms
  
  """
 
@@ -2418,55 +2418,55 @@ is fully reversible.
 
 ### New short definitions based on http://globalwordnet.github.io/schemas/
 
-#relations.agent.df.en = "X is typically the agent of the action expressed by Y"
+#relations.agent.df.en = "A is typically the agent of the action expressed by B"
 relations.antonym.df.en = "An opposite and inherently incompatible word"
-relations.be_in_state.df.en = "X is qualified by Y"
-#relations.co_agent_instrument.df.en = "Y is the instrument used by X in a certain action"
-#relations.co_agent_patient.df.en = "Y is the patient undergoing an action carried out by X"
-#relations.co_agent_result.df.en = "Y is the result of an action carried out by X"
-#relations.co_instrument_agent.df.en = "X is the instrument used by Y for a certain action"
-#relations.co_instrument_patient.df.en = "Y undergoes an action for which the instrument expressed by X is used"
-#relations.co_instrument_result.df.en = "Y is the result of an action carried out by the instrument expressed by X"
-#relations.co_patient_agent.df.en = "Y undergoes an action carried out by X"
-#relations.co_patient_instrument.df.en = "X undergoes an action for which the instrument expressed by X is used"
-#relations.co_result_agent.df.en = "X is the result of an action carried out by Y"
-#relations.co_result_instrument.df.en = "X is the result of an action for which the instrument expressed by Y is used"
+relations.be_in_state.df.en = "A is qualified by B"
+#relations.co_agent_instrument.df.en = "B is the instrument used by A in a certain action"
+#relations.co_agent_patient.df.en = "B is the patient undergoing an action carried out by A"
+#relations.co_agent_result.df.en = "B is the result of an action carried out by A"
+#relations.co_instrument_agent.df.en = "A is the instrument used by B for a certain action"
+#relations.co_instrument_patient.df.en = "B undergoes an action for which the instrument expressed by A is used"
+#relations.co_instrument_result.df.en = "B is the result of an action carried out by the instrument expressed by A"
+#relations.co_patient_agent.df.en = "B undergoes an action carried out by A"
+#relations.co_patient_instrument.df.en = "A undergoes an action for which the instrument expressed by A is used"
+#relations.co_result_agent.df.en = "A is the result of an action carried out by B"
+#relations.co_result_instrument.df.en = "A is the result of an action for which the instrument expressed by B is used"
 #relations.co_role.df.en = "One concept undergoes an action in which the other concept is involved (bidirectional)"
-#relations.direction.df.en = "X is typically the direction or location of the action or event expressed by Y"
-relations.eq_synonym.df.en = "X and Y are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
-relations.holo_location.df.en = "Y is a place located in X"
-relations.holo_portion.df.en = "Y is an amount/piece/portion of X"
-relations.holonym.df.en = "X makes up a part of Y"
-relations.in_manner.df.en = "Y qualifies the manner in which an action or event expressed by X takes place"
-#relations.instrument.df.en = "X is the instrument necessary for the action or event expressed by Y"
-#relations.involved_agent.df.en = "Y is typically the agent of the action expressed by X"
-#relations.involved_direction.df.en = "Y is typically the direction or location of the action or event expressed by X"
-#relations.involved_instrument.df.en = "Y is typically the instrument necessary for the action or event expressed by X"
-#relations.involved_location.df.en = "Y is typically the location where the action or event expressed by X takes place"
-#relations.involved_patient.df.en = "Y is typically the patient un-dergoing an action or event expressed by X"
-#relations.involved_result.df.en = "Y comes into existence as a result of X"
-#relations.involved_source_direction.df.en = "Y is the place from where the action or event expressed by X begins/starts/happens"
-#relations.involved_target_direction.df.en = "Y is the place where the action or event expressed by X leads to"
-#relations.involved.df.en = "Y is typically involved in the action or event expressed by X"
-relations.is_caused_by.df.en = "X comes about because of Y"
+#relations.direction.df.en = "A is typically the direction or location of the action or event expressed by B"
+relations.eq_synonym.df.en = "A and B are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)"
+relations.holo_location.df.en = "B is a place located in A"
+relations.holo_portion.df.en = "B is an amount/piece/portion of A"
+relations.holonym.df.en = "A makes up a part of B"
+relations.in_manner.df.en = "B qualifies the manner in which an action or event expressed by A takes place"
+#relations.instrument.df.en = "A is the instrument necessary for the action or event expressed by B"
+#relations.involved_agent.df.en = "B is typically the agent of the action expressed by A"
+#relations.involved_direction.df.en = "B is typically the direction or location of the action or event expressed by A"
+#relations.involved_instrument.df.en = "B is typically the instrument necessary for the action or event expressed by A"
+#relations.involved_location.df.en = "B is typically the location where the action or event expressed by A takes place"
+#relations.involved_patient.df.en = "B is typically the patient un-dergoing an action or event expressed by A"
+#relations.involved_result.df.en = "B comes into existence as a result of A"
+#relations.involved_source_direction.df.en = "B is the place from where the action or event expressed by A begins/starts/happens"
+#relations.involved_target_direction.df.en = "B is the place where the action or event expressed by A leads to"
+#relations.involved.df.en = "B is typically involved in the action or event expressed by A"
+relations.is_caused_by.df.en = "A comes about because of B"
 relations.is_entailed_by.df.en = "Opposite of entails"
-relations.is_subevent_of.df.en = "X takes place during or as part of Y, and whenever X takes place, Y takes place"
-#relations.location.df.en = "X is the location where the action or event expressed by Y takes place"
-relations.manner_of.df.en = "X qualifies the manner in which an action or event expressed by Y takes place"
-relations.mero_location.df.en = "X is a place located in Y"
-relations.mero_portion.df.en = "X is an amount/piece/portion of Y"
-relations.meronym.df.en = "Y makes up a part of X"
+relations.is_subevent_of.df.en = "A takes place during or as part of B, and whenever A takes place, B takes place"
+#relations.location.df.en = "A is the location where the action or event expressed by B takes place"
+relations.manner_of.df.en = "A qualifies the manner in which an action or event expressed by B takes place"
+relations.mero_location.df.en = "A is a place located in B"
+relations.mero_portion.df.en = "A is an amount/piece/portion of B"
+relations.meronym.df.en = "B makes up a part of A"
 relations.other.df.en = "Any relation not otherwise specified"
-#relations.patient.df.en = "X is the patient undergoing an action or event expressed by Y"
-#rels.pertainym.df.en =  "X is of or pertaining to Y"
-relations.restricted_by.df.en = "A relation between nominal (pronominal) Y and an adjectival X (quantifier/determiner)"
-relations.restricts.df.en = "A relation between an adjectival X (quantifier/determiner) and a nominal (pronominal) Y"
-#relations.result.df.en = "X comes into existence as a result of Y"
-#relations.role.df.en = "X is typically involved in the action or event expressed by Y"
-#relations.source_direction.df.en = "X is the place from where the event expressed by Y begins"
-relations.state_of.df.en = "Y is qualified by X"
-relations.subevent.df.en = "Y takes place during or as part of X, and whenever Y takes place, X takes place"
-#relations.target_direction.df.en = "X is the place to which the action or event expressed by Y leads"
+#relations.patient.df.en = "A is the patient undergoing an action or event expressed by B"
+#rels.pertainym.df.en =  "A is of or pertaining to B"
+relations.restricted_by.df.en = "A relation between nominal (pronominal) B and an adjectival A (quantifier/determiner)"
+relations.restricts.df.en = "A relation between an adjectival A (quantifier/determiner) and a nominal (pronominal) B"
+#relations.result.df.en = "A comes into existence as a result of B"
+#relations.role.df.en = "A is typically involved in the action or event expressed by B"
+#relations.source_direction.df.en = "A is the place from where the event expressed by B begins"
+relations.state_of.df.en = "B is qualified by A"
+relations.subevent.df.en = "B takes place during or as part of A, and whenever B takes place, A takes place"
+#relations.target_direction.df.en = "A is the place to which the action or event expressed by B leads"
 
 ### Relation Simple Aspect IP
 
