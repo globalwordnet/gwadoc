@@ -10,7 +10,7 @@ from gwadoc import relations
 ### Relation: domain
 
 relations.domain.name.en = "Domain"
-relations.domain.df.en = "A concept which is a Topic, Region or Usage pointer of a given concept."
+relations.domain.df.en = "a concept which is a topic, region or usage of a given concept"
 relations.domain.dfn.en = """
 Domain is an underspecified relation between two concepts where Concept B is a Topic (scientific category), 
 Region or Usage pointer of Concept A.
@@ -30,7 +30,7 @@ In EuroWordNet, Domain is moved to a separate ontology.(EuroWordNet General Docu
 ### Relation: has_domain
 
 relations.has_domain.name.en = "In Domain"
-relations.has_domain.df.en = "A concept which is a term of a given Topic, Region or Usage concept."
+relations.has_domain.df.en = "a concept which belongs to a the topic, region or usage of a given concept"
 relations.has_domain.dfn.en = """
 In Domain is an underspecified relation between two concepts where Concept A is a Topic (scientific category, 
 Region or Usage term of Concept B.
@@ -50,7 +50,7 @@ In EuroWordNet, In Domain is moved to a separate ontology.(EuroWordNet General D
 ### Relation: constitutive
 
 relations.constitutive.name.en = "Constitutive"
-relations.constitutive.df.en = "Core semantic relations that define synsets"
+relations.constitutive.df.en = "core semantic relations that define synsets"
 relations.constitutive.dfn.en = """
 Core semantic relations that define synsets.
 
@@ -155,7 +155,7 @@ verbs. In plWordNet it is also extended to adjectives and adverbs.
 ### Relation: similar
 
 relations.similar.name.en = "Similar"
-relations.similar.df.en = "(of words) expressing closely related meanings"
+relations.similar.df.en = "a concept that has a closely related meaning to a given concept"
 relations.similar.dfn.en = """
 A relation between two concepts where concept A and concept B are
 closely related in meaning but are not in the same synset. Similarity
@@ -202,7 +202,7 @@ relation which is why it is not given in the mappings below.
 ### Relation: role
 
 relations.role.name.en = "Role"
-relations.role.df.en = "A concept which is involved in the action or event expressed by a given concept."
+relations.role.df.en = "a concept which is involved in the action or event expressed by a given concept"
 relations.role.dfn.en = """
 Role is an underspecified relation between two concepts where concept A is typically involved 
 in the action or event expressed by concept B.
@@ -235,7 +235,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: agent
 
 relations.agent.name.en = "Agent"
-relations.agent.df.en = "A concept which is typically the one/that who/which does the action denoted by a given concept."
+relations.agent.df.en = "a concept which is typically the one/that who/which does the action denoted by a given concept"
 relations.agent.dfn.en = """
 Agent is a relation between two concepts where Concept A is the semantic role of the 
 animate entity that instigates or causes the happening of Concept B, typically intentionally. 
@@ -265,7 +265,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: patient
 
 relations.patient.name.en = "Patient"
-relations.patient.df.en = "A concept which is the one/that who/which undergoes a given concept."
+relations.patient.df.en = "a concept which is the one/that who/which undergoes a given concept"
 relations.patient.dfn.en = """
 Patient is a relation between two concepts where Concept A is the semantic role of an entity 
 that is not the agent but is directly involved in or affected by the happening denoted by Concept B.
@@ -295,7 +295,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: result
 
 relations.result.name.en = "Result"
-relations.result.df.en = "A concept which comes into existence as a result of a given concept."
+relations.result.df.en = "a concept which comes into existence as a result of a given concept"
 relations.result.dfn.en = """
 Result is a relation between two concepts where Concept A exists as a result only by virtue of 
 the activity denoted by Concept B.
@@ -330,7 +330,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: instrument
 
 relations.instrument.name.en = "Instrument"
-relations.instrument.df.en = "A concept which is the instrument necessary for the action or event expressed by a given concept."
+relations.instrument.df.en = "a concept which is the instrument necessary for the action or event expressed by a given concept"
 relations.instrument.dfn.en = """
 Instrument is a relation between two concepts where Concept A is the semantic role of 
 the entity (usually inanimate) that the agent uses to perform an action or start a process
@@ -371,7 +371,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: location
 
 relations.location.name.en = "Location"
-relations.location.df.en = "A concept which is the place where the event expressed by a given concept happens."
+relations.location.df.en = "a concept which is the place where the event expressed by a given concept happens"
 relations.location.dfn.en = """
 Location is a relation between two concepts where concept A is the
 location where the action or event expressed by concept B takes place.
@@ -402,7 +402,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: direction
 
 relations.direction.name.en = "Direction"
-relations.direction.df.en = "A concept which is the direction of the action or event expressed by a given concept."
+relations.direction.df.en = "a concept which is the direction of the action or event expressed by a given concept"
 relations.direction.dfn.en = """
 Direction is a relation between two concepts where concept A is typically
 the direction or location of the action or event expressed by concept B.
@@ -430,7 +430,7 @@ relations.direction.com.en = """
 ### Relation: target_direction
 
 relations.target_direction.name.en = "Target Direction"
-relations.target_direction.df.en = "A concept which is the place where the action or event expressed by a given concept leads to."
+relations.target_direction.df.en = "a concept which is the place where the action or event expressed by a given concept leads to"
 relations.target_direction.dfn.en = """
 Target Direction is a relation between two concepts where Concept A is the place designated as the 
 end (as of a race or journey) of an action or event expressed by Concept B.
@@ -460,7 +460,7 @@ relations.target_direction.com.en = """
 ### Relation: source_direction
 
 relations.source_direction.name.en = "Source Direction"
-relations.source_direction.df.en = "A concept which is the place from where the event expressed by a given concept begins."
+relations.source_direction.df.en = "a concept which is the place from where the event expressed by a given concept begins"
 relations.source_direction.dfn.en = """
 Source Direction is a relation between two concepts where concept A is the place
 from where the action or event expressed by concept B begins/starts/happens.
@@ -490,7 +490,7 @@ relations.source_direction.com.en = """
 ### Relation: involved
 
 relations.involved.name.en = "Involved"
-relations.involved.df.en = "A concept which is the action or event a given concept typically involved in."
+relations.involved.df.en = "a concept which is the action or event a given concept is typically involved in"
 relations.involved.dfn.en = """
 Involved is an underspecified relation between two concepts where concept B is the action 
 or event concept A typically involved in. 
@@ -524,7 +524,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_agent (EuroWordNet - page 29/30)
 
 relations.involved_agent.name.en = "Involved Agent"
-relations.involved_agent.df.en = "A concept which is the action done by an agent expressed by a given concept."
+relations.involved_agent.df.en = "a concept which is the action done by an agent expressed by a given concept"
 relations.involved_agent.dfn.en = """
 Involved Agent is a relation between two concepts where concept B is typically the action 
 done by the agent expressed by concept A.
@@ -554,7 +554,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_patient
 
 relations.involved_patient.name.en = "Involved Patient"
-relations.involved_patient.df.en = "A concept which is the action that the patient expressed by a given concept undergoing."
+relations.involved_patient.df.en = "a concept which is the action that the patient expressed by a given concept undergoes"
 relations.involved_patient.dfn.en = """
 Involved Patient is a relation between two concepts where Concept B is
 typically an action or event that the patient expressed by Concept A undergoing.
@@ -584,7 +584,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_result
 
 relations.involved_result.name.en = "Involved Result"
-relations.involved_result.df.en = "A concept which is the action or event with a result of a given concept comes into existence."
+relations.involved_result.df.en = "a concept which is the action or event with the result that a given concept comes into existence"
 relations.involved_result.dfn.en = """
 Involved Result is a relation between two concepts where concept B comes
 into existence as a result of concept A.
@@ -619,7 +619,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_instrument
 
 relations.involved_instrument.name.en = "Involved Instrument"
-relations.involved_instrument.df.en = "A concept which is typically the action with the instrument expressed by a given concept."
+relations.involved_instrument.df.en = "a concept which is typically the action performed with the instrument expressed by a given concept"
 relations.involved_instrument.dfn.en = """
 Involved Instrument is a relation between two concepts where concept B is
 typically the action or event with the usage of instrument expressed by concept A.
@@ -659,7 +659,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_location
 
 relations.involved_location.name.en = "Involved Location"
-relations.involved_location.df.en = "A concept which is the event happening in a place expressed by a given concept."
+relations.involved_location.df.en = "a concept which is an event happening in the place expressed by a given concept"
 relations.involved_location.dfn.en = """
 Involved Location is a relation between two concepts where concept B is
 typically the action or event which takes place in the location expressed by concept A.
@@ -690,7 +690,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: involved_direction
 
 relations.involved_direction.name.en = "Involved Direction"
-relations.involved_direction.df.en = "A concept which is the action with the direction expressed by a given concept."
+relations.involved_direction.df.en = "a concept which is an action with the direction expressed by a given concept"
 relations.involved_direction.dfn.en = """
 Involved Direction is a relation between two concepts where concept B is
 typically the action or event with the direction or location expressed by concept A.
@@ -718,7 +718,7 @@ relations.involved_direction.com.en = """
 ### Relation: involved_target_direction
 
 relations.involved_target_direction.name.en = "Involved Target Direction"
-relations.involved_target_direction.df.en = "A concept which is the action or event leading to a place expressed by a given concept."
+relations.involved_target_direction.df.en = "a concept which is an action leading to the place expressed by a given concept"
 relations.involved_target_direction.dfn.en = """
 Involved Target Direction is a relation between two concepts where concept B is the the action 
 or event leading to a place expressed by concept A.
@@ -748,7 +748,7 @@ relations.involved_target_direction.com.en = """
 ### Relation: involved_source_direction
 
 relations.involved_source_direction.name.en = "Involved Source Direction"
-relations.involved_source_direction.df.en = "A concept which is the action beginning from a place of a given concept."
+relations.involved_source_direction.df.en = "A concept which is an action beginning from the place of a given concept"
 relations.involved_source_direction.dfn.en = """
 Involved Source Direction is a relation between two concepts where concept B is the action or event 
 which begins/starts/happens from a place expressed by concept A.
@@ -778,7 +778,7 @@ relations.involved_source_direction.com.en = """
 ### Relation: co_role EDP31
 
 relations.co_role.name.en = "Co Role"
-relations.co_role.df.en = "A concept undergoes an action in which a given concept is involved."
+relations.co_role.df.en = "a concept undergoes an action in which a given concept is involved"
 relations.co_role.dfn.en = """
 Co Role is an underspecified relation between two concepts where Concept A undergoes an action in
 which Concept B is involved (bidirectional).
@@ -800,7 +800,7 @@ employ it as a general relation covering all its subtypes.
 ### Relation: co_agent_patient EDP32
 
 relations.co_agent_patient.name.en = "Co Agent Patient"
-relations.co_agent_patient.df.en = "A concept which is the patient undergoing an action carried out by a given concept."
+relations.co_agent_patient.df.en = "a concept which is the patient undergoing an action carried out by a given concept"
 relations.co_agent_patient.dfn.en = """
 Co Agent Patient is a relation between two concepts where Concept B is the patient
 undergoing an action carried out by Concept A.
@@ -816,7 +816,7 @@ relations.co_agent_patient.com.en = """
 ### Relation: co_patient_agent EDP32
 
 relations.co_patient_agent.name.en = "Co Patient Agent"
-relations.co_patient_agent.df.en = "A concept which carries out an action a given concept undergoing."
+relations.co_patient_agent.df.en = "a concept which carries out an action a given concept is undergoing"
 relations.co_patient_agent.dfn.en = """
 Co Patient Agent is a relation between two concepts where Concept A carries out an action 
 Concept B undergoing.
@@ -834,7 +834,7 @@ relations.co_patient_agent.com.en = """
 ### Relation: co_agent_instrument EDP32
 
 relations.co_agent_instrument.name.en = "Co Agent Instrument"
-relations.co_agent_instrument.df.en = "A concept which is the instrument used by a given concept in an action."
+relations.co_agent_instrument.df.en = "a concept which is the instrument used by a given concept in an action"
 relations.co_agent_instrument.dfn.en = """
 Co Agent Instrument is a relation between two concepts where Concept B is the instrument used
 by Concept A in a certain action.
@@ -852,7 +852,7 @@ relations.co_agent_instrument.com.en = """
 ### Relation: co_instrument_agent EDP32
 
 relations.co_instrument_agent.name.en = "Co Instrument Agent"
-relations.co_instrument_agent.df.en = "A concept which carries out an action by using a given concept as an instrument."
+relations.co_instrument_agent.df.en = "a concept which carries out an action by using a given concept as an instrument"
 relations.co_instrument_agent.dfn.en = """
 Co Instrument Agent is a relation between two concepts where Concept A carries out an action 
 by using Concept B as an instrument.
@@ -870,7 +870,7 @@ relations.co_instrument_agent.com.en = """
 ### Relation: co_agent_result EDP32
 
 relations.co_agent_result.name.en = "Co Agent Result"
-relations.co_agent_result.df.en = "A concept which is the result of an action taken by a given concept."
+relations.co_agent_result.df.en = "a concept which is the result of an action taken by a given concept"
 relations.co_agent_result.dfn.en = """
 Co Agent Result is a relation between two concepts where Concept B is the result of an
 action carried out by Concept A.
@@ -886,7 +886,7 @@ relations.co_agent_result.com.en = """
 ### Relation: co_result_agent EDP32
 
 relations.co_result_agent.name.en = "Co Result Agent"
-relations.co_result_agent.df.en = "A concept which takes an action resulting in a given concept."
+relations.co_result_agent.df.en = "a concept which takes an action resulting in a given concept"
 relations.co_result_agent.dfn.en = """
 Co Result Agent is a relation between two concepts where Concept A takes an action resulting 
 in Concept B.
@@ -904,7 +904,7 @@ relations.co_result_agent.com.en = """
 ### Relation: co_patient_instrument EDP32
 
 relations.co_patient_instrument.name.en = "Co Patient Instrument"
-relations.co_patient_instrument.df.en = "A concept which is used as an instrument in an action a given concept undergoes."
+relations.co_patient_instrument.df.en = "a concept which is used as an instrument in an action a given concept undergoes"
 relations.co_patient_instrument.dfn.en = """
 Co Patient Instrument is a relation between two concepts where Concept B is the instrument 
 used in an action which Concept A undergoes.
@@ -922,7 +922,7 @@ relations.co_patient_instrument.com.en = """
 ### Relation: co_instrument_patient EDP32
 
 relations.co_instrument_patient.name.en = "Co Instrument Patient"
-relations.co_instrument_patient.df.en = "A concept which undergoes an action with the use of a given concept as an instrument."
+relations.co_instrument_patient.df.en = "a concept which undergoes an action with the use of a given concept as an instrument"
 relations.co_instrument_patient.dfn.en = """
 Co Instrument Patient is a relation between two concepts where Concept A undergoes an action
 for which the instrument expressed by Concept B is used.
@@ -940,7 +940,7 @@ relations.co_instrument_patient.com.en = """
 ### Relation: co_result_instrument EDP32
 
 relations.co_result_instrument.name.en = "Co Result Instrument"
-relations.co_result_instrument.df.en = "A concept which is used as an instrument in an action resulting in a given concept."
+relations.co_result_instrument.df.en = "a concept which is used as an instrument in an action resulting in a given concept"
 relations.co_result_instrument.dfn.en = """
 Co Result Instrument is a relation between two concepts where Concept B is an instrument used 
 in an action resulting in Concept A.
@@ -958,7 +958,7 @@ relations.co_result_instrument.com.en = """
 ### Relation: co_instrument_result ice saw/ice
 
 relations.co_instrument_result.name.en = "Co Instrument Result"
-relations.co_instrument_result.df.en = "A concept which is the result of an action using an instrument of a given concept."
+relations.co_instrument_result.df.en = "a concept which is the result of an action using an instrument of a given concept"
 relations.co_instrument_result.dfn.en = """
 Co Instrument Result is a relation between two concepts where Concept A is the result of an
 action carried out by the instrument expressed by Concept B.
@@ -976,9 +976,7 @@ relations.co_instrument_result.com.en = """
 ### Relation: state_of EDP37
 
 relations.state_of.name.en = "State Of"
-relations.state_of.df.en = """
-the way something is with respect to its main attributes
-"""
+relations.state_of.df.en = "a concept which qualifies a given concept"
 relations.state_of.dfn.en = """
 A relation between two concepts where concept B is qualified by
 concept A.
@@ -1011,7 +1009,7 @@ FCB: isn't this the same as attribute (but split into two directions)
 ### Relation: be_in_state EDP37
 
 relations.be_in_state.name.en = "Be In State"
-relations.be_in_state.df.en = "Concept A is qualified by B"
+relations.be_in_state.df.en = "a concept which is qualified by a given concept"
 relations.be_in_state.dfn.en = """
 A relation between two concepts where concept A is qualified by
 concept B.
@@ -1045,10 +1043,7 @@ In plWordNet it is a relation between lexical units.
 ### Relation: causes EDP34
 
 relations.causes.name.en = "Causes"
-relations.causes.df.en = """
-Concept A is an entity that produces an effect or is responsible for events or
-results of Concept B.
-"""
+relations.causes.df.en = "a concept that produces an effect or is responsible for events or results of a given concept"
 relations.causes.dfn.en = """
 A relation between two concepts where concept B comes into existence
 as a result of concept A. Entailment is a relation that links two
@@ -1104,7 +1099,7 @@ seems possible to just absorb PWN's links.
 ### Relation: is_caused_by EDP34
 
 relations.is_caused_by.name.en = "Is Caused By"
-relations.is_caused_by.df.en = "Concept A comes about because of concept B"
+relations.is_caused_by.df.en = "a concept which comes about because of a given concept"
 relations.is_caused_by.dfn.en = """
 A relation between two concepts where concept A comes into existence
 as a result of concept B.
@@ -1152,7 +1147,7 @@ The 'is caused by' relation was missing from PWN before."""
 ### Relation: subevent EDP35
 
 relations.subevent.name.en = "Subevent"
-relations.subevent.df.en = "Concept B takes place during or as part of concept A, and whenever concept B takes place, concept A takes place"
+relations.subevent.df.en = "a concept for which a given concept is a part of"
 relations.subevent.dfn.en = """
 A relation between two concepts where concept B takes place
 during or as part of concept A, and whenever concept B takes
@@ -1204,7 +1199,7 @@ The SUBEVENT relation is very useful for many closely related verbs and appeals 
 ### Relation: is_subevent_of EDP35
 
 relations.is_subevent_of.name.en = "Is Subevent Of"
-relations.is_subevent_of.df.en = "Concept A takes place during or as part of concept B, and whenever concept A takes place, concept B takes place"
+relations.is_subevent_of.df.en = "a concept which takes place during or as part of a given concept"
 relations.is_subevent_of.dfn.en = """
 A relation between two concepts where concept A takes place
 during or as part of concept B, and whenever concept A takes
@@ -1254,7 +1249,7 @@ relations.is_subevent_of.com.en = """
 ### Relation: in_manner EDP36
 
 relations.in_manner.name.en = "In Manner"
-relations.in_manner.df.en = "B qualifies the manner in which an action or event expressed by A takes place"
+relations.in_manner.df.en = "a concept that takes place in the manner of a given concept"
 relations.in_manner.dfn.en = """
 A relation between two concepts where concept B qualifies
 the manner in which an action or event expressed by concept
@@ -1289,7 +1284,7 @@ relation in addition to normal hyponymy to make the manner component explicit (i
 ### Relation: manner_of EDP36
 
 relations.manner_of.name.en = "Manner Of"
-relations.manner_of.df.en = "a way of acting or behaving"
+relations.manner_of.df.en = "a concept which qualifies the manner in which a given concept takes place"
 relations.manner_of.dfn.en = """
 A relation between two concepts where concept A qualifies
 the manner in which an action or event expressed by concept
@@ -1322,9 +1317,7 @@ relations.manner_of.com.en = """
 ### Relation: meronym EDP26
 
 relations.meronym.name.en = "Meronym"
-relations.meronym.df.en = """
-a word that names a part of a larger whole
-"""
+relations.meronym.df.en = """a concept that names a part of a larger whole of a given concept"""
 relations.meronym.dfn.en = """
 A relation between two concepts where concept A makes up a part of
 concept B.
@@ -1360,9 +1353,7 @@ shouldn't be a special relation.
 ### Relation: holonym EDP26
 
 relations.holonym.name.en = "Holonym"
-relations.holonym.df.en = """
-a word that names the whole of which a given word is a part
-"""
+relations.holonym.df.en = "a concept which is the whole that a given concept is a part of"
 relations.holonym.dfn.en = """
 A relation between two concepts where concept A makes up a
 part of concept B.
@@ -1394,7 +1385,7 @@ shouldn't be a special relation.
 ### Relation: mero_part EDP27
 
 relations.mero_part.name.en = "Part Meronym"
-relations.mero_part.df.en = "concept A is a component of concept B"
+relations.mero_part.df.en = "a concept which is a component of a given concept"
 relations.mero_part.dfn.en = """
 A relation between two concepts where concept A is a component of
 concept B. Meronym and Holonym Part is a paired relation that denotes
@@ -1434,7 +1425,7 @@ geographical inclusiveness relations.
 ### Relation: holo_part EDP27
 
 relations.holo_part.name.en = "Part Holonym"
-relations.holo_part.df.en = "Concept B is the whole where Concept A is a part"
+relations.holo_part.df.en = "a concept that is the whole where a given concept is a part"
 relations.holo_part.dfn.en = """
 A relation between two concepts where concept B is the whole of the different component of
 concept A. Meronym and Holonym Part is a paired relation that denotes
@@ -1471,7 +1462,7 @@ The has_holo-part relation typically relates components to their wholes, namely:
 ### Relation: mero_member EPD27
 
 relations.mero_member.name.en = "Member Meronym"
-relations.mero_member.df.en = "Concept A is a member of Concept B"
+relations.mero_member.df.en = "a concept which is a member of a given concept"
 relations.mero_member.dfn.en = """
 A relation between two concepts where concept A is a member/ element
 of concept B. Meronym and Holonym Membership is a paired relation that
@@ -1506,7 +1497,7 @@ relations.mero_member.com.en = """
 ### Relation: holo_member EDP27
 
 relations.holo_member.name.en = "Member Holonym"
-relations.holo_member.df.en = "Concept B is a member of Concept A"
+relations.holo_member.df.en = "a concept is the whole that a given concept is a member of"
 relations.holo_member.dfn.en = """
 A relation between two concepts where concept B is a member/ element
 of concept A. Meronym and Holonym Membership is a paired relation that
@@ -1542,7 +1533,7 @@ relations.holo_member.com.en = """
 ### Relation: mero_substance EDP28
 
 relations.mero_substance.name.en = "Substance Meronym"
-relations.mero_substance.df.en = "Concept A is made of concept B."
+relations.mero_substance.df.en = "a concept which is made of a given concept"
 relations.mero_substance.dfn.en = """
 A relation between two concepts where concept A is made of concept
 B. Meronym and Holonym Substance is a paired relation that denotes a
@@ -1582,7 +1573,7 @@ The relation between things and the stuff which compose them is called MADE_OF.
 ### Relation: holo_substance EDP28
 
 relations.holo_substance.name.en = "Substance Holonym"
-relations.holo_substance.df.en = "Concept-B is a substance of Concept-A"
+relations.holo_substance.df.en = "a concept which is the substance of a given concept"
 relations.holo_substance.dfn.en = """
 A relation between two concepts where concept B is made of concept
 A. Meronym and Holonym Substance is a paired relation that denotes a
@@ -1617,7 +1608,7 @@ Complex holonyms can also contain substances but in that case the MADE_OF relati
 ### Relation: mero_location EDP28
 
 relations.mero_location.name.en = "Location Meronym"
-relations.mero_location.df.en = "A is a place located in B"
+relations.mero_location.df.en = "a concept which is the location of a given concept"
 relations.mero_location.dfn.en = """
 A relation between two concepts where concept A is a place
 located in concept B.
@@ -1648,7 +1639,7 @@ relations.mero_location.com.en = """
 ### Relation: holo_location EDP28
 
 relations.holo_location.name.en = "Location Holonym"
-relations.holo_location.df.en = "B is a place located in A"
+relations.holo_location.df.en = "a concept with is located in a given concept"
 relations.holo_location.dfn.en = """
 A relation between two concepts where concept B is a place
 located in concept A.
@@ -1679,7 +1670,7 @@ relations.holo_location.com.en = """
 ### Relation: mero_portion EDP27
 
 relations.mero_portion.name.en = "Portion Meronym"
-relations.mero_portion.df.en = "Concept A is an amount of Concept B"
+relations.mero_portion.df.en = "a concept which is an amount/piece/portion of a given concept"
 relations.mero_portion.dfn.en = """
 A relation between two concepts where concept A is an
 amount/piece/portion of concept B.
@@ -1711,7 +1702,7 @@ extension (for instance, there is no lexical item equivalent to “portion of ca
 ### Relation: holo_portion EDP27
 
 relations.holo_portion.name.en = "Portion Holonym"
-relations.holo_portion.df.en = "Concept B is the whole amount/piece of A"
+relations.holo_portion.df.en = "a concept which is the whole that a given concept is an amount/piece/portion of"
 relations.holo_portion.dfn.en = """
 A relation between two concepts where concept B is an
 amount/piece/portion of concept A
@@ -1745,10 +1736,7 @@ These lexical items will be linked to their wholes by means of a has_holo_portio
 ### Relation: eq_synonym
 
 relations.eq_synonym.name.en = "Equal Synonym"
-relations.eq_synonym.df.en = """
-two words that can be interchanged in a context are said to be
-synonymous relative to that context
-"""
+relations.eq_synonym.df.en = """two concepts that are equivalent in a given context"""
 relations.eq_synonym.dfn.en = """
 A relation between two concepts where A and B are equivalent concepts
 but their nature requires that they remain separate.
@@ -1809,7 +1797,7 @@ In principle all semantically equivalent words should belong to the same synsets
 ### Relation: instance_hypernym
 
 relations.instance_hypernym.name.en = "Instance Hypernym"
-relations.instance_hypernym.df.en = "the type of an instance"
+relations.instance_hypernym.df.en = "a concept that is an instance of a given concept"
 relations.instance_hypernym.dfn.en = """
 A relation between two concepts where concept A (``instance_hyponym``)
 is a type of concept B (``instance_hypernym``), and where A is an
@@ -1838,7 +1826,7 @@ Sometimes modelled as hyponomy/hypernymy relations.
 ### Relation: instance_hyponym
 
 relations.instance_hyponym.name.en = "Instance Hyponym"
-relations.instance_hyponym.df.en = "an occurrence of something"
+relations.instance_hyponym.df.en = "a concept of which the given concept is an instance"
 relations.instance_hyponym.dfn.en = """
 A relation between two concepts where concept A (``instance_hyponym``)
 is a type of concept B (``instance_hypernym``), and where A is an
@@ -1870,7 +1858,7 @@ To distinguish it from class hyponymy the relation is dubbed has_instance.
 ### Relation: exemplifies
 
 relations.exemplifies.name.en = "Exemplifies"
-relations.exemplifies.df.en = "A concept which is the example of a given concept."
+relations.exemplifies.df.en = "a concept which is the example of a given concept"
 relations.exemplifies.dfn.en = """
 Exemplifies is a relation between two concepts where Concept A is the example of Concept B.
 """
@@ -1888,7 +1876,7 @@ too different from the standard meaning of domain.
 ### Relation: is_exemplified_by
 
 relations.is_exemplified_by.name.en = "Is Exemplified By"
-relations.is_exemplified_by.df.en = "A concept which is the type of a given concept."
+relations.is_exemplified_by.df.en = "a concept which is the type of a given concept"
 relations.is_exemplified_by.dfn.en = """
 Is Exemplified By is a relation between two concepts where Concept B is a type of 
 Concept A, such as idiom, honorific or classifier.
@@ -1907,7 +1895,7 @@ propose 'Exemplified_By'.
 ### Relation: domain_topic
 
 relations.domain_topic.name.en = "Domain Topic"
-relations.domain_topic.df.en = "A concept which is the scientific category pointer of a given concept."
+relations.domain_topic.df.en = "a concept which is the scientific category pointer of a given concept"
 relations.domain_topic.dfn.en = """
 Domain Topic is a relation between two concepts where Concept B is a scientific
 category (e.g. computing, sport, biology, etc.) of concept A.
@@ -1925,7 +1913,7 @@ relations.domain_topic.com.en = """
 ### Relation: has_domain_topic
 
 relations.has_domain_topic.name.en = "Has Domain Topic"
-relations.has_domain_topic.df.en = "A concept which is a term in the scientific category of a given concept."
+relations.has_domain_topic.df.en = "a concept which is a term in the scientific category of a given concept"
 relations.has_domain_topic.dfn.en = """
 Has Domain Topic is a relation between two concepts where Concept A is a scientific
 category (e.g. computing, sport, biology, etc.) of concept B.
@@ -1943,7 +1931,7 @@ relations.has_domain_topic.com.en = """
 ### Relation: domain_region
 
 relations.domain_region.name.en = "Domain Region"
-relations.domain_region.df.en = "A concept which is a geographical / cultural domain pointer of a given concept."
+relations.domain_region.df.en = "a concept which is a geographical / cultural domain pointer of a given concept"
 relations.domain_region.dfn.en = """
 Domain Region is a relation between two concepts where Concept B is a geographical / 
 cultural domain of concept A. 
@@ -1964,7 +1952,7 @@ what...
 ### Relation: has_domain_region
 
 relations.has_domain_region.name.en = "Has Domain Region"
-relations.has_domain_region.df.en = "A concept which is the term in the geographical / cultural domain of a given concept."
+relations.has_domain_region.df.en = "A concept which is the term in the geographical / cultural domain of a given concept"
 relations.has_domain_region.dfn.en = """
 Has Domain Region is a relation between two concepts where Concept A is a term of the geographical /
 cultural domain of concept B.
@@ -1985,9 +1973,7 @@ a good name.
 ### Relation: attribute
 
 relations.attribute.name.en = "Attribute"
-relations.attribute.df.en = """
-an abstraction belonging to or characteristic of an entity
-"""
+relations.attribute.df.en = "a concept which is an attribute of a given concept"
 relations.attribute.dfn.en = """
 A relation between nominal and adjectival concepts where the concept A
 is an attribute of concept B. ‘Attributes’ is a self-reciprocal link
@@ -2031,9 +2017,7 @@ adjectives to nouns.
 ### Relation: restricts
 
 relations.restricts.name.en = "Restricts"
-relations.restricts.df.en = """
-place limits on (extent or amount or access)
-"""
+relations.restricts.df.en = "a concept which restricts a given concept"
 relations.restricts.dfn.en = """
 A relation between an adjectival concept A (quantifier/determiner) and
 a nominal (pronominal) concept B.
@@ -2053,7 +2037,7 @@ now marked as domain usage. (to be corrected soon'ish)
 ### Relation: restricted_by
 
 relations.restricted_by.name.en = "Restricted By"
-relations.restricted_by.df.en = ""
+relations.restricted_by.df.en = "a concept which is restricted by a given concept"
 relations.restricted_by.dfn.en = """
 A relation between nominal (pronominal) concept B and an
 adjectival concept A (quantifier/determiner).
@@ -2070,7 +2054,7 @@ relations.restricted_by.com.en = """
 ### Relation: classifies
 
 relations.classifies.name.en = "Classifies"
-relations.classifies.df.en = """A concept A used when counting concept B"""
+relations.classifies.df.en = "a concept used for counting a given concept"
 
 relations.classifies.dfn.en = """
 A concept A used when counting concept B.
@@ -2108,7 +2092,7 @@ This relation was introduced in  [DaCosta:Bond:2016]
 ### Relation: classified_by
 
 relations.classified_by.name.en = "Classified By"
-relations.classified_by.df.en = """Concept B is modified by classifier A when it is counted."""
+relations.classified_by.df.en = "a concept used when a given concept is counted"
 relations.classified_by.dfn.en = """
 Concept B is modified by classifier A when it is counted.
 """
@@ -2129,9 +2113,7 @@ relations.classified_by.com.en = """This relation was introduced in  [DaCosta:Bo
 ### Relation: also (no ili)
 
 relations.also.name.en = "See also"
-relations.also.df.en = """
-a word having a loose semantic relation to another word
-"""
+relations.also.df.en = "a concept having a loose semantic relation to a given concept"
 relations.also.dfn.en = """
 ‘See Also’ is a self-reciprocal link (the two directions of this
 relation share the same meaning) — Concept-A relates to Concept-B, and
@@ -2170,10 +2152,7 @@ This could perhaps be merged with other
 ### Relation: antonym
 
 relations.antonym.name.en = "Antonym"
-relations.antonym.df.en = """
-a word that expresses a meaning opposed to the meaning of another
-word, in which case the two words are antonyms of each other
-"""
+relations.antonym.df.en = "a concept with the opposite meaning of a given concept"
 relations.antonym.dfn.en = """
 Two words are antonyms if their meanings are opposite in some way such as:
  
@@ -2261,9 +2240,7 @@ plWordnet distinguishes between 'conversion' which is the same relationship form
 ### Relation: entails
 
 relations.entails.name.en = "Entails"
-relations.entails.df.en = """
-impose, involve, or imply as a necessary accompaniment or result
-"""
+relations.entails.df.en = "a concept which entails a given concept"
 relations.entails.dfn.en = """
 Entailment is a relation that links two verbs, and it is currently
 unilateral — Verb-A entails Verb-B, without a reciprocal or tracing
@@ -2292,7 +2269,7 @@ A verb A entails B if A cannot be done unless B is, or has been, done.
 ### Relation: is_entailed_by
 
 relations.is_entailed_by.name.en = "Is Entailed By"
-relations.is_entailed_by.df.en = "Concept B is dome/happens because of concept A"
+relations.is_entailed_by.df.en = "a concept which is entailed by a given concept"
 relations.is_entailed_by.dfn.en = """
 """
 relations.is_entailed_by.ex.en = "`sleep <ILIURL/21840>`_ is entailed by `snore <ILIURL/21852>`_"
@@ -2316,7 +2293,7 @@ relations.is_entailed_by.com.en = """
 ### Relation: other
 
 relations.other.name.en = "Other"
-relations.other.df.en = "Any relation not otherwise specified"
+relations.other.df.en = "any relation not otherwise specified"
 relations.other.dfn.en = """
 This is used for semantic relation types not currently supported by
 the OMW DTD.  The exact relation type can be given with ``dc:type``:
@@ -2353,7 +2330,7 @@ This has no reverse, as we cannot be sure what the relation is gong to be.   How
 ### Relation: participle
 
 relations.participle.name.en = "Participle"
-relations.participle.df.en = "A concept which is a participial adjective derived from a verb expressed by a given concept."
+relations.participle.df.en = "a concept which is a participial adjective derived from a verb expressed by a given concept"
 relations.participle.dfn.en = """
 Participle is a relation between two concepts where Concept A is a participial adjective 
 which is drived from Concept B in the form of verb.
@@ -2373,7 +2350,7 @@ see, anywhere FCB)
 ### Relation: pertainym
 
 relations.pertainym.name.en = "Pertainym"
-relations.pertainym.df.en = "A concept which is of or pertaining to a given concept."
+relations.pertainym.df.en = "a concept which is of or pertaining to a given concept"
 relations.pertainym.dfn.en = """
 Pertainym is a relation between two concepts where Concept A is related or applicable to Concept B.  Typically A will be an adjective and B a noun, or A an adverb and B an adjective.  It is typically used for adjectives that are morphologically related to the noun they are related to, are not gradable and do not have antonyms.   It is also used for nouns that are semantically related but not morphologically related, typically because came from different languages historically, so *lunar* for *moon* or *arborial* for *tree*.
 """
@@ -2395,7 +2372,7 @@ relations.pertainym.com.en = """
 ### Relation: derivation
 
 relations.derivation.name.en = "Derivation"
-relations.derivation.df.en = "A concept which is a derivationally related form of a given concept."
+relations.derivation.df.en = "a concept which is a derivationally related form of a given concept"
 relations.derivation.dfn.en = """
 Derivation is a relation between two concept where Concept A is the derivationally related 
 form of Concept B. 
@@ -2471,53 +2448,53 @@ relations.subevent.df.en = "B takes place during or as part of A, and whenever B
 ### Relation Simple Aspect IP
 
 relations.simple_aspect_ip.name.en = "Simple Aspect (imp to per)"
-relations.simple_aspect_ip.df.en = "A concept which is linked to another through a change from imperfective to perfective aspect"
+relations.simple_aspect_ip.df.en = "a concept which is linked to a given concept through a change from imperfective to perfective aspect"
 relations.simple_aspect_ip.ex.en = ""
 
 ### Relation Simple Aspect PI
 
 relations.simple_aspect_pi.name.en = "Simple Aspect (per to imp)"
-relations.simple_aspect_pi.df.en = "A concept which is linked to another through a change from perfective to imperfective aspect"
+relations.simple_aspect_pi.df.en = "a concept which is linked to a given concept through a change from perfective to imperfective aspect"
 relations.simple_aspect_pi.ex.en = ""
 
 
 ### Relation Secondary Aspect IP
 
 relations.secondary_aspect_ip.name.en = "Secondary Aspect (ip)"
-relations.secondary_aspect_ip.df.en = "A concept which is linked to another through a change in aspect (ip)"
+relations.secondary_aspect_ip.df.en = "a concept which is linked to a given concept through a change in aspect (imperfective to perfective)"
 relations.secondary_aspect_ip.ex.en = ""
 
 ### Relation Secondary Aspect PI
 
 relations.secondary_aspect_pi.name.en = "Secondary Aspect (pi)"
-relations.secondary_aspect_pi.df.en = "A concept which is linked to another through a change in aspect (pi)"
+relations.secondary_aspect_pi.df.en = "a concept which is linked to a given concept through a change in aspect (perfective to imperfective)"
 relations.secondary_aspect_pi.ex.en = ""
 
 
 ### Relation: Feminine
 
 relations.feminine.name.en = "Feminine"
-relations.feminine.df.en= "A concept used to refer to female members of a class"
+relations.feminine.df.en= "a concept used to refer to female members of a given concept"
 relations.feminine.ex.en = "`sow <ILIURL/48204>`_ is the feminine of `pig <ILIURL/48199>`_"
 
 
 ### Relation: Feminine
 
 relations.has_feminine.name.en = "Has Feminine"
-relations.has_feminine.df.en= "A concept which has a special concept for female members of its class"
+relations.has_feminine.df.en= "a concept which has a given concept for female members of its class"
 relations.has_feminine.ex.en = "`pig <ILIURL/48199>`_ has the feminine `sow <ILIURL/48204>`_"
 
 
 ### Relation: Masculine
 
 relations.masculine.name.en = "Masculine"
-relations.masculine.df.en= "A concept used to refer to male members of a class"
+relations.masculine.df.en= "a concept used to refer to male members of a given concept"
 relations.masculine.ex.en = "`boar <ILIURL/48203>`_ is the masculine of `pig <ILIURL/48199>`_"
 
 ### Relation: Masculine
 
 relations.has_masculine.name.en = "Has Masculine"
-relations.has_masculine.df.en= "A concept which has a special concept for male members of its class"
+relations.has_masculine.df.en= "a concept which has a given concept for male members of its class"
 relations.has_masculine.ex.en = "`pig <ILIURL/48199>`_ has the masculine `boar <ILIURL/48203>`_ "
 
 
@@ -2525,13 +2502,13 @@ relations.has_masculine.ex.en = "`pig <ILIURL/48199>`_ has the masculine `boar <
 ### Relation: Young
 
 relations.young.name.en = "Young"
-relations.young.df.en = "A concept used to refer to young members of a class"
+relations.young.df.en = "a concept used to refer to young members of a given concept"
 relations.young.ex.en = "`piglet <ILIURL/48200>`_ is a young `pig <ILIURL/48199>`_"
 
 ### Relation: Young
 
 relations.has_young.name.en = "Has Young"
-relations.has_young.df.en = """A concept which has a special concept for young members of its class"""
+relations.has_young.df.en = """a concept which has a given concept for young members of its class"""
 relations.has_young.ex.en = "`pig <ILIURL/48199>`_ has young `piglet <ILIURL/48200>`_"
 
 
@@ -2539,13 +2516,13 @@ relations.has_young.ex.en = "`pig <ILIURL/48199>`_ has young `piglet <ILIURL/482
 ### Relation: Diminuative
 
 relations.diminutive.name.en = "Diminutive"
-relations.diminutive.df.en = "A concept used to refer to generally smaller members of a class"
+relations.diminutive.df.en = "a concept used to refer to generally smaller members of a given concept"
 relations.diminutive.ex.en = "`kitchenette  <ILIURL/55399>`_ is a diminutive `kitchen <ILIURL/55397>`_"
 
 ### Relation: Diminuative
 
 relations.has_diminutive.name.en = "Has Diminutive"
-relations.has_diminutive.df.en = "A concept which has a special concept for generally smaller members of its class"
+relations.has_diminutive.df.en = "a concept which has a given concept for generally smaller members of its class"
 relations.has_diminutive.ex.en = "`kitchen <ILIURL/55397>`_ has  diminutive `kitchenette  <ILIURL/55399>`_ "
 
 
@@ -2553,13 +2530,13 @@ relations.has_diminutive.ex.en = "`kitchen <ILIURL/55397>`_ has  diminutive `kit
 ### Relation: Augmentative
 
 relations.augmentative.name.en = "Augmentative"
-relations.augmentative.df.en = "A concept used to refer to generally larger members of a class"
+relations.augmentative.df.en = "a concept used to refer to generally larger members of a given concept"
 relations.augmentative.ex.en = "`great house <ILIURL/7550>`_ is a larger `house <ILIURL/54960>`_"
 
 ### Relation: Augmentative
 
 relations.has_augmentative.name.en = "Has Augmentative"
-relations.has_augmentative.df.en = "A concept which has a special concept for generally larger members of its class"
+relations.has_augmentative.df.en = "a concept which has a given concept for generally larger members of its class"
 relations.has_augmentative.ex.en = "`house <ILIURL/54960>`_ has larger `great house <ILIURL/7550>`_ "
 
 
@@ -2567,27 +2544,27 @@ relations.has_augmentative.ex.en = "`house <ILIURL/54960>`_ has larger `great ho
 ### Relation: Gradable Antonym
 
 relations.anto_gradable.name.en = "Gradable Antonym"
-relations.anto_gradable.df.en = "word pairs whose meanings are opposite and which lie on a continuous spectrum"
+relations.anto_gradable.df.en = "a concept whose meaning is opposite to a given concept and which lie on a continuous spectrum"
 relations.anto_gradable.ex.en = "`hot <ILIURL/6824>`_ is a gradable antonym `cold <ILIURL/63356>`_"
 relations.anto_gradable.com.en = "Also known as *polar antonyms*."
 
 ### Relation: Simple Antonym
 
 relations.anto_simple.name.en = "Simple Antonym"
-relations.anto_simple.df.en = "word pairs whose meanings are opposite but whose meanings do not lie on a continuous spectrum"
+relations.anto_simple.df.en = "a concept whose meanings is opposite to a given concept but whose meanings do not lie on a continuous spectrum"
 relations.anto_simple.ex.en = "`alive <ILIURL/496>`_ is a simple antonym `dead <ILIURL/527>`_"
 relations.anto_gradable.com.en = "Also known as *complementary antonyms*."
 
 ### Relation: Converse Antonym
 
 relations.anto_converse.name.en = "Converse Antonym"
-relations.anto_converse.df.en = "word pairs that name or describe a single relationship from opposite perspectives"
+relations.anto_converse.df.en = "a concept that describes a single relationship from opposite perspectives to a given concept"
 relations.anto_converse.ex.en = "`parent <ILIURL/91858>`_ is a converse antonym of `child <ILIURL/88965>`_"
 relations.anto_gradable.com.en = "Also known as just *converse* or *relational antonym*."
 
 ### Relation: Inter-register Synonym
 
 relations.ir_synonym.name.en = "Inter-register Synonym"
-relations.ir_synonym.df.en = "A concept that means the same except for the style or connotation"
+relations.ir_synonym.df.en = "a concept that means the same as a given concept except for the style or connotation"
 relations.ir_synonym.ex.en = "`loot <ILIURL/106350>`_ is an inter-register synonym of `money <ILIURL/107057>`_"
 
