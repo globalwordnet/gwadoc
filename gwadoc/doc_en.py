@@ -1931,7 +1931,7 @@ relations.has_domain_topic.com.en = """
 ### Relation: domain_region
 
 relations.domain_region.name.en = "Domain Region"
-relations.domain_region.df.en = "a concept which is a geographical / cultural domain pointer of a given concept"
+relations.domain_region.df.en = "a concept which is a geographical/cultural domain pointer of a given concept"
 relations.domain_region.dfn.en = """
 Domain Region is a relation between two concepts where Concept B is a geographical / 
 cultural domain of concept A. 
