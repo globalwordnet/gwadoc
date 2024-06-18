@@ -1952,7 +1952,7 @@ what...
 ### Relation: has_domain_region
 
 relations.has_domain_region.name.en = "Has Domain Region"
-relations.has_domain_region.df.en = "A concept which is the term in the geographical / cultural domain of a given concept"
+relations.has_domain_region.df.en = "A concept which is the term in the geographical/cultural domain of a given concept"
 relations.has_domain_region.dfn.en = """
 Has Domain Region is a relation between two concepts where Concept A is a term of the geographical /
 cultural domain of concept B.
