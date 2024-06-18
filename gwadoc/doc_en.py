@@ -1639,7 +1639,7 @@ relations.mero_location.com.en = """
 ### Relation: holo_location EDP28
 
 relations.holo_location.name.en = "Location Holonym"
-relations.holo_location.df.en = "a concept with is located in a given concept"
+relations.holo_location.df.en = "a concept which is located in a given concept"
 relations.holo_location.dfn.en = """
 A relation between two concepts where concept B is a place
 located in concept A.
