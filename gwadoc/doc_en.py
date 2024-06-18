@@ -1317,7 +1317,7 @@ relations.manner_of.com.en = """
 ### Relation: meronym EDP26
 
 relations.meronym.name.en = "Meronym"
-relations.meronym.df.en = """a concept that names a part of a larger whole of a given concept"""
+relations.meronym.df.en = "a concept that names a part of a larger whole of a given concept"
 relations.meronym.dfn.en = """
 A relation between two concepts where concept A makes up a part of
 concept B.
@@ -1736,7 +1736,7 @@ These lexical items will be linked to their wholes by means of a has_holo_portio
 ### Relation: eq_synonym
 
 relations.eq_synonym.name.en = "Equal Synonym"
-relations.eq_synonym.df.en = """two concepts that are equivalent in a given context"""
+relations.eq_synonym.df.en = "two concepts that are equivalent in a given context"
 relations.eq_synonym.dfn.en = """
 A relation between two concepts where A and B are equivalent concepts
 but their nature requires that they remain separate.
@@ -2508,7 +2508,7 @@ relations.young.ex.en = "`piglet <ILIURL/48200>`_ is a young `pig <ILIURL/48199>
 ### Relation: Young
 
 relations.has_young.name.en = "Has Young"
-relations.has_young.df.en = """a concept which has a given concept for young members of its class"""
+relations.has_young.df.en = "a concept which has a given concept for young members of its class"
 relations.has_young.ex.en = "`pig <ILIURL/48199>`_ has young `piglet <ILIURL/48200>`_"
 
 
