@@ -30,7 +30,7 @@ In EuroWordNet, Domain is moved to a separate ontology.(EuroWordNet General Docu
 ### Relation: has_domain
 
 relations.has_domain.name.en = "In Domain"
-relations.has_domain.df.en = "a concept which belongs to a the topic, region or usage of a given concept"
+relations.has_domain.df.en = "a concept which belongs to the topic, region or usage of a given concept"
 relations.has_domain.dfn.en = """
 In Domain is an underspecified relation between two concepts where Concept A is a Topic (scientific category, 
 Region or Usage term of Concept B.
