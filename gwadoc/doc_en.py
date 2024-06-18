@@ -1147,7 +1147,7 @@ The 'is caused by' relation was missing from PWN before."""
 ### Relation: subevent EDP35
 
 relations.subevent.name.en = "Subevent"
-relations.subevent.df.en = "a concept for which a given concept is a part of"
+relations.subevent.df.en = "a concept for which a given concept is a part of and takes place whenever the given concept takes place"
 relations.subevent.dfn.en = """
 A relation between two concepts where concept B takes place
 during or as part of concept A, and whenever concept B takes
@@ -1858,7 +1858,7 @@ To distinguish it from class hyponymy the relation is dubbed has_instance.
 ### Relation: exemplifies
 
 relations.exemplifies.name.en = "Exemplifies"
-relations.exemplifies.df.en = "a concept which is the example of a given concept"
+relations.exemplifies.df.en = "a concept which is an example of a given concept"
 relations.exemplifies.dfn.en = """
 Exemplifies is a relation between two concepts where Concept A is the example of Concept B.
 """
@@ -2461,13 +2461,13 @@ relations.simple_aspect_pi.ex.en = ""
 ### Relation Secondary Aspect IP
 
 relations.secondary_aspect_ip.name.en = "Secondary Aspect (ip)"
-relations.secondary_aspect_ip.df.en = "a concept which is linked to a given concept through a change in aspect (imperfective to perfective)"
+relations.secondary_aspect_ip.df.en = "a concept which is linked to a given concept through a change in aspect through morphological changes (imperfective to perfective)"
 relations.secondary_aspect_ip.ex.en = ""
 
 ### Relation Secondary Aspect PI
 
 relations.secondary_aspect_pi.name.en = "Secondary Aspect (pi)"
-relations.secondary_aspect_pi.df.en = "a concept which is linked to a given concept through a change in aspect (perfective to imperfective)"
+relations.secondary_aspect_pi.df.en = "a concept which is linked to a given concept through a change in aspect through morphological changes (perfective to imperfective)"
 relations.secondary_aspect_pi.ex.en = ""
 
 
