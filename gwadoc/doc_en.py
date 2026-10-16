@@ -1273,9 +1273,8 @@ yes     a   *to A is to B in a C manner/way.*
 
 Conditions:
 
-- A and B are verbs
-- B is the hyperonym of A
-- C is an adjective/adverb
+- A is a verb
+- B is an adjective/adverb
 
 """
 relations.in_manner.com.en = """
@@ -1371,8 +1370,8 @@ relations.holonym.test.en = """
 Holonymy-relation between nouns
 
 ===     =   ======================================================
-yes     a   *A is a holonym of B if Bs are parts of As*
-.       .   *A is a holonym of B if Bs are members of As*
+yes     a   *B is a holonym of A if As are parts of Bs*
+.       .   *B is a holonym of A if As are members of Bs*
 
 no      b   the converse of any of the (a) sentences.
 ===     =   ======================================================
