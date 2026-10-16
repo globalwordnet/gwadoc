@@ -894,11 +894,11 @@ extended to adjectives and adverbs.</p> <h4>XML</h4>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept A (<tt class="docutils literal">instance_hyponym</tt>)
-is a type of concept B (<tt class="docutils literal">instance_hypernym</tt>), and where A is an
-individual entity.  A will be a terminal node in the hierarchy.
+        <p> A relation between two concepts where concept B (<tt class="docutils literal">instance_hyponym</tt>)
+is a type of concept A (<tt class="docutils literal">instance_hypernym</tt>), and where B is an
+individual entity.  B will be a terminal node in the hierarchy.
 Instances are expressed by proper nouns.</p>
-<p>An <tt class="docutils literal">instance hyponym</tt> can also be referred to as a <tt class="docutils literal">type</tt> </p>
+<p>An <tt class="docutils literal">instance hyponym</tt> can also be referred to as an <tt class="docutils literal">instance</tt> </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
@@ -912,14 +912,14 @@ Instances are expressed by proper nouns.</p>
 </colgroup>
 <tbody valign="top">
 <tr><td>Yes</td>
-<td>A is one of the Bs</td>
+<td>B is one of the As</td>
 </tr>
 <tr><td>No</td>
-<td>B is one of the As</td>
+<td>A is one of the Bs</td>
 </tr>
 </tbody>
 </table>
-<p>Condition: A is a proper noun (or named entity), B is a common noun.</p></p></p>
+<p>Condition: B is a proper noun (or named entity), A is a common noun.</p></p></p>
         <h4> Comments </h4>
         <p>Hyponymy is a relation between classes of entities. Individual entities can also be said to belong to some class.
 Although we do not find many instances in a lexical database, the relation is useful for users
@@ -1624,8 +1624,8 @@ relation which is why it is not given in the mappings below.</p> <h4>XML</h4>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept A makes up a part of
-concept B. </p>
+        <p> A relation between two concepts where concept B makes up a part of
+concept A. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
@@ -1644,15 +1644,15 @@ concept B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>A/an A makes up a part of A/an B</em></td>
+<td><em>A/an B makes up a part of A/an A</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>A/an B has A/an As</em></td>
+<td><em>A/an A has A/an Bs</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>A is a meronym of &quot;B&quot; if As are parts of B(s)</em></td>
+<td><em>B is a meronym of &quot;A&quot; if Bs are parts of A(s)</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -1834,7 +1834,7 @@ shouldn't be a special relation.</p> <h4>XML</h4>
 <article class="relation">
     <h3 id="mero_location"><a href="#mero_location">Location Meronym</a> (<span class="rel-id">mero_location</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"A is a place located in B"</span>
+        <span class="short definition">"B is a place located in A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -1860,12 +1860,12 @@ shouldn't be a special relation.</p> <h4>XML</h4>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept A is a place
-located in concept B. </p>
+        <p> A relation between two concepts where concept B is a place
+located in concept A. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
-<li><a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81751">desert</a> has part-meronym <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81753">oasis</a></li>
+<li><a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81751">desert</a> has mero_location <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81753">oasis</a></li>
 </ul>
 	  </p><h4>Tests</h4>
         <p><p>Location meronymy -relation between nouns (EWN test 26)</p>
@@ -1878,7 +1878,7 @@ located in concept B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>a/an/the A is a place located in a/an/the B</em></td>
+<td><em>a/an/the B is a place located in a/an/the A</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -1933,7 +1933,7 @@ located in concept B. </p>
 <article class="relation">
     <h3 id="holo_location"><a href="#holo_location">Location Holonym</a> (<span class="rel-id">holo_location</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"B is a place located in A"</span>
+        <span class="short definition">"A is a place located in B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -1959,15 +1959,15 @@ located in concept B. </p>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept B is a place
-located in concept A. </p>
+        <p> A relation between two concepts where concept A is a place
+located in concept B. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
-<li><a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81724">space</a> has part-holonym <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81733">aerospace</a></li>
+<li><a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81724">space</a> has holo_location <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/81733">aerospace</a></li>
 </ul>
 	  </p><h4>Tests</h4>
-        <p><p>Location meronymy -relation between nouns (EWN test 26)</p>
+        <p><p>Location holonymy -relation between nouns (EWN test 26)</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="5%" />
@@ -1977,7 +1977,7 @@ located in concept A. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>a/an/the B is a place located in a/an/the A</em></td>
+<td><em>a/an/the A is a place located in a/an/the B</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -2032,7 +2032,7 @@ located in concept A. </p>
 <article class="relation">
     <h3 id="mero_member"><a href="#mero_member">Member Meronym</a> (<span class="rel-id">mero_member</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Concept A is a member of Concept B"</span>
+        <span class="short definition">"Concept B is a member/element of Concept A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -2051,18 +2051,18 @@ located in concept A. </p>
 	      <th>example</th>
               <td>
 		 
-                <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/92069">player</a> has member-meronym <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/80236">team</a>
+                <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/80236">team</a> has member-meronym <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/92069">player</a>
 		
               </td>
             </tr>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept A is a member/ element
-of concept B. Meronym and Holonym Membership is a paired relation that
+        <p> A relation between two concepts where concept B is a member/ element
+of concept A. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
 it does not relates a sub-kind of a concept. It links groups to members
-— Many instances of Concept-A form Concept-B; and Concept-B is composed of many members of Concept-A. </p>
+— Many instances of Concept-B form Concept-A; and Concept-A is composed of many members of Concept-B. </p>
 	 
         <h4>Examples</h4>
         <p><ul class="simple">
@@ -2079,7 +2079,7 @@ it does not relates a sub-kind of a concept. It links groups to members
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>a/an A is a member/element of (a/an/the) B</em></td>
+<td><em>a/an B is a member/element of (a/an/the) A</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -2089,8 +2089,8 @@ it does not relates a sub-kind of a concept. It links groups to members
 </table>
 <p>Conditions:</p>
 <ul class="simple">
-<li>A is a single object-denoting noun</li>
-<li>B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)</li>
+<li>B is a single object-denoting noun</li>
+<li>A is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)</li>
 <li>preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.</li>
 </ul></p></p>
         <h4><h4>XML</h4>
@@ -2147,7 +2147,7 @@ it does not relates a sub-kind of a concept. It links groups to members
 <article class="relation">
     <h3 id="holo_member"><a href="#holo_member">Member Holonym</a> (<span class="rel-id">holo_member</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"Concept B is a member of Concept A"</span>
+        <span class="short definition">"Concept A is a member/element of Concept B"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -2166,15 +2166,15 @@ it does not relates a sub-kind of a concept. It links groups to members
 	      <th>example</th>
               <td>
 		 
-                <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/80236">team</a> has member-holonym <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/92069">player</a>
+                <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/92069">player</a> has member-holonym <a class="reference external" href="https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/80236">team</a>
 		
               </td>
             </tr>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept B is a member/ element
-of concept A. Meronym and Holonym Membership is a paired relation that
+        <p> A relation between two concepts where concept A is a member/ element
+of concept B. Meronym and Holonym Membership is a paired relation that
 denotes group formation and membership. Is different from hyponym as
 it does not relates a sub-kind of a concept. It links groups to members
 — Concept-B is composed of many members of Concept-A; and many
@@ -2195,7 +2195,7 @@ instances of Concept-A form Concept-B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>a/an B is a member/element of (a/an/the) A</em></td>
+<td><em>a/an A is a member/element of (a/an/the) B</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -2205,8 +2205,8 @@ instances of Concept-A form Concept-B. </p>
 </table>
 <p>Conditions:</p>
 <ul class="simple">
-<li>B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)</li>
 <li>A is a single object-denoting noun</li>
+<li>B is a multiform noun (either a group-noun, a collective-noun or as a lexicalized plural denoting multiple objects)</li>
 <li>preferably humans, animals, plants or vehicles or closed sets such as the number system, or the alphabet.</li>
 </ul></p></p>
         <h4><h4>XML</h4>
@@ -2263,7 +2263,7 @@ instances of Concept-A form Concept-B. </p>
 <article class="relation">
     <h3 id="mero_part"><a href="#mero_part">Part Meronym</a> (<span class="rel-id">mero_part</span>)<a class="toplink" href="#">back to top</a></h3>
     <div class="description">
-        <span class="short definition">"concept A is a component of concept B"</span>
+        <span class="short definition">"concept B is a part of concept A"</span>
         <table class="fieldlist"><tr>
                 <th>applicability</th>
                 <td><ul>
@@ -2289,8 +2289,8 @@ instances of Concept-A form Concept-B. </p>
         </table>
 	
         <h4>Definition</h4>
-        <p> A relation between two concepts where concept A is a component of
-concept B. Meronym and Holonym Part is a paired relation that denotes
+        <p> A relation between two concepts where concept B is a part of
+concept A. Meronym and Holonym Part is a paired relation that denotes
 proper parts (separable, in principle), which preserve a belonging
 relation even if the physical link is broken — Concept-A can be
 separated into Concept-B”; and Concept-B is a part of some Concept-A.</p>
@@ -2312,17 +2312,17 @@ inclusiveness relations. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>a/an A is a component of a/an B</em></td>
+<td><em>a/an B is a component of a/an A</em></td>
 </tr>
 <tr><td>.</td>
 <td>b</td>
-<td><em>a/an B is a whole/system/complex/network/arrangement/construction of parts/components among which a/an A</em></td>
+<td><em>a/an A is a whole/system/complex/network/arrangement/construction of parts/components among which a/an B</em></td>
 </tr>
 </tbody>
 </table>
 <p>Condition:</p>
 <ul class="simple">
-<li>A and B are concrete nouns denoting objects, there must be several As</li>
+<li>A and B are concrete nouns denoting objects, there must be several Bs</li>
 </ul></p></p>
         <h4> Comments </h4>
         <p>This relation is also frequently used by PWN to denote
@@ -2646,7 +2646,7 @@ amount/piece/portion of concept A </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>(a/an) B is the whole amount/piece of A</em></td>
+<td><em>(a/an) B is an (amount/piece/portion) of A</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -2966,7 +2966,7 @@ Concept-B is a substance of Concept-A”. </p>
         <p> <p>This is used for semantic relation types not currently supported by
 the OMW DTD.  The exact relation type can be given with <tt class="docutils literal">dc:type</tt>:</p>
 <pre class="code xml literal-block">
-<span class="name tag">&lt;SynsetRelation</span> <span class="name attribute">relType=</span><span class="literal string">&quot;other&quot;</span> <span class="name attribute">dc:type=</span><span class="literal string">&quot;emotion&quot;</span> <span class="name attribute">target=</span><span class="literal string">&quot;example-en-1234-n&quot;</span><span class="name tag">/&gt;</span>
+<span class="name tag">&lt;SynsetRelation</span><span class="whitespace"> </span><span class="name attribute">relType=</span><span class="literal string">&quot;other&quot;</span><span class="whitespace"> </span><span class="name attribute">dc:type=</span><span class="literal string">&quot;emotion&quot;</span><span class="whitespace"> </span><span class="name attribute">target=</span><span class="literal string">&quot;example-en-1234-n&quot;</span><span class="name tag">/&gt;</span>
 </pre> </p>
 	 
         <h4>Examples</h4>
@@ -3234,15 +3234,15 @@ concept A. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>B is the state that applies to A</em></td>
+<td><em>A is the state that applies to B</em></td>
 </tr>
 </tbody>
 </table>
 <dl class="docutils">
 <dt>Conditions:</dt>
 <dd><ul class="first last simple">
-<li>B is an adjective/adverb.</li>
-<li>A is a noun.</li>
+<li>A is an adjective/adverb.</li>
+<li>B is a noun.</li>
 </ul>
 </dd>
 </dl></p></p>
@@ -3608,15 +3608,15 @@ as a result of concept B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>(To/A/an) B takes place because of A</em></td>
+<td><em>(To/A/an) A takes place because of B</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>(To/A/an) B is the consequence A</em></td>
+<td><em>(To/A/an) A is the consequence B</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>(To/A/an) B is the result of A</em></td>
+<td><em>(To/A/an) A is the result of B</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -3642,15 +3642,15 @@ as a result of concept B. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>B is caused by A</em></td>
+<td><em>A is caused by B</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>B is the consequence of A</em></td>
+<td><em>A is the consequence of B</em></td>
 </tr>
 <tr><td>.</td>
 <td>.</td>
-<td><em>B is the result of A</em></td>
+<td><em>A is the result of B</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -3660,8 +3660,8 @@ as a result of concept B. </p>
 </table>
 <p>Conditions:</p>
 <ul class="simple">
-<li>A is a verb in the infinitive form</li>
-<li>B is and adjective</li>
+<li>B is a verb in the infinitive form</li>
+<li>A is and adjective</li>
 </ul></p></p>
         <h4> Comments </h4>
         <p>The 'is caused by' relation was missing from PWN before.</p> <h4>XML</h4>
@@ -3900,7 +3900,7 @@ place, concept B takes place. </p>
 <tbody valign="top">
 <tr><td>yes</td>
 <td>a</td>
-<td><em>A consists of B and other events or processes</em></td>
+<td><em>B consists of A and other events or processes</em></td>
 </tr>
 <tr><td>no</td>
 <td>b</td>
@@ -3910,8 +3910,8 @@ place, concept B takes place. </p>
 </table>
 <p>Conditions:</p>
 <ul class="simple">
-<li>B is a verb in the gerundive form</li>
-<li>A is a verb in the gerundive form buying consists of paying and other events or processes</li>
+<li>A is a verb in the gerundive form</li>
+<li>B is a verb in the gerundive form buying consists of paying and other events or processes</li>
 </ul></p></p>
         <h4><h4>XML</h4>
         <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
@@ -4012,9 +4012,8 @@ B takes place. </p>
 </table>
 <p>Conditions:</p>
 <ul class="simple">
-<li>A and B are verbs</li>
-<li>B is the hyperonym of A</li>
-<li>C is an adjective/adverb</li>
+<li>A is an adjective/adverb</li>
+<li>B is a verb</li>
 </ul></p></p>
         <h4><h4>XML</h4>
         <p>In the <a href='https://github.com/globalwordnet/schemas'>XML
