@@ -78,9 +78,9 @@ def build(args):
             trim_blocks=True,
             autoescape=False,
             loader=loader)
-        env.filters['render_rst'] = rst_renderer
+        env.filters['render_rst'] = rst_renderer('latex')
         env.filters['escape_tex'] = escape_tex
-        template = env.get_template('index.tex')
+        template = env.get_template(f'{args.object}.tex')
 
     else:
         raise ValueError('invalid format: {}'.format(args.format))

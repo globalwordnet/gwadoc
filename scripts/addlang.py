@@ -19,7 +19,7 @@ def seed_docs(lang, doc, wn):
             ## normally only one
             for s in wn.synsets(ili=relili):
                 if s.definition():
-                    defs.append(definition)
+                    defs.append(s.definition())
                 ## better to order by frequency if known (rarely known)
                 for w in s.words():
                     for f in w.forms():

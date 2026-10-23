@@ -1678,7 +1678,7 @@ amount/piece/portion of concept B.
 """
 relations.mero_portion.ex.en = "`drop <ILIURL/109995>`_ has mero-portion `liquid <ILIURL/115633>`_"
 relations.mero_portion.exe.en = """
- * `Nigeria <ILIURL/83853>`_ has part-meronym `Abuja <ILIURL/83854>`_
+ * `Nigeria <ILIURL/83853>`_ has mero-portion `Abuja <ILIURL/83854>`_
 """
 relations.mero_portion.test.en = """
 Portion meronymy -relation between nouns (EWN test 26)
@@ -1710,7 +1710,7 @@ amount/piece/portion of concept A
 """
 relations.holo_portion.ex.en = "`liquid <ILIURL/115633>`_ has holo-portion `drop <ILIURL/109995>`_"
 relations.holo_portion.exe.en = """
- * `Africa <ILIURL/84937>`_ has part-holonym `Eastern Hemisphere <ILIURL/81982>`_
+ * `Africa <ILIURL/84937>`_ has holo-portion `Eastern Hemisphere <ILIURL/81982>`_
 
 """
 relations.holo_portion.test.en = """
